@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="http://dev.startupsclub.com/image/use.png">
+        <title>Profile-Startupsclub</title>
+    <!-- Bootstrap core CSS -->
+    <link href="http://dev.startupsclub.com/font-awesome.4.6.1/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://dev.startupsclub.com/bootstrap.3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="http://dev.startupsclub.com/css/animate.min.css" rel="stylesheet" type="text/css">
+    <link href="http://dev.startupsclub.com/css/timeline.css" rel="stylesheet" type="text/css">
+     <link href="http://dev.startupsclub.com/css/profile3.css" rel="stylesheet" type="text/css">
+     <link href="http://dev.startupsclub.com/css/forms.css" rel="stylesheet" type="text/css">
+     <link href="http://dev.startupsclub.com/css/buttons.css" rel="stylesheet" type="text/css">
+     <link href="http://dev.startupsclub.com/css/jquery-confirm.css" rel="stylesheet" type="text/css">
+<script src="http://dev.startupsclub.com/js/jquery.1.11.1.min.js"></script>
+          <script src="http://dev.startupsclub.com/js/parsley.min.js"></script>
+          <script src="http://dev.startupsclub.com/js/jquery-confirm.js"></script>
+   
+    <script src="bootstrap.3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+      
+<nav class="navbar navbar-white navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+           <a class="navbar-brand" href="/"><img src="http://dev.startupsclub.com/image/logo_head.png"></img></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="actives"><a href="">Find</a></li>
+            <li><a href="">Ask</a></li>
+            <li><a href="">Events</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                <img class="img-circle img-sm" src="http://dev.startupsclub.com/image/1487243208.jpg" alt="User Image"></i></a>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="/logout">logout</a></li>
+                
+              </ul>
+            </li>
+           
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+            <div class="container page-content">
+      <div class="row">
+      <div class="col-md-10 col-md-offset-1">
+      <div class="user-profile">
+        <div class="profile-header-background">
+                    <img id="display_cover" src="http://dev.startupsclub.com/image/1487267971.jpg" alt="Profile Header Background">
+                <p>                         <input type="hidden" id="hidden_token" name="_token" value="dUc5pp1ie7h9gNfTSYcs63RS1cfaUV9CdvKXUgyX">
+                      </p>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="profile-info-left">
+              <div class="text-center">
+                  <img src="http://dev.startupsclub.com/image/1487268049.jpg" alt="Avatar" class="avatar img-circle">
+                  <h2>Rengaprasad</h2>
+              </div>
+              <div class="action-buttons">
+                <div class="row" >
+                 <!--  <div class="col-xs-6">
+                      <a href="#" class="btn btn-azure btn-block"><i class="fa fa-user-plus"></i> Follow</a>
+                  </div> -->
+                                   <div class="col-xs-6">
+                      <a onclick="sendMessage(this)" data-user="19" class="btn btn-azure btn-block"><i class="fa fa-envelope"></i> Message</a>
+                  </div>
+
+                               </div>
+              </div>
+             <div class="section">
+                <h3>Basic</h3>
+                <ul class="list-unstyled list-social">
+                  <li><a href="#"><i class="fa fa-dribbble"></i> cdw</a></li>
+                  <li><a href="#"><i class="fa fa-dribbble"></i> chennai</a></li>
+                  <li><a href="#"><i class="fa fa-dribbble"></i> cewfw</a></li>
+                  <li><a href="#"><i class="fa fa-dribbble"></i> fEW</a></li>
+                </ul>
+              </div>
+                        <div class="section">
+                <h3>Contact</h3>
+                <ul class="list-unstyled list-social">
+                  <li><a href="#"><i class="fa fa-dribbble"></i> 9841483250</a></li>
+                  <li><a href="#"><i class="fa fa-dribbble"></i> Idea stage</a></li>
+                  <li><a href="#"><i class="fa fa-dribbble"></i> dfwe</a></li>
+                  <li><a href="#"><i class="fa fa-dribbble"></i> fsdf@cd.com</a></li>
+                  <li><a href="#"><i class="fa fa-dribbble"></i> cewfw</a></li>
+                  <li><a href="#"><i class="fa fa-dribbble"></i> fEW</a></li>
+                </ul>
+              </div>
+              <div class="section">
+                <h3>Social</h3>
+                <ul class="list-unstyled list-social">
+                  <li><a href="#"><i class="fa fa-twitter"></i> </a></li>
+                  <li><a href="#"><i class="fa fa-facebook"></i> </a></li>
+                  <li><a href="#"><i class="fa fa-linkedin"></i> </a></li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+          
+         <!-- Begin page content -->
+        <div class="col-md-8" ng-app="Profile" ng-controller="postCtrl">
+          <div class="row">
+            <!-- left posts-->
+            <div class="col-md-12">
+              <div class="row">
+                <div class="col-md-12">
+                <!-- post state form -->
+                  <div class="box profile-info n-border-top">
+                    <form>
+                        <textarea ng-model="post" class="form-control input-lg p-text-area post_field" rows="2" placeholder="Whats in your mind today?"></textarea>
+                    </form>
+                    <div class="box-footer box-form">
+                        <button type="button" class="btn btn-azure pull-right" ng-click="putPost()">Post</button>
+                        <ul class="nav nav-pills">
+                            <li><a href="#"><i class="fa fa-map-marker"></i></a></li>
+                            <li><a href="#"><i class="fa fa-camera"></i></a></li>
+                            <li><a href="#"><i class=" fa fa-film"></i></a></li>
+                            <li><a href="#"><i class="fa fa-microphone"></i></a></li>
+                        </ul>
+                    </div>
+                  </div><!-- end post state form -->
+                  <div id="posts_append_data">
+                  <!--   posts -->
+                  <div class="box box-widget">
+                    <div class="box-header with-border">
+                      <div class="user-block">
+                        <img class="img-circle" src="http://dev.startupsclub.com/image/1487268049.jpg" alt="User Image">
+                        <span class="username"><a href="/profile/rengaprasad.b">Rengaprasad</a></span>
+                        <span class="description">Shared publicly - 2017-02-16 17:58:48</span>
+                        <span></span>
+                       
+                      </div>
+                    </div>
+
+                    <div class="box-body" style="display: block;">
+                     
+                      <p>TQ45</p>
+                      <button type="button" class="btn btn-default btn-xs"><i class="fa fa-share"></i> Share</button>
+                      <button type="button" class="btn btn-default btn-xs"><i class="fa fa-thumbs-o-up"></i> Like</button>
+                      <span class="pull-right text-muted">1 comments</span>
+                    </div>
+                    <div class="comments_append_data43">
+       
+                    <div class="box-footer box-comments" style="display: block;">
+                                                               <div class="box-comment">
+                        <img class="img-circle img-sm" src="http://dev.startupsclub.com/image/1487268049.jpg" alt="User Image">
+                        <div class="comment-text">
+                          <span class="username">
+                        <a href="/profile/rengaprasad.b">
+                          Rengaprasad</a>
+                          <span class="text-muted pull-right">2017-02-16 18:10:52 </span>
+                          </span>
+                          VBSF
+                                                </div>
+                      </div>
+
+                 
+                                           </div>
+                  </div>
+                    <div class="box-footer" style="display: block;">
+                  
+                        <img class="img-responsive img-circle img-sm" src="http://dev.startupsclub.com/image/1487243208.jpg" alt="Alt Text">
+                        <div class="img-push">
+                          <input type="text" data-post="43" class="form-control input-sm comment_field" onkeypress="comment_post(event,this)" placeholder="Press enter to post comment">
+                        </div>
+                    
+                    </div>
+                  </div><!--  end posts-->
+
+                  <!--   posts -->
+                  <div class="box box-widget">
+                    <div class="box-header with-border">
+                      <div class="user-block">
+                        <img class="img-circle" src="http://dev.startupsclub.com/image/1487268049.jpg" alt="User Image">
+                        <span class="username"><a href="/profile/rengaprasad.b">Rengaprasad</a></span>
+                        <span class="description">Shared publicly - 2017-02-16 17:58:48</span>
+                        <span></span>
+                       
+                      </div>
+                    </div>
+
+                    <div class="box-body" style="display: block;">
+                     
+                      <p>TR5T</p>
+                      <button type="button" class="btn btn-default btn-xs"><i class="fa fa-share"></i> Share</button>
+                      <button type="button" class="btn btn-default btn-xs"><i class="fa fa-thumbs-o-up"></i> Like</button>
+                      <span class="pull-right text-muted">1 comments</span>
+                    </div>
+                    <div class="comments_append_data42">
+       
+                    <div class="box-footer box-comments" style="display: block;">
+                                                               <div class="box-comment">
+                        <img class="img-circle img-sm" src="http://dev.startupsclub.com/image/1487268049.jpg" alt="User Image">
+                        <div class="comment-text">
+                          <span class="username">
+                        <a href="/profile/rengaprasad.b">
+                          Rengaprasad</a>
+                          <span class="text-muted pull-right">2017-02-16 18:10:54 </span>
+                          </span>
+                          F\SDF
+                                                </div>
+                      </div>
+
+                 
+                                           </div>
+                  </div>
+                    <div class="box-footer" style="display: block;">
+                  
+                        <img class="img-responsive img-circle img-sm" src="http://dev.startupsclub.com/image/1487243208.jpg" alt="Alt Text">
+                        <div class="img-push">
+                          <input type="text" data-post="42" class="form-control input-sm comment_field" onkeypress="comment_post(event,this)" placeholder="Press enter to post comment">
+                        </div>
+                    
+                    </div>
+                  </div><!--  end posts-->
+
+                 
+                </div>
+                </div>
+              </div>
+            </div><!-- end left posts-->
+          </div>
+        </div><!-- end  center posts -->
+
+
+        
+
+        </div>
+      </div>
+      </div>
+      </div>
+    </div>    
+ 
+
+   <div class="modal fade" id="sendmessageuser" role="dialog">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Send Message</h4>
+        </div>
+        <div class="modal-body">
+  <textarea class="form-control" rows="5" id="comment"></textarea>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" id="sendMessage" data-user="" class="btn btn-primary">Send Message</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+    <footer class="footer">
+      <div class="container">
+        <p class="text-muted"> Copyright &copy; Company - All rights reserved </p>
+      </div>
+    </footer>
+    <script src="http://dev.startupsclub.com/bootstrap.3.3.6/js/bootstrap.min.js"></script>
+   <script src="http://dev.startupsclub.com/js/custom.js"></script>
+   <script src="http://dev.startupsclub.com/js/profile.js"></script>
+  </body>
+  
+
+</html>

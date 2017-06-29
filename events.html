@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+     <div class="row">
+                    <div class="col-sm-6">
+                        <a href="style_one_light" target="_blank">
+                            <div class="im-box">
+                                <img src="images/header.jpg">
+                                <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                            </div>
+                        </a>
+                                <div class="hov"><span>Style One Light</span></div>
+                    </div>
+                    <div class="col-sm-6">
+                        <a href="style_two_light" target="_blank">
+                            <div class="im-box">
+                                <img src="images/header.jpg">
+                                <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                            </div>
+                        </a>
+                                <div class="hov"><span>Style Two Light</span></div>
+                    </div>
+                </div>
+
+ 
+<style type="text/css">
+	
+
+h1{
+    color:#000;
+    letter-spacing:2px;
+    font-size:50px;
+    font-weight:600;
+    text-shadow: 2px 2px 2px #ccc;
+    position:relative;    
+    font-family: 'Lato', sans-serif;
+    display:inline-block;
+}
+h1,h2,h3,h4,h5,h6,p{    
+    font-family: 'Lato', sans-serif;
+}
+.fr{
+    margin-bottom: 50px;
+    line-height: 30px;
+}
+h3, .h3{    
+    font-size: 13px;
+    letter-spacing: 17px;
+}
+h1:after,h1:before{
+    position:absolute;
+    content:"";
+    height:2px;
+    background:#000;
+    width:100px;
+
+}
+h1:after{
+    left:40px;
+    bottom:-20px;
+}
+h1:before{
+    right:40px;
+    bottom:-28px;
+}
+
+img{
+    max-width:100%;
+    height:auto;
+}
+
+.head-intro {
+    text-align: center;
+    width: 100%;
+    background: url(../images/1.jpg);
+    background-size: cover;
+    text-align: center;
+    background-attachment: fixed;
+}
+.head-intro .c-container {
+    padding: 50px 15px 100px 15px;
+    background: rgba(255,255,255,.75);
+}
+.content_wrapper{
+    padding:30px 0 100px 0;
+    text-align:center;
+    box-shadow: 2px 2px 23px #ccc;
+}
+.content_wrapper>p{
+    margin-bottom:50px;
+}
+.content_wrapper .col-sm-6{
+    margin-bottom:50px;
+    text-align:center;
+}
+.content_wrapper .col-sm-6 h2{
+    font-size:15px;    
+    font-weight: 700;
+    text-transform:uppercase;
+    margin:0;
+    display:inline-block;
+    margin-top:15px;
+    box-shadow:0px 0px 5px #ccc;
+    padding: 15px 62px;
+}
+.drk{
+    background:#000;
+    color:#fff;
+}
+.im-box{
+    position:relative;
+}
+.im-box .fa,
+.im-boxd .fa{
+    position:absolute;
+    height:100%;
+    width:100%;
+    background:rgba(0,0,0,.6);
+    top:0;
+    left:0;
+    color: #fff;
+    font-size:32px;
+    opacity:0;    
+    transition:all .5s;
+    -webkit-transition:all .5s;
+    -moz-transition:all .5s;
+}
+.im-box .fa{
+    background:rgba(255,255,255,.7);
+    color:#000;
+}
+.im-box .fa:before,
+.im-boxd .fa:before {
+    top:50%;
+    position:absolute;
+    left:45%;
+    opacity:0;
+    margin-top: -16px;
+    transition:all .5s;
+    -webkit-transition:all .5s;
+    -moz-transition:all .5s;
+}
+a:hover .im-box .fa,
+a:hover .im-boxd .fa{
+    opacity:1;
+}
+a:hover .im-box .fa:before,
+a:hover .im-boxd .fa:before {
+    left:49%;
+    opacity:1;
+}
+.content_wrapper .col-sm-6 a{
+    display:block;
+    box-shadow:0px 0px 5px #ccc;
+    position:relative;
+    transition:all .5s;
+    color:#000;
+    transition:all .5s;
+    -webkit-transition:all .5s;
+    -moz-transition:all .5s;
+}
+
+.content_wrapper .col-sm-6 a:hover{
+    text-decoration:none;
+}
+.content_wrapper .col-sm-6 .hov,
+.content_wrapper .col-sm-6 .im-boxd .hov{
+    position:absolute;
+    display:inline-block;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background:rgba(255,255,255,.6);
+    opacity:0;
+    transition:all .5s;
+    -webkit-transition:all .5s;
+    -moz-transition:all .5s;
+}
+.content_wrapper .col-sm-6 .hb span {
+    background:rgba(0,0,0,.6);
+}
+.content_wrapper .col-sm-6 .hov span,
+.content_wrapper .col-sm-6 .hovb span{
+    left:50%;
+    top:50%;
+    position:absolute;
+    text-transform:uppercase;
+    font-size:14px;
+    letter-spacing:2px;
+    font-weight: 700;
+    padding: 9px 26px;
+    margin-left:-104px;
+    background:#fff;
+    margin-top:-19px;
+}
+.content_wrapper .col-sm-6 a:hover .hov,
+.content_wrapper .col-sm-6 a:hover .im-boxd .hov{
+    opacity:1;
+}
+.content_wrapper .col-sm-6 .hov span,
+.content_wrapper .col-sm-6 .hovb span{
+    background:#fff;
+    color:#000;
+    box-shadow:0px 0px 3px #ccc;
+}
+.content_wrapper .col-sm-6 .hovb span{
+    background:#000;
+    color:#fff;
+    box-shadow:0px 0px 5px #ccc;
+}
+.content_wrapper .col-sm-6 .im-boxd .hov span {
+    background:#000;
+    color:#fff;    
+    box-shadow:0px 0px 5px #191919;
+}
+.content_wrapper .col-sm-6 .hov span,
+.content_wrapper .col-sm-6 .im-boxd .hov span,
+.content_wrapper .col-sm-6 .hov,
+.content_wrapper .col-sm-6 .im-boxd .hov,
+.content_wrapper .col-sm-6 .hovb span,
+.content_wrapper .col-sm-6 .im-boxd .hovb span,
+.content_wrapper .col-sm-6 .hovb,
+.content_wrapper .col-sm-6 .im-boxd .hovb{
+    position:relative;
+    margin:0;
+    left:0;
+    top:0;
+    opacity:1;
+}
+.content_wrapper .col-sm-6 .hov, .content_wrapper .col-sm-6 .hovb{
+    padding:25px 18px;
+}
+@media only screen and (max-width :480px) {
+    .content_wrapper .col-sm-6 .hov span, 
+    .content_wrapper .col-sm-6 .im-boxd .hovb span {
+            font-size: 10px;
+    }
+    .fr {
+        margin-bottom: 36px;
+        line-height: 30px;
+        letter-spacing: 10px;
+    }
+}
+</style>                
+</body>
+</html>

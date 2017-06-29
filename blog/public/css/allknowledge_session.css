@@ -1,0 +1,88 @@
+.ks-thumbnail{
+	margin-top: 60px; 
+}
+.ks-div{
+	position: relative; 
+	left: 0px; 
+	top: 0px;
+	opacity: 1;
+    display: block;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+.ks-image{
+	width: 100%; 
+	height: 100%; 
+	position: relative; 
+	border-radius: 0px 0px 75px;
+	
+}
+.ks-date{
+	position: absolute; 
+	top: 0%; 
+    left: 1%;
+    color: #fff; 
+}
+.ks-time{
+	position: absolute; 
+	top: 0%; 
+	right: 1%;
+	color: #fff; 
+}
+.ks-speaker{
+	position: absolute; 
+	height: 150px;
+	width: 150px;
+	border-radius: 50%; 
+	bottom: 0%; 
+	right: 0%; 
+	border: 2px solid rgb(255, 255, 255);
+}
+
+.margin {
+		margin-top: 95px;
+		margin-bottom: 25px;
+}
+@media only screen and (max-width: 842px) {
+	.padd{
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+}
+
+@media only screen and (min-width: 1080px) {
+    .container {
+       padding-right: 60px;
+       padding-left: 60px;
+       margin-left: auto;
+       margin-right: auto;
+    }
+}
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%)
+}
+
+.text {
+  font-size: 16px;
+  padding: 16px 32px;
+}
+.thumbnail:hover .ks-div {
+  opacity: 0.3;
+}
+
+.thumbnail:hover .middle {
+  opacity: 1;
+}
+.ks-km{
+	background: #f57f20;
+	color: white;
+}
+.thumbnail:hover{
+	box-shadow: 5px 5px 5px 5px;
+}

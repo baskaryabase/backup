@@ -1,0 +1,362 @@
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
+/*basic reset*/
+* {
+margin: 0 ;
+padding: 0;
+}
+html {
+height: 100%;
+/*Image only BG fallback*/
+/*background: url('http://thecodeplayer.com/uploads/media/gs.png');*/
+/*background = gradient + image pattern combo*/
+/*background: linear-gradient(rgba(196, 102, 0, 0.2), rgba(155, 89, 182, 0.2)),  url('http://thecodeplayer.com/uploads/media/gs.png');*/
+}
+body {
+font-family: montserrat, arial, verdana;
+}
+/*form styles*/
+#msform {
+width: 100%;
+
+text-align: center;
+position: absolute;
+top: 10%;
+height: 80%;
+overflow-y: scroll;
+
+}
+#msform fieldset {
+background: white;
+border: 0 none;
+border-radius: 3px;
+box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+padding:0% 1.5% 1.5% 1.5%;
+box-sizing: border-box;
+width: 80%;
+margin: -0.25% 10.5%;
+/*stacking fieldsets above each other*/
+position: absolute;
+}
+
+/*Hide all except first fieldset*/
+#msform fieldset:not(:first-of-type) {
+display: none;
+}
+/*inputs*/
+#msform input, #msform textarea { /*register_custom.css:46*/
+    padding: 9px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    font-family: montserrat;
+    color: #2C3E50;
+    font-size: 13px;
+}
+/*buttons*/
+#msform .action-button {
+width: 100px;
+background: #ff7d0f;
+font-weight: bold;
+color: white;
+border: 0 none;
+border-radius: 1px;
+cursor: pointer;
+padding: 10px 5px;
+margin: 10px 5px;
+}
+#msform .action-button:hover, #msform .action-button:focus {
+box-shadow: 0 0 0 2px white, 0 0 0 3px #ff7d0f;
+}
+/*headings*/
+.fs-title {
+font-size: 15px;
+text-transform: uppercase;
+color: #2C3E50;
+
+}
+.fs-subtitle {
+font-weight: normal;
+font-size: 13px;
+color: #666;
+margin-bottom: 20px;
+}
+/*progressbar*/
+#progressbar {
+
+overflow: hidden;
+/*CSS counters to number the steps*/
+counter-reset: step;
+}
+#progressbar li { /* register_custom.css:91*/
+    list-style-type: none;
+    color: #2d3f51;
+    text-transform: uppercase;
+    font-size: 9px;
+    width: 33.33%;
+    float: left;
+    position: relative;
+}
+#progressbar li:before {
+content: counter(step);
+counter-increment: step;
+width: 20px;
+line-height: 20px;
+display: block;
+font-size: 10px;
+color: #333;
+background: white;
+border-radius: 3px;
+margin: 0 auto 5px auto;
+}
+/*progressbar connectors*/
+#progressbar li:after {
+content: '';
+width: 100%;
+height: 2px;
+background: white;
+position: absolute;
+left: -50%;
+top: 9px;
+z-index: -1; /*put it behind the numbers*/
+}
+#progressbar li:first-child:after {
+/*connector not needed before the first step*/
+content: none;
+}
+/*marking active/completed steps green*/
+/*The number of the step and the connector before it = green*/
+#progressbar li.active:before, #progressbar li.active:after {
+background: #ff7d0f;
+color: white;
+}
+
+span.wpcf7-not-valid-tip {
+  /*display: none !important; */
+  position: relative;
+  margin-bottom: 10px;
+
+}
+.member_lay {
+    width: 100%;
+    display: block;
+    position: relative;
+    font-size: 0;
+}
+.member_lay .custom_radio {
+    font-size: 14px;
+    width: calc(100% / 2 - 20px);
+    margin: 10px 10px;
+    color: #fff;
+}
+.cus_rdcont {
+
+    width:100%;
+    color: black;
+    padding: 10px;
+}
+
+
+.regular_pricing{
+    margin-bottom: 30px;
+}
+.pioneer_pricing{
+    margin-bottom: 30px;
+}
+
+label.col-md-6.pioneer_pricing, label.col-md-6.regular_pricing{
+    cursor: pointer;
+}
+
+.pricing_row ul{
+    color:#2e4052;
+}
+
+
+.typeahead {
+  padding: 20px;
+  max-width: 600px;
+}
+
+.typeahead ul.tags {
+  list-style: none;
+  border-bottom: 1px solid #aaa;
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 0;
+  cursor: text;
+  /*border-bottom: 1px solid #26a69a;
+  box-shadow: 0 1px 0 0 #26a69a;*/
+}
+
+.typeahead ul.tags.focused {
+  border-bottom: 1px solid #26a69a;
+  box-shadow: 0 1px 0 0 #26a69a;
+}
+
+.typeahead ul.list{
+  list-style: none;
+  border: 1px solid #aaa;
+  border-top: none;
+  width: 400px;
+  padding: 0;
+  margin: 0;
+}
+.typeahead ul.list li{
+  padding: 5px;
+  cursor: pointer;
+}
+
+.typeahead ul.list li.active{
+  background-color: #aaa;
+}
+
+
+.typeahead ul li.tag {
+  display: inline;
+  padding: 2px 2px 2px 5px;
+  border: 1px solid #aaa;
+  background-color: #eee;
+  border-radius: 5px;
+  margin-right: 5px;
+  color: #333;
+  cursor: pointer;
+}
+
+.typeahead ul li.inputtag {
+  display: inline;
+  margin-right: 5px;
+  color: #333;
+}
+.typeahead ul li.inputtag input {
+  border: none;
+  display: inline;
+  height: initial;
+  width: initial;
+  margin: initial;
+}
+
+.typeahead ul li.inputtag input:focus {
+  border: none;
+  display: inline;
+  height: initial;
+  width: initial;
+  margin: initial;
+  border-bottom: none;
+  box-shadow: none;
+}
+
+.typeahead ul li.inputtag input:focus {
+  outline: none;
+}
+
+
+.typeahead ul li span {
+  padding-left: 5px;
+  padding-right: 2px;
+  font-weight: bold;
+  font-family: sans-serif;
+  color: rgba(0,0,0,0.5);
+  text-transform: lowercase;
+  font-height: 10px;
+}
+.align-center{
+  text-align:center !important;
+}
+.width-25pc{
+  width:25%;
+}
+.width-70pc{
+  width:70% !important;
+  margin: auto;
+  clear: both;
+}
+.font-medium{
+  font-size: 12px !important;
+}
+.margin-tp-sm{
+  margin-top: 1%;
+}
+.padding-left{
+  padding-left:  !important;
+}
+.error-class{
+  color:red;
+}
+.float-right{
+  float: right !important;
+
+}
+.footer-margin{
+  margin:0% !important;
+}
+/*.submit.third.action-button {
+
+    position: absolute;
+}*/
+@media only screen and (min-width: 768px) {
+
+.cus_rdcont {
+    height: 20em !important;
+
+  }
+}
+@media only screen and (max-width: 500px) {
+
+    #msform fieldset {
+
+margin: -0.5% 10.5% !important;
+
+}
+#msform {
+top: 13% !important;
+height: 75% !important;
+
+}
+.width-70pc{
+  width:100% !important;
+}
+}
+ ul{
+    list-style-type: circle;
+}
+
+label.custom_radio input:checked+.cus_rdcont {
+    box-shadow: -1px 1px 1px 1px rgb(0, 0, 0);
+}
+.custom_radio input:checked{
+  position:relative!important;
+
+}
+select {font-size:2em}
+
+option {color:#6666;font-weight:bold; padding:5px}
+
+option:hover {color:blue}
+
+option {border:1px solid green}
+
+
+input[type=checkbox], input[type=radio] {
+  opacity: 1 !important;
+  margin:0px !important;
+  text-align: left !important;
+}
+.arr{
+  text-align: left !important;
+  width:70% !important;
+  clear: both;
+  margin:auto;
+}
+
+span.wpcf7-not-valid-tip {
+
+    /*display: none !important; */
+
+    position: relative;
+
+    margin-bottom: 10px;
+
+ color:red;
+
+}

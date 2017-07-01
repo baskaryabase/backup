@@ -1,5 +1,6 @@
 .ks-thumbnail{
 	margin-top: 60px; 
+	height: 400px;
 }
 .ks-div{
 	position: relative; 
@@ -18,16 +19,16 @@
 	
 }
 .ks-date{
-	position: absolute; 
-	top: 0%; 
-    left: 1%;
-    color: #fff; 
+	/*position: absolute; 
+	bottom: 0%; 
+    left: 1%;*/
+    color: black; 
 }
 .ks-time{
-	position: absolute; 
-	top: 0%; 
-	right: 1%;
-	color: #fff; 
+	/*position: absolute; 
+	bottom: 0%; 
+	right: 1%;*/
+	color: black; 
 }
 .ks-speaker{
 	position: absolute; 
@@ -74,6 +75,7 @@
 }
 .thumbnail:hover .ks-div {
   opacity: 0.3;
+  background-color: #f57f20;
 }
 
 .thumbnail:hover .middle {
@@ -83,6 +85,6 @@
 	background: #f57f20;
 	color: white;
 }
-.thumbnail:hover{
+/*.thumbnail:hover{
 	box-shadow: 5px 5px 5px 5px;
-}
+}*/

@@ -12,47 +12,9 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-<section id='header'>
-  
-<div id="myCarousel" class="carousel slide slider" data-ride="carousel">
-  <!-- Indicators -->
-  <ol class="carousel-indicators">
-    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-    <li data-target="#myCarousel" data-slide-to="1"></li>
-    <li data-target="#myCarousel" data-slide-to="2"></li>
-  </ol>
-
-  <!-- Wrapper for slides -->
-  <div class="carousel-inner">
-    <div class="item active ">
-      <img  src="<?php echo URL::asset('/image/ks/header.jpg') ?>" alt="Los Angeles">
-    </div>
-
-    <div class="item">
-      <img src="<?php echo URL::asset('/image/ks/header.jpg') ?>" alt="Chicago">
-    </div>
-
-    <div class="item">
-      <img src="<?php echo URL::asset('/image/ks/header.jpg') ?>" alt="New York">
-    </div>
-  </div>
-
-  <!-- Left and right controls -->
-  <a style="left: 14px;" class="left carousel-control" href="#myCarousel" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a style="right: 14px;" class="right carousel-control" href="#myCarousel" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
-</section>
 
 
-
-
-<div class="container">
+<div style="margin-top: 65px;" class="container">
 
 
 <div style="background: #fff;" class="margin col-md-9">  
@@ -70,12 +32,12 @@
 </div>
 <div>
   <h2 class="font-size-15"><span>Event Details</span></h2>
-  <p>We have a monthly meetup where entrepreneurs both aspiring and established come together to meet one another. These events typically have a theme, which could be a speaker, a workshop or an entrepreneur sharing his/her experience.We have a monthly meetup where entrepreneurs both aspiring and established come together to meet one another. These events typically have a theme, which could be a speaker, a workshop or an entrepreneur sharing his/her experience.We have a monthly meetup where entrepreneurs both aspiring and established come together to meet one another. These events typically have a theme, which could be a speaker, a workshop or an entrepreneur sharing his/her experience.</p>
+  <p>We have a monthly meetup where entrepreneurs both aspiring and established come together to meet one another. These events typically have a theme, which could be a speaker, a workshop or an entrepreneur sharing his/her experience.We have a monthly meetup where entrepreneurs both aspiring and established come together to meet one another.</p>
 </div>
 
 <center>
 <div>
-   <button type="button" class="btn btn-lg rsvp" data-toggle="modal" data-target="#myModal">Join Us / RSVP</button></div>
+   <button type="button" class="btn btn-md rsvp" data-toggle="modal" data-target="#myModal">Join Us / RSVP</button></div>
 </center>    
 
 </div>
@@ -85,81 +47,30 @@
 
 
 <section id="Time">
-<div class="container-fluid">
-        <div class="row">
-        <div class="col-md-12">
-          
-            <h2 style="font-size: 22px; margin-bottom: -42px;"><span>Event Timeline</span></h2>
-         
-          <div style="display:inline-block;width:100%;overflow-y:auto;">
-          <ul class="timeline timeline-horizontal">
-            <li class="timeline-item">
-              <div class="timeline-badge primary"><i class="glyphicon glyphicon-check"></i></div>
-              <div class="timeline-panel">
-                <div class="timeline-heading">
-                  <h4 class="timeline-title">Enrolled in Open Ignite</h4>
-                  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> Sep 10, 2014</small></p>
-                </div>
-                <div class="timeline-body">
-                  <!-- <p>Mussum ipsum cacilds, vidis litro abertis. Consetis faiz elementum girarzis, nisi eros gostis.</p> -->
-                </div>
-              </div>
-            </li>
-            <li class="timeline-item">
-              <div class="timeline-badge success"><i class="glyphicon glyphicon-check"></i></div>
-              <div class="timeline-panel">
-                <div class="timeline-heading">
-                  <h4 class="timeline-title">Interviewed</h4>
-                  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> Feb 10, 2015</small></p>
-                </div>
-                <div class="timeline-body">
-                  <!-- <p>Mussum ipsum cacilds, vidis faiz elementum girarzis, nisi eros gostis.</p> -->
-                </div>
-              </div>
-            </li>
-            <li class="timeline-item">
-              <div class="timeline-badge info"><i class="glyphicon glyphicon-check"></i></div>
-              <div class="timeline-panel">
-                <div class="timeline-heading">
-                  <h4 class="timeline-title">Joined PEO</h4>
-                  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> Jun 1, 2015</small></p>
-                </div>
-                <div class="timeline-body">
-                  <!-- <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipisci. Mé faiz elementum girarzis, nisi eros gostis.</p> -->
-                </div>
-              </div>
-            </li>
-            <li class="timeline-item">
-              <div class="timeline-badge danger"><i class="glyphicon glyphicon-check"></i></div>
-              <div class="timeline-panel">
-                <div class="timeline-heading">
-                  <h4 class="timeline-title">Joined Ignite</h4>
-                  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> Feb 25, 2016</small></p>
-                </div>
-                <div class="timeline-body">
-                  <!-- <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis.</p> -->
-                </div>
-              </div>
-            </li>
-            <li class="timeline-item">
-              <div class="timeline-badge warning"><i class="glyphicon glyphicon-check"></i></div>
-              <div class="timeline-panel">
-                <div class="timeline-heading">
-                  <h4 class="timeline-title">Completed Training</h4>
-                  <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> May 31, 2016</small></p>
-                </div>
-                <div class="timeline-body">
-                  <!-- <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis.</p> -->
-                </div>
-              </div>
-            </li>
-            
-          </ul>
-        </div>
-        </div>
-      </div>
-    </div>
 
+<center><div class="timeline-style">
+<h2 class="font-size-15"><span>Timeline</span></h2>
+<h5 class="hh5"><span>Event Date<br></span><strong>12 August 2017</strong></h5>
+<div class="timeline">
+  <div class="timeline-item">
+    <time datetime="2016-02-03T15:00+08:00">3:00 PM</time>
+    <p>Task C completed</p>
+  </div>
+  <div class="timeline-item">
+    <time datetime="2016-02-03T11:30+08:00">11:30 AM</time>
+    <p>Task B completed</p>
+  </div>
+  <div class="timeline-item">
+    <time datetime="2016-02-03T09:45+08:00">9:45 AM</time>
+    <p>Task A completed</p>
+  </div>
+  <div class="timeline-item">
+    <time datetime="2016-02-03T09:45+08:00">9:45 AM</time>
+    <p>Task A completed</p>
+  </div>
+</div>
+</div>
+</center>
 </section>  
 
 
@@ -168,15 +79,15 @@
 
 <section class="speaker-details padding-120">
       <div class="margin col-md-12">
-      <div class="page-header">
-        <h2><span>Speaker</span></h2>
+      <div class="">
+        <h2 class="font-size-15"><span>Speaker</span></h2>
       </div>
         <div class="row">
-          <div style="box-sizing: inherit; display: block;" class="col-md-4 col-sm-4 col-xs-12">
-            <div class="speaker-image">
-              <img  src="<?php echo URL::asset('/image/ks/header.jpg') ?>" alt="speaker image" class="img-responsive img-circle">
-            </div>
+        <div style="box-sizing: inherit; display: block;" class="col-md-4 col-sm-4 col-xs-12">
+          <div class="speaker-image">
+            <img  src="<?php echo URL::asset('/image/ks/header.jpg') ?>" alt="speaker image" class="img-responsive ks-speaker-size">
           </div>
+        </div>
           <div class="col-md-8 col-sm-8 col-xs-12">
             <div class="speaker-content">
               <h4>John dissilva</h4>
@@ -237,43 +148,76 @@
 
 
 <section>
-<div style="padding-right: 0px;" class="margin col-md-3 pull-right">
-         <div class="thumbnail ks-thumbnail col-md-12">
-         <div class="ks-div">
-         <img class="img-responsive ks-image" 
-         src="<?php echo URL::asset('/image/ks/header.jpg') ?>" alt="">
-         <div>
-         <img 
-         src="https://scontent.fmaa1-1.fna.fbcdn.net/v/t1.0-9/13669172_1764311867187944_2683542492691180399_n.jpg?oh=a7f3a88d5d1255a1c81d8bfa77937627&amp;oe=59E37DD6" 
-         class="ks-speaker">
-         </div>
-         </div>
-         <div>
-         <h3 class="caption">Tripple S Workshop – Specific Sales Selling – BLR</h3>
-         
-         <h5>12 April 2017<span class="pull-right">12pm Onwards</span></h5>
-        
-         </div>
-         </div>
 
-         <div class="thumbnail ks-thumbnail col-md-12">
-         <div class="ks-div">
-         <img class="img-responsive ks-image" 
-         src="<?php echo URL::asset('/image/ks/header.jpg') ?>" alt="">
-         <div>
-         <img 
-         src="https://scontent.fmaa1-1.fna.fbcdn.net/v/t1.0-9/13669172_1764311867187944_2683542492691180399_n.jpg?oh=a7f3a88d5d1255a1c81d8bfa77937627&amp;oe=59E37DD6" 
-         class="ks-speaker">
-         </div>
-         </div>
-         <div>
-         <h3 class="caption">Tripple S Workshop – Specific Sales Selling – BLR</h3>
-         
-         <h5>12 April 2017<span class="pull-right">12pm Onwards</span></h5>
-  
-         
-         </div>
-         </div>
+<div style="padding-top: 18px; 
+            
+            padding-right: 15px;
+            padding-left: 15px;" class="col-md-3">
+   <h5 style="border-bottom: 3px solid #f57f20; font-size: 14px;">Similar Posts</h5>
+</div>
+<div style="margin-bottom: 15px;" class="col-md-3 pull-right">
+
+ <div class="event">
+  <div class="table">
+  <div class="row">
+     <div class="col date-short" style="background-color:#999999">
+       <div class="month">MAR</div> 
+       <div class="day">02</div> 
+     </div>
+     <div class="col event-details">
+       <div class="event-name">Explore Security Graduate Programs</div>
+       <div class="date-long">Wednesday, Mar 2, 6pm</div>
+       <div class="location">Webinar</div>
+       <a href="#"><div class="registration">RSVP</div></a> 
+     </div>
+    <div class="col right-col"></div>
+  </div>
+  </div>
+</div>
+
+</div>   
+
+<div style="margin-bottom: 25px;"  class="col-md-3 pull-right">
+
+ <div class="event">
+  <div class="table">
+  <div class="row">
+     <div class="col date-short" style="background-color:#999999">
+       <div class="month">MAR</div> 
+       <div class="day">02</div> 
+     </div>
+     <div class="col event-details">
+       <div class="event-name">Explore Security Graduate Programs</div>
+       <div class="date-long">Wednesday, Mar 2, 6pm</div>
+       <div class="location">Webinar</div>
+       <a href="#"><div class="registration">RSVP</div></a> 
+     </div>
+    <div class="col right-col"></div>
+  </div>
+  </div>
+</div>
+
+</div>   
+
+<div  class="col-md-3 pull-right">
+
+ <div class="event">
+  <div class="table">
+  <div class="row">
+     <div class="col date-short" style="background-color:#999999">
+       <div class="month">MAR</div> 
+       <div class="day">02</div> 
+     </div>
+     <div class="col event-details">
+       <div class="event-name">Explore Security Graduate Programs</div>
+       <div class="date-long">Wednesday, Mar 2, 6pm</div>
+       <div class="location">Webinar</div>
+       <a href="#"><div class="registration">RSVP</div></a> 
+     </div>
+    <div class="col right-col"></div>
+  </div>
+  </div>
+</div>
 
 </div>   
 </section>

@@ -11,7 +11,7 @@
 @stop
    @section('content')
 
-	
+	<link rel="stylesheet" type="text/css" href="css/events_style.css">
 
 
 
@@ -47,29 +47,33 @@
 							<li class="filter" data-filter=".jun-01"><span>June 01</span></li>
 						</ul>
 					</div> -->
-					<div class="tab-content-wrap row">
-						<?php foreach ($events as $key => $value) { 
-							# code...
-					?>
-						<div class="col-lg-3 col-md-4 col-sm-6 mix hvr-float-shadow wow fadeIn">
-							<div class="img-holder"><img src="http://wp1.themexlab.com/html/event_time/img/upcoming-event/1.jpg" alt=""></div>
-							<div class="content-wrap">
-								<img style="height:45;width:45" src="<?php echo URL::asset('/image/use.png') ?>" alt="" class="author-img">
-								<div class="meta">
-									<ul>
-										<li><span><i class="fa fa-clock-o"></i>{{ date('jS F Y',strtotime($value['event_date'])) }}</span></li>
-										<li><span><i class="fa fa-map-marker"></i>{{ $value['event_city'] }}</span></li>
-									</ul>
-								</div>
-						
-								<h3>{{ $value['event_title'] }}</h3>
-								<p>{!! html_entity_decode(substr(strip_tags($value['event_content']),0,40)) !!} [...]</p>
-								<a class="read-more" href="/single-events/{{ str_slug($value['event_title']) }}">read more<i class="fa fa-angle-right"></i></a>
-								<a class="read-more pull-right" href="#"  data-toggle="modal" data-target="#myModal"  >Rsvp<i class="fa fa-angle-right"></i></a>
-							</div>
-						</div> 
-					<?php } ?>
+		<div  class="tab-content-wrap row row-eq-height">
+			<?php foreach ($events as $key => $value) { 
+				# code...
+		?>
+			<div class="col-lg-3 col-md-4 col-sm-6 mix hvr-float-shadow wow fadeIn">
+				<div class="img-holder"><img src="http://wp1.themexlab.com/html/event_time/img/upcoming-event/1.jpg" alt="">
+                 
+				</div>
+				<div class="content-wrap row-eq-height">
+					
+					<div class="meta">
+						<ul>
+							<li><span><i class="fa fa-clock-o"></i>{{ date('jS F Y',strtotime($value['event_date'])) }}</span></li>
+							<li><span><i class="fa fa-map-marker"></i>{{ $value['event_city'] }}</span></li>
+						</ul>
 					</div>
+			
+					<h3>{{ $value['event_title'] }}</h3>
+					<p>{!! html_entity_decode(substr(strip_tags($value['event_content']),0,40)) !!} [...]</p>
+					<a class="read-more" href="/single-events/{{ str_slug($value['event_title']) }}">read more<i class="fa fa-angle-right"></i></a>
+					<a class="read-more pull-right" href="#"  data-toggle="modal" data-target="#myModal"  >Rsvp<i class="fa fa-angle-right"></i></a>
+				</div>
+			</div> 
+		<?php } ?>
+		</div>
+
+
 				</div>
 			</div>
 		</div>

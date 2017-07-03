@@ -22,12 +22,15 @@
   
   <div class=" margin col-md-12">
     <div>
-    <li style="list-style: none; padding-top: 15px;"><h5><i style="color: #f57f20; padding-right: 14px;" class="fa fa-calendar" aria-hidden="true"></i><span>12 SEP  2017</span><span><span>,  10 am onwards</span></span></h5></li>
+    <h5 class="pull-right hidden-xs">Knowledge Session</h5>
+    <li style="list-style: none; padding-top: 15px;"><h5><i style="color: #f57f20; padding-right: 14px;" class="fa fa-calendar" aria-hidden="true"></i><span>12 sep  2017</span><span><span>,  10 am onwards</span></span></h5></li>
         <h1 style="font-size: 20px">Swapping Customers for Productive Growth – BLR</h1>
     </div>
 <div class="padd">
   <ul >
-    <li style="list-style: none;"><h5><i style="color: #f57f20; padding-right: 18px;" class="fa fa-map-marker" aria-hidden="true"></i><span>Coimbatore</span><span><span>,  City hall</span></span></h5></li>
+    <li style="list-style: none;"><h5><i style="color: #f57f20; padding-right: 18px;" class="fa fa-map-marker" aria-hidden="true"></i><span>Coimbatore,</span><span><br><span style="padding-left: 26px;"> City hall</span></span>
+    <span class="pull-right">₹ 5000 / seat</span> 
+    </h5></li>
   </ul>
 </div>
 <div>
@@ -153,7 +156,8 @@
             
             padding-right: 15px;
             padding-left: 15px;" class="col-md-3">
-   <h5 style="border-bottom: 3px solid #f57f20; font-size: 14px;">Similar Posts</h5>
+            
+   <div style="background: #fff"><h5 style="border-bottom: 3px solid #f57f20; font-size: 14px;">Similar Posts</h5></div>
 </div>
 <div style="margin-bottom: 15px;" class="col-md-3 pull-right">
 
@@ -246,7 +250,7 @@
         <div class="modal-body">
           <div>
  
-<h1>JOIN US!! </h1>
+<!-- <h1>JOIN US!! </h1> -->
 <div class="shopping-cart">
 
   <div class="column-labels">
@@ -255,7 +259,7 @@
     <label class="product-price">Price</label>
     <label class="product-quantity">Seats</label>
     <label class="product-removal">Remove</label>
-    <label class="product-line-price">Total</label>
+    <label class="product-line-price"></label>
   </div>
 
   <div class="product">
@@ -329,7 +333,9 @@
 
 
 <script type="text/javascript">
- var taxRate = 0;
+
+
+var taxRate = 0;
 var shippingRate = 0; 
 var fadeTime = 0;
 

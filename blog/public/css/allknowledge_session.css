@@ -39,7 +39,7 @@
 	border-radius: 50%; 
 	bottom: 0%; 
 	right: 0%; 
-	border: 2px solid #f57f20;
+	border: 2px solid #fff;
 }
 
 .margin {
@@ -88,8 +88,11 @@
     position: absolute;
     height: 100%;
     width: 100%;
-    opacity: .7;
+    opacity: .5;
     background-color: #f57f20;
     top: 0%;
     border-radius: 0 0 50px;
+}
+.thumbnail:hover{
+	 box-shadow: 0 4px 8px 0 #999999, 0 6px 20px 0 #999999;
 }

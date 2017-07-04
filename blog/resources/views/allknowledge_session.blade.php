@@ -15,6 +15,7 @@
 
 
 		<div class="col-md-4 col-sm-4 padd">
+		<a href="#">
 		<div class="thumbnail">
 			
 		     <div class="ks-div">
@@ -40,12 +41,15 @@
 	           <h5 class="ks-date">12 April 2017<span class="pull-right">12pm Onwards</span>	</h5>
 	         </div>
 		      </div>
+             </a>
+
 		      </div>
 
 
 
 
 		<div class="col-md-4 col-sm-4 padd">
+		<a href="#">
 		<div class="thumbnail">
 			
 		     <div class="ks-div">
@@ -71,10 +75,12 @@
 	           <h5 class="ks-date">12 April 2017<span class="pull-right">12pm Onwards</span>	</h5>
 	         </div>
 		      </div>
+		      </a>
 		      </div>
 
 
 		<div class="col-md-4 col-sm-4 padd">
+		<a href="#">
 		<div class="thumbnail">
 			
 		     <div class="ks-div">
@@ -100,6 +106,7 @@
 	           <h5 class="ks-date">12 April 2017<span class="pull-right">12pm Onwards</span>	</h5>
 	         </div>
 		      </div>
+		      </a>
 		      </div>
  </div>
 </div>

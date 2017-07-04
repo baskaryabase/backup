@@ -22,8 +22,10 @@
   
   <div class=" margin col-md-12">
     <div>
-    <h5 class="pull-right hidden-xs">Knowledge Session</h5>
+    <h5 style="font-weight: bold;" class="pull-right hidden-xs">Knowledge Session</h5>
     <li style="list-style: none; padding-top: 15px;"><h5><i style="color: #f57f20; padding-right: 14px;" class="fa fa-calendar" aria-hidden="true"></i><span>12 sep  2017</span><span><span>,  10 am onwards</span></span></h5></li>
+
+    <li style="list-style: none;"><h5><i style="color: #f57f20; padding-right: 14px;" class="fa fa-clock-o" aria-hidden="true"></i><span>Four hour Session</span></h5></li>
         <h1 style="font-size: 20px">Swapping Customers for Productive Growth – BLR</h1>
     </div>
 <div class="padd">
@@ -39,7 +41,7 @@
 </div>
 
 <center>
-<div>
+<div style="padding: 15px">
    <button type="button" class="btn btn-md rsvp" data-toggle="modal" data-target="#myModal">Join Us / RSVP</button></div>
 </center>    
 
@@ -53,7 +55,7 @@
 
 <center><div class="timeline-style">
 <h2 class="font-size-15"><span>Timeline</span></h2>
-<h5 class="hh5"><span>Event Date<br></span><strong>12 August 2017</strong></h5>
+<!-- <h5 class="hh5"><span>Event Date<br></span><strong>12 August 2017</strong></h5> -->
 <div class="timeline">
   <div class="timeline-item">
     <time datetime="2016-02-03T15:00+08:00">3:00 PM</time>
@@ -113,7 +115,7 @@
     <div class="col-md-6 t1">
       <div class="col-head text-center">
         
-        <h3>Awards</h3>
+        <h3 style="padding-top: 5px;font-size: 20px;">Awards</h3>
       </div>
       <ul class="list-unstyled">
            <li>
@@ -130,7 +132,7 @@
     <div class="col-md-6 t2">
       <div class="col-head text-center">
         
-        <h3>Recognitions</h3>
+        <h3 style="padding-top: 5px;font-size: 20px">Recognitions</h3>
       </div>
       <ul class="list-unstyled">
            <li>
@@ -157,14 +159,24 @@
             padding-right: 15px;
             padding-left: 15px;" class="col-md-3">
             
-   <div style="background: #fff"><h5 style="border-bottom: 3px solid #f57f20; font-size: 14px;">Similar Posts</h5></div>
+   <div style=" background: #f57f20;
+                color: #fff;
+                height: 26px;
+                text-align: center;
+                padding-top: 0px;
+                border-radius: 5px;">
+                <h5 
+                style="font-size: 14px;
+                           padding-top:5px;">
+                Similar Sessions</h5></div>
 </div>
-<div style="margin-bottom: 15px;" class="col-md-3 pull-right">
+
+<div style="margin-bottom: 15px;margin-top: 15px;" class="col-md-3 pull-right">
 
  <div class="event">
   <div class="table">
   <div class="row">
-     <div class="col date-short" style="background-color:#999999">
+     <div class="col date-short" style="background-color:#8ec33f">
        <div class="month">MAR</div> 
        <div class="day">02</div> 
      </div>
@@ -203,25 +215,6 @@
 
 </div>   
 
-<div  class="col-md-3 pull-right">
-
- <div class="event">
-  <div class="table">
-  <div class="row">
-     <div class="col date-short" style="background-color:#999999">
-       <div class="month">MAR</div> 
-       <div class="day">02</div> 
-     </div>
-     <div class="col event-details">
-       <div class="event-name">Explore Security Graduate Programs</div>
-       <div class="date-long">Wednesday, Mar 2, 6pm</div>
-       <div class="location">Webinar</div>
-       <a href="#"><div class="registration">RSVP</div></a> 
-     </div>
-    <div class="col right-col"></div>
-  </div>
-  </div>
-</div>
 
 </div>   
 </section>
@@ -237,7 +230,7 @@
 
 
 
-
+<!-- popup -->
  <div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog">
     
@@ -245,7 +238,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">RSVP registration</h4>
+          <h4 class="modal-title">Registration Form</h4>
         </div>
         <div class="modal-body">
           <div>
@@ -283,19 +276,19 @@
 <div  class="i container">  
   <form id="contact" action="" method="post">
     <fieldset>
-      <input placeholder="Your name" type="text" tabindex="1" required autofocus>
+      <input placeholder="Name" type="text" tabindex="1" required autofocus>
     </fieldset>
     <fieldset>
-      <input placeholder="Your Email Address" type="email" tabindex="2" required>
+      <input placeholder="Email Address" type="email" tabindex="2" required>
     </fieldset>
     <fieldset>
-      <input placeholder="Your Phone Number (optional)" type="tel" tabindex="3" required>
+      <input placeholder="Phone Number" type="tel" tabindex="3" required>
     </fieldset>
     <fieldset>
       <input placeholder="City" type="text" tabindex="4" required>
     </fieldset>
     <fieldset>
-      <input placeholder="company name" type="url" tabindex="4" required>
+      <input placeholder="Startups Name" type="url" tabindex="4" required>
  
  </fieldset>
         
@@ -308,7 +301,7 @@
 
 
 <fieldset>
-     <button style="color: #fff" name="submit" type="submit" id="contact-submit" data-submit="...Sending">RSVP</button>
+     <button style="color: #fff" name="submit" type="submit" id="contact-submit" data-submit="...Sending">Register</button>
     </fieldset>
   </form>
 </div>

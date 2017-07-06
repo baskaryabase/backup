@@ -2281,12 +2281,40 @@ function getSingleKs(){
 return view('knowledge_sessions');
 
 }
+
+
 function getAllKs(){
 
 
 return view('allknowledge_session');
 
 }
+function getMentoring(){
 
+return view('mentoringpage');
+
+}
+function getDigitalMarketing(){
+
+return view('digitalmarketing');
+
+}
+function getReachUs(){
+
+return view('reachus');
+
+}
+
+function getWhatWeDo(){
+
+return view('Whatwedo');
+
+}
+
+function getKsEdit(){
+
+return view('ks_edit');
+
+}
 
 }

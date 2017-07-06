@@ -49,7 +49,7 @@ body{
 }
 #event-speakers .single-speakers .img-holder img {
   border-radius: 50%;
-  box-shadow: -2px 2px 0 -1px rgba(11, 186, 151, 0.7), 2px 2px 0 -1px rgba(247, 159, 255, 0.7);
+  box-shadow: -2px 2px 0 -1px #f57f20, 2px 2px 0 -1px #8ec33f;
 }
 #event-speakers .single-speakers .info {
   padding: 25px 0;
@@ -216,3 +216,13 @@ body{
     position: relative;
     top: -.5em;
 }
+
+@media only screen and (min-width: 1094px) {
+  .cont{
+    padding-left: 60px;
+    padding-right: 60px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+

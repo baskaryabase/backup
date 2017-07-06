@@ -23,7 +23,7 @@ $the_content=$events['event_content'];
  ?>
 	
 <section class="full">
-<div class="container event_single">
+<div class="cont event_single">
 	<div style="margin-top: 90px; margin-bottom: 25px;" class="col-md-9">
 			
 			<div style="background: #fff" class="col-md-12 col-sm-12">
@@ -104,11 +104,11 @@ $the_content=$events['event_content'];
 </div><!--end of article snippet-->
 </div>
 
- <div><section id="event-speakers">
+ <div><section style="padding-top: 0px;" id="event-speakers">
 		<div class="container">
 		<div class="col-md-9">
 			<div class="row">
-				<div class="col-lg-6 col-md-8 col-sm-8 col-lg-offset-0 col-md-offset-1 col-sm-offset-1">
+				<div class="col-md-8 col-sm-8 col-lg-offset-0 col-md-offset-1 col-sm-offset-1">
 					<!-- .single-speakers -->
 					<div class="single-speakers row">
 						<div class="img-holder text-center col-lg-6 col-md-5 col-sm-5">
@@ -132,7 +132,7 @@ $the_content=$events['event_content'];
 					<!-- .single-speakers -->
 				 
 				</div>
-				<div class="col-lg-6 col-md-8 col-sm-10 col-lg-offset-0 col-md-offset-1 col-sm-offset-1">
+				<div style="margin-bottom: -150px" class="col-md-8 col-sm-10 col-lg-offset-0 col-md-offset-1 col-sm-offset-1">
 					<!-- .single-speakers -->
 					<div class="single-speakers row">
 						<div class="img-holder text-center col-lg-6 col-md-5 col-sm-5">

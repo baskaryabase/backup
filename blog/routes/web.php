@@ -22,7 +22,11 @@ Route::get('/events', 'MainController@getEvents');
 Route::get('/single-events/{fn}', 'MainController@getSingleEvents');
 Route::get('/knowledge-session/', 'MainController@getSingleKs');
 Route::get('/knowledge-sessions/', 'MainController@getAllKs');
-
+Route::get('/mentoring/', 'MainController@getMentoring');
+Route::get('/digital-marketing/', 'MainController@getDigitalMarketing');
+Route::get('/reach-us/', 'MainController@getReachUs');
+Route::get('/what-we-do/', 'MainController@getWhatWeDo');
+Route::get('/ks-edit/', 'MainController@getKsEdit');
  
   Route::post('/get-find-member', 'MainController@get_find_member');
 

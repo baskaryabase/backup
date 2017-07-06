@@ -246,7 +246,7 @@
           <h4 class="modal-title">Registration Form</h4>
         </div>
         <div class="modal-body">
-          <div>
+    <div>
  
 <!-- <h1>JOIN US!! </h1> -->
 <div class="shopping-cart">

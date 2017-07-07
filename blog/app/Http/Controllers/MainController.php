@@ -2316,5 +2316,10 @@ function getKsEdit(){
 return view('ks_edit');
 
 }
+function getOurTeam(){
+
+return view('our_team');
+
+}
 
 }

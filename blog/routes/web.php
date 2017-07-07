@@ -27,6 +27,7 @@ Route::get('/digital-marketing/', 'MainController@getDigitalMarketing');
 Route::get('/reach-us/', 'MainController@getReachUs');
 Route::get('/what-we-do/', 'MainController@getWhatWeDo');
 Route::get('/ks-edit/', 'MainController@getKsEdit');
+Route::get('/our-team/', 'MainController@getOurTeam');
  
   Route::post('/get-find-member', 'MainController@get_find_member');
 

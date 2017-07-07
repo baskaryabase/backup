@@ -1,10 +1,10 @@
-  @section('footer')
+   @section('footer')
 
  <footer class="footer">
         <div class="container">
-          <p class="text-muted"> Copyright 2017 Startups Club Services Pvt Ltd. </p>
+          <center><p class="text-muted"> Copyright 2017 Startups Club Services Pvt Ltd. </p></center>
         </div>
-      </footer>
+</footer>
 
       <script>
      
@@ -42,6 +42,6 @@
 
 </script>
 
-
+<script src="<?php echo URL::asset('/js/sc_care.js') ?>"></script>
 
           @stop

@@ -16,7 +16,7 @@
 }*/
 @media only screen and (min-width: 1080px) {
     .container {
-       padding-right: 60px;
+       padding-right: 20px;
        padding-left: 60px;
        margin-left: auto;
        margin-right: auto;
@@ -1049,4 +1049,14 @@ fieldset {
 .event .event-details .registration {
   font-weight: bold;
   color: #f57f20;
+}
+
+
+.opacity {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: .5;
+    background-color: #000;
+    top: 0;
 }

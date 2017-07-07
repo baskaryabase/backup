@@ -34,12 +34,7 @@
 
    @yield('content')
 
-
-
-
-       
-
-   @section('footer')
+ @section('footer')
         @show
         <script src="<?php echo URL::asset('/bootstrap.3.3.6/js/bootstrap.min.js') ?>"></script>
  

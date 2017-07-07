@@ -1,5 +1,5 @@
    
-  @extends('layouts.HeaderFooter')
+  @extends('layouts.PlainHeaderFooter')
       @section('title')
     <title>Events | Member Platform | Startups Club</title> 
    @stop

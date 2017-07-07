@@ -1,0 +1,68 @@
+@media (min-width : 768px) and (max-width: 1920px) {
+	.dropdown:hover .dropdown-menu{display: block;}
+	.classclearfix{display: none;}
+}
+
+ 
+@media (max-width: 991px) {
+	.col-md-offset-1.col-md-5, .col-md-6{width: 50%;float: left;}
+	.lead-blue-block .blue-block-link,.lead-blue-block p{font-size: 22px !important;}
+}
+
+@media (max-width: 768px) {
+	.navbar-brand {float: left;}
+	.navbar-brand{padding: 8px 27px; }
+	/*.navbar-brand > img {width: 273px;}*/
+	.col-md-offset-1.col-md-5, .col-md-6{width: 100%;float: left;}
+	.lead-doc{margin-bottom: 30px}
+	.nav.navbar-nav.navbar-right a:hover{border-bottom: none !important;}
+	.lead-menu-item .active{border-bottom: none !important;background: #d2d2d2 !important; color: #ffffff; font-weight: bold;}
+	main{padding: 0 !important;}
+	.lead-footer-bg .right{padding: 37px 70px !important;}
+	.col-md-offset2.col-md-8.col-md-offset-2 > p{padding: 30px 31px 0px;}
+	.dropdown-menu{width: 100% !important;}
+	.dropdown-menu::before{top:30px !important;left:9px; border-bottom: 10px transparent !important;}
+	.abtcmpny{font-weight: normal;font-size: 20px; line-height: 150%;}
+	.main-sidebar{width: 0;}
+	.main-sidebar.sidenav{margin-top: 50px !important;}
+	.collapse.in .lead-menu-item a {padding: 25px 15px!important;}
+
+}
+
+@media (max-width: 522px){
+	.bg-center > h1{font-size: 50px !important;}
+
+}
+
+@media (max-width: 479px) { 
+	.lead-doc{text-indent: 0px;margin-bottom: 5px}
+	.bg-center p{font-size: 20px !important;}
+	.lead-content-2-btn{font-size: 16px !important;}
+	.lead-content-2-btn:hover{font-size: 20px !important;}
+
+}
+
+@media (min-width : 768px) and (max-width: 1024px) {
+	.collapse .lead-menu-item a{padding: 15px !important;}
+	.navbar-header{display: none;}
+}
+@media (min-width: 767px){
+	.sidebar-icon{
+		display: none;
+	}
+}
+/*@media (max-width : 479px) {
+	form.frm{padding: 40 !important}
+
+}
+
+@media (max-width : 426px) {
+	.bg-center > h1{font-size: 30px !important;}
+
+}
+
+@media (max-width: 360px) {
+.home .full-bg{padding: 0 0 50px !important;}
+.lead-menu-item > a:hover{border-bottom: none !important;}
+
+}*/

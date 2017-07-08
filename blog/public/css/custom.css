@@ -119,8 +119,8 @@ ul.treeview-menu {
     text-align: right;
 }
 aside#mySidenav{overflow-y: hidden;}
-ul li a:hover {
-    background: #000;}
+/*ul li a:hover {
+    background: #000;}*/
 li.menulinks {
     border-bottom: 1px solid rgba(60,60,60,0.1);
     padding: 6px 0;

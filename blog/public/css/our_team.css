@@ -18,7 +18,12 @@ h2{
     top: 50%;
     z-index: 1;    
 }
-
+.cont{
+padding-right: 15px;
+padding-left: 15px;
+margin-left: auto;
+margin-right: auto;
+}
 span{
      background: #fff;
       padding: 0 20px;
@@ -70,6 +75,7 @@ margin-bottom: 25px
 .team-member {
   margin: 15px 0;
   padding: 0;
+  width: 289px;
 }
 
 .team-member figure {

@@ -23,7 +23,7 @@
       <div class="cont">
         <div class="row">
 
-          <div class="col-md-offset-2 col-sm-offset-2 col-md-4 col-sm-4">
+          <div align="center" class="col-md-offset-2 col-md-4">
             <div class="team-member">
               <figure>
                 <img src="<?php echo URL::asset('/image/our_team/salma.jpg') ?>">
@@ -41,7 +41,7 @@
             </div><!-- /.team-member-->
           </div><!-- /.col-md-4 -->
 
-          <div class="col-md-4 col-sm-4">
+          <div align="center" class="col-md-4">
             <div class="team-member">
               <figure>
                 <img src="<?php echo URL::asset('/image/our_team/vivek.jpg') ?>">
@@ -70,7 +70,7 @@
       </div><!-- /.col-md-12 -->
 
 <div class="row text-center">
-<div class="col-md-4 col-sm-4 col-md-offset-4 col-sm-offset-4">
+<div align="center" class="col-md-4 col-sm-4 col-sm-offset-4">
             <div class="team-member">
               <figure>
                 <img src="<?php echo URL::asset('/image/our_team/Mahesh-Bhalla.jpg') ?>" alt="" class="img-responsive">
@@ -95,8 +95,8 @@
         <center><h2><span>Board Advisor</span></h2></center>
       </div><!-- /.col-md-12 -->
 
-<div class="row text-center">
-<div class="col-md-4 col-sm-4 col-md-offset-4 col-sm-offset-4">
+<div  class="row text-center">
+<div align="center" class="col-md-4 col-sm-4 col-sm-offset-4">
             <div class="team-member">
               <figure>
                 <img src="<?php echo URL::asset('/image/our_team/michael.jpg') ?>" alt="" class="img-responsive">
@@ -122,7 +122,7 @@
       </div><!-- /.col-md-12 -->
 
 <div class="row text-center">
-<div class="col-md-3 col-sm-3">
+<div align="center" class="col-md-4">
             <div class="team-member">
               <figure>
                 <img src="<?php echo URL::asset('/image/our_team/faraz.jpg') ?>" alt="" class="img-responsive">
@@ -136,11 +136,11 @@
                 </figcaption>
               </figure>
               <h4>Mohammed Faraz</h4>
-              <p></p>
+              <p>Business Head</p>
             </div><!-- /.team-member-->
           </div> <!-- /.col-md-4 -->
   
-<div class="col-md-3 col-sm-3">
+<div align="center" class="col-md-4">
             <div class="team-member">
               <figure>
                 <img src="<?php echo URL::asset('/image/our_team/soumiya.jpg') ?>" alt="" class="img-responsive">
@@ -154,11 +154,11 @@
                 </figcaption>
               </figure>
               <h4>Soumya Sthapak</h4>
-              <p></p>
+              <p>Head of Sales</p>
             </div><!-- /.team-member-->
           </div> <!-- /.col-md-4 -->
 
-<div class="col-md-3 col-sm-3">
+<div align="center" class="col-md-4">
             <div class="team-member">
               <figure>
                 <img src="<?php echo URL::asset('/image/our_team/sidh.jpeg') ?>" alt="" class="img-responsive">
@@ -172,11 +172,11 @@
                 </figcaption>
               </figure>
               <h4>Siddharth Jena</h4>
-              <p></p>
+              <p>Strategic</p>
             </div><!-- /.team-member-->
           </div> <!-- /.col-md-4 -->
 
-<div class="col-md-3 col-sm-3">
+<div align="center" class="col-md-4">
             <div class="team-member">
               <figure>
                 <img src="<?php echo URL::asset('/image/our_team/mandy.jpeg') ?>" alt="" class="img-responsive">
@@ -190,10 +190,46 @@
                 </figcaption>
               </figure>
               <h4>Mandeep Kaur</h4>
-              <p></p>
+              <p>General Manager</p>
             </div><!-- /.team-member-->
           </div> <!-- /.col-md-4 -->
 
+
+<div align="center" class="col-md-4">
+            <div class="team-member">
+              <figure>
+                <img src="<?php echo URL::asset('/image/our_team/prasad.jpg') ?>" alt="" class="img-responsive">
+                <figcaption style="padding: 5px;">
+                  <p class="font">Prasad is our talented back end developer who pulls the weight to have all of the development done for Startups Club. He works under Khuzema to give our members the digital experience we wish to give. He stays quite silent, then suddenly delivers a killer one-liner.</p>
+                  <ul>
+                    <li><a href=""><i class="fa fa-facebook fa-2x"></i></a></li>
+                    <li><a href=""><i class="fa fa-twitter fa-2x"></i></a></li>
+                    <li><a href=""><i class="fa fa-linkedin fa-2x"></i></a></li>
+                  </ul>
+                </figcaption>
+              </figure>
+              <h4>Thirunarayanan Prasad</h4>
+              <p>Tech Head</p>
+            </div><!-- /.team-member-->
+          </div> <!-- /.col-md-4 -->
+
+<div align="center" class="col-md-4">
+            <div class="team-member">
+              <figure>
+                <img src="<?php echo URL::asset('/image/our_team/jothi.jpg') ?>" alt="" class="img-responsive">
+                <figcaption style="padding: 5px;">
+                  <p class="font">Jyothi works as a part of the Operations teams and works along with Mandeep to ensure that all of the operations of the company are smoothly taken care of. She remains unusually silent but gets the job done!</p>
+                  <ul>
+                    <li><a href=""><i class="fa fa-facebook fa-2x"></i></a></li>
+                    <li><a href=""><i class="fa fa-twitter fa-2x"></i></a></li>
+                    <li><a href=""><i class="fa fa-linkedin fa-2x"></i></a></li>
+                  </ul>
+                </figcaption>
+              </figure>
+              <h4>Jyothi Shetty</h4>
+              <p></p>
+            </div><!-- /.team-member-->
+          </div> <!-- /.col-md-4 -->
 
 
 </div>

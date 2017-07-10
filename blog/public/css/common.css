@@ -328,3 +328,18 @@ time.blue_green { background-color: #148aa5 }
 a.eventCard--hasGroup{
     color:#000!important;
 }
+
+
+
+/*header*/
+nav.navbar.navbar-default.navbar-static-top{background: #fff;}
+.dropdown-menu>li>a:hover {
+   text-decoration: none;
+}
+
+  ul.dropdown-menu a:hover {
+   background: #f1f1f1 ;
+}
+ul.dropdown-menu a {
+   padding: 12px 16px;
+}

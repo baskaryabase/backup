@@ -1,27 +1,45 @@
-  
- @section('header') 
-<nav class="navbar navbar-white navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-           <a class="navbar-brand" href="/"><img src="<?php echo URL::asset('/image/logo_head.png') ?>"></img></a>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav navbar-right">    
+@section('header') 
+<div id="navbar">
+  <nav class="navbar navbar-default navbar-static-top" role="navigation">
+    <div class="container">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/"><img src="<?php echo URL::asset('/image/logo_head.png') ?>"></img></a>
+    </div>
+        <div class="collapse navbar-collapse" id="navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">    
                             <?php if(!empty(session()->get('SessionID'))){ ?>
-                  <li class=""><a href="/logout" >Logout</a></li>
-                  <?php }else{ ?>
-                  <li class=""><a href="#" class="getLogin" >Login</a></li>
+                 <li class=""><a href="/logout" >Logout</a></li>
+                  <?php }else{ ?> 
+                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" >Know us<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">What we do</a></li>
+                        <li><a href="#">Team</a></li>
+                        <li><a href="#">Family</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" >Event<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li class="kopie"><a href="#">Meetups</a></li>
+                        <li><a href="#">Ks</a></li>
+                        <li><a href="#">Ravup</a></li>
+                        <li><a href="#">Calender</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Demoday</a></li>
+                <li><a href="#">Find</a></li>
+                <li><a href="#">Ask</a></li>
+                <li><a href="#">Scin</a></li>
+            
+                </ul>
                   <?php } ?>
-            <li class="<?php echo (Request::segment(1)=='home')?'actives':''; ?>"><a href="/">Home <span class="badge homebadge"></span></a></li>
-            <li class="<?php echo (Request::segment(1)=='find')?'actives':''; ?>"><a href="/find">Find</a></li>
-            <li class="<?php echo (Request::segment(1)=='ask')?'actives':''; ?>"><a data-html="true" data-toggle="tooltip" data-placement="bottom" title="Coming Soon">Ask</a></li>
-            <li class="<?php echo (Request::segment(1)=='events')?'actives':''; ?>"><a href="http://startupsclub.org/monthly-meetings/">Events</a></li>
+            
                           <?php if(!empty(session()->get('SessionID'))){ ?>
   <li><a onclick="get_notification()" class="btn btn-default dropdown-toggle" id="menu1" data-toggle="dropdown"><img src="<?php echo URL::asset('/image/notification.png') ?>"></img> <span class="badge notifybadge"></span></a>
 <ul class="dropdown-menu custom_notify" role="menu" aria-labelledby="menu1">
@@ -50,12 +68,8 @@
           </ul>
         </div>
       </div>
+      </div>
     </nav>
-
-
-
-
-    
 <div id="login_modal" class="modal fade" role="dialog">
   <div class="modal-dialog ">
     <!-- Modal content-->
@@ -142,6 +156,11 @@
 /*$(document).ready(function() {
 $('[data-toggle="tooltip"]').tooltip(); 
 })*/
+$('ul.nav li.dropdown').hover(function() {
+  $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
+}, function() {
+  $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
+});
 </script>
    <script src="<?php echo URL::asset('/js/header.js') ?>"></script>
      <link href="<?php echo URL::asset('/css/common.css') ?>" rel="stylesheet" type="text/css">

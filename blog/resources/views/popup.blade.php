@@ -82,7 +82,7 @@
         <div class="panel-heading">
           <div class="row">
             <div id="a" class="col-xs-6 tabs focus">
-              <a href="#" class="active" id="login-form-link"><div class="login">LOGIN</div></a>
+              <a href="#" class="active " id="login-form-link"><div class="login">LOGIN</div></a>
             </div>
             <div id="b" class="col-xs-6 tabs">
               <a href="#" id="register-form-link"><div class="register ">REGISTER</div></a>

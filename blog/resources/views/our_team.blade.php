@@ -1,8 +1,8 @@
-@extends('layouts.HeaderFooter')
+@extends('layouts.PlainHeaderFooter')
       @section('title')
     <title>Events | Member Platform | Startups Club</title> 
    @stop
-  @section('header')
+ @section('header')
 @include('layouts.header')
 @stop
    @section('content')
@@ -12,6 +12,7 @@
 
 
 <!-- Our team Section -->
+<div>
 <section id="team" class="team content-section">
   <div class="container">
   <div class="col-md-12">
@@ -480,3 +481,4 @@
 
   </div><!-- /.container -->
 </section><!-- /.our-team -->
+</div>

@@ -2321,5 +2321,10 @@ function getOurTeam(){
 return view('our_team');
 
 }
+function getPopup(){
+
+return view('popup');
+
+}
 
 }

@@ -226,3 +226,24 @@ body{
   }
 }
 
+.height{
+  height: 200px;
+}
+.bot-mar{
+  margin-bottom: 85px;
+}
+.white-bg{
+  background: #fff;
+}
+.eve-title{
+  font-size: 25px; 
+  margin-top: 20px;
+}
+.speaker-div{
+  padding-top: 0px;
+}
+@media only screen and (max-width: 844px) {
+ .speaker-div{
+  height: 600px;
+} 
+}

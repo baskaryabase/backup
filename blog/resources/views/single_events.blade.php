@@ -27,36 +27,34 @@ print_r($events);
 echo '</pre>';*/
  ?>
 	
-<section class="full"> 
+<section class="full bot-mar"> 
 <div class="cont event_single">
-	<div style="margin-top: 90px; margin-bottom: 25px;" class="col-md-9">
-			
-			<div style="background: #fff" class="col-md-12 col-sm-12">
-				<div style="padding-top: 5px;" class="article-body">
-				
-				<h1 style="font-size: 25px; margin-top: 20px;">{{ $events['event']['event_title'] }}</h1>
-				<div class="row highligh_row" >
-					<?php
-					if(!empty($date)){ ?>							  	
-						<p style="font-size: 14px;" class="event_title"><i style="color: #f57f20;" class="fa fa-calendar" aria-hidden="true"></i> <span class="event_info"><?php echo $date; ?></span></p>
-						 <?php }
-					?>
+<div class="bot-mar col-md-9">
+<div class="white-bg col-md-12 col-sm-12">
+<div style="padding-top: 5px;" class="article-body">
+<h1 class="eve-title">{{ $events['event']['event_title'] }}</h1>
+<div class="row highligh_row" >
+<?php
+if(!empty($date)){ ?>							  	
+<p style="font-size: 14px;" class="event_title"><i style="color: #f57f20;" class="fa fa-calendar" aria-hidden="true"></i> <span class="event_info"><?php echo $date; ?></span></p>
+		 <?php }
+		?>
 
-					<?php 
-					if(!empty($time)){ ?>
-			            <p style="font-size: 14px;" class="event_title event_time"><i style="color: #f57f20;" class="fa fa-clock-o" aria-hidden="true"></i> <span class="econtents"><?php echo $time; ?></span></p>
+	<?php 
+		if(!empty($time)){ ?>
+        <p style="font-size: 14px;" class="event_title event_time"><i style="color: #f57f20;" class="fa fa-clock-o" aria-hidden="true"></i> <span class="econtents"><?php echo $time; ?></span></p>
 			            <?php }
 			            ?>
 
 					<?php
-					if(!empty($events_cost_for_attending_paid)){ ?>
-			            <p style="font-size: 14px;" class="rate_single"><i style="font-size: 14px; color: #f57f20;" class="event-irupee">&#x20B9;</i><?php echo $events_cost_for_attending_paid; ?></p>
-			            <?php }
-			            else{ ?>
-			            	<p style="font-size: 14px;" class="rate_single"> Free</p>
-			            <?php }
-					?>	
-					<p style="font-size: 14px;" class="rate_single" data-post="" data-cost="<?php echo '200' ?>" onclick="buy_ticket(this)">RSVP</p>
+		if(!empty($events_cost_for_attending_paid)){ ?>
+        <p style="font-size: 14px;" class="rate_single"><i style="font-size: 14px; color: #f57f20;" class="event-irupee">&#x20B9;</i><?php echo $events_cost_for_attending_paid; ?></p>
+        <?php }
+        else{ ?>
+    	<p style="font-size: 14px;" class="rate_single"> Free</p>
+        <?php }
+		?>	
+		<p style="font-size: 14px;" class="rate_single" data-post="" data-cost="<?php echo '200' ?>" onclick="buy_ticket(this)">RSVP</p>
 				</div>
 				<hr>
 				<div class="row">
@@ -81,23 +79,7 @@ echo '</pre>';*/
 			       
 			       
 			        	<div id="myModal" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Modal Header</h4>
-      </div>
-      <div class="modal-body">
-        <p>Some text in the modal.</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-
-  </div>
+  
 </div>
 			
 <div class="group">
@@ -109,10 +91,10 @@ echo '</pre>';*/
 </div><!--end of article snippet-->
 </div>
 
- <div><section style="padding-top: 0px;" id="event-speakers">
+ <div><section class="speaker-div" id="event-speakers">
 		<div class="container">
 		<div class="col-md-9">
-			<div class="row">
+			<div class="row height">
 				<?php foreach ($events['speaker'] as $key => $value) {
 				$speaker_image= URL::asset("/image/speakers/".$value['speaker_image']);
 ?>
@@ -157,7 +139,7 @@ echo '</pre>';*/
 </div>
 <!-- end of 9 columns -->
 
-<div style="margin-top: 75px;" class="col-md-3">
+<div style="margin-top: -80px;" class="col-md-3">
 <div>
 	<div style="height: 26px;
 	     background-color: #f57f20;
@@ -292,3 +274,5 @@ echo '</pre>';*/
 </div>
 </div>
 </div>
+
+@stop

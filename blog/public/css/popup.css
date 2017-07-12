@@ -1,21 +1,6 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,100,700,500);
 
-body {
-  padding-top: 90px;
-  background:#F7F7F7;
-  color:#666666;
-  font-family: 'Roboto', sans-serif;
-  font-weight:100;
-}
+ 
 
-body{
-  width: 100%;
-  background: -webkit-linear-gradient(left, #22d686, #24d3d3, #22d686, #24d3d3);
-  background: linear-gradient(to right, #22d686, #24d3d3, #22d686, #24d3d3);
-  background-size: 600% 100%;
-  -webkit-animation: HeroBG 20s ease infinite;
-          animation: HeroBG 20s ease infinite;
-}
 
 @-webkit-keyframes HeroBG {
   0% {
@@ -115,8 +100,8 @@ label {
   margin: 30px;
 }
 .panel-login>.panel-heading {
-  color: #848c9d;
-  background-color: #e8e9ec;
+  color: #000;
+  background-color: transparent;
   border-color: #fff;
   text-align:center;
   border-bottom-left-radius: 5px;
@@ -182,7 +167,7 @@ label {
   border-color: #ccc;
 }
 .btn-login {
-  background-color: #E8E9EC;
+  background-color: #8ec33f;
   outline: none;
   color: #2D3B55;
   font-size: 14px;
@@ -197,7 +182,7 @@ label {
 .btn-login:hover,
 .btn-login:focus {
   color: #fff;
-  background-color: #2D3B55;
+  background-color: #f57f20;
 }
 .forgot-password {
   text-decoration: underline;
@@ -210,7 +195,7 @@ label {
 }
 
 .btn-register {
-  background-color: #E8E9EC;
+  background-color: #8ec33f;
   outline: none;
   color: #2D3B55;
   font-size: 14px;
@@ -225,9 +210,9 @@ label {
 .btn-register:hover,
 .btn-register:focus {
   color: #fff;
-  background-color: #2D3B55;
+  background-color: #f57f20;
 }
 .focus{
-  background: #f57f20;
+  background: #f57f20 !important;
   color: #fff !important;
 }

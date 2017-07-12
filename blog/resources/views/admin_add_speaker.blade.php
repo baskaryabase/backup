@@ -23,7 +23,7 @@ echo '</pre>';
     </section>
    <section class="content">
    <div class="box box-default">
-       
+        
         <!-- /.box-header -->
         <div class="box-body">
           <div class="row">
@@ -56,21 +56,7 @@ echo '</pre>';
                   <label>Linkedin profile link:</label>
                   <input type="text" class="form-control" id="speaker_llink" placeholder="Enter ...">
                 </div>
-                   <div class="form-group">
-                  <label for="exampleInputFile">Speaker Photo</label>
-                  <input type="file" id="speaker_profile">
-<input type="hidden" id="hidden_speaker_image"  value="" >
-                </div>
-              <!-- /.form-group -->
-            </div>
-
-            <div class="col-md-6">
-             <div class="form-group">
-                  <label>Twitter profile Link:</label>
-                  <input type="text" class="form-control" id="speaker_tlink" placeholder="Enter ...">
-                
-                </div>
-                  <div class="form-group">
+                     <div class="form-group">
                   <label>Awards:</label>
                     <div class="input_fields_wrap">
                     <div class="col-md-11">
@@ -85,9 +71,42 @@ echo '</pre>';
   <div class="clearfix"></div>
                 
                 </div>
+            </div>
+
+            <div class="col-md-6">
+             <div class="form-group">
+                  <label>Twitter profile Link:</label>
+                  <input type="text" class="form-control" id="speaker_tlink" placeholder="Enter ...">
+                
+                </div>
+                  <div class="form-group">
+                  <label>Recognition:</label>
+                    <div class="input_fields_wrap1">
+                    <div class="col-md-11">
+                           
+          <input type="text" name="recognition[]" value="" id="awards" placeholder="Enter Recognition"  class="form-control">      </div>
+      
+      
+      <div class="col-md-1">
+    <button class="btn-link  add_field_button1 pull-right"><i class="fa fa-plus-circle" title="Add Contact Number"></i></button>
+  </div>
+  </div>
+  <div class="clearfix"></div>
+                
+                </div>
                 
                  
                  
+            </div>
+
+            <div class="col-md-6">
+             
+                   <div class="form-group">
+                  <label for="exampleInputFile">Speaker Photo</label>
+                  <input type="file" id="speaker_profile">
+<input type="hidden" id="hidden_speaker_image"  value="" >
+                </div>
+              <!-- /.form-group -->
             </div>
 
 <div class="col-md-12" style="text-align: center">

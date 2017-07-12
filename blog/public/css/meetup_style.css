@@ -740,8 +740,8 @@ ul.event_list li{
 }
 .highligh_row {
   background-color: transparent;
-  border-top: 1px solid #393836;
-  border-bottom: 1px solid #393836;
+  border-top: 1px dashed #393836;
+  border-bottom: 1px dashed #393836;
   color: #393836;
 }
 .event_title,

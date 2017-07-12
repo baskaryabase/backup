@@ -1,4 +1,3 @@
-   
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -42,8 +41,8 @@
 
   <body class="animated fadeIn">
 
-      @section('header')
-        @show
+@section('header')
+@show
 <?php
 /*echo '<pre>';
 print_r($details);
@@ -51,8 +50,9 @@ echo '</pre>';*/
  ?>
   
     <!-- Begin page content -->
-    <div class="container page-content ">
-         <div class="owl-carousel row">
+<div class="container page-content ">
+<div style="position: relative; margin-top: -60px;">
+<div class="owl-carousel row">
   <?php foreach ($details['events'] as $key => $value) {
 
 ?>
@@ -79,9 +79,14 @@ echo '</pre>';*/
 <?php } ?>
 
 </div>
-<button class="flickity-prev-next-button previous  customPrevBtn float-left" type="button" aria-label="previous"><svg viewBox="0 0 100 100"><path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z" class="arrow"></path></svg></button>
+<div style="position: absolute;width: 100%; top: 70px;">
+<button class="flickity-prev-next-button previous  customPrevBtn float-left" type="button" aria-label="previous">
+<svg viewBox="0 0 100 100">
+<path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z" class="arrow fill"></path></svg></button>
 
-<button class="flickity-prev-next-button next float-right customNextBtn" type="button" aria-label="next"><svg viewBox="0 0 100 100"><path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z" class="arrow" transform="translate(100, 100) rotate(180) "></path></svg></button>
+<button class="flickity-prev-next-button next float-right customNextBtn" type="button" aria-label="next"><svg viewBox="0 0 100 100"><path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z" class="arrow fill" transform="translate(100, 100) rotate(180) "></path></svg></button>
+</div>
+</div>
 
       <div class="row">
         <!-- left links -->

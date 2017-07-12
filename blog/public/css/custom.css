@@ -24,17 +24,17 @@
 }
 
 
-html, body {overflow-x: hidden;width: 100%;font-family: 'Gill Sans';font-size: 18px;color: #666}
+html, body {overflow-x: hidden;width: 100%;font-size: 18px;color: #666}
 body{line-height: 150%;font-size: 16px;font-weight: normal;}
-/*h1,h2,h3,h4,h5,h6{font-weight: bold;padding: 10px 0;}
+h1,h2,h3,h4,h5,h6{font-weight: bold;padding: 10px 0;}
 h2{font-size: 30px;font-weight: normal;}
 h3{font-size:25px;}
 h4{font-size:20px;}
 h5{font-size: 18px;}
 h6{font-size:16px;}
 p{margin: 0 0 10px;}
-ul li,p{line-height: 150%;font-size: 18px;font-weight: normal;}
-*/
+ul li,p{line-height: 150%;font-weight: normal;}
+
 .shadow,.shadow-png,.shadow-hover{filter: drop-shadow(5px 5px 5px #d2d2d2);}
 .shadow:hover, .shadow-hover:hover{box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
 .shadow-png:hover{filter: drop-shadow(65px 17px 65px #d2d2d2);}
@@ -118,9 +118,8 @@ ul.treeview-menu {
     position: relative;
     text-align: right;
 }
-aside#mySidenav{overflow-y: hidden;}
-/*ul li a:hover {
-    background: #000;}*/
+ul li a:hover {
+    background: #000;}
 li.menulinks {
     border-bottom: 1px solid rgba(60,60,60,0.1);
     padding: 6px 0;
@@ -397,7 +396,7 @@ form.frm label, form.frm p > strong{font-size: 16px;}
 .product-auth-info, .product-price-info{margin: 15px 0;}
 .content{float: left;font-size: 20px;}
 .auth, .price{margin-left: 10px;font-size: 19px;}
-.description {background: #d2d2d2 none repeat scroll 0 0;cursor: pointer;padding: 15px 20px;text-transform: uppercase;font-size: 20px;}
+.description {/*background: #d2d2d2 none repeat scroll 0 0;*/cursor: pointer;font-size: 20px;}
 .books-category .caret {float: right; margin-right: 10px; margin-top: 15px; width: 9px;}
 #demo{padding: 0 20px; background: #f2f2f2;}
 div.description{margin-bottom: 0;border-radius: 2px;margin-top: 20px;}

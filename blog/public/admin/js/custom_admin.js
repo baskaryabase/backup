@@ -1,4 +1,4 @@
-  
+    
 
 function get_followup(elm){ 
 
@@ -612,7 +612,20 @@ var speaker_tlink=$('#speaker_tlink').val();
 var hidden_speaker_image=$('#hidden_speaker_image').val();
 
  var hidden_token=$('#hidden_token').val();
+var awards_speaker   = new Array();
+ $("input[name='awards[]']").each(function(){
+  if($(this).val())
+    awards_speaker.push($(this).val());
+        }); 
+ var recognition_speaker   = new Array();
+ $("input[name='recognition[]']").each(function(){
+   if($(this).val())
+    recognition_speaker.push($(this).val());
+        }); 
+
   var sam = { 
+    awards_speaker : awards_speaker,
+    recognition_speaker : recognition_speaker,
     speaker_name : speaker_name,
     speaker_desn : speaker_desn,
     speaker_bio : speaker_bio,
@@ -635,8 +648,17 @@ if(jQuery.trim(data.errors) != 'success'){
 $('.wpcf7-not-valid-tip').html('');
                  $.each(data.errors, function(key,val) {
 
-                                $('#'+key).after('<span class="wpcf7-not-valid-tip">'+val[0]+'<span>');
+if(key == 'awards_speaker'){
+   $('.input_fields_wrap').last().after('<span class="wpcf7-not-valid-tip">'+val[0]+'<span>');
+ }else if(key == 'recognition_speaker'){
+   $('.input_fields_wrap1').last().after('<span class="wpcf7-not-valid-tip">'+val[0]+'<span>');
 
+ }else{
+
+           $('#'+key).after('<span class="wpcf7-not-valid-tip">'+val[0]+'<span>');
+                  
+                 
+}
                             });
 
 
@@ -659,8 +681,21 @@ var speaker_llink=$('#speaker_llink').val();
 var speaker_tlink=$('#speaker_tlink').val();
 var hidden_speaker_image=$('#hidden_speaker_image').val();
 
+var awards_speaker   = new Array();
+ $("input[name='awards[]']").each(function(){
+    if($(this).val())
+    awards_speaker.push($(this).val());
+        }); 
+ var recognition_speaker   = new Array();
+ $("input[name='recognition[]']").each(function(){
+    if($(this).val())
+    recognition_speaker.push($(this).val());
+        }); 
+
  var hidden_token=$('#hidden_token').val();
   var sam = { 
+    awards_speaker : awards_speaker,
+    recognition_speaker : recognition_speaker,
     edit_id : edit_id,
     speaker_name : speaker_name,
     speaker_desn : speaker_desn,
@@ -684,8 +719,15 @@ if(jQuery.trim(data.errors) != 'success'){
 $('.wpcf7-not-valid-tip').html('');
                  $.each(data.errors, function(key,val) {
 
-                                $('#'+key).after('<span class="wpcf7-not-valid-tip">'+val[0]+'<span>');
+                  if(key == 'awards_speaker'){
+   $('.input_fields_wrap').last().after('<span class="wpcf7-not-valid-tip">'+val[0]+'<span>');
+ }else if(key == 'recognition_speaker'){
+   $('.input_fields_wrap1').last().after('<span class="wpcf7-not-valid-tip">'+val[0]+'<span>');
 
+ }else{
+
+                  $('#'+key).after('<span class="wpcf7-not-valid-tip">'+val[0]+'<span>');
+}
                             });
 
 
@@ -828,6 +870,33 @@ var max_fields      = 10; //maximum input boxes allowed
     });*/
     
     $(this).on("click",".remove_field1", function(e){ //user click on remove text
+     
+        e.preventDefault(); $(this).parent('div').remove(); x--;
+    })
+
+})
+
+   $(document).ready(function(){ 
+
+var max_fields      = 10; //maximum input boxes allowed
+    var wrapper         = $(".input_fields_wrap1"); //Fields wrapper
+    var add_button      = $(".add_field_button1"); //Add button ID
+    
+    var x = 1; //initlal text box count
+    $(add_button).click(function(e){ //on add input button click
+    
+        e.preventDefault();
+        if(x < max_fields){ //max input box allowed
+            x++; //text box increment
+      $('.input_fields_wrap1').last().after('<div class="input_fields_wrap1" ><div class="form-group"><div class="col-md-11"><input type="text" name="recognition[]" value="" id="awards" placeholder="Enter Recognition"  class="form-control"></div><a class="remove_field btn-link" href="#" ><i class="fa fa-minus-circle" title="Remove Mobile Number"></i></a></div><div class="clearfix"></div></div>'); //add input box
+        }
+    });
+ /*   $(close_disaster).click(function(e){
+      x=1;
+
+    });*/
+    
+    $(this).on("click",".remove_field", function(e){ //user click on remove text
      
         e.preventDefault(); $(this).parent('div').remove(); x--;
     })

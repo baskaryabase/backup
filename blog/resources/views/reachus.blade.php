@@ -1,9 +1,12 @@
-@extends('layouts.HeaderFooter')
+@extends('layouts.PlainHeaderFooter')
       @section('title')
     <title>Events | Member Platform | Startups Club</title> 
    @stop
   @section('header')
 @include('layouts.header')
+@stop
+  @section('footer')
+@include('layouts.footer')
 @stop
    @section('content')
 
@@ -12,51 +15,50 @@
 
 <div class="container margin">
 
+
 <div class="col-md-6 mar">
 <h2><span class="grey">Contact Us</span></h2>
 
 <div class="inner contact">
-                <!-- Form Area -->
-                <div class="contact-form">
-                    <!-- Form -->
-                    <form id="contact-us" method="post" action="#">
-                        <!-- Left Inputs -->
-                        <div class="col-md-6 col-sm-6 wow animated slideInLeft" data-wow-delay=".5s">
-                            <!-- Name -->
-                            <input type="text" name="name" id="name" required="required" class="form" placeholder="Name" />
-                            <!-- Email -->
-                            <input type="email" name="mail" id="mail" required="required" class="form" placeholder="Email" />
-                            <!-- Subject -->
-                            <input type="numbersn" name="phone" id="subject" required="required" class="form" placeholder="Phone Number" />
-                        </div><!-- End Left Inputs -->
-                        <!-- Right Inputs -->
-                        <div class="col-md-6 col-sm-6 wow animated slideInRight" data-wow-delay=".5s">
-            <input type="text" name="startupsname" id="subject" required="required" class="form" placeholder="Startups Name" />               
-                            <!-- Message -->
-                            <textarea name="message" id="message" class="form textarea"  placeholder="Message"></textarea>
-                        </div><!-- End Right Inputs -->
-                        <!-- Bottom Submit -->
-                        <div class="relative fullwidth col-xs-12">
-                            <!-- Send Button -->
-                            <button type="submit" id="submit" name="submit" class="form-btn semibold">Send Message</button> 
-                        </div><!-- End Bottom Submit -->
-                        <!-- Clear -->
-                        <div class="clear"></div>
-                    </form>
+               <!-- Form Area -->
+               <div class="contact-form">
+                   <!-- Form -->
+                   <form id="contact-us" method="post" action="#">
+                       <!-- Left Inputs -->
+                       <div class="col-md-6 col-sm-6 wow animated slideInLeft" data-wow-delay=".5s">
+                           <!-- Name -->
+                           <input type="text" name="name" id="name" required="required" class="form" placeholder="Name" />
+                           <!-- Email -->
+                           <input type="email" name="mail" id="mail" required="required" class="form" placeholder="Email" />
+                           <!-- Subject -->
+                           <input type="numbersn" name="phone" id="subject" required="required" class="form" placeholder="Phone Number" />
+                       </div><!-- End Left Inputs -->
+                       <!-- Right Inputs -->
+                       <div class="col-md-6 col-sm-6 wow animated slideInRight" data-wow-delay=".5s">
+           <input type="text" name="startupsname" id="subject" required="required" class="form" placeholder="Startups Name" />              
+                           <!-- Message -->
+                           <textarea name="message" id="message" class="form textarea"  placeholder="Message"></textarea>
+                       </div><!-- End Right Inputs -->
+                       <!-- Bottom Submit -->
+                       <div class="relative fullwidth col-xs-12">
+                           <!-- Send Button -->
+                           <button type="submit" id="submit" name="submit" class="form-btn semibold">Send Message</button>
+                       </div><!-- End Bottom Submit -->
+                       <!-- Clear -->
+                       <div class="clear"></div>
+                   </form>
 
-                    <!-- Your Mail Message -->
-                    <div class="mail-message-area">
-                        <!-- Message -->
-                        <div class="alert gray-bg mail-message not-visible-message">
-                            <strong>Thank You !</strong> Your email has been delivered.
-                        </div>
-                    </div>
+                   <!-- Your Mail Message -->
+                   <div class="mail-message-area">
+                       <!-- Message -->
+                       <div class="alert gray-bg mail-message not-visible-message">
+                           <strong>Thank You !</strong> Your email has been delivered.
+                       </div>
+                   </div>
 
-                </div><!-- End Contact Form Area -->
-            </div><!-- End Inner -->
+               </div><!-- End Contact Form Area -->
+           </div><!-- End Inner -->
 </div>
-
-
 <div class="col-md-6 col-sm-6">
 	<h1 class="grey" style="padding-top: 12px;">Headquarters</h1>
  <div style="font-size: 17px;">

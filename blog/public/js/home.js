@@ -1,3 +1,10 @@
+
+var app = angular.module('LoginApp', []);
+app.controller('LoginCtrl', function($scope) {
+    $scope.user = 'John Doe';
+    $scope.email = 'john.doe@gmail.com';
+});
+
  var role=$('#role').val();
 $('.role_monitization').on("focus", function(){
 

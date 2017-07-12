@@ -1,13 +1,13 @@
 
-	
-
-	
-  @extends('layouts.HeaderFooter')
+  @extends('layouts.PlainHeaderFooter')
       @section('title')
     <title>Events | Member Platform | Startups Club</title> 
    @stop
   @section('header')
 @include('layouts.header')
+@stop
+  @section('footer')
+@include('layouts.footer')
 @stop
    @section('content')
 
@@ -67,7 +67,7 @@
 					<h3>{{ $value['event_title'] }}</h3>
 					<p>{!! html_entity_decode(substr(strip_tags($value['event_content']),0,40)) !!} [...]</p>
 					<a class="read-more" href="/single-events/{{ str_slug($value['event_title']) }}">read more<i class="fa fa-angle-right"></i></a>
-					<a class="read-more pull-right" href="#"  data-toggle="modal" data-target="#myModal"  >Rsvp<i class="fa fa-angle-right"></i></a>
+					<a class="read-more pull-right rsvp_link" href="#" data-type="meetup" data-id="{{ $value['event_id'] }}"   >Rsvp<i class="fa fa-angle-right"></i></a>
 				</div>
 			</div> 
 		<?php } ?>
@@ -83,120 +83,110 @@
 	
 
 
-	<!-- #event-speakers -->
-	<section id="event-speakers">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12">
-					<div class="section-title text-center">
-						<h1>EVENT SPEAKERS</h1>
-						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has <br> been the industry's standard dummy text ever since the 1500</p>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-lg-6 col-md-8 col-sm-8 col-lg-offset-0 col-md-offset-1 col-sm-offset-1">
-					<!-- .single-speakers -->
-					<div class="single-speakers row">
-						<div class="info text-right col-lg-6 col-md-7 col-sm-7">
-							<h3>Masum Rana</h3>
-							<span class="position">UI/UX Designer</span>
-							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-							<ul class="social">
-								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-								<li><a href="#"><i class="fa fa-pinterest"></i></a></li>
-								<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-							</ul>
-						</div>
-						<div class="img-holder text-center col-lg-6 col-md-5 col-sm-5">
-							<div class="img-container"><img src="http://wp1.themexlab.com/html/event_time/img/speakers/1.png" alt=""></div>
-						</div>
-					</div>
-					<!-- /.single-speakers -->
 
-					<!-- .single-speakers -->
-					<div class="single-speakers row">
-						<div class="info text-right col-lg-6 col-md-7 col-sm-7">
-							<h3>Muhibbur Rashid</h3>
-							<span class="position">UI/UX Designer</span>
-							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-							<ul class="social">
-								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-								<li><a href="#"><i class="fa fa-pinterest"></i></a></li>
-								<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-							</ul>
-						</div>
-						<div class="img-holder text-center col-lg-6 col-md-5 col-sm-5">
-							<div class="img-container"><img src="http://wp1.themexlab.com/html/event_time/img/speakers/2.png" alt=""></div>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-6 col-md-8 col-sm-10 col-lg-offset-0 col-md-offset-1 col-sm-offset-1">
-					<!-- .single-speakers -->
-					<div class="single-speakers row">
-						<div class="img-holder text-center col-lg-6 col-md-5 col-sm-5">
-							<div class="img-container" data-wow-delay=".6s"><img src="http://wp1.themexlab.com/html/event_time/img/speakers/3.png" alt=""></div>
-						</div>
-						<div class="info text-left col-lg-6 col-md-7 col-sm-7">
-							<h3>Rafifa Nodi</h3>
-							<span class="position">UI/UX Designer</span>
-							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-							<ul class="social">
-								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-								<li><a href="#"><i class="fa fa-pinterest"></i></a></li>
-								<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-							</ul>
-						</div>
-					</div>
-					<!-- /.single-speakers -->
 
-					<!-- .single-speakers -->
-					<div class="single-speakers row">
-						<div class="img-holder text-center col-lg-6 col-md-5 col-sm-5">
-							<div class="img-container"><img src="http://wp1.themexlab.com/html/event_time/img/speakers/4.png" alt=""></div>
-						</div>
-						<div class="info text-left col-lg-6 col-md-7 col-sm-7">
-							<h3>Rashed Kabir</h3>
-							<span class="position">UI/UX Designer</span>
-							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-							<ul class="social">
-								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-								<li><a href="#"><i class="fa fa-pinterest"></i></a></li>
-								<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-							</ul>
-						</div>
-					</div>
-					<!-- /.single-speakers -->
-				</div>
-			</div>
-			<div class="row text-center">
-				<a href="#" class="show-more hvr-bounce-to-right">SEE MORE</a>
-			</div>
-		</div>
-	</section>
 
-	<div id="myModal" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-
+<div id="rsvp_modal" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-lg">
+  <input type="hidden" id="hidden_token" name="_token" value="{{ csrf_token() }}">
     <!-- Modal content-->
-    <div class="modal-content">
+   <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Modal Header</h4>
+        <h3 class="modal-title">RSVP Registration</span></h3>
       </div>
       <div class="modal-body">
-        <p>Some text in the modal.</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
+<div class="row">
+
+        
+            <div class="col-md-6">
+            	<div class="form-group">
+
+            	<h4>Name in full:</h4>
+              <input class="form-control participant_modal" id="attendees_name" type="text">
+            </div>
+</div>
+
+
+ <div class="col-md-6">
+ 	<div class="form-group">
+ 	<h4>Email-id:</h4>
+<input type="text" id="attendees_email" class="form-control participant_modal">
+</div>
+</div>
+</div>
+<div class="row">
+	<div class="col-md-6">
+<div class="form-group">
+            <h4>Cell Number:</h4>
+            
+              <input class="form-control participant_modal" id="attendees_mobile" type="text">
+            </div>
+</div>
+ <div class="col-md-6">
+<div class="form-group">
+<h4>City of origin</h4>
+
+<input type="text" id="attendees_city" class="form-control participant_modal">
+</div>
+</div>
+</div>
+<div class="row">
+	<div class="col-md-6">
+<div class="form-group">
+            <h4>Current status:</h4>
+
+            <select class="form-control participant_modal" id="attendees_status">
+  <option>Aspiring entrepreneur</option>
+  <option>Budding entrepreneur</option>
+  <option>Established  entrepreneur</option>
+
+</select>
+            
+             
+            </div>
+</div>
+
+</div>
+<div class="row member_partner_display" style="display:none">
+	<div class="col-md-12">
+<div class="form-group">
+            <h4>Passes</h4>
+
+           <div class="radio">
+  <label class="radio-inline"><input type="radio" id="yes_pioneer" data-cost="15000" data-value="Platinum ValueKit" checked name="optradio2">Platinum ValueKit     <span style="text-decoration:line-through">Rs. 17,000</span>. Early bird offer    Rs. 15,000  (All 3 days + 4 MasterClass)</label>
+</div>
+<div class="radio">
+  <label class="radio-inline"><input type="radio" data-value="Gold ValueKit" data-cost="10000" name="optradio2">Gold ValueKit           <span style="text-decoration:line-through">Rs. 12,000</span>. Early bird offer     Rs.   10,000  (All 3 days + 2 MasterClass)</label>
+</div>
+<!-- <div class="radio">
+  <label class="radio-inline"><input type="radio" data-value="2-Day Pitch Pass" data-cost="5000" name="optradio2">3-Day Pitch Pass       <span style="text-decoration:line-through">Rs.   7,000</span>. Early bird offer     Rs.   5,000   (All 3 Day minus MasterClass)</label>
+</div>
+<div class="radio">
+  <label class="radio-inline"><input type="radio" data-value="1-Day Pitch Pass" data-cost="3000" name="optradio2">1-Day Pitch Pass       <span style="text-decoration:line-through">Rs.   5,000</span>. Early bird offer     Rs.   3,000  (Day 3)</label>
+</div> -->
+
+            
+             
+            </div>
+</div>
+
+</div>
+
+      
+      
+      
     </div>
+    <div class="modal-footer">
+    	<span id="total_amount">₹ <span id="change_total_amount_new"></span></span>
+        <button type="button" class="btn btn-default close_modal" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-default" data-type="" data-id="" id="register_rsvp">Register</button>
+    
+      </div>
 
   </div>
+</div>
+</div>
 </div>
 	
 	<script src="<?php echo URL::asset('/js/jquery.1.11.1.min.js') ?>"></script>

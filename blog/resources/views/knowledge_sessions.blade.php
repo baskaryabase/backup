@@ -1,10 +1,13 @@
-   
-  @extends('layouts.HeaderFooter')
+    
+  @extends('layouts.PlainHeaderFooter')
       @section('title')
     <title>Events | Member Platform | Startups Club</title> 
    @stop
   @section('header')
 @include('layouts.header')
+@stop
+  @section('footer')
+@include('layouts.footer')
 @stop
    @section('content')
 
@@ -26,18 +29,18 @@
     <li style="list-style: none; padding-top: 15px;"><h5><i style="color: #f57f20; padding-right: 14px;" class="fa fa-calendar" aria-hidden="true"></i><span>12 sep  2017</span><span><span>,  10 am onwards</span></span></h5></li>
 
     <li style="list-style: none;"><h5><i style="color: #f57f20; padding-right: 14px;" class="fa fa-clock-o" aria-hidden="true"></i><span>Four hour Session</span></h5></li>
-        <h1 style="font-size: 20px">Swapping Customers for Productive Growth – BLR</h1>
+        <h1 style="font-size: 20px" contenteditable="true">Swapping Customers for Productive Growth – BLR</h1>
     </div>
 <div class="padd">
   <ul >
     <li style="list-style: none;"><h5><i style="color: #f57f20; padding-right: 18px;" class="fa fa-map-marker" aria-hidden="true"></i><span>Coimbatore,</span><span><br><span style="padding-left: 26px;"> City hall</span></span>
-    <span class="pull-right">₹ 5000 / seat</span> 
+    <span class="pull-right" contenteditable="true">₹ 5000 / seat</span> 
     </h5></li>
   </ul>
 </div>
 <div>
   <h2 class="font-size-15"><span>Event Details</span></h2>
-  <p>We have a monthly meetup where entrepreneurs both aspiring and established come together to meet one another. These events typically have a theme, which could be a speaker, a workshop or an entrepreneur sharing his/her experience.We have a monthly meetup where entrepreneurs both aspiring and established come together to meet one another.</p>
+  <p contenteditable="true">We have a monthly meetup where entrepreneurs both aspiring and established come together to meet one another. These events typically have a theme, which could be a speaker, a workshop or an entrepreneur sharing his/her experience.We have a monthly meetup where entrepreneurs both aspiring and established come together to meet one another.</p>
 </div>
 
 <center>

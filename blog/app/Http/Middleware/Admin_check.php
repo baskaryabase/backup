@@ -23,7 +23,7 @@ $response=$next($request);
 
                if ($role != 'founder' && $role != 'team') {
 
-                    return redirect()->guest('/');
+                   // return redirect()->guest('/');
         }
 
         return $response;

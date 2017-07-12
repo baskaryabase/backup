@@ -1,14 +1,16 @@
 <?php
- 
+  
 namespace App\Http\Controllers;
-
+ 
 use Illuminate\Http\Request;
 use App\Http\models\sc_users;
 use App\Http\models\sc_posts;
-use App\Http\models\sc_usermetas;
+use App\Http\models\sc_usermetas; 
 use App\Http\models\sc_events;
+use App\Http\models\sc_speakers;
 use App\Http\models\sc_comments;
 use App\Http\models\sc_likes;
+use App\Http\models\demoday_pics;
 use App\Http\models\sc_notifications;
 use App\Http\models\users_company_details;
 use Illuminate\Support\Facades\Redirect;
@@ -2271,7 +2273,19 @@ function getSingleEvents($event){
 
 $event_obj=sc_events::orderBy('event_date','asc')->where('event_slug',$event)->get();
 $event_array=$event_obj->toArray();
-return view('single_events')->with('events',$event_array[0]);
+$allevent_obj=sc_events::orderBy('event_date','asc')->where('event_slug','!=',$event)->limit(5)->get();
+$allevent_array=$allevent_obj->toArray();
+$speaker_obj=sc_speakers::whereIn('speaker_name',explode(',', $event_array[0]['event_speaker']))->get();
+$speaker_array=$speaker_obj->toArray();
+
+$final_array['event']=$event_array[0];
+$final_array['speaker']=$speaker_array;
+$final_array['similar']=$allevent_array;
+
+/*echo '<pre>';
+print_r($final_array);
+echo '</pre>';die;*/
+return view('single_events')->with('events',$final_array);
 
 }
 
@@ -2281,50 +2295,393 @@ function getSingleKs(){
 return view('knowledge_sessions');
 
 }
+function getMemberDashboard(){
 
 
-function getAllKs(){
-
-
-return view('allknowledge_session');
+return view('member_dashboard');
 
 }
-function getMentoring(){
+function getAddKnowledgeSession(){
 
-return view('mentoringpage');
+
+return view('add_knowledge_session');
 
 }
-function getDigitalMarketing(){
+function getAddMemberSpeaker(){
 
-return view('digitalmarketing');
+
+return view('member_add_speaker');
+
+}
+
+
+
+function CheckKnowledgeSession(Request $request){
+
+
+$validator = Validator::make($request->all(), [
+                
+                'event_title' => 'required',      
+                'event_date' => 'required',
+                'event_cost' => 'required',
+                'event_time' => 'required',
+                'event_city' => 'required',
+                'event_venue' => 'required',
+                'event_category' => 'required',
+              
+                'event_content' => 'required',
+                
+        ],[
+'event_title.required' => 'This field is required',
+'event_date.required' => 'This field is required',
+'event_cost.required' => 'This field is required',
+'event_city.required' => 'This field is required',
+'event_venue.required' => 'This field is required',
+'event_category.required' => 'This field is required',
+
+'event_content.required' => 'This field is required',
+'event_time.required' => 'This field is required',
+        ]);
+
+        if ($validator->fails()) {
+
+            return Response::json(array(
+        'success' => true,
+        'errors' => $validator->getMessageBag()->toArray()
+
+    ), 200); // 400 being the HTTP code for an invalid request.
+       
+die;
+
+        }else{
+
+
+
+
+
+            return Response::json(array(
+        'success' => true,
+        'errors' => 'success'
+
+    ), 200);
+
+
+
+        }
+
+
+
+
+}
+
+function CheckRsvp(Request $request){
+
+
+$validator = Validator::make($request->all(), [
+                
+                'attendees_name' => 'required',      
+                'attendees_email' => 'required',
+                'attendees_mobile' => 'required',
+                'attendees_city' => 'required',
+                'attendees_status' => 'required',
+              
+                
+        ],[
+'attendees_name.required' => 'This field is required',
+'attendees_email.required' => 'This field is required',
+'attendees_mobile.required' => 'This field is required',
+'attendees_city.required' => 'This field is required',
+'attendees_status.required' => 'This field is required',
+
+        ]);
+
+        if ($validator->fails()) {
+
+            return Response::json(array(
+        'success' => true,
+        'errors' => $validator->getMessageBag()->toArray()
+
+    ), 200); // 400 being the HTTP code for an invalid request.
+       
+
+
+        }else{
+
+             $user_id = session()->get('userid');
+             $role = session()->get('role');
+  $insert_array= array(
+        'parent_id'=>$request->input('data_id'),
+        'member_id'=>$user_id,
+        'member_type'=>$role,
+        'name'=>$request->input('attendees_name'),
+        'phone_number'=>$request->input('attendees_mobile'),
+        'email'=>$request->input('attendees_email'),
+        'city'=>$request->input('attendees_city'),
+      
+        'status'=>$request->input('attendees_status'),
+        'ticket_type'=>$request->input('data_type'),
+        'created_date'=>date("Y-m-d H:i:s")
+        );
+       $results = DB::table('rsvp_members')->insertGetId($insert_array);
+
+
+
+
+
+            return Response::json(array(
+        'success' => true,
+        'errors' => 'success'
+
+    ), 200);
+
+
+
+        }
+
+
+
+
+}
+function CheckAttendees(Request $request){
+
+
+$validator = Validator::make($request->all(), [
+                
+                'attendees_name' => 'required',      
+                'attendees_email' => 'required',
+                'attendees_mobile' => 'required',
+                'attendees_city' => 'required',
+                'attendees_status' => 'required',
+              
+                
+        ],[
+'attendees_name.required' => 'This field is required',
+'attendees_email.required' => 'This field is required',
+'attendees_mobile.required' => 'This field is required',
+'attendees_city.required' => 'This field is required',
+'attendees_status.required' => 'This field is required',
+
+        ]);
+
+        if ($validator->fails()) {
+
+            return Response::json(array(
+        'success' => true,
+        'errors' => $validator->getMessageBag()->toArray()
+
+    ), 200); // 400 being the HTTP code for an invalid request.
+       
+
+
+        }else{
+
+            
+            return Response::json(array(
+        'success' => true,
+        'errors' => 'success'
+
+    ), 200);
+
+
+
+        }
+
+
+
+
+}
+function InsertAttendees(Request $request){
+
+
+$validator = Validator::make($request->all(), [
+                
+                'attendees_name' => 'required',      
+                'attendees_email' => 'required',
+                'attendees_mobile' => 'required',
+                'attendees_city' => 'required',
+                'attendees_status' => 'required',
+              
+                
+        ],[
+'attendees_name.required' => 'This field is required',
+'attendees_email.required' => 'This field is required',
+'attendees_mobile.required' => 'This field is required',
+'attendees_city.required' => 'This field is required',
+'attendees_status.required' => 'This field is required',
+
+        ]);
+
+        if ($validator->fails()) {
+
+            return Response::json(array(
+        'success' => true,
+        'errors' => $validator->getMessageBag()->toArray()
+
+    ), 200); // 400 being the HTTP code for an invalid request.
+       
+
+
+        }else{
+
+             $user_id = session()->get('userid');
+             $role = session()->get('role');
+  $insert_array= array(
+        'parent_id'=>'demo',
+        'demo_city'=>$request->input('data_city'),
+        'demo_date'=>$request->input('demo_date'),
+        'amount'=>$request->input('demo_price'),
+       
+        'member_id'=>$user_id,
+        'member_type'=>$role,
+        'name'=>$request->input('attendees_name'),
+        'phone_number'=>$request->input('attendees_mobile'),
+        'email'=>$request->input('attendees_email'),
+        'city'=>$request->input('attendees_city'),
+      
+        'status'=>$request->input('attendees_status'),
+        'ticket_type'=>$request->input('demo_type'),
+        'created_date'=>date("Y-m-d H:i:s")
+        );
+       $results = DB::table('rsvp_members')->insertGetId($insert_array);
+
+
+
+
+
+            return Response::json(array(
+        'success' => true,
+        'errors' => 'success'
+
+    ), 200);
+
+
+
+        }
+
+
+
+
+}
+function CheckParticipants(Request $request){
+
+
+$validator = Validator::make($request->all(), [
+                
+                'participant_name' => 'required',      
+                'participant_email' => 'required',
+                'participant_startup' => 'required',
+                'participant_desb' => 'required',
+                'participant_website' => 'required',
+                'participant_start' => 'required',
+                'participant_team' => 'required',
+                'participant_head' => 'required',
+                'participant_file' => 'required',
+                'participant_mobile' => 'required',
+              
+                
+        ],[
+'participant_name.required' => 'This field is required',
+'participant_email.required' => 'This field is required',
+'participant_startup.required' => 'This field is required',
+'participant_desb.required' => 'This field is required',
+'participant_website.required' => 'This field is required',
+'participant_start.required' => 'This field is required',
+'participant_team.required' => 'This field is required',
+'participant_head.required' => 'This field is required',
+'participant_file.required' => 'This field is required',
+'participant_mobile.required' => 'This field is required',
+
+        ]);
+
+        if ($validator->fails()) {
+
+            return Response::json(array(
+        'success' => true,
+        'errors' => $validator->getMessageBag()->toArray()
+
+    ), 200); // 400 being the HTTP code for an invalid request.
+       
+
+
+        }else{
+
+             $user_id = session()->get('userid');
+             $role = session()->get('role');
+  $insert_array= array(
+        'demo_city'=>$request->input('data_id'),
+        'demo_type'=>$user_id,
+        'demo_date'=>$role,
+        'name'=>$request->input('participant_name'),
+        'email_id'=>$request->input('participant_email'),
+        'phone_number'=>$request->input('participant_mobile'),
+        'startup_name'=>$request->input('participant_startup'),   
+        'startup_description'=>$request->input('participant_desb'),
+        'startup_website'=>$request->input('participant_website'),
+        'startup_commence'=>$request->input('participant_start'),
+        'team_size'=>$request->input('participant_team'),
+        'startup_head'=>$request->input('participant_head'),
+        'startup_file'=>$request->input('participant_file'),
+        'created_date'=>date("Y-m-d H:i:s")
+        );
+       $results = DB::table('demoday_participants')->insertGetId($insert_array);
+
+
+
+
+
+            return Response::json(array(
+        'success' => true,
+        'errors' => 'success'
+
+    ), 200);
+
+
+
+        }
+
+
+
+
+}
+
+function getDemoday(){
+return view('demoday');
+
+}
+function getFamily(){
+return view('our_family');
+
+}
+function getScin(){
+return view('scin');
 
 }
 function getReachUs(){
-
 return view('reachus');
 
 }
+function getRevUp(){
+return view('revup');
 
+}
 function getWhatWeDo(){
+return view('whatwedo');
 
-return view('Whatwedo');
+}
+function getDemodayCity($city){
+
+  $pics_obj=Demoday_pics::where('demoday_flag',$city)->get();
+  $pics_array['main']=$pics_obj->toArray();
+  $pics_array['city']=$city;
+/*  echo '<pre>';
+  print_r($pics_array);
+  echo '</pre>';*/
+  if(empty($pics_array)){
+  return Redirect::to('/error404');
+}
+return view('demo_city')->with('pics',$pics_array);
 
 }
 
-function getKsEdit(){
-
-return view('ks_edit');
-
-}
-function getOurTeam(){
-
-return view('our_team');
-
-}
-function getPopup(){
-
-return view('popup');
-
-}
 
 }

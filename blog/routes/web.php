@@ -1,5 +1,5 @@
 <?php
- 
+  
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,18 +17,26 @@
 });*/
 
 Route::get('/', 'MainController@getHome');
+Route::get('/demoday', 'MainController@getDemoday');
+Route::get('/democity/{fn}', 'MainController@getDemodayCity');
+Route::get('/contact', 'MainController@getReachUs');
+Route::get('/revup', 'MainController@getRevUp');
+Route::get('/scin', 'MainController@getScin');
+Route::get('/family', 'MainController@getFamily');
+Route::get('/what-we-do', 'MainController@getWhatWeDo');
 Route::get('/find', 'MainController@getFind');
 Route::get('/events', 'MainController@getEvents');
 Route::get('/single-events/{fn}', 'MainController@getSingleEvents');
 Route::get('/knowledge-session/', 'MainController@getSingleKs');
-Route::get('/knowledge-sessions/', 'MainController@getAllKs');
-Route::get('/mentoring/', 'MainController@getMentoring');
-Route::get('/digital-marketing/', 'MainController@getDigitalMarketing');
-Route::get('/reach-us/', 'MainController@getReachUs');
-Route::get('/what-we-do/', 'MainController@getWhatWeDo');
-Route::get('/ks-edit/', 'MainController@getKsEdit');
-Route::get('/our-team/', 'MainController@getOurTeam');
-Route::get('/popup/', 'MainController@getPopup');
+Route::get('/member-dashboard/', 'MainController@getMemberDashboard');
+Route::get('/add-knowledge-session/', 'MainController@getAddKnowledgeSession');
+Route::get('/add-member-speaker/', 'MainController@getAddMemberSpeaker');
+Route::post('/CheckKnowledgeSession/', 'MainController@CheckKnowledgeSession');
+Route::post('/CheckRsvp/', 'MainController@CheckRsvp');
+Route::post('/CheckAttendees/', 'MainController@CheckAttendees');
+Route::post('/InsertAttendees/', 'MainController@InsertAttendees');
+Route::post('/CheckParticipants/', 'MainController@CheckParticipants');
+
  
   Route::post('/get-find-member', 'MainController@get_find_member');
 

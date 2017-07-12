@@ -1,4 +1,4 @@
-@extends('layouts.profileMaster')
+ @extends('layouts.profileMaster')
  @section('header')
 
 <nav class="navbar navbar-white navbar-fixed-top">

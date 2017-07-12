@@ -1,3 +1,9 @@
+@import url(//fonts.googleapis.com/css?family=Lato:400|Inconsolata);
+body {
+  font-family: Lato,"Helvetica Neue",Arial,Verdana,Tahoma,"Lucida Sans",FreeSans,"Lucida Sans Unicode","Luxi Sans",sans-serif;
+   font-size: 14px!important;
+    line-height: 1.42857!important;
+}
 .custom_notify li img {
     border-radius: 50em;
     height: 45px;
@@ -282,14 +288,17 @@ time.blue_green { background-color: #148aa5 }
     transform: translateY(-50%);
 }
 .flickity-prev-next-button.previous {
-    left: 76px;
+    left: 0px;
       position: absolute;
 }
 .flickity-prev-next-button.next {
-    right: 100px;
+    right: 0px;
       position: absolute;
+      color: #f57f20;
 }
-
+.fill{
+    fill:#f57f20;
+}
 
  .eventCard-group {
     position: relative;
@@ -328,10 +337,17 @@ time.blue_green { background-color: #148aa5 }
 a.eventCard--hasGroup{
     color:#000!important;
 }
+.col-md-6.ng-scope {
+   background: #e9eaed ;
+}
+body.animated.fadeIn {
+   background: #e9eaed ;
+}
+.col-md-3 {
+   background: #e9eaed ;
+}
 
 
-
-/*header*/
 nav.navbar.navbar-default.navbar-static-top{background: #fff;}
 .dropdown-menu>li>a:hover {
    text-decoration: none;

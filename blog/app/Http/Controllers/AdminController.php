@@ -1,6 +1,6 @@
 <?php
+ namespace App\Http\Controllers;
  
-namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 /*use Request;*/
 use App\Http\models\sc_users;
@@ -10,6 +10,7 @@ use App\Http\models\sc_comments;
 use App\Http\models\sc_solds;
 use App\Http\models\sc_announcements;
 use App\Http\models\sc_events;
+use App\Http\models\speaker_metas;
 use App\Http\models\sc_memberpartner_logos;
 use App\Http\models\sc_followups;
 use App\Http\models\sc_likes;
@@ -827,7 +828,17 @@ function AdminEditSpeaker($id){
 
 $speaker_obj=Sc_speakers::where('speaker_id',$id)->orderBy('created_date', 'desc')->get();
 $speaker_array=$speaker_obj->toArray();
-return view('admin_edit_speaker')->with('speakers',$speaker_array[0]);
+$metas_obj=speaker_metas::where('speaker_id',$id)->orderBy('created_date', 'asc')->get();
+$metas_array=$metas_obj->toArray();
+foreach ($metas_array as $key => $value) {
+ $final_meta[$value['meta_key']][]=$value;
+}
+$final_array['details']=$speaker_array[0];
+$final_array['metas']=$final_meta;
+echo '<pre>';
+print_r($final_array);
+echo '</pre>';
+return view('admin_edit_speaker')->with('speakers',$final_array);
 
 
 }
@@ -883,6 +894,8 @@ $validator = Validator::make($request->all(), [
                 'speaker_llink' => 'required',
                 'speaker_tlink' => 'required',
                 'hidden_speaker_image' => 'required',
+                'awards_speaker' => 'required',
+                'recognition_speaker' => 'required',
                 
         ],[
 'speaker_name.required' => 'This field is required',
@@ -892,6 +905,8 @@ $validator = Validator::make($request->all(), [
 'speaker_llink.required' => 'This field is required',
 'speaker_tlink.required' => 'This field is required',
 'hidden_speaker_image.required' => 'This field is required',
+'awards_speaker.required' => 'This field is required',
+'recognition_speaker.required' => 'This field is required',
         ]);
 
         if ($validator->fails()) {
@@ -921,7 +936,31 @@ die;
 'created_by'=>session()->get('userid'),
   );
 
-DB::table('sc_speakers')->insert($speaker_array);
+$speaker_id=DB::table('sc_speakers')->insertGetId($speaker_array);
+
+foreach (array_filter($request->input('awards_speaker')) as $key => $value) {
+$award_array[]=array(
+'speaker_id'=>$speaker_id,
+'meta_key'=>'awards',
+'meta_data'=>$value,
+'created_date'=>date("Y-m-d H:i:s"),
+'created_by'=>session()->get('userid'),
+);
+  
+}
+foreach (array_filter($request->input('recognition_speaker')) as $key => $value) {
+$recognition_array[]=array(
+'speaker_id'=>$speaker_id,
+'meta_key'=>'recognition',
+'meta_data'=>$value,
+'created_date'=>date("Y-m-d H:i:s"),
+'created_by'=>session()->get('userid'),
+);
+  
+}
+
+DB::table('speaker_metas')->insert($award_array);
+DB::table('speaker_metas')->insert($recognition_array);
 
 
             return Response::json(array(
@@ -1101,8 +1140,12 @@ $validator = Validator::make($request->all(), [
                 'speaker_llink' => 'required',
                 'speaker_tlink' => 'required',
                 'hidden_speaker_image' => 'required',
+                'awards_speaker' => 'required',
+                'recognition_speaker' => 'required',
                 
         ],[
+'awards_speaker.required' => 'This field is required',
+'recognition_speaker.required' => 'This field is required',
 'speaker_name.required' => 'This field is required',
 'speaker_desn.required' => 'This field is required',
 'speaker_cname.required' => 'This field is required',
@@ -1140,6 +1183,34 @@ die;
   );
 
     Sc_speakers::where('speaker_id',$request->input('edit_id'))->update($speaker_array);
+    Speaker_metas::where('speaker_id',$request->input('edit_id'))->delete();
+
+
+
+
+foreach (array_filter($request->input('awards_speaker')) as $key => $value) {
+$award_array[]=array(
+'speaker_id'=>$request->input('edit_id'),
+'meta_key'=>'awards',
+'meta_data'=>$value,
+'created_date'=>date("Y-m-d H:i:s"),
+'created_by'=>session()->get('userid'),
+);
+  
+}
+foreach (array_filter($request->input('recognition_speaker')) as $key => $value) {
+$recognition_array[]=array(
+'speaker_id'=>$request->input('edit_id'),
+'meta_key'=>'recognition',
+'meta_data'=>$value,
+'created_date'=>date("Y-m-d H:i:s"),
+'created_by'=>session()->get('userid'),
+);
+  
+}
+
+DB::table('speaker_metas')->insert($award_array);
+DB::table('speaker_metas')->insert($recognition_array);
 
 
 

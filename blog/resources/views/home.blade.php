@@ -1,4 +1,4 @@
-     @extends('layouts.homeMaster')
+       @extends('layouts.homeMaster')
          @section('title')
     <title>Home | Member Platform | Startups Club</title> 
    @stop
@@ -18,7 +18,7 @@
     ?>
 
 
-    
+     
     <div class="col-md-6" ng-app="Home" ng-controller="homeCtrl">
       <input type="hidden" id="url_flag" value="">
           <div class="row">
@@ -192,6 +192,10 @@ $('.customPrevBtn').click(function() {
     // Parameters has to be in square bracket '[]'
     owl.trigger('prev.owl.carousel', [300]);
 })
+$('.owl-stage-outer').css('position','initial');
+$('.owl-carousel').css('position','initial');
+$('.owl-carousel').css('width','auto');
+
 
 });
 

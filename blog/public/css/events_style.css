@@ -60,6 +60,7 @@ body {
   font-family: 'Raleway', sans-serif;
   font-size: 14px;
   line-height: 24px;
+  background: #f6f9f9;
 }
 ul,
 li {
@@ -1658,7 +1659,7 @@ header .mainmenu-container li.dropdown > a .fa {
 
 footer {
   background: #29363E;
-  padding: 100px 0 85px;
+  /*padding: 100px 0 85px;*/
 }
 footer .footer-widget h3 {
   font-size: 18px;
@@ -1737,14 +1738,14 @@ footer .footer-widget .social-icons a {
   text-align: center;
   display: inline-block;
 /*  background: url(../img/resources/social-icon-bg.png) center center no-repeat;
-*/  margin-right: 5px;
+  margin-right: 5px;
   transition: all .3s ease;
 }
 footer .footer-widget .social-icons a:hover {
   color: #FF8625;
   transform: rotate(360deg);
 
-}
+}*/
 
 /** ====== Bottom Bar styles ====== **/
 

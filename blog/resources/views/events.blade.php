@@ -20,7 +20,7 @@
 	<section id="upcoming-event">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-7 col-md-7 col-sm-7">
+				<div class="col-lg-7 col-md-7 col-sm-7 mar-top">
 					<div class="section-title">
 						<h1>Upcoming Events</h1>
 <!-- 						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has <br> been the industry's standard dummy text ever since the 1500</p>
@@ -47,7 +47,7 @@
 							<li class="filter" data-filter=".jun-01"><span>June 01</span></li>
 						</ul>
 					</div> -->
-		<div  class="tab-content-wrap row row-eq-height">
+		<div align="center"  class="tab-content-wrap row row-eq-height">
 			<?php foreach ($events as $key => $value) { 
 				# code...
 		?>

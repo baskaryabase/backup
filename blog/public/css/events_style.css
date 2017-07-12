@@ -82,6 +82,9 @@ h6 {
   padding: 0;
   margin-bottom: 15px;
 }
+.mar-top{
+  margin-top: -50px;
+}
 a,
 a:hover,
 a:active,
@@ -620,6 +623,14 @@ header .mainmenu-container li.dropdown > a .fa {
 #upcoming-event .tab-content-wrap .col-lg-3 {
   padding: 0 10px;
   margin-bottom: 25px;
+  
+}
+@media only screen and (max-width: 844px){
+  #upcoming-event .tab-content-wrap .col-lg-3 {
+  padding: 0 10px;
+  margin-bottom: 25px;
+  width: 290px;
+}
 }
 #upcoming-event .tab-content-wrap .col-lg-3:hover .img-holder img {
   transform: scale(1.2);

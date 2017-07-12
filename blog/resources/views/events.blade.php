@@ -66,7 +66,7 @@
 			
 					<h3>{{ $value['event_title'] }}</h3>
 					<p>{!! html_entity_decode(substr(strip_tags($value['event_content']),0,40)) !!} [...]</p>
-					<a class="read-more" href="/single-events/{{ str_slug($value['event_title']) }}">read more<i class="fa fa-angle-right"></i></a>
+					<a style="float: left;" class="read-more" href="/single-events/{{ str_slug($value['event_title']) }}">read more<i class="fa fa-angle-right"></i></a>
 					<a class="read-more pull-right rsvp_link" href="#" data-type="meetup" data-id="{{ $value['event_id'] }}"   >Rsvp<i class="fa fa-angle-right"></i></a>
 				</div>
 			</div> 

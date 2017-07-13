@@ -177,7 +177,7 @@ var owl = $('.owl-carousel');
 owl.owlCarousel({
     items:5,
     loop:true,
-    margin:2,
+    margin:5,
     autoplay:true,
     autoplayTimeout:3000,
     
@@ -195,6 +195,8 @@ $('.customPrevBtn').click(function() {
 $('.owl-stage-outer').css('position','initial');
 $('.owl-carousel').css('position','initial');
 $('.owl-carousel').css('width','auto');
+$('.owl-item').css('background','white');
+
 
 
 });

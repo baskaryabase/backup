@@ -49,10 +49,16 @@ print_r($details);
 echo '</pre>';*/
  ?>
   
-    <!-- Begin page content -->
-<div class="container page-content ">
-<div style="position: relative; margin-top: -60px;">
-<div class="owl-carousel row">
+
+<div style="position: relative; margin-top: 20px;width: 100%">
+<div style="position: absolute;
+            background: #000;
+            width: 100%;
+            height: 275px;
+            opacity: .3;
+            margin-top: -24px;"></div>
+<div style="margin-right: 15px;
+            margin-left: 15px;" class="owl-carousel row container">
   <?php foreach ($details['events'] as $key => $value) {
 
 ?>
@@ -62,14 +68,18 @@ echo '</pre>';*/
   </div>
 
   <div class="eventCard-event chunk">
-    <h5 class="text--small text--heavy">  <span><i class="fa fa-map-marker"></i> {{ $value['event_venue'] }}</span></h5>
+    <h5 class="text--small text--heavy">  
+    <span style="height: 20px;"><i class="fa fa-map-marker">
+      
+    </i> {{ $value['event_venue'] }}</span>
+    </h5>
 
     
   
   
                   
-                   <span><i class="fa fa-clock-o"></i> {{ date('jS F Y',strtotime($value['event_date'])) }}</span>
-                    <span><i class="fa fa-globe" aria-hidden="true"></i> {{ $value['event_city'] }}</span>
+                   <span style="height: 40px;"><span><i class="fa fa-clock-o"></i> {{ date('jS F Y',strtotime($value['event_date'])) }}</span>
+                    <span><i class="fa fa-globe" aria-hidden="true"></i> {{ $value['event_city'] }}</span></span>
                 
                
 
@@ -87,6 +97,11 @@ echo '</pre>';*/
 <button class="flickity-prev-next-button next float-right customNextBtn" type="button" aria-label="next"><svg viewBox="0 0 100 100"><path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z" class="arrow fill" transform="translate(100, 100) rotate(180) "></path></svg></button>
 </div>
 </div>
+
+
+    <!-- Begin page content -->
+<div class="container page-content ">
+
 
       <div class="row">
         <!-- left links -->

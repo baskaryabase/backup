@@ -288,11 +288,11 @@ time.blue_green { background-color: #148aa5 }
     transform: translateY(-50%);
 }
 .flickity-prev-next-button.previous {
-    left: 0px;
+    left: 35px;
       position: absolute;
 }
 .flickity-prev-next-button.next {
-    right: 0px;
+    right: 35px;
       position: absolute;
       color: #f57f20;
 }

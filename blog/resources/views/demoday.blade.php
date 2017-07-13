@@ -527,22 +527,23 @@
 
 	<div class="wpb_text_column wpb_content_element ">
 		<div class="wpb_wrapper">
-			<h2 style="text-align: center;">Bangalore - Taj Vivanta</h2>
-<h2 style="text-align: center;">Dec 8th - 10th, 2017</h2>
+			<h2 style="text-align: center; padding-bottom: 10px;"><span style="border-bottom: 3px solid #f57f20;">Bangalore - Taj Vivanta</span></h2>
+<h3 style="text-align: center; ">Dec 8th - 10th, 2017</h3>
 
 		</div>
 	</div>
 </div></div></div></div>
-	<div class="wpb_text_column wpb_content_element ">
+
+	<div style="box-shadow: 0 4px 8px 0 #f57f20, 0 6px 20px 0 #f57f20;" class="container wpb_text_column wpb_content_element ">
 		<div class="wpb_wrapper">
 			<p style="text-align: center;"><em>“I’m convinced that about half of what separates the successful entrepreneurs from the non-successful ones is pure perseverance.” </em></p>
 <p style="text-align: center;"><em>- Steve Jobs,</em><em>&nbsp;Co-founder and CEO of Apple</em></p>
 <p style="text-align: center;">Yes, Demo Day is an experience that hacks the process for entrepreneurs reaching out to Investors.</p>
 <p><em>Perseverance</em> is the keyword here, when it comes to Demo Day, for our Team or our Entrepreneurs. The Startups Club Team has never stopped working towards making this experience the most productive one for all the entrepreneurs, we have touched in the last 4 years. We have in our Community, closely watched a wide range of entrepreneurs from across this nation. Each putting in their efforts to ensure that they get recognized, they grow, they are invested upon and they are pushed forward. Perseverance has been the differentiator between the ones who made it big and those who did not.</p>
 <p>This year, we are no doubt making this <em>“The Widest Startup Challenge” </em>by touching 20 cities across the country and bringing down some of the best Investors from across the world to explore opportunities with our Startups at the Finale. But the most interesting aspect of our Finale in Bangalore is the approach we have taken for making sure, every attendee takes back true value for his or her money and time they will spend with us for these 3 days.</p>
-
-		</div>
 	</div>
+</div>
+
 <div id="hidden_user_id" style="display:none">0</div>
 <div id="participant_modal" class="modal fade" role="dialog">
   <div class="modal-dialog modal-lg">
@@ -797,7 +798,7 @@ Lunch Break<br>
 	<div class="row">
 		<!-- Pricing -->
 
-		<div class="col-md-4  custom-block-price">
+		<div class="col-md-4 col-sm-6  custom-block-price">
 			<div class="pricing hover-effect">
 				<div class="pricing-head">
 					<h3>1-Day Finale Access <span>
@@ -831,7 +832,7 @@ Lunch Break<br>
 			</div>
 		</div>
 
-		<div class="col-md-4 custom-block-price">
+		<div class="col-md-4 col-sm-6 custom-block-price">
 			<div class="pricing hover-effect">
 				<div class="pricing-head">
 					<h3>2-Day Finale Access <span>
@@ -864,7 +865,7 @@ Lunch Break<br>
 				</div>
 			</div>
 		</div>
-		<div class="col-md-4 custom-block-price">
+		<div class="col-md-4 col-sm-6  custom-block-price">
 			<div class="pricing hover-effect">
 				<div class="pricing-head">
 					<h3>3-Day Finale Access <span>
@@ -897,9 +898,8 @@ Lunch Break<br>
 				</div>
 			</div>
 		</div>
-	</div>
-	<div class="row">
-		<div class="col-md-4  custom-block-price">
+
+		<div class="col-md-offset-2 col-md-4  col-sm-6  custom-block-price">
 			<div class="pricing hover-effect">
 				<div class="pricing-head">
 					<h3>Platinum ValueKit <span>
@@ -932,7 +932,8 @@ Lunch Break<br>
 				</div>
 			</div>
 		</div>
-<div class="col-md-4 custom-block-price">
+		<div class="col-sm-3 visible-sm"></div>
+<div class="col-md-4  col-sm-6 custom-block-price">
 			<div class="pricing hover-effect">
 				<div class="pricing-head">
 					<h3>Gold ValueKit <span>
@@ -965,6 +966,9 @@ Lunch Break<br>
 				</div>
 			</div>
 		</div>
+	</div>
+	<div class="row">
+		
 		<!--//End Pricing -->
 	</div>
 	
@@ -1131,7 +1135,13 @@ Pricing table
 
 		</div>
 	</div>
-</div></div></div></div></div></section><section class="light-wrapper  vc_row wpb_row vc_row-fluid"><div class="container"><div class="row"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner "><div class="wpb_wrapper">
+</div></div></div></div></div></section>
+<section class="light-wrapper  vc_row wpb_row vc_row-fluid">
+<div class="container">
+<div class="row">
+<div class="wpb_column vc_column_container vc_col-sm-12">
+<div style="border: 1px solid #f57f20" class="vc_column-inner ">
+<div class="wpb_wrapper">
 	<div class="wpb_text_column wpb_content_element ">
 		<div class="wpb_wrapper">
 			<p>Please Remember:</p>
@@ -1152,7 +1162,8 @@ Pricing table
 
 		</div>
 	</div>
-</div></div></div></div></div></section><section class="light-wrapper  vc_row wpb_row vc_row-fluid"><div class="container"><div class="row"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner "><div class="wpb_wrapper"><div class="vc_separator wpb_content_element vc_separator_align_center vc_sep_width_100 vc_sep_pos_align_center vc_sep_color_orange vc_separator-has-text"><span class="vc_sep_holder vc_sep_holder_l"><span class="vc_sep_line"></span></span><h4>
+</div>
+</div></div></div></div></section><section class="light-wrapper  vc_row wpb_row vc_row-fluid"><div class="container"><div class="row"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner "><div class="wpb_wrapper"><div class="vc_separator wpb_content_element vc_separator_align_center vc_sep_width_100 vc_sep_pos_align_center vc_sep_color_orange vc_separator-has-text"><span class="vc_sep_holder vc_sep_holder_l"><span class="vc_sep_line"></span></span><h4>
 </h4><h1>Premium Pioneer Members</h1>
 <p></p><span class="vc_sep_holder vc_sep_holder_r"><span class="vc_sep_line"></span></span>
 </div></div></div></div></div></div></section><section class="light-wrapper  vc_row wpb_row vc_row-fluid"><div class="container"><div class="row"><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner "><div class="wpb_wrapper">
@@ -1197,7 +1208,12 @@ Pricing table
 			<a href="http://www.solocubes.com" target="_blank" class="vc_single_image-wrapper   vc_box_border_grey"><img width="728" height="315" src="http://startupsclub.org/wp-content/uploads/2016/12/Solocubes.png" class="vc_single_image-img attachment-full" alt="Solocubes" srcset="http://startupsclub.org/wp-content/uploads/2016/12/Solocubes.png 728w, http://startupsclub.org/wp-content/uploads/2016/12/Solocubes-300x130.png 300w" sizes="(max-width: 728px) 100vw, 728px" style="opacity: 1;"></a>
 		</figure>
 	</div>
-</div></div></div></div></div></section><section class="light-wrapper  vc_row wpb_row vc_row-fluid"><div class="container"><div class="row"><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner "><div class="wpb_wrapper">
+</div></div></div></div></div></section><section class="light-wrapper  vc_row wpb_row vc_row-fluid">
+<div class="container">
+<div class="row">
+<div class="wpb_column vc_column_container vc_col-sm-2">
+<div class="vc_column-inner ">
+<div class="wpb_wrapper">
 	<div class="wpb_single_image wpb_content_element vc_align_center">
 		
 		<figure class="wpb_wrapper vc_figure">
@@ -1211,14 +1227,25 @@ Pricing table
 			<a href="http://www.infraace.com" target="_blank" class="vc_single_image-wrapper   vc_box_border_grey"><img width="1981" height="649" src="http://startupsclub.org/wp-content/uploads/2016/12/infraace-logo.png" class="vc_single_image-img attachment-full" alt="infraace logo" srcset="http://startupsclub.org/wp-content/uploads/2016/12/infraace-logo.png 1981w, http://startupsclub.org/wp-content/uploads/2016/12/infraace-logo-300x98.png 300w, http://startupsclub.org/wp-content/uploads/2016/12/infraace-logo-768x252.png 768w, http://startupsclub.org/wp-content/uploads/2016/12/infraace-logo-1024x335.png 1024w" sizes="(max-width: 1981px) 100vw, 1981px" style="opacity: 1;"></a>
 		</figure>
 	</div>
-</div></div></div><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner "><div class="wpb_wrapper">
-	<div class="wpb_single_image wpb_content_element vc_align_center">
+</div>
+</div></div>
+<div class="wpb_column vc_column_container vc_col-sm-2">
+<div class="vc_column-inner "><div class="wpb_wrapper">
+<div class="wpb_single_image wpb_content_element vc_align_center">
 		
 		<figure class="wpb_wrapper vc_figure">
-			<a href="http://www.ajnasoft.com" target="_blank" class="vc_single_image-wrapper   vc_box_border_grey"><img width="1000" height="1000" src="http://startupsclub.org/wp-content/uploads/2016/12/Ajnalogo.jpg" class="vc_single_image-img attachment-full" alt="Ajnalogo" srcset="http://startupsclub.org/wp-content/uploads/2016/12/Ajnalogo.jpg 1000w, http://startupsclub.org/wp-content/uploads/2016/12/Ajnalogo-150x150.jpg 150w, http://startupsclub.org/wp-content/uploads/2016/12/Ajnalogo-300x300.jpg 300w, http://startupsclub.org/wp-content/uploads/2016/12/Ajnalogo-768x768.jpg 768w, http://startupsclub.org/wp-content/uploads/2016/12/Ajnalogo-172x172.jpg 172w, http://startupsclub.org/wp-content/uploads/2016/12/Ajnalogo-60x60.jpg 60w" sizes="(max-width: 1000px) 100vw, 1000px" style="opacity: 1;"></a>
+			<a href="http://www.ajnasoft.com" target="_blank" class="vc_single_image-wrapper   vc_box_border_grey">
+			<img width="1000" height="1000" src="http://startupsclub.org/wp-content/uploads/2016/12/Ajnalogo.jpg" 
+			class="vc_single_image-img attachment-full" 
+			alt="Ajnalogo" 
+			srcset="http://startupsclub.org/wp-content/uploads/2016/12/Ajnalogo.jpg 1000w, http://startupsclub.org/wp-content/uploads/2016/12/Ajnalogo-150x150.jpg 150w, http://startupsclub.org/wp-content/uploads/2016/12/Ajnalogo-300x300.jpg 300w, http://startupsclub.org/wp-content/uploads/2016/12/Ajnalogo-768x768.jpg 768w, http://startupsclub.org/wp-content/uploads/2016/12/Ajnalogo-172x172.jpg 172w, http://startupsclub.org/wp-content/uploads/2016/12/Ajnalogo-60x60.jpg 60w" sizes="(max-width: 1000px) 100vw, 1000px" style="opacity: 1;"></a>
 		</figure>
 	</div>
-</div></div></div><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner "><div class="wpb_wrapper">
+</div>
+</div>
+</div>
+<div class="wpb_column vc_column_container vc_col-sm-2">
+<div class="vc_column-inner "><div class="wpb_wrapper">
 	<div class="wpb_single_image wpb_content_element vc_align_center">
 		
 		<figure class="wpb_wrapper vc_figure">

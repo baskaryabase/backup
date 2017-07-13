@@ -1,8 +1,8 @@
   
  @section('header') 
 
-<div id="navbar">
-  <nav class="navbar navbar-default navbar-static-top" role="navigation">
+<div style="padding-bottom: 80px;" id="navbar">
+  <nav class="navbar navbar-default navbar-static-top navbar-fixed-top" role="navigation">
     <div class="container" >
     <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">

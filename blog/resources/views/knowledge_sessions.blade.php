@@ -17,7 +17,7 @@
 
 
 
-<div style="margin-top: 65px;" class="container">
+<div class="container cont-margin">
 
 
 <div style="background: #fff;" class="margin col-md-9">  
@@ -25,26 +25,26 @@
   
   <div class=" margin col-md-12">
     <div>
-    <h5 style="font-weight: bold;" class="pull-right hidden-xs">Knowledge Session</h5>
-    <li style="list-style: none; padding-top: 15px;"><h5><i style="color: #f57f20; padding-right: 14px;" class="fa fa-calendar" aria-hidden="true"></i><span>12 sep  2017</span><span><span>,  10 am onwards</span></span></h5></li>
+    <h5 class="ks pull-right hidden-xs">Knowledge Session</h5>
+    <li class="ks-date"><h5><i class="ks-icon fa fa-calendar" aria-hidden="true"></i><span>12 sep  2017</span><span><span>,  10 am onwards</span></span></h5></li>
 
-    <li style="list-style: none;"><h5><i style="color: #f57f20; padding-right: 14px;" class="fa fa-clock-o" aria-hidden="true"></i><span>Four hour Session</span></h5></li>
-        <h1 style="font-size: 20px" contenteditable="true">Swapping Customers for Productive Growth – BLR</h1>
+    <li class="li-style"><h5><i class="ks-icon fa fa-clock-o" aria-hidden="true"></i><span>Four hour Session</span></h5></li>
+        <h1 style="font-size: 20px">Swapping Customers for Productive Growth – BLR</h1>
     </div>
 <div class="padd">
   <ul >
-    <li style="list-style: none;"><h5><i style="color: #f57f20; padding-right: 18px;" class="fa fa-map-marker" aria-hidden="true"></i><span>Coimbatore,</span><span><br><span style="padding-left: 26px;"> City hall</span></span>
-    <span class="pull-right" contenteditable="true">₹ 5000 / seat</span> 
+    <li class="li-style"><h5><i class="ks-venue fa fa-map-marker" aria-hidden="true"></i><span>Coimbatore,</span><span><br><span class="ks-city"> City hall</span></span>
+    <span class="pull-right"><i class="fa fa-inr" aria-hidden="true"></i> 5000 / seat</span> 
     </h5></li>
   </ul>
 </div>
 <div>
   <h2 class="font-size-15"><span>Event Details</span></h2>
-  <p contenteditable="true">We have a monthly meetup where entrepreneurs both aspiring and established come together to meet one another. These events typically have a theme, which could be a speaker, a workshop or an entrepreneur sharing his/her experience.We have a monthly meetup where entrepreneurs both aspiring and established come together to meet one another.</p>
+  <p>We have a monthly meetup where entrepreneurs both aspiring and established come together to meet one another. These events typically have a theme, which could be a speaker, a workshop or an entrepreneur sharing his/her experience.We have a monthly meetup where entrepreneurs both aspiring and established come together to meet one another.</p>
 </div>
 
 <center>
-<div style="padding: 15px">
+<div class="padd-15">
    <button type="button" class="btn btn-md rsvp" data-toggle="modal" data-target="#myModal">Join Us / RSVP</button></div>
 </center>    
 
@@ -157,24 +157,15 @@
 
 <section>
 
-<div style="padding-top: 18px; 
+<div class="ks-similar-div col-md-3">
             
-            padding-right: 15px;
-            padding-left: 15px;" class="col-md-3">
-            
-   <div style=" background: #f57f20;
-                color: #fff;
-                height: 26px;
-                text-align: center;
-                padding-top: 0px;
-                border-radius: 5px;">
+   <div class="ks-sim-head">
                 <h5 
-                style="font-size: 14px;
-                           padding-top:5px;">
+                class="ks-sim-heading">
                 Similar Sessions</h5></div>
 </div>
 
-<div style="margin-bottom: 15px;margin-top: 15px;" class="col-md-3 pull-right">
+<div class="ks-sim-mar col-md-3 pull-right">
 
  <div class="event">
   <div class="table">
@@ -196,7 +187,7 @@
 
 </div>   
 
-<div style="margin-bottom: 25px;"  class="col-md-3 pull-right">
+<div class="ks-sim-mar-bot col-md-3 pull-right">
 
  <div class="event">
   <div class="table">

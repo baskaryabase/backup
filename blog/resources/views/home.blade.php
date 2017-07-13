@@ -1,7 +1,7 @@
-       @extends('layouts.homeMaster')
-         @section('title')
-    <title>Home | Member Platform | Startups Club</title> 
-   @stop
+@extends('layouts.homeMaster')
+@section('title')
+<title>Home | Member Platform | Startups Club</title> 
+@stop
   @section('header')
 @include('layouts.header')
 @stop
@@ -302,7 +302,7 @@ $('.owl-item').css('background','white');
                 });
               
           
-                $('.liveurl ').on('click', '.controls .button', function() 
+               $('.liveurl ').on('click', '.controls .button', function() 
                 {
                  
 

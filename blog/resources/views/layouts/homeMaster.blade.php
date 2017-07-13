@@ -50,13 +50,13 @@ echo '</pre>';*/
  ?>
   
 
-<div style="position: relative; margin-top: 20px;width: 100%">
+<div style="position: relative; margin-top: 30px;width: 100%">
 <div style="position: absolute;
             background: #000;
             width: 100%;
-            height: 275px;
+            height: 315px;
             opacity: .3;
-            margin-top: -24px;"></div>
+            margin-top: -44px;"></div>
 <div style="margin-right: 15px;
             margin-left: 15px;" class="owl-carousel row container">
   <?php foreach ($details['events'] as $key => $value) {

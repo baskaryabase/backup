@@ -15,6 +15,62 @@
 print_r($details);
 echo '</pre>';*/
 ?>
+<style type="text/css">
+@media screen and (max-width: 991px){
+  .cont{
+    padding: 0 15px;
+    margin: 0 auto;
+  }
+}
+
+  @media screen and (max-width: 991px){
+    
+    .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    margin-left: -30px;
+    margin-top: 180px;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 30px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+  }
+</style>
 
  <div class="row page-content">
       <div class="col-md-8 col-md-offset-2">
@@ -54,7 +110,12 @@ echo '</pre>';*/
  </div>
 
 </div>
-         <div class="col-md-3" >
+
+
+<!-- filter div starts here -->
+<div id="mySidenav" class="col-md-3 sidenav" >
+ <a href="javascript:void(0)" class="closebtn hidden-lg hidden-md" onclick="closeNav()">&times;</a>
+
   <div class="widget" style="max-height: 250px;overflow-y:scroll">
               <div class="widget-body" >Location
  <?php
@@ -152,8 +213,15 @@ foreach ($ind as $key => $value) {
             </div>
 
          </div>
-         
-        <div class="col-md-9" >
+         <!-- filter end -->
+
+
+
+<div id="main" class="col-md-9 cont" >
+        
+        <span class="hidden-lg hidden-md" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+
+
 <div class="row">
   <div id="display_find_append">
           <input type="hidden" id="hidden_token" name="_token" value="{{ csrf_token() }}">
@@ -192,4 +260,22 @@ echo '</pre>';*/
     </div>
     </div>
     </div>
+
+
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("mySidenav").style.marginLeft = "0";
+    document.getElementById("main").style.marginLeft = "250px";
+    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("mySidenav").style.marginLeft = "-30px";
+    document.getElementById("main").style.marginLeft= "0";
+    document.body.style.backgroundColor = "#E9EAEd";
+}
+</script>
+
 @stop

@@ -1,9 +1,19 @@
   
  @section('header') 
+<style type="text/css">
+.navbar-style{
+  margin-bottom: 100px;
+}
+ @media screen and (min-width: 767px) and (max-width: 1093px) {
+    .navbar-style{
+      margin-bottom: 180px;
+    }
+ }
+</style>
 
-<div style="padding-bottom: 80px;" id="navbar">
+<div class="navbar-style" id="navbar">
   <nav class="navbar navbar-default navbar-static-top navbar-fixed-top" role="navigation">
-    <div class="container" >
+    <div class="container">
     <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
           <span class="sr-only">Toggle navigation</span>
@@ -221,7 +231,6 @@
 </script>
 
 
-
 <script>
 /*$(document).ready(function() {
 $('[data-toggle="tooltip"]').tooltip(); 
@@ -232,7 +241,6 @@ $('ul.nav li.dropdown').hover(function() {
 }, function() {
   $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
 });
-
 
 </script>
    <script src="<?php echo URL::asset('/js/header.js') ?>"></script>

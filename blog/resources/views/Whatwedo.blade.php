@@ -1,6 +1,4 @@
-
-	
-  @extends('layouts.PlainHeaderFooter')
+@extends('layouts.PlainHeaderFooter')
       @section('title')
     <title>Events | Member Platform | Startups Club</title> 
    @stop
@@ -240,7 +238,7 @@ we can offer the perfect solution.</p>
 </div></div></div></div></div></section>
 <section class="strip-divider primary-overlay ebor-parallax">
 		<div class="background-image-holder parallax-background skrollable skrollable-before" data-bottom-top="-webkit-transform: translate3d(0px,-100px, 0px)" data-center="-webkit-transform: translate3d(0px,0px, 0px)" data-top-bottom="-webkit-transform: translate3d(0px,100px, 0px)" style="background: url(&quot;http://startupsclub.org/wp-content/uploads/2015/01/20915_652527351525581_4254211675430539696_n.jpg?id=454&quot;) 50% 0%; transform: translate3d(0px, -100px, 0px);">
-		    <img class="background-image" alt="Background Image" src="http://startupsclub.org/wp-content/uploads/2015/01/20915_652527351525581_4254211675430539696_n.jpg?id=454" style="opacity: 1; display: none;">
+		    <img class="background-image" alt="Background Image" src="<?php echo URL::asset('/image/demoday/eco/g.jpg') ?>" style="opacity: 1; display: none;">
 		</div>
 		      
 		<div class="container">
@@ -285,16 +283,42 @@ we can offer the perfect solution.</p>
 
 
 
-<link rel="stylesheet" id="font-awesome-css" href="http://startupsclub.org/wp-content/plugins/js_composer/assets/lib/bower/font-awesome/css/font-awesome.min.css?ver=4.11.2" type="text/css" media="all">
-<link rel="stylesheet" id="vc_google_fonts_montserratregular700-css" href="//fonts.googleapis.com/css?family=Montserrat%3Aregular%2C700&amp;subset=latin&amp;ver=4.6.6" type="text/css" media="all">
-<script type="text/javascript" src="http://startupsclub.org/wp-content/plugins/contact-form-7/includes/js/jquery.form.min.js?ver=3.51.0-2014.06.20"></script>
+
 <script type="text/javascript">
 /* <![CDATA[ */
 var _wpcf7 = {"loaderUrl":"http:\/\/startupsclub.org\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif","recaptcha":{"messages":{"empty":"Please verify that you are not a robot."}},"sending":"Sending ...","cached":"1"};
 /* ]]> */
 </script>
 
-<div id="lightboxOverlay" class="lightboxOverlay" style="display: none;"></div><div id="lightbox" class="lightbox" style="display: none;"><div class="lb-outerContainer"><div class="lb-container"><img class="lb-image" src=""><div class="lb-nav"><a class="lb-prev" href=""></a><a class="lb-next" href=""></a></div><div class="lb-loader"><a class="lb-cancel"></a></div></div></div><div class="lb-dataContainer"><div class="lb-data"><div class="lb-details"><span class="lb-caption"></span><span class="lb-number"></span></div><div class="lb-closeContainer"><a class="lb-close"></a></div></div></div></div><div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe name="fb_xdm_frame_http" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" id="fb_xdm_frame_http" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="http://staticxx.facebook.com/connect/xd_arbiter/r/XBwzv5Yrm_1.js?version=42#channel=fcf8bfe558964&amp;origin=http%3A%2F%2Fstartupsclub.org" style="border: none;"></iframe><iframe name="fb_xdm_frame_https" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="https://staticxx.facebook.com/connect/xd_arbiter/r/XBwzv5Yrm_1.js?version=42#channel=fcf8bfe558964&amp;origin=http%3A%2F%2Fstartupsclub.org" style="border: none;"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div></div>
+<div id="lightboxOverlay" class="lightboxOverlay" style="display: none;"></div>
+<div id="lightbox" class="lightbox" style="display: none;">
+<div class="lb-outerContainer">
+<div class="lb-container">
+<img class="lb-image" src="">
+<div class="lb-nav">
+<a class="lb-prev" href=""></a>
+<a class="lb-next" href=""></a>
+</div>
+<div class="lb-loader">
+<a class="lb-cancel"></a>
+</div>
+</div>
+</div>
+<div class="lb-dataContainer">
+<div class="lb-data">
+<div class="lb-details">
+<span class="lb-caption"></span>
+<span class="lb-number"></span>
+</div>
+<div class="lb-closeContainer"><a class="lb-close"></a>
+</div>
+</div>
+</div>
+</div>
+<div style="margin-bottom: 80px;" id="fb-root" class=" fb_reset">
+<div style="position: absolute; top: -10000px; height: 0px; width: 0px;">
+<div>
+<iframe name="fb_xdm_frame_http" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" id="fb_xdm_frame_http" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="http://staticxx.facebook.com/connect/xd_arbiter/r/XBwzv5Yrm_1.js?version=42#channel=fcf8bfe558964&amp;origin=http%3A%2F%2Fstartupsclub.org" style="border: none;"></iframe><iframe name="fb_xdm_frame_https" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="https://staticxx.facebook.com/connect/xd_arbiter/r/XBwzv5Yrm_1.js?version=42#channel=fcf8bfe558964&amp;origin=http%3A%2F%2Fstartupsclub.org" style="border: none;"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div></div>
 
 @stop
  

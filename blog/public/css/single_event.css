@@ -1,6 +1,16 @@
 body{
   background-color: #e9eaed;
 }
+.ks-sim-div{
+  height: 26px;
+       background-color: #f57f20;
+       color: #fff;text-align: center;
+       margin-top: 16px;
+       border-radius: 5px;
+}
+.ks-sim-mar{
+  margin-top: -10px;
+}
 #event-speakers {
   background: #FFFFFF;
   padding: 120px 0;

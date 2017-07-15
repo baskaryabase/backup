@@ -137,7 +137,7 @@
 					<div class="wpb_single_image wpb_content_element vc_align_center">
 		
 						<figure class="wpb_wrapper vc_figure">
-							<a href="http://www.razorpay.com" target="_blank" class="vc_single_image-wrapper   vc_box_border_grey"><img width="4474" height="1140" src="http://startupsclub.org/wp-content/uploads/2016/06/Razorpay-2.png" class="vc_single_image-img attachment-full" alt="Razorpay" srcset="http://startupsclub.org/wp-content/uploads/2016/06/Razorpay-2.png 4474w, http://startupsclub.org/wp-content/uploads/2016/06/Razorpay-2-300x76.png 300w, http://startupsclub.org/wp-content/uploads/2016/06/Razorpay-2-768x196.png 768w, http://startupsclub.org/wp-content/uploads/2016/06/Razorpay-2-1024x261.png 1024w" sizes="(max-width: 4474px) 100vw, 4474px" style="opacity: 1;"></a>
+							<a href="http://www.razorpay.com" target="_blank" class="vc_single_image-wrapper   vc_box_border_grey"><img width="4474" height="1140" src="<?php echo URL::asset('/image/demoday/sponsors/razorpay.png') ?>" class="vc_single_image-img attachment-full" alt="Razorpay" sizes="(max-width: 4474px) 100vw, 4474px" style="opacity: 1;"></a>
 						</figure>
 					</div>
 				</div>
@@ -149,7 +149,7 @@
 			<div class="wpb_single_image wpb_content_element vc_align_center">
 		
 				<figure class="wpb_wrapper vc_figure">
-					<a href="http://www.uniqbees.in" target="_blank" class="vc_single_image-wrapper   vc_box_border_grey"><img width="250" height="85" src="http://startupsclub.org/wp-content/uploads/2016/11/uniqbees.png" class="vc_single_image-img attachment-full" alt="uniqbees" style="opacity: 1;"></a>
+					<a href="http://www.uniqbees.in" target="_blank" class="vc_single_image-wrapper   vc_box_border_grey"><img width="250" height="85" src="<?php echo URL::asset('/image/demoday/sponsors/uniqbees.png') ?>" class="vc_single_image-img attachment-full" alt="uniqbees" style="opacity: 1;"></a>
 				</figure>
 			</div>
 		</div>
@@ -161,7 +161,7 @@
 			<div class="wpb_single_image wpb_content_element vc_align_center">
 		
 				<figure class="wpb_wrapper vc_figure">
-					<a href="http://www.uber.com" target="_blank" class="vc_single_image-wrapper   vc_box_border_grey"><img width="150" height="150" src="http://startupsclub.org/wp-content/uploads/2016/12/Uber-150x150.jpg" class="vc_single_image-img attachment-thumbnail" alt="Uber" srcset="http://startupsclub.org/wp-content/uploads/2016/12/Uber-150x150.jpg 150w, http://startupsclub.org/wp-content/uploads/2016/12/Uber-300x300.jpg 300w, http://startupsclub.org/wp-content/uploads/2016/12/Uber-172x172.jpg 172w, http://startupsclub.org/wp-content/uploads/2016/12/Uber-60x60.jpg 60w, http://startupsclub.org/wp-content/uploads/2016/12/Uber.jpg 600w" sizes="(max-width: 150px) 100vw, 150px" style="opacity: 1;"></a>
+					<a href="http://www.uber.com" target="_blank" class="vc_single_image-wrapper   vc_box_border_grey"><img width="150" height="150" src="<?php echo URL::asset('/image/demoday/sponsors/uber.jpg') ?>" class="vc_single_image-img attachment-thumbnail" alt="Uber" style="opacity: 1;"></a>
 				</figure>
 			</div>
 		</div>
@@ -173,7 +173,8 @@
 			<div class="wpb_single_image wpb_content_element vc_align_center">
 		
 				<figure class="wpb_wrapper vc_figure">
-					<a href="http://www.oyorooms.com" target="_blank" class="vc_single_image-wrapper   vc_box_border_grey"><img width="150" height="150" src="http://startupsclub.org/wp-content/uploads/2016/12/969.Logos-Final_1x1-ratio-Logo-red-copy-2-02-150x150.png" class="vc_single_image-img attachment-thumbnail" alt="969.Logos-Final_1x1-ratio-Logo-red-copy-2-02" srcset="http://startupsclub.org/wp-content/uploads/2016/12/969.Logos-Final_1x1-ratio-Logo-red-copy-2-02-150x150.png 150w, http://startupsclub.org/wp-content/uploads/2016/12/969.Logos-Final_1x1-ratio-Logo-red-copy-2-02-300x300.png 300w, http://startupsclub.org/wp-content/uploads/2016/12/969.Logos-Final_1x1-ratio-Logo-red-copy-2-02-768x768.png 768w, http://startupsclub.org/wp-content/uploads/2016/12/969.Logos-Final_1x1-ratio-Logo-red-copy-2-02-1024x1024.png 1024w, http://startupsclub.org/wp-content/uploads/2016/12/969.Logos-Final_1x1-ratio-Logo-red-copy-2-02-172x172.png 172w, http://startupsclub.org/wp-content/uploads/2016/12/969.Logos-Final_1x1-ratio-Logo-red-copy-2-02-60x60.png 60w" sizes="(max-width: 150px) 100vw, 150px" style="opacity: 1;"></a>
+					<a href="http://www.oyorooms.com" target="_blank" class="vc_single_image-wrapper   vc_box_border_grey"><img width="150" height="150" src="<?php echo URL::asset('/image/demoday/sponsors/oyo.png') ?>" class="vc_single_image-img attachment-thumbnail" alt="969.Logos-Final_1x1-ratio-Logo-red-copy-2-02"  sizes="(max-width: 150px) 100vw, 150px" 
+					style="opacity: 1;"></a>
 				</figure>
 			</div>
 		</div>
@@ -198,7 +199,7 @@
 	<div class="wpb_single_image wpb_content_element vc_align_center">
 		
 		<figure class="wpb_wrapper vc_figure">
-			<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="300" height="200" src="http://startupsclub.org/wp-content/uploads/2016/12/vizag-2.jpg" class="vc_single_image-img attachment-full" alt="vizag" style="opacity: 1;"></div>
+			<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="300" height="200" src="<?php echo URL::asset('/image/demoday/demoday-cities/vizag.jpg') ?>" class="vc_single_image-img attachment-full" alt="vizag" style="opacity: 1;"></div>
 		</figure>
 	</div>
 
@@ -214,7 +215,7 @@
 	<div class="wpb_single_image wpb_content_element vc_align_center">
 		
 		<figure class="wpb_wrapper vc_figure">
-			<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="300" height="200" src="http://startupsclub.org/wp-content/uploads/2016/12/vijaywada.jpg" class="vc_single_image-img attachment-full" alt="vijaywada" style="opacity: 1;"></div>
+			<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="300" height="200" src="<?php echo URL::asset('/image/demoday/demoday-cities/vijayawada.jpg') ?>" class="vc_single_image-img attachment-full" alt="vijaywada" style="opacity: 1;"></div>
 		</figure>
 	</div>
 
@@ -230,7 +231,7 @@
 	<div class="wpb_single_image wpb_content_element vc_align_center">
 		
 		<figure class="wpb_wrapper vc_figure">
-			<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="300" height="200" src="http://startupsclub.org/wp-content/uploads/2016/12/hyderabad.jpg" class="vc_single_image-img attachment-full" alt="hyderabad" style="opacity: 1;"></div>
+			<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="300" height="200" src="<?php echo URL::asset('/image/demoday/demoday-cities/hyderabad.jpg') ?>" class="vc_single_image-img attachment-full" alt="hyderabad" style="opacity: 1;"></div>
 		</figure>
 	</div>
 
@@ -246,7 +247,7 @@
 	<div class="wpb_single_image wpb_content_element vc_align_center">
 		
 		<figure class="wpb_wrapper vc_figure">
-			<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="300" height="200" src="http://startupsclub.org/wp-content/uploads/2016/12/chandigarh.jpg" class="vc_single_image-img attachment-full" alt="chandigarh" style="opacity: 1;"></div>
+			<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="300" height="200" src="<?php echo URL::asset('/image/demoday/demoday-cities/chandigarh.jpg') ?>" class="vc_single_image-img attachment-full" alt="chandigarh" style="opacity: 1;"></div>
 		</figure>
 	</div>
 
@@ -262,7 +263,7 @@
 	<div class="wpb_single_image wpb_content_element vc_align_center">
 		
 		<figure class="wpb_wrapper vc_figure">
-			<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="300" height="200" src="http://startupsclub.org/wp-content/uploads/2016/12/ahmedabad.jpg" class="vc_single_image-img attachment-full" alt="ahmedabad" style="opacity: 1;"></div>
+			<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="300" height="200" src="<?php echo URL::asset('/image/demoday/demoday-cities/ahmedabad.jpg') ?>" class="vc_single_image-img attachment-full" alt="ahmedabad" style="opacity: 1;"></div>
 		</figure>
 	</div>
 
@@ -278,7 +279,7 @@
 	<div class="wpb_single_image wpb_content_element vc_align_center">
 		
 		<figure class="wpb_wrapper vc_figure">
-			<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="300" height="200" src="http://startupsclub.org/wp-content/uploads/2016/12/delhi.jpg" class="vc_single_image-img attachment-full" alt="delhi" style="opacity: 1;"></div>
+			<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="300" height="200" src="<?php echo URL::asset('/image/demoday/demoday-cities/delhi.jpg') ?>" class="vc_single_image-img attachment-full" alt="delhi" style="opacity: 1;"></div>
 		</figure>
 	</div>
 
@@ -294,7 +295,7 @@
 	<div class="wpb_single_image wpb_content_element vc_align_center">
 		
 		<figure class="wpb_wrapper vc_figure">
-			<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="300" height="200" src="http://startupsclub.org/wp-content/uploads/2016/12/jaipur.jpg" class="vc_single_image-img attachment-full" alt="jaipur" style="opacity: 1;"></div>
+			<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="300" height="200" src="<?php echo URL::asset('/image/demoday/demoday-cities/jaipur.jpg') ?>" class="vc_single_image-img attachment-full" alt="jaipur" style="opacity: 1;"></div>
 		</figure>
 	</div>
 
@@ -310,7 +311,7 @@
 	<div class="wpb_single_image wpb_content_element vc_align_center">
 		
 		<figure class="wpb_wrapper vc_figure">
-			<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="300" height="200" src="http://startupsclub.org/wp-content/uploads/2016/12/vellore.jpg" class="vc_single_image-img attachment-full" alt="vellore" style="opacity: 1;"></div>
+			<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="300" height="200" src="<?php echo URL::asset('/image/demoday/demoday-cities/vellore.jpg') ?>" class="vc_single_image-img attachment-full" alt="vellore" style="opacity: 1;"></div>
 		</figure>
 	</div>
 
@@ -326,7 +327,7 @@
 	<div class="wpb_single_image wpb_content_element vc_align_center">
 		
 		<figure class="wpb_wrapper vc_figure">
-			<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="300" height="200" src="http://startupsclub.org/wp-content/uploads/2016/12/mumbai.jpg" class="vc_single_image-img attachment-full" alt="mumbai" style="opacity: 1;"></div>
+			<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="300" height="200" src="<?php echo URL::asset('/image/demoday/demoday-cities/mumbai.jpg') ?>" class="vc_single_image-img attachment-full" alt="mumbai" style="opacity: 1;"></div>
 		</figure>
 	</div>
 
@@ -342,7 +343,7 @@
 	<div class="wpb_single_image wpb_content_element vc_align_center">
 		
 		<figure class="wpb_wrapper vc_figure">
-			<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="300" height="200" src="http://startupsclub.org/wp-content/uploads/2016/12/goa.jpg" class="vc_single_image-img attachment-full" alt="goa" style="opacity: 1;"></div>
+			<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="300" height="200" src="<?php echo URL::asset('/image/demoday/demoday-cities/goa.jpg') ?>" class="vc_single_image-img attachment-full" alt="goa" style="opacity: 1;"></div>
 		</figure>
 	</div>
 
@@ -358,7 +359,7 @@
 	<div class="wpb_single_image wpb_content_element vc_align_center">
 		
 		<figure class="wpb_wrapper vc_figure">
-			<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="300" height="200" src="http://startupsclub.org/wp-content/uploads/2016/12/kolkata.jpg" class="vc_single_image-img attachment-full" alt="kolkata" style="opacity: 1;"></div>
+			<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="300" height="200" src="<?php echo URL::asset('/image/demoday/demoday-cities/kolkata.jpg') ?>" class="vc_single_image-img attachment-full" alt="kolkata" style="opacity: 1;"></div>
 		</figure>
 	</div>
 
@@ -374,7 +375,7 @@
 	<div class="wpb_single_image wpb_content_element vc_align_center">
 		
 		<figure class="wpb_wrapper vc_figure">
-			<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="300" height="200" src="http://startupsclub.org/wp-content/uploads/2016/12/bangalore.jpg" class="vc_single_image-img attachment-full" alt="bangalore" style="opacity: 1;"></div>
+			<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="300" height="200" src="<?php echo URL::asset('/image/demoday/demoday-cities/bangalore.jpg') ?>" class="vc_single_image-img attachment-full" alt="bangalore" style="opacity: 1;"></div>
 		</figure>
 	</div>
 
@@ -390,7 +391,7 @@
 	<div class="wpb_single_image wpb_content_element vc_align_center">
 		
 		<figure class="wpb_wrapper vc_figure">
-			<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="300" height="200" src="http://startupsclub.org/wp-content/uploads/2016/12/mysore.jpg" class="vc_single_image-img attachment-full" alt="mysore" style="opacity: 1;"></div>
+			<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="300" height="200" src="<?php echo URL::asset('/image/demoday/demoday-cities/mysore.jpg') ?>" class="vc_single_image-img attachment-full" alt="mysore" style="opacity: 1;"></div>
 		</figure>
 	</div>
 
@@ -406,7 +407,7 @@
 	<div class="wpb_single_image wpb_content_element vc_align_center">
 		
 		<figure class="wpb_wrapper vc_figure">
-			<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="300" height="200" src="http://startupsclub.org/wp-content/uploads/2016/12/mangalore.jpg" class="vc_single_image-img attachment-full" alt="mangalore" style="opacity: 1;"></div>
+			<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="300" height="200" src="<?php echo URL::asset('/image/demoday/demoday-cities/mangalore.jpg') ?>" class="vc_single_image-img attachment-full" alt="mangalore" style="opacity: 1;"></div>
 		</figure>
 	</div>
 
@@ -422,7 +423,7 @@
 	<div class="wpb_single_image wpb_content_element vc_align_center">
 		
 		<figure class="wpb_wrapper vc_figure">
-			<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="300" height="200" src="http://startupsclub.org/wp-content/uploads/2016/12/indore.jpg" class="vc_single_image-img attachment-full" alt="indore" style="opacity: 1;"></div>
+			<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="300" height="200" src="<?php echo URL::asset('/image/demoday/demoday-cities/indore.jpg') ?>" class="vc_single_image-img attachment-full" alt="indore" style="opacity: 1;"></div>
 		</figure>
 	</div>
 
@@ -438,7 +439,7 @@
 	<div class="wpb_single_image wpb_content_element vc_align_center">
 		
 		<figure class="wpb_wrapper vc_figure">
-			<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="300" height="200" src="http://startupsclub.org/wp-content/uploads/2016/12/kochi.jpg" class="vc_single_image-img attachment-full" alt="kochi" style="opacity: 1;"></div>
+			<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="300" height="200" src="<?php echo URL::asset('/image/demoday/demoday-cities/kochi.jpg') ?>" class="vc_single_image-img attachment-full" alt="kochi" style="opacity: 1;"></div>
 		</figure>
 	</div>
 
@@ -454,7 +455,7 @@
 	<div class="wpb_single_image wpb_content_element vc_align_center">
 		
 		<figure class="wpb_wrapper vc_figure">
-			<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="300" height="200" src="http://startupsclub.org/wp-content/uploads/2016/12/pune.jpg" class="vc_single_image-img attachment-full" alt="pune" style="opacity: 1;"></div>
+			<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="300" height="200" src="<?php echo URL::asset('/image/demoday/demoday-cities/pune.jpg') ?>" class="vc_single_image-img attachment-full" alt="pune" style="opacity: 1;"></div>
 		</figure>
 	</div>
 
@@ -470,7 +471,7 @@
 	<div class="wpb_single_image wpb_content_element vc_align_center">
 		
 		<figure class="wpb_wrapper vc_figure">
-			<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="300" height="200" src="http://startupsclub.org/wp-content/uploads/2016/12/madurai.jpg" class="vc_single_image-img attachment-full" alt="madurai" style="opacity: 1;"></div>
+			<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="300" height="200" src="<?php echo URL::asset('/image/demoday/demoday-cities/madurai.jpg') ?>" class="vc_single_image-img attachment-full" alt="madurai" style="opacity: 1;"></div>
 		</figure>
 	</div>
 
@@ -486,7 +487,7 @@
 	<div class="wpb_single_image wpb_content_element vc_align_center">
 		
 		<figure class="wpb_wrapper vc_figure">
-			<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="300" height="200" src="http://startupsclub.org/wp-content/uploads/2016/12/coimbatore.jpg" class="vc_single_image-img attachment-full" alt="coimbatore" style="opacity: 1;"></div>
+			<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="300" height="200" src="<?php echo URL::asset('/image/demoday/demoday-cities/coimbatore.jpg') ?>" class="vc_single_image-img attachment-full" alt="coimbatore" style="opacity: 1;"></div>
 		</figure>
 	</div>
 
@@ -502,7 +503,7 @@
 	<div class="wpb_single_image wpb_content_element vc_align_center">
 		
 		<figure class="wpb_wrapper vc_figure">
-			<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="300" height="200" src="http://startupsclub.org/wp-content/uploads/2016/12/chennai.jpg" class="vc_single_image-img attachment-full" alt="chennai" style="opacity: 1;"></div>
+			<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="300" height="200" src="<?php echo URL::asset('/image/demoday/demoday-cities/chennai.jpg') ?>" class="vc_single_image-img attachment-full" alt="chennai" style="opacity: 1;"></div>
 		</figure>
 	</div>
 
@@ -521,7 +522,7 @@
 	<div class="wpb_single_image wpb_content_element vc_align_center">
 		
 		<figure class="wpb_wrapper vc_figure">
-			<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="640" height="427" src="http://startupsclub.org/wp-content/uploads/2016/12/glass-house-333364_1280-1.jpg" class="vc_single_image-img attachment-full" alt="Bangalore" srcset="http://startupsclub.org/wp-content/uploads/2016/12/glass-house-333364_1280-1.jpg 640w, http://startupsclub.org/wp-content/uploads/2016/12/glass-house-333364_1280-1-300x200.jpg 300w, http://startupsclub.org/wp-content/uploads/2016/12/glass-house-333364_1280-1-600x400.jpg 600w" sizes="(max-width: 640px) 100vw, 640px" style="opacity: 1;"></div>
+			<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="640" height="427" src="<?php echo URL::asset('/image/demoday/demoday-cities/demoday_finale.jpg') ?>" class="vc_single_image-img attachment-full" alt="Bangalore" sizes="(max-width: 640px) 100vw, 640px" style="opacity: 1;"></div>
 		</figure>
 	</div>
 
@@ -1170,42 +1171,42 @@ Pricing table
 	<div class="wpb_single_image wpb_content_element vc_align_center">
 		
 		<figure class="wpb_wrapper vc_figure">
-			<a href="http://ablifree.com" target="_blank" class="vc_single_image-wrapper   vc_box_border_grey"><img class="vc_single_image-img " src="http://startupsclub.org/wp-content/uploads/2017/01/Ablifree-1-100x100.png" width="100" height="100" alt="Ablifree" title="Ablifree" style="opacity: 1;"></a>
+			<a href="http://ablifree.com" target="_blank" class="vc_single_image-wrapper   vc_box_border_grey"><img class="vc_single_image-img " src="<?php echo URL::asset('/image/demoday/ppm/1.png') ?>" width="100" height="100" alt="Ablifree" title="Ablifree" style="opacity: 1;"></a>
 		</figure>
 	</div>
 </div></div></div><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner "><div class="wpb_wrapper">
 	<div class="wpb_single_image wpb_content_element vc_align_center">
 		
 		<figure class="wpb_wrapper vc_figure">
-			<a href="http://www.eventshigh.com" target="_blank" class="vc_single_image-wrapper   vc_box_border_grey"><img class="vc_single_image-img " src="http://startupsclub.org/wp-content/uploads/2016/11/logo_fbr-300x100.jpg" width="300" height="100" alt="EventsHigh_Logo" title="EventsHigh_Logo" style="opacity: 1;"></a>
+			<a href="http://www.eventshigh.com" target="_blank" class="vc_single_image-wrapper   vc_box_border_grey"><img class="vc_single_image-img " src="<?php echo URL::asset('/image/demoday/ppm/2.jpg') ?>" width="300" height="100" alt="EventsHigh_Logo" title="EventsHigh_Logo" style="opacity: 1;"></a>
 		</figure>
 	</div>
 </div></div></div><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner "><div class="wpb_wrapper">
 	<div class="wpb_single_image wpb_content_element vc_align_center">
 		
 		<figure class="wpb_wrapper vc_figure">
-			<a href="http://www.academyofrobotics.net" target="_blank" class="vc_single_image-wrapper   vc_box_border_grey"><img class="vc_single_image-img " src="http://startupsclub.org/wp-content/uploads/2016/12/101-AOR-Only-Logo-425x100.png" width="425" height="100" alt="academyofrobotics-logo" title="academyofrobotics-logo" style="opacity: 1;"></a>
+			<a href="http://www.academyofrobotics.net" target="_blank" class="vc_single_image-wrapper   vc_box_border_grey"><img class="vc_single_image-img " src="<?php echo URL::asset('/image/demoday/ppm/3.png') ?>" width="425" height="100" alt="academyofrobotics-logo" title="academyofrobotics-logo" style="opacity: 1;"></a>
 		</figure>
 	</div>
 </div></div></div><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner "><div class="wpb_wrapper">
 	<div class="wpb_single_image wpb_content_element vc_align_center">
 		
 		<figure class="wpb_wrapper vc_figure">
-			<a href="http://www.onelifeacademy.in" target="_blank" class="vc_single_image-wrapper   vc_box_border_grey"><img class="vc_single_image-img " src="http://startupsclub.org/wp-content/uploads/2016/12/OLA-300x200.jpg" width="300" height="200" alt="OneLifeAcademy" title="OneLifeAcademy" style="opacity: 1;"></a>
+			<a href="http://www.onelifeacademy.in" target="_blank" class="vc_single_image-wrapper   vc_box_border_grey"><img class="vc_single_image-img " src="<?php echo URL::asset('/image/demoday/ppm/4.jpg') ?>" width="300" height="200" alt="OneLifeAcademy" title="OneLifeAcademy" style="opacity: 1;"></a>
 		</figure>
 	</div>
 </div></div></div><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner "><div class="wpb_wrapper">
 	<div class="wpb_single_image wpb_content_element vc_align_center">
 		
 		<figure class="wpb_wrapper vc_figure">
-			<a href="http://www.pitchdecks.co.in" target="_blank" class="vc_single_image-wrapper   vc_box_border_grey"><img class="vc_single_image-img " src="http://startupsclub.org/wp-content/uploads/2016/12/PDBLogo.png" width="120" height="120" alt="PitchDeckandBeyond" title="PitchDeckandBeyond" style="opacity: 1;"></a>
+			<a href="http://www.pitchdecks.co.in" target="_blank" class="vc_single_image-wrapper   vc_box_border_grey"><img class="vc_single_image-img " src="<?php echo URL::asset('/image/demoday/ppm/5.png') ?>" width="120" height="120" alt="PitchDeckandBeyond" title="PitchDeckandBeyond" style="opacity: 1;"></a>
 		</figure>
 	</div>
 </div></div></div><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner "><div class="wpb_wrapper">
 	<div class="wpb_single_image wpb_content_element vc_align_center">
 		
 		<figure class="wpb_wrapper vc_figure">
-			<a href="http://www.solocubes.com" target="_blank" class="vc_single_image-wrapper   vc_box_border_grey"><img width="728" height="315" src="http://startupsclub.org/wp-content/uploads/2016/12/Solocubes.png" class="vc_single_image-img attachment-full" alt="Solocubes" srcset="http://startupsclub.org/wp-content/uploads/2016/12/Solocubes.png 728w, http://startupsclub.org/wp-content/uploads/2016/12/Solocubes-300x130.png 300w" sizes="(max-width: 728px) 100vw, 728px" style="opacity: 1;"></a>
+			<a href="http://www.solocubes.com" target="_blank" class="vc_single_image-wrapper   vc_box_border_grey"><img width="728" height="315" src="<?php echo URL::asset('/image/demoday/ppm/6.png') ?>" class="vc_single_image-img attachment-full" alt="Solocubes"  sizes="(max-width: 728px) 100vw, 728px" style="opacity: 1;"></a>
 		</figure>
 	</div>
 </div></div></div></div></div></section><section class="light-wrapper  vc_row wpb_row vc_row-fluid">
@@ -1217,14 +1218,14 @@ Pricing table
 	<div class="wpb_single_image wpb_content_element vc_align_center">
 		
 		<figure class="wpb_wrapper vc_figure">
-			<a href="http://www.spacewhiz.com" target="_blank" class="vc_single_image-wrapper   vc_box_border_grey"><img width="2484" height="864" src="http://startupsclub.org/wp-content/uploads/2016/12/spacewhiz-header.jpg" class="vc_single_image-img attachment-full" alt="spacewhiz header" srcset="http://startupsclub.org/wp-content/uploads/2016/12/spacewhiz-header.jpg 2484w, http://startupsclub.org/wp-content/uploads/2016/12/spacewhiz-header-300x104.jpg 300w, http://startupsclub.org/wp-content/uploads/2016/12/spacewhiz-header-768x267.jpg 768w, http://startupsclub.org/wp-content/uploads/2016/12/spacewhiz-header-1024x356.jpg 1024w" sizes="(max-width: 2484px) 100vw, 2484px" style="opacity: 1;"></a>
+			<a href="http://www.spacewhiz.com" target="_blank" class="vc_single_image-wrapper   vc_box_border_grey"><img width="2484" height="864" src="<?php echo URL::asset('/image/demoday/ppm/7.jpg') ?>" class="vc_single_image-img attachment-full" alt="spacewhiz header" sizes="(max-width: 2484px) 100vw, 2484px" style="opacity: 1;"></a>
 		</figure>
 	</div>
 </div></div></div><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner "><div class="wpb_wrapper">
 	<div class="wpb_single_image wpb_content_element vc_align_center">
 		
 		<figure class="wpb_wrapper vc_figure">
-			<a href="http://www.infraace.com" target="_blank" class="vc_single_image-wrapper   vc_box_border_grey"><img width="1981" height="649" src="http://startupsclub.org/wp-content/uploads/2016/12/infraace-logo.png" class="vc_single_image-img attachment-full" alt="infraace logo" srcset="http://startupsclub.org/wp-content/uploads/2016/12/infraace-logo.png 1981w, http://startupsclub.org/wp-content/uploads/2016/12/infraace-logo-300x98.png 300w, http://startupsclub.org/wp-content/uploads/2016/12/infraace-logo-768x252.png 768w, http://startupsclub.org/wp-content/uploads/2016/12/infraace-logo-1024x335.png 1024w" sizes="(max-width: 1981px) 100vw, 1981px" style="opacity: 1;"></a>
+			<a href="http://www.infraace.com" target="_blank" class="vc_single_image-wrapper   vc_box_border_grey"><img width="1981" height="649" src="<?php echo URL::asset('/image/demoday/ppm/8.png') ?>" class="vc_single_image-img attachment-full" alt="infraace logo" sizes="(max-width: 1981px) 100vw, 1981px" style="opacity: 1;"></a>
 		</figure>
 	</div>
 </div>
@@ -1235,10 +1236,10 @@ Pricing table
 		
 		<figure class="wpb_wrapper vc_figure">
 			<a href="http://www.ajnasoft.com" target="_blank" class="vc_single_image-wrapper   vc_box_border_grey">
-			<img width="1000" height="1000" src="http://startupsclub.org/wp-content/uploads/2016/12/Ajnalogo.jpg" 
+			<img width="1000" height="1000" src="<?php echo URL::asset('/image/demoday/ppm/9.jpg') ?>" 
 			class="vc_single_image-img attachment-full" 
 			alt="Ajnalogo" 
-			srcset="http://startupsclub.org/wp-content/uploads/2016/12/Ajnalogo.jpg 1000w, http://startupsclub.org/wp-content/uploads/2016/12/Ajnalogo-150x150.jpg 150w, http://startupsclub.org/wp-content/uploads/2016/12/Ajnalogo-300x300.jpg 300w, http://startupsclub.org/wp-content/uploads/2016/12/Ajnalogo-768x768.jpg 768w, http://startupsclub.org/wp-content/uploads/2016/12/Ajnalogo-172x172.jpg 172w, http://startupsclub.org/wp-content/uploads/2016/12/Ajnalogo-60x60.jpg 60w" sizes="(max-width: 1000px) 100vw, 1000px" style="opacity: 1;"></a>
+			sizes="(max-width: 1000px) 100vw, 1000px" style="opacity: 1;"></a>
 		</figure>
 	</div>
 </div>
@@ -1249,112 +1250,115 @@ Pricing table
 	<div class="wpb_single_image wpb_content_element vc_align_center">
 		
 		<figure class="wpb_wrapper vc_figure">
-			<a href="http://www.analyticalinvestments.com" target="_blank" class="vc_single_image-wrapper   vc_box_border_grey"><img width="313" height="223" src="http://startupsclub.org/wp-content/uploads/2016/12/analytical-investments.png" class="vc_single_image-img attachment-full" alt="analytical investments" srcset="http://startupsclub.org/wp-content/uploads/2016/12/analytical-investments.png 313w, http://startupsclub.org/wp-content/uploads/2016/12/analytical-investments-300x214.png 300w" sizes="(max-width: 313px) 100vw, 313px" style="opacity: 1;"></a>
+			<a href="http://www.analyticalinvestments.com" target="_blank" class="vc_single_image-wrapper   vc_box_border_grey"><img width="313" height="223" src="<?php echo URL::asset('/image/demoday/ppm/10.png') ?>" alt="analytical investments" style="opacity: 1;"></a>
 		</figure>
 	</div>
 </div></div></div><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner "><div class="wpb_wrapper">
 	<div class="wpb_single_image wpb_content_element vc_align_center">
 		
 		<figure class="wpb_wrapper vc_figure">
-			<a href="http://www.cloop.co.in" target="_blank" class="vc_single_image-wrapper   vc_box_border_grey"><img width="150" height="150" src="http://startupsclub.org/wp-content/uploads/2016/12/Cloop-150x150.jpeg" class="vc_single_image-img attachment-thumbnail" alt="Cloop" srcset="http://startupsclub.org/wp-content/uploads/2016/12/Cloop-150x150.jpeg 150w, http://startupsclub.org/wp-content/uploads/2016/12/Cloop-300x300.jpeg 300w, http://startupsclub.org/wp-content/uploads/2016/12/Cloop-172x172.jpeg 172w, http://startupsclub.org/wp-content/uploads/2016/12/Cloop-60x60.jpeg 60w, http://startupsclub.org/wp-content/uploads/2016/12/Cloop.jpeg 512w" sizes="(max-width: 150px) 100vw, 150px" style="opacity: 1;"></a>
+			<a href="http://www.cloop.co.in" target="_blank" class="vc_single_image-wrapper   vc_box_border_grey"><img width="150" height="150" src="<?php echo URL::asset('/image/demoday/ppm/11.jpeg') ?>" class="vc_single_image-img attachment-thumbnail" alt="Cloop" sizes="(max-width: 150px) 100vw, 150px" style="opacity: 1;"></a>
 		</figure>
 	</div>
 </div></div></div><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner "><div class="wpb_wrapper">
 	<div class="wpb_single_image wpb_content_element vc_align_center">
 		
 		<figure class="wpb_wrapper vc_figure">
-			<a href="http://www.quikhiring.com" target="_blank" class="vc_single_image-wrapper   vc_box_border_grey"><img width="1200" height="850" src="http://startupsclub.org/wp-content/uploads/2016/12/QuikHiring-Logo.png" class="vc_single_image-img attachment-full" alt="QuikHiring Logo" srcset="http://startupsclub.org/wp-content/uploads/2016/12/QuikHiring-Logo.png 1200w, http://startupsclub.org/wp-content/uploads/2016/12/QuikHiring-Logo-300x213.png 300w, http://startupsclub.org/wp-content/uploads/2016/12/QuikHiring-Logo-768x544.png 768w, http://startupsclub.org/wp-content/uploads/2016/12/QuikHiring-Logo-1024x725.png 1024w" sizes="(max-width: 1200px) 100vw, 1200px" style="opacity: 1;"></a>
+			<a href="http://www.quikhiring.com" target="_blank" class="vc_single_image-wrapper   vc_box_border_grey"><img width="1200" height="850" src="<?php echo URL::asset('/image/demoday/ppm/12.png') ?>" class="vc_single_image-img attachment-full" alt="QuikHiring Logo" sizes="(max-width: 1200px) 100vw, 1200px" style="opacity: 1;"></a>
 		</figure>
 	</div>
 </div></div></div></div></div></section><section class="light-wrapper  vc_row wpb_row vc_row-fluid"><div class="container"><div class="row"><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner "><div class="wpb_wrapper">
 	<div class="wpb_single_image wpb_content_element vc_align_center">
 		
 		<figure class="wpb_wrapper vc_figure">
-			<a href="http://www.thepurpleink.com" target="_blank" class="vc_single_image-wrapper   vc_box_border_grey"><img width="1400" height="400" src="http://startupsclub.org/wp-content/uploads/2016/12/PurpleInk.png" class="vc_single_image-img attachment-full" alt="PurpleInk" srcset="http://startupsclub.org/wp-content/uploads/2016/12/PurpleInk.png 1400w, http://startupsclub.org/wp-content/uploads/2016/12/PurpleInk-300x86.png 300w, http://startupsclub.org/wp-content/uploads/2016/12/PurpleInk-768x219.png 768w, http://startupsclub.org/wp-content/uploads/2016/12/PurpleInk-1024x293.png 1024w" sizes="(max-width: 1400px) 100vw, 1400px" style="width: auto; height: auto; opacity: 1;"></a>
+			<a href="http://www.thepurpleink.com" target="_blank" class="vc_single_image-wrapper   vc_box_border_grey"><img width="1400" height="400" src="<?php echo URL::asset('/image/demoday/ppm/13.png') ?>" class="vc_single_image-img attachment-full" alt="PurpleInk" sizes="(max-width: 1400px) 100vw, 1400px" style="width: auto; height: auto; opacity: 1;"></a>
 		</figure>
 	</div>
 </div></div></div><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner "><div class="wpb_wrapper">
 	<div class="wpb_single_image wpb_content_element vc_align_center">
 		
 		<figure class="wpb_wrapper vc_figure">
-			<a href="http://www.YaTraining.com" target="_blank" class="vc_single_image-wrapper   vc_box_border_grey"><img width="180" height="111" src="http://startupsclub.org/wp-content/uploads/2016/12/Ya-training-Logo.jpg" class="vc_single_image-img attachment-full" alt="Ya training Logo" style="opacity: 1;"></a>
+			<a href="http://www.YaTraining.com" target="_blank" class="vc_single_image-wrapper   vc_box_border_grey"><img width="180" height="111" src="<?php echo URL::asset('/image/demoday/ppm/14.jpg') ?>" class="vc_single_image-img attachment-full" alt="Ya training Logo" style="opacity: 1;"></a>
 		</figure>
 	</div>
 </div></div></div><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner "><div class="wpb_wrapper">
 	<div class="wpb_single_image wpb_content_element vc_align_center">
 		
 		<figure class="wpb_wrapper vc_figure">
-			<a href="http://www.auzatech.com" target="_blank" class="vc_single_image-wrapper   vc_box_border_grey"><img width="1405" height="480" src="http://startupsclub.org/wp-content/uploads/2017/01/logo_at_full.png" class="vc_single_image-img attachment-full" alt="logo_at_full" srcset="http://startupsclub.org/wp-content/uploads/2017/01/logo_at_full.png 1405w, http://startupsclub.org/wp-content/uploads/2017/01/logo_at_full-300x102.png 300w, http://startupsclub.org/wp-content/uploads/2017/01/logo_at_full-768x262.png 768w, http://startupsclub.org/wp-content/uploads/2017/01/logo_at_full-1024x350.png 1024w" sizes="(max-width: 1405px) 100vw, 1405px" style="width: auto; height: auto; opacity: 1;"></a>
+			<a href="http://www.auzatech.com" target="_blank" class="vc_single_image-wrapper   vc_box_border_grey"><img width="1405" height="480" src="<?php echo URL::asset('/image/demoday/ppm/15.png') ?>" class="vc_single_image-img attachment-full" alt="logo_at_full" sizes="(max-width: 1405px) 100vw, 1405px" style="width: auto; height: auto; opacity: 1;"></a>
 		</figure>
 	</div>
 </div></div></div><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner "><div class="wpb_wrapper">
 	<div class="wpb_single_image wpb_content_element vc_align_center">
 		
 		<figure class="wpb_wrapper vc_figure">
-			<a href="http://www.jackpott.asia" target="_blank" class="vc_single_image-wrapper   vc_box_border_grey"><img width="2382" height="1684" src="http://startupsclub.org/wp-content/uploads/2017/01/jackpott-logo-white-background.png" class="vc_single_image-img attachment-full" alt="jackpott-logo-white background" srcset="http://startupsclub.org/wp-content/uploads/2017/01/jackpott-logo-white-background.png 2382w, http://startupsclub.org/wp-content/uploads/2017/01/jackpott-logo-white-background-300x212.png 300w, http://startupsclub.org/wp-content/uploads/2017/01/jackpott-logo-white-background-768x543.png 768w, http://startupsclub.org/wp-content/uploads/2017/01/jackpott-logo-white-background-1024x724.png 1024w" sizes="(max-width: 2382px) 100vw, 2382px" style="width: auto; height: auto; opacity: 1;"></a>
+			<a href="http://www.jackpott.asia" target="_blank" class="vc_single_image-wrapper   vc_box_border_grey"><img width="2382" height="1684" src="<?php echo URL::asset('/image/demoday/ppm/16.png') ?>" alt="jackpott-logo-white background" style="width: auto; height: auto; opacity: 1;"></a>
 		</figure>
 	</div>
 </div></div></div><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner "><div class="wpb_wrapper">
 	<div class="wpb_single_image wpb_content_element vc_align_center">
 		
 		<figure class="wpb_wrapper vc_figure">
-			<a href="http://www.buymediaspace.com" target="_blank" class="vc_single_image-wrapper   vc_box_border_grey"><img width="1024" height="1024" src="http://startupsclub.org/wp-content/uploads/2017/01/18076511_1879506898939900_6408277200275931527_o.jpg" class="vc_single_image-img attachment-full" alt="18076511_1879506898939900_6408277200275931527_o" srcset="http://startupsclub.org/wp-content/uploads/2017/01/18076511_1879506898939900_6408277200275931527_o.jpg 1024w, http://startupsclub.org/wp-content/uploads/2017/01/18076511_1879506898939900_6408277200275931527_o-150x150.jpg 150w, http://startupsclub.org/wp-content/uploads/2017/01/18076511_1879506898939900_6408277200275931527_o-300x300.jpg 300w, http://startupsclub.org/wp-content/uploads/2017/01/18076511_1879506898939900_6408277200275931527_o-768x768.jpg 768w, http://startupsclub.org/wp-content/uploads/2017/01/18076511_1879506898939900_6408277200275931527_o-172x172.jpg 172w, http://startupsclub.org/wp-content/uploads/2017/01/18076511_1879506898939900_6408277200275931527_o-60x60.jpg 60w" sizes="(max-width: 1024px) 100vw, 1024px" style="width: auto; height: auto; opacity: 1;"></a>
+			<a href="http://www.buymediaspace.com" target="_blank" class="vc_single_image-wrapper   vc_box_border_grey"><img width="1024" height="1024" src="<?php echo URL::asset('/image/demoday/ppm/17.jpg') ?>" class="vc_single_image-img attachment-full" alt="18076511_1879506898939900_6408277200275931527_o" style="width: auto; height: auto; opacity: 1;"></a>
 		</figure>
 	</div>
 </div></div></div><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner "><div class="wpb_wrapper">
 	<div class="wpb_single_image wpb_content_element vc_align_center">
 		
 		<figure class="wpb_wrapper vc_figure">
-			<a href="http://www.futurexindia.com" target="_blank" class="vc_single_image-wrapper   vc_box_border_grey"><img width="1124" height="1208" src="http://startupsclub.org/wp-content/uploads/2017/01/Anuj-Logo.png" class="vc_single_image-img attachment-full" alt="Anuj Logo" srcset="http://startupsclub.org/wp-content/uploads/2017/01/Anuj-Logo.png 1124w, http://startupsclub.org/wp-content/uploads/2017/01/Anuj-Logo-279x300.png 279w, http://startupsclub.org/wp-content/uploads/2017/01/Anuj-Logo-768x825.png 768w, http://startupsclub.org/wp-content/uploads/2017/01/Anuj-Logo-953x1024.png 953w" sizes="(max-width: 1124px) 100vw, 1124px" style="width: auto; height: auto; opacity: 1;"></a>
+			<a href="http://www.futurexindia.com" target="_blank" class="vc_single_image-wrapper   vc_box_border_grey"><img width="1124" height="1208" src="<?php echo URL::asset('/image/demoday/ppm/18.png') ?>" class="vc_single_image-img attachment-full" alt="Anuj Logo" sizes="(max-width: 1124px) 100vw, 1124px" style="width: auto; height: auto; opacity: 1;"></a>
 		</figure>
 	</div>
 </div></div></div></div></div></section><section class="light-wrapper  vc_row wpb_row vc_row-fluid"><div class="container"><div class="row"><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner "><div class="wpb_wrapper">
 	<div class="wpb_single_image wpb_content_element vc_align_center">
 		
 		<figure class="wpb_wrapper vc_figure">
-			<a href="http://www.total-sols.com" target="_blank" class="vc_single_image-wrapper   vc_box_border_grey"><img width="361" height="181" src="http://startupsclub.org/wp-content/uploads/2016/12/Total-Solutions.png" class="vc_single_image-img attachment-full" alt="Total Solutions" srcset="http://startupsclub.org/wp-content/uploads/2016/12/Total-Solutions.png 361w, http://startupsclub.org/wp-content/uploads/2016/12/Total-Solutions-300x150.png 300w" sizes="(max-width: 361px) 100vw, 361px" style="width: auto; height: auto; opacity: 1;"></a>
+			<a href="http://www.total-sols.com" target="_blank" class="vc_single_image-wrapper   vc_box_border_grey"><img width="361" height="181" src="<?php echo URL::asset('/image/demoday/ppm/19.png') ?>" class="vc_single_image-img attachment-full" alt="Total Solutions" style="width: auto; height: auto; opacity: 1;"></a>
 		</figure>
 	</div>
 </div></div></div><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner "><div class="wpb_wrapper">
 	<div class="wpb_single_image wpb_content_element vc_align_center">
 		
 		<figure class="wpb_wrapper vc_figure">
-			<a href="http://flock.co" target="_blank" class="vc_single_image-wrapper   vc_box_border_grey"><img width="1884" height="888" src="http://startupsclub.org/wp-content/uploads/2016/12/Flock.jpg" class="vc_single_image-img attachment-full" alt="Flock" srcset="http://startupsclub.org/wp-content/uploads/2016/12/Flock.jpg 1884w, http://startupsclub.org/wp-content/uploads/2016/12/Flock-300x141.jpg 300w, http://startupsclub.org/wp-content/uploads/2016/12/Flock-768x362.jpg 768w, http://startupsclub.org/wp-content/uploads/2016/12/Flock-1024x483.jpg 1024w" sizes="(max-width: 1884px) 100vw, 1884px" style="width: auto; height: auto; opacity: 1;"></a>
+			<a href="http://flock.co" target="_blank" class="vc_single_image-wrapper   vc_box_border_grey"><img width="1884" height="888" src="<?php echo URL::asset('/image/demoday/ppm/20.jpg') ?>" class="vc_single_image-img attachment-full" alt="Flock" sizes="(max-width: 1884px) 100vw, 1884px" style="width: auto; height: auto; opacity: 1;"></a>
 		</figure>
 	</div>
 </div></div></div><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner "><div class="wpb_wrapper">
 	<div class="wpb_single_image wpb_content_element vc_align_center">
 		
 		<figure class="wpb_wrapper vc_figure">
-			<a href="http://www.rupeelife.com/" target="_blank" class="vc_single_image-wrapper   vc_box_border_grey"><img width="1684" height="425" src="http://startupsclub.org/wp-content/uploads/2016/12/logo-sleek-0.jpg" class="vc_single_image-img attachment-full" alt="logo-sleek-0" srcset="http://startupsclub.org/wp-content/uploads/2016/12/logo-sleek-0.jpg 1684w, http://startupsclub.org/wp-content/uploads/2016/12/logo-sleek-0-300x76.jpg 300w, http://startupsclub.org/wp-content/uploads/2016/12/logo-sleek-0-768x194.jpg 768w, http://startupsclub.org/wp-content/uploads/2016/12/logo-sleek-0-1024x258.jpg 1024w" sizes="(max-width: 1684px) 100vw, 1684px" style="width: auto; height: auto; opacity: 1;"></a>
+			<a href="http://www.rupeelife.com/" target="_blank" class="vc_single_image-wrapper   vc_box_border_grey"><img width="1684" height="425" src="<?php echo URL::asset('/image/demoday/ppm/21.jpg') ?>" class="vc_single_image-img attachment-full" alt="logo-sleek-0" sizes="(max-width: 1684px) 100vw, 1684px" style="width: auto; height: auto; opacity: 1;"></a>
 		</figure>
 	</div>
 </div></div></div><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner "><div class="wpb_wrapper">
 	<div class="wpb_single_image wpb_content_element vc_align_center">
 		
 		<figure class="wpb_wrapper vc_figure">
-			<a href="https://play.google.com/store/apps/details?id=com.ionicframework.projectx956620 " target="_blank" class="vc_single_image-wrapper   vc_box_border_grey"><img width="1080" height="1080" src="http://startupsclub.org/wp-content/uploads/2016/12/1080x1080.png" class="vc_single_image-img attachment-full" alt="1080x1080" srcset="http://startupsclub.org/wp-content/uploads/2016/12/1080x1080.png 1080w, http://startupsclub.org/wp-content/uploads/2016/12/1080x1080-150x150.png 150w, http://startupsclub.org/wp-content/uploads/2016/12/1080x1080-300x300.png 300w, http://startupsclub.org/wp-content/uploads/2016/12/1080x1080-768x768.png 768w, http://startupsclub.org/wp-content/uploads/2016/12/1080x1080-1024x1024.png 1024w, http://startupsclub.org/wp-content/uploads/2016/12/1080x1080-172x172.png 172w, http://startupsclub.org/wp-content/uploads/2016/12/1080x1080-60x60.png 60w" sizes="(max-width: 1080px) 100vw, 1080px" style="width: auto; height: auto; opacity: 1;"></a>
+			<a href="https://play.google.com/store/apps/details?id=com.ionicframework.projectx956620 " 
+			target="_blank" class="vc_single_image-wrapper   vc_box_border_grey">
+			<img width="1080" height="1080" src="<?php echo URL::asset('/image/demoday/ppm/22.png') ?>" class="vc_single_image-img attachment-full" alt="1080x1080" sizes="(max-width: 1080px) 100vw, 1080px" style="width: auto; height: auto; opacity: 1;"></a>
 		</figure>
 	</div>
 </div></div></div><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner "><div class="wpb_wrapper">
 	<div class="wpb_single_image wpb_content_element vc_align_center">
 		
 		<figure class="wpb_wrapper vc_figure">
-			<a href="http://ideatoipo.in/" target="_blank" class="vc_single_image-wrapper   vc_box_border_grey"><img width="640" height="381" src="http://startupsclub.org/wp-content/uploads/2016/12/i2I.png" class="vc_single_image-img attachment-full" alt="i2I" srcset="http://startupsclub.org/wp-content/uploads/2016/12/i2I.png 640w, http://startupsclub.org/wp-content/uploads/2016/12/i2I-300x179.png 300w" sizes="(max-width: 640px) 100vw, 640px" style="width: auto; height: auto; opacity: 1;"></a>
+			<a href="http://ideatoipo.in/" target="_blank" class="vc_single_image-wrapper   vc_box_border_grey"><img width="640" height="381" src="<?php echo URL::asset('/image/demoday/ppm/23.png') ?>" class="vc_single_image-img attachment-full" alt="i2I" style="width: auto; height: auto; opacity: 1;"></a>
 		</figure>
 	</div>
 </div></div></div><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner "><div class="wpb_wrapper">
 	<div class="wpb_single_image wpb_content_element vc_align_center">
 		
 		<figure class="wpb_wrapper vc_figure">
-			<a href="http://corpinfiny.com/" target="_blank" class="vc_single_image-wrapper   vc_box_border_grey"><img width="1079" height="419" src="http://startupsclub.org/wp-content/uploads/2016/12/IMG-20170619-WA0009.jpg" class="vc_single_image-img attachment-full" alt="IMG-20170619-WA0009" srcset="http://startupsclub.org/wp-content/uploads/2016/12/IMG-20170619-WA0009.jpg 1079w, http://startupsclub.org/wp-content/uploads/2016/12/IMG-20170619-WA0009-300x116.jpg 300w, http://startupsclub.org/wp-content/uploads/2016/12/IMG-20170619-WA0009-768x298.jpg 768w, http://startupsclub.org/wp-content/uploads/2016/12/IMG-20170619-WA0009-1024x398.jpg 1024w" sizes="(max-width: 1079px) 100vw, 1079px" style="width: auto; height: auto; opacity: 1;"></a>
+			<a href="http://corpinfiny.com/" target="_blank" class="vc_single_image-wrapper   vc_box_border_grey">
+			<img width="1079" height="419" src="<?php echo URL::asset('/image/demoday/ppm/24.jpg') ?>" class="vc_single_image-img attachment-full" alt="IMG-20170619-WA0009" sizes="(max-width: 1079px) 100vw, 1079px" style="width: auto; height: auto; opacity: 1;"></a>
 		</figure>
 	</div>
 </div></div></div></div></div></section><section class="light-wrapper  vc_row wpb_row vc_row-fluid"><div class="container"><div class="row"><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner "><div class="wpb_wrapper">
 	<div class="wpb_single_image wpb_content_element vc_align_center">
 		
 		<figure class="wpb_wrapper vc_figure">
-			<a href="http://caforstartups.com/" target="_blank" class="vc_single_image-wrapper   vc_box_border_grey"><img width="1280" height="786" src="http://startupsclub.org/wp-content/uploads/2016/12/without-background.png" class="vc_single_image-img attachment-full" alt="without background" srcset="http://startupsclub.org/wp-content/uploads/2016/12/without-background.png 1280w, http://startupsclub.org/wp-content/uploads/2016/12/without-background-300x184.png 300w, http://startupsclub.org/wp-content/uploads/2016/12/without-background-768x472.png 768w, http://startupsclub.org/wp-content/uploads/2016/12/without-background-1024x629.png 1024w" sizes="(max-width: 1280px) 100vw, 1280px" style="width: auto; height: auto; opacity: 1;"></a>
+			<a href="http://caforstartups.com/" target="_blank" class="vc_single_image-wrapper   vc_box_border_grey"><img width="1280" height="786" src="<?php echo URL::asset('/image/demoday/ppm/25.png') ?>" class="vc_single_image-img attachment-full" alt="without background" style="width: auto; height: auto; opacity: 1;"></a>
 		</figure>
 	</div>
 </div></div></div><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner "><div class="wpb_wrapper"></div></div></div><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner "><div class="wpb_wrapper"></div></div></div><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner "><div class="wpb_wrapper"></div></div></div><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner "><div class="wpb_wrapper"></div></div></div><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner "><div class="wpb_wrapper"></div></div></div></div></div></section><section class="light-wrapper  vc_row wpb_row vc_row-fluid"><div class="container"><div class="row"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner "><div class="wpb_wrapper"><div class="vc_separator wpb_content_element vc_separator_align_center vc_sep_width_100 vc_sep_pos_align_center vc_sep_color_orange vc_separator-has-text"><span class="vc_sep_holder vc_sep_holder_l"><span class="vc_sep_line"></span></span><h4>
@@ -1364,49 +1368,49 @@ Pricing table
 	<div class="wpb_single_image wpb_content_element vc_align_center">
 		
 		<figure class="wpb_wrapper vc_figure">
-			<a href="http://www.kluniversity.in" target="_blank" class="vc_single_image-wrapper   vc_box_border_grey"><img class="vc_single_image-img " src="http://startupsclub.org/wp-content/uploads/2016/12/klulogo3.png" width="492" height="112" alt="KL University" title="KL University" style="opacity: 1;"></a>
+			<a href="http://www.kluniversity.in" target="_blank" class="vc_single_image-wrapper   vc_box_border_grey"><img class="vc_single_image-img " src="<?php echo URL::asset('/image/demoday/eco/1.png') ?>" width="492" height="112" alt="KL University" title="KL University" style="opacity: 1;"></a>
 		</figure>
 	</div>
 </div></div></div><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner "><div class="wpb_wrapper">
 	<div class="wpb_single_image wpb_content_element vc_align_center">
 		
 		<figure class="wpb_wrapper vc_figure">
-			<a href="http://www.ecell.in" target="_blank" class="vc_single_image-wrapper   vc_box_border_grey"><img width="948" height="565" src="http://startupsclub.org/wp-content/uploads/2017/01/ecell1.png" class="vc_single_image-img attachment-full" alt="ecell1" srcset="http://startupsclub.org/wp-content/uploads/2017/01/ecell1.png 948w, http://startupsclub.org/wp-content/uploads/2017/01/ecell1-300x179.png 300w, http://startupsclub.org/wp-content/uploads/2017/01/ecell1-768x458.png 768w" sizes="(max-width: 948px) 100vw, 948px" style="width: auto; height: auto; opacity: 1;"></a>
+			<a href="http://www.ecell.in" target="_blank" class="vc_single_image-wrapper   vc_box_border_grey"><img width="948" height="565" src="<?php echo URL::asset('/image/demoday/eco/2.png') ?>" class="vc_single_image-img attachment-full" alt="ecell1" sizes="(max-width: 948px) 100vw, 948px" style="width: auto; height: auto; opacity: 1;"></a>
 		</figure>
 	</div>
 </div></div></div><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner "><div class="wpb_wrapper">
 	<div class="wpb_single_image wpb_content_element vc_align_center">
 		
 		<figure class="wpb_wrapper vc_figure">
-			<a href="http://ikeva.com" target="_blank" class="vc_single_image-wrapper   vc_box_border_grey"><img width="161" height="65" src="http://startupsclub.org/wp-content/uploads/2016/12/ikeva.png" class="vc_single_image-img attachment-full" alt="ikeva" style="opacity: 1;"></a>
+			<a href="http://ikeva.com" target="_blank" class="vc_single_image-wrapper   vc_box_border_grey"><img width="161" height="65" src="<?php echo URL::asset('/image/demoday/eco/3.png') ?>" class="vc_single_image-img attachment-full" alt="ikeva" style="opacity: 1;"></a>
 		</figure>
 	</div>
 </div></div></div><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner "><div class="wpb_wrapper">
 	<div class="wpb_single_image wpb_content_element vc_align_center">
 		
 		<figure class="wpb_wrapper vc_figure">
-			<a href="http://www.starthubnation.com" target="_blank" class="vc_single_image-wrapper   vc_box_border_grey"><img width="1300" height="807" src="http://startupsclub.org/wp-content/uploads/2016/12/logo_starthub.png" class="vc_single_image-img attachment-full" alt="logo_starthub" srcset="http://startupsclub.org/wp-content/uploads/2016/12/logo_starthub.png 1300w, http://startupsclub.org/wp-content/uploads/2016/12/logo_starthub-300x186.png 300w, http://startupsclub.org/wp-content/uploads/2016/12/logo_starthub-768x477.png 768w, http://startupsclub.org/wp-content/uploads/2016/12/logo_starthub-1024x636.png 1024w" sizes="(max-width: 1300px) 100vw, 1300px" style="width: auto; height: auto; opacity: 1;"></a>
+			<a href="http://www.starthubnation.com" target="_blank" class="vc_single_image-wrapper   vc_box_border_grey"><img width="1300" height="807" src="<?php echo URL::asset('/image/demoday/eco/4.png') ?>" class="vc_single_image-img attachment-full" alt="logo_starthub" sizes="(max-width: 1300px) 100vw, 1300px" style="width: auto; height: auto; opacity: 1;"></a>
 		</figure>
 	</div>
 </div></div></div><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner "><div class="wpb_wrapper">
 	<div class="wpb_single_image wpb_content_element vc_align_center">
 		
 		<figure class="wpb_wrapper vc_figure">
-			<a href="http://www.StartupSuccessStories.in" target="_blank" class="vc_single_image-wrapper   vc_box_border_grey"><img width="1286" height="757" src="http://startupsclub.org/wp-content/uploads/2016/12/StartupSuccessStories-logo.png" class="vc_single_image-img attachment-full" alt="StartupSuccessStories-logo" srcset="http://startupsclub.org/wp-content/uploads/2016/12/StartupSuccessStories-logo.png 1286w, http://startupsclub.org/wp-content/uploads/2016/12/StartupSuccessStories-logo-300x177.png 300w, http://startupsclub.org/wp-content/uploads/2016/12/StartupSuccessStories-logo-768x452.png 768w, http://startupsclub.org/wp-content/uploads/2016/12/StartupSuccessStories-logo-1024x603.png 1024w" sizes="(max-width: 1286px) 100vw, 1286px" style="width: auto; height: auto; opacity: 1;"></a>
+			<a href="http://www.StartupSuccessStories.in" target="_blank" class="vc_single_image-wrapper   vc_box_border_grey"><img width="1286" height="757" src="<?php echo URL::asset('/image/demoday/eco/5.png') ?>" class="vc_single_image-img attachment-full" alt="StartupSuccessStories-logo" sizes="(max-width: 1286px) 100vw, 1286px" style="width: auto; height: auto; opacity: 1;"></a>
 		</figure>
 	</div>
 </div></div></div><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner "><div class="wpb_wrapper">
 	<div class="wpb_single_image wpb_content_element vc_align_center">
 		
 		<figure class="wpb_wrapper vc_figure">
-			<a href="http://www.ennoxcellence.com" target="_blank" class="vc_single_image-wrapper   vc_box_border_grey"><img width="1385" height="750" src="http://startupsclub.org/wp-content/uploads/2016/12/ennoxcellence-logo-1.png" class="vc_single_image-img attachment-full" alt="ennoxcellence-logo (1)" srcset="http://startupsclub.org/wp-content/uploads/2016/12/ennoxcellence-logo-1.png 1385w, http://startupsclub.org/wp-content/uploads/2016/12/ennoxcellence-logo-1-300x162.png 300w, http://startupsclub.org/wp-content/uploads/2016/12/ennoxcellence-logo-1-768x416.png 768w, http://startupsclub.org/wp-content/uploads/2016/12/ennoxcellence-logo-1-1024x555.png 1024w" sizes="(max-width: 1385px) 100vw, 1385px" style="width: auto; height: auto; opacity: 1;"></a>
+			<a href="http://www.ennoxcellence.com" target="_blank" class="vc_single_image-wrapper   vc_box_border_grey"><img width="1385" height="750" src="<?php echo URL::asset('/image/demoday/eco/6.png') ?>" class="vc_single_image-img attachment-full" alt="ennoxcellence-logo (1)" sizes="(max-width: 1385px) 100vw, 1385px" style="width: auto; height: auto; opacity: 1;"></a>
 		</figure>
 	</div>
 </div></div></div></div></div></section><section class="light-wrapper  vc_row wpb_row vc_row-fluid last"><div class="container"><div class="row"><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner "><div class="wpb_wrapper">
 	<div class="wpb_single_image wpb_content_element vc_align_center">
 		
 		<figure class="wpb_wrapper vc_figure">
-			<a href="http://www.bharatiyastartups.com" target="_blank" class="vc_single_image-wrapper   vc_box_border_grey"><img width="878" height="379" src="http://startupsclub.org/wp-content/uploads/2016/12/bhartiyastartups.png" class="vc_single_image-img attachment-full" alt="bhartiyastartups" srcset="http://startupsclub.org/wp-content/uploads/2016/12/bhartiyastartups.png 878w, http://startupsclub.org/wp-content/uploads/2016/12/bhartiyastartups-300x129.png 300w, http://startupsclub.org/wp-content/uploads/2016/12/bhartiyastartups-768x332.png 768w" sizes="(max-width: 878px) 100vw, 878px" style="width: auto; height: auto; opacity: 1;"></a>
+			<a href="http://www.bharatiyastartups.com" target="_blank" class="vc_single_image-wrapper   vc_box_border_grey"><img width="878" height="379" src="<?php echo URL::asset('/image/demoday/eco/7.png') ?>" class="vc_single_image-img attachment-full" alt="bhartiyastartups"sizes="(max-width: 878px) 100vw, 878px" style="width: auto; height: auto; opacity: 1;"></a>
 		</figure>
 	</div>
 </div></div></div><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner "><div class="wpb_wrapper"></div></div></div><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner "><div class="wpb_wrapper"></div></div></div><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner "><div class="wpb_wrapper"></div></div></div><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner "><div class="wpb_wrapper"></div></div></div><div class="wpb_column vc_column_container vc_col-sm-2"><div class="vc_column-inner "><div class="wpb_wrapper"></div></div></div></div></div></section>

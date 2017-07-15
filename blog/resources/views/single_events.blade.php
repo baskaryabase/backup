@@ -139,13 +139,9 @@ if(!empty($date)){ ?>
 </div>
 <!-- end of 9 columns -->
 
-<div style="margin-top: -80px;" class="col-md-3">
+<div class="ks-sim-mar col-md-3">
 <div>
-	<div style="height: 26px;
-	     background-color: #f57f20;
-	     color: #fff;text-align: center;
-	     margin-top: 16px;
-	     border-radius: 5px;">
+	<div class="ks-sim-div">
 	     <h5 style="font-size: 15px; 
 	                padding-top: 4px;">Similar events<h5></div>
 </div>

@@ -284,12 +284,6 @@ we can offer the perfect solution.</p>
 
 
 
-<script type="text/javascript">
-/* <![CDATA[ */
-var _wpcf7 = {"loaderUrl":"http:\/\/startupsclub.org\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif","recaptcha":{"messages":{"empty":"Please verify that you are not a robot."}},"sending":"Sending ...","cached":"1"};
-/* ]]> */
-</script>
-
 <div id="lightboxOverlay" class="lightboxOverlay" style="display: none;"></div>
 <div id="lightbox" class="lightbox" style="display: none;">
 <div class="lb-outerContainer">

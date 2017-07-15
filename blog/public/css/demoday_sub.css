@@ -1,0 +1,15 @@
+.padding{
+	padding: 5px;
+}
+
+.margin{
+	margin-top: 100px;
+}
+@media screen and (max-width: 767px){
+	.cont{
+		padding-right: 15px;
+		padding-left: 15px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}

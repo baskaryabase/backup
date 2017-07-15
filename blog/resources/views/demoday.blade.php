@@ -522,7 +522,7 @@
 	<div class="wpb_single_image wpb_content_element vc_align_center">
 		
 		<figure class="wpb_wrapper vc_figure">
-			<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="640" height="427" src="<?php echo URL::asset('/image/demoday/demoday-cities/demoday_finale.jpg') ?>" class="vc_single_image-img attachment-full" alt="Bangalore" sizes="(max-width: 640px) 100vw, 640px" style="opacity: 1;"></div>
+			<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="640" height="427" src="<?php echo URL::asset('/image/demoday/demoday-cities/demoday_finalae.jpg') ?>" class="vc_single_image-img attachment-full" alt="Bangalore" sizes="(max-width: 640px) 100vw, 640px" style="opacity: 1;"></div>
 		</figure>
 	</div>
 
@@ -633,7 +633,7 @@
 </div>
  <div class="col-md-6">
 <div class="form-group">
-<h4>Attach presentation <a href="http://startupsclub.org/wp-content/uploads/2016/12/Pitch-Format.pptx">(Refer Format)</a></h4>
+<h4>Attach presentation <a href="<?php echo URL::asset('/files/Pitch-Format.pptx') ?>">(Refer Format)</a></h4>
 
 <input id="participant_file" type="file" name="pic[]">
 </div>
@@ -1422,23 +1422,8 @@ Pricing table
 
 
 
-<script type="text/javascript" src="http://startupsclub.org/wp-content/plugins/contact-form-7/includes/js/jquery.form.min.js?ver=3.51.0-2014.06.20"></script>
-<script type="text/javascript">
-/* <![CDATA[ */
-var _wpcf7 = {"loaderUrl":"http:\/\/startupsclub.org\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif","recaptcha":{"messages":{"empty":"Please verify that you are not a robot."}},"sending":"Sending ...","cached":"1"};
-/* ]]> */
-</script>
-<script type="text/javascript" src="http://startupsclub.org/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=4.5"></script>
-<script type="text/javascript" src="http://w.sharethis.com/button/st_insights.js"></script>
-<script type="text/javascript" src="http://startupsclub.org/wp-content/plugins/simple-share-buttons-adder/js/ssba.min.js?ver=4.6.6"></script>
-<script type="text/javascript" src="http://startupsclub.org/wp-content/themes/meetup/style/js/bootstrap.min.js?ver=4.6.6"></script>
-<script type="text/javascript" src="http://startupsclub.org/wp-content/themes/meetup/style/js/plugins.js?ver=4.6.6"></script>
-<script type="text/javascript" src="http://startupsclub.org/wp-content/themes/meetup/style/js/scripts.js?ver=4.6.6"></script>
-<script type="text/javascript" src="https://checkout.razorpay.com/v1/checkout.js?ver=1.1"></script><div class="razorpay-container" style="z-index: 1000000000; position: fixed; top: 0px; display: none; left: 0px; height: 100%; width: 100%; backface-visibility: hidden; overflow-y: visible;"><style>@keyframes rzp-rot{to{transform: rotate(360deg);}}@-webkit-keyframes rzp-rot{to{-webkit-transform: rotate(360deg);}}</style><div class="razorpay-backdrop" style="min-height: 100%; transition: 0.3s ease-out; position: fixed; top: 0px; left: 0px; width: 100%; height: 100%;"><span style="text-decoration: none; background: rgb(214, 68, 68); border: 1px dashed white; padding: 3px; opacity: 0; transform: rotate(45deg); transition: opacity 0.3s ease-in; font-family: lato, ubuntu, helvetica, sans-serif; color: white; position: absolute; width: 200px; text-align: center; right: -50px; top: 50px;">Test Mode</span></div><iframe class="razorpay-checkout-frame" style="height: 100%; position: relative; background: none; display: block; border: 0 none transparent; margin: 0px; padding: 0px;" allowtransparency="true" width="100%" height="100%" src="https://api.razorpay.com/v1/checkout/public"></iframe></div>
-<script type="text/javascript" src="http://startupsclub.org/wp-content/plugins/s2member/s2member-o.php?ws_plugin__s2member_js_w_globals=1&amp;qcABC=1&amp;ver=160801-160801-3056929864"></script>
-<script type="text/javascript" src="http://startupsclub.org/wp-includes/js/wp-embed.min.js?ver=4.6.6"></script>
-<script type="text/javascript" src="http://startupsclub.org/wp-content/plugins/js_composer/assets/js/dist/js_composer_front.min.js?ver=4.11.2"></script>
-<script type="text/javascript" id="slb_context">/* <![CDATA[ */if ( !!window.jQuery ) {(function($){$(document).ready(function(){if ( !!window.SLB ) { {$.extend(SLB, {"context":["public","user_guest"]});} }})})(jQuery);}/* ]]> */</script>
+
+<div class="razorpay-container" style="z-index: 1000000000; position: fixed; top: 0px; display: none; left: 0px; height: 100%; width: 100%; backface-visibility: hidden; overflow-y: visible;"><style>@keyframes rzp-rot{to{transform: rotate(360deg);}}@-webkit-keyframes rzp-rot{to{-webkit-transform: rotate(360deg);}}</style><div class="razorpay-backdrop" style="min-height: 100%; transition: 0.3s ease-out; position: fixed; top: 0px; left: 0px; width: 100%; height: 100%;"><span style="text-decoration: none; background: rgb(214, 68, 68); border: 1px dashed white; padding: 3px; opacity: 0; transform: rotate(45deg); transition: opacity 0.3s ease-in; font-family: lato, ubuntu, helvetica, sans-serif; color: white; position: absolute; width: 200px; text-align: center; right: -50px; top: 50px;">Test Mode</span></div><iframe class="razorpay-checkout-frame" style="height: 100%; position: relative; background: none; display: block; border: 0 none transparent; margin: 0px; padding: 0px;" allowtransparency="true" width="100%" height="100%" src="https://api.razorpay.com/v1/checkout/public"></iframe></div>
 
 <div id="lightboxOverlay" class="lightboxOverlay" style="display: none;"></div><div id="lightbox" class="lightbox" style="display: none;"><div class="lb-outerContainer"><div class="lb-container"><img class="lb-image" src=""><div class="lb-nav"><a class="lb-prev" href=""></a><a class="lb-next" href=""></a></div><div class="lb-loader"><a class="lb-cancel"></a></div></div></div><div class="lb-dataContainer"><div class="lb-data"><div class="lb-details"><span class="lb-caption"></span><span class="lb-number"></span></div><div class="lb-closeContainer"><a class="lb-close"></a></div></div></div></div><div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe name="fb_xdm_frame_http" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" id="fb_xdm_frame_http" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="http://staticxx.facebook.com/connect/xd_arbiter/r/XBwzv5Yrm_1.js?version=42#channel=f3890d427106524&amp;origin=http%3A%2F%2Fstartupsclub.org" style="border: none;"></iframe><iframe name="fb_xdm_frame_https" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="https://staticxx.facebook.com/connect/xd_arbiter/r/XBwzv5Yrm_1.js?version=42#channel=f3890d427106524&amp;origin=http%3A%2F%2Fstartupsclub.org" style="border: none;"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div></div></body>
 

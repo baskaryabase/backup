@@ -2666,6 +2666,10 @@ return view('revup');
 }
 function getWhatWeDo(){
 return view('whatwedo');
+}
+
+function getDemodaySub(){
+return view('demoday_sub');
 
 }
 function getDemodayCity($city){

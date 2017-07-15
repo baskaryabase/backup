@@ -10,12 +10,12 @@
   @stop
    @section('content')
    <!-- Begin page content -->
-    <?php 
- /* echo '<pre>';
-    print_r($details); 
-    echo '</pre>'; 
-    die;*/  
-    ?>
+<?php 
+/* echo '<pre>';
+print_r($details); 
+echo '</pre>'; 
+die;*/  
+?>
 
 
      
@@ -31,7 +31,8 @@
                     <form>
                         <textarea id="status_area" ng-model="post" class="form-control role_monitization input-lg p-text-area post_field" rows="2" placeholder="Share your startup experiences."></textarea>
                     </form>
-<div class="liveurl-loader"></div>
+<div class="liveurl-loader">
+  </div>
         
         <div class="get_url">
         <div class="liveurl">

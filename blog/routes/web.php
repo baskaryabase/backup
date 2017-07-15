@@ -28,6 +28,7 @@ Route::get('/find', 'MainController@getFind');
 Route::get('/events', 'MainController@getEvents');
 Route::get('/single-events/{fn}', 'MainController@getSingleEvents');
 Route::get('/knowledge-session/', 'MainController@getSingleKs');
+Route::get('/demoday-sub/', 'MainController@getDemodaySub');
 Route::get('/member-dashboard/', 'MainController@getMemberDashboard');
 Route::get('/add-knowledge-session/', 'MainController@getAddKnowledgeSession');
 Route::get('/add-member-speaker/', 'MainController@getAddMemberSpeaker');

@@ -27,9 +27,9 @@
 												<div class="wpb_text_column wpb_content_element ">
 													<div class="wpb_wrapper">
 														<h2 style="text-align: center;">
-														<a href="http://startupsclub.org/wp-content/uploads/2017/06/SCINFull.jpg" data-slb-active="1" data-slb-asset="1286848765" data-slb-internal="0" data-slb-group="3916">
-														<img class="alignnone size-medium wp-image-3917" src="http://startupsclub.org/wp-content/uploads/2017/06/SCINFull-300x107.jpg" alt="SCINFull" width="300" height="107" srcset="http://startupsclub.org/wp-content/uploads/2017/06/SCINFull-300x107.jpg 300w, http://startupsclub.org/wp-content/uploads/2017/06/SCINFull-768x274.jpg 768w, http://startupsclub.org/wp-content/uploads/2017/06/SCINFull-1024x366.jpg 1024w" sizes="(max-width: 300px) 100vw, 300px" style="opacity: 1;">
-													</a>
+													
+														<img class="alignnone size-medium wp-image-3917" src="<?php echo URL::asset('/image/scin/scin.jpg') ?>" alt="SCINFull" width="300" height="107" sizes="(max-width: 300px) 100vw, 300px" style="opacity: 1;">
+													
 												</h2>
 
 										<p><b>INCURATOR* -&nbsp;</b><b><i>Turbocharging your ideas</i></b></p>

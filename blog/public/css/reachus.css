@@ -6,6 +6,9 @@
         margin-right: auto;
     }
 }
+.map-margin{
+  margin-bottom: 110px;
+}
 .grey{
     color: #999999;
 }

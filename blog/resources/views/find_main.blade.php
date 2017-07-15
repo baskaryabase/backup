@@ -1,5 +1,5 @@
-  @extends('layouts.findMaster')
-      @section('title')
+@extends('layouts.findMaster')
+   @section('title')
     <title>Find | Member Platform | Startups Club</title> 
    @stop
   @section('header')
@@ -134,12 +134,12 @@ foreach ($details['location'] as $key => $value) {
 ?>
 
 
-                 <div class="checkbox">
-                                      <label>
-                                          <input class="find_change" name="find_location[]" value="{{ $value }}" type="checkbox">
-                                          <span class="text">{{ $value }}</span>
-                                      </label>
-                  </div>
+      <div class="checkbox">
+            <label>
+                <input class="find_change" name="find_location[]" value="{{ $value }}" type="checkbox">
+                <span class="text">{{ $value }}</span>
+            </label>
+      </div>
 
   <?php } ?>
 
@@ -228,7 +228,7 @@ foreach ($ind as $key => $value) {
 
 <div id="main" class="col-md-9 cont" >
         
-        <span class="hidden-lg hidden-md" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+        <span class="hidden-lg hidden-md" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Refine</span>
 
 
 <div class="row">

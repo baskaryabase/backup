@@ -5,7 +5,6 @@
   @section('header')
 @include('layouts.header')
 @stop
-
 @include('layouts.footer')
   @section('footer')
   @stop
@@ -22,7 +21,16 @@ echo '</pre>';*/
     margin: 0 auto;
   }
 }
-
+@media screen and (max-width: 991px) and (min-width: 767px){
+ .margin-top{
+  margin-top: 127px;
+ }
+}
+@media screen and (max-width: 767px){
+ .margin-top{
+  margin-top: 55px;
+ }
+}
   @media screen and (max-width: 991px){
     
     .sidenav {
@@ -33,10 +41,11 @@ echo '</pre>';*/
     top: 0;
     left: 0;
     margin-left: -30px;
-    margin-top: 180px;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
+}
+}
 }
 
 .sidenav a {
@@ -113,7 +122,7 @@ echo '</pre>';*/
 
 
 <!-- filter div starts here -->
-<div id="mySidenav" class="col-md-3 sidenav" >
+<div id="mySidenav" class="col-md-3 sidenav margin-top" >
  <a href="javascript:void(0)" class="closebtn hidden-lg hidden-md" onclick="closeNav()">&times;</a>
 
   <div class="widget" style="max-height: 250px;overflow-y:scroll">

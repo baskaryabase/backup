@@ -2672,6 +2672,14 @@ function getDemodaySub(){
 return view('demoday_sub');
 
 }
+function getOurTeam(){
+return view('our_team');
+
+}
+function getDash(){
+return view('dash');
+
+}
 function getDemodayCity($city){
 
   $pics_obj=Demoday_pics::where('demoday_flag',$city)->get();

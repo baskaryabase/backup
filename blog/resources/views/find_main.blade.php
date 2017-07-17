@@ -18,7 +18,7 @@ echo '</pre>';*/
 @media screen and (max-width: 991px){
   .cont{
     padding: 0 15px;
-    margin: 0 auto;
+    margin: 0 auto;  
   }
 }
 @media screen and (max-width: 991px) and (min-width: 767px){

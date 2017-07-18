@@ -1,0 +1,259 @@
+body{
+  background-color: #e9eaed;
+}
+.ks-sim-div{
+  height: 26px;
+       background-color: #f57f20;
+       color: #fff;text-align: center;
+       margin-top: 16px;
+       border-radius: 5px;
+}
+.ks-sim-mar{
+  margin-top: -10px;
+}
+#event-speakers {
+  background: #FFFFFF;
+  padding: 120px 0;
+}
+#event-speakers .single-speakers {
+  margin: 60px 0;
+}
+#event-speakers .single-speakers:hover .img-holder .img-container:after,
+#event-speakers .single-speakers:hover .img-holder .img-container:before {
+  bottom: 0;
+}
+#event-speakers .single-speakers .img-holder .img-container {
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+}
+#event-speakers .single-speakers .img-holder .img-container:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 100%;
+  opacity: .55;
+  transition: all .3s ease;
+  border-radius: 50%;
+  background: #1eb089;
+  background: -moz-linear-gradient(left, #f57f20 0%, #8ec33f 100%, #f57f20 100%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, #f57f20), color-stop(100%, #8ec33f), color-stop(100%, #f57f20));
+  background: -webkit-linear-gradient(left, #f57f20 0%, #8ec33f 100%, #f57f20 100%);
+  background: -o-linear-gradient(left, #f57f20 0%, #8ec33f 100%, #f57f20 100%);
+  background: -ms-linear-gradient(left, #f57f20 0%, #8ec33f 100%, #f57f20 100%);
+  background: linear-gradient(to right, #f57f20 0%, #8ec33f 100%, #f57f20 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1eb089', endColorstr='#7db9e8', GradientType=1);
+}
+#event-speakers .single-speakers .img-holder .img-container:after {
+  content: ' ';
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+/*  background: transparent url(../img/gallery/overlay-bg.png) center center no-repeat;
+*/  transition: all .3s ease .1s;
+}
+#event-speakers .single-speakers .img-holder img {
+  border-radius: 50%;
+  box-shadow: -2px 2px 0 -1px #f57f20, 2px 2px 0 -1px #8ec33f;
+}
+#event-speakers .single-speakers .info {
+  padding: 25px 0;
+}
+#event-speakers .single-speakers .info h3 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #374045;
+  margin-bottom: 5px;
+}
+#event-speakers .single-speakers .info span.position {
+  color: #929FA8;
+  margin-bottom: 30px;
+  display: block;
+}
+#event-speakers .single-speakers .info p {
+  color: #929FA8;
+  margin-bottom: 30px;
+}
+#event-speakers .single-speakers .info .social li {
+  display: inline;
+}
+#event-speakers .single-speakers .info .social li a {
+  display: inline-block;
+  color: #00D8B7;
+  font-size: 15px;
+  margin-right: 10px;
+  transition: all .3s ease;
+}
+#event-speakers .single-speakers .info .social li a:hover {
+  color: #FF8625;
+}
+#event-speakers a.show-more {
+  display: inline-block;
+  border: 2px solid transparent;
+  line-height: 44px;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: 800;
+  color: #fff;
+  padding: 0 43px;
+  text-transform: uppercase;
+  background: #FF8625;
+}
+#event-speakers a.show-more:hover {
+  border-color: #FF8625;
+  color: #FF8625;
+}
+#event-speakers a.show-more:before {
+  border-radius: 5px;
+  background: #fff;
+
+}
+#rsvp a.show-more {
+  display: inline-block;
+  border: 2px solid transparent;
+  line-height: 44px;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: 800;
+  color: #fff;
+  padding: 0 43px;
+  text-transform: uppercase;
+  background: #FF8625;
+}
+#rsvp a.show-more:hover {
+  border-color: #FF8625;
+  color: #FF8625;
+}
+#rsvp a.show-more:before {
+  border-radius: 5px;
+  background: #fff;
+
+}
+.hvr-bounce-to-right {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+.hvr-bounce-to-right:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #2098D1;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 0 50%;
+  transform-origin: 0 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-bounce-to-right:hover, .hvr-bounce-to-right:focus, .hvr-bounce-to-right:active {
+  color: white;
+}
+.hvr-bounce-to-right:hover:before, .hvr-bounce-to-right:focus:before, .hvr-bounce-to-right:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+  -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+  transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+}
+
+.sm-div{
+  position: relative;
+
+}
+
+.sm-head{
+  position: absolute;
+  top: 0%;
+  left: 2%;
+  color: #fff;
+}
+.sm-events:hover{
+   box-shadow: 0 4px 8px 0 #f57f20, 0 6px 20px 0 #f57f20;
+}
+
+.h2 {
+   width: 100%; 
+   text-align: center; 
+   border-bottom: 1px solid #f57f20; 
+   line-height: 0.1em;
+   margin: 10px 0 20px; 
+} 
+
+.span { 
+    background:#fff; 
+    padding:0 10px; 
+}
+
+
+
+.group { 
+    display: table;
+    width: 50%;
+    font-size: 15px;
+    margin: 0 auto;
+    padding-top: 30px;
+} 
+.item {
+    display: table-cell;
+}
+.text { 
+    white-space: nowrap;
+    width: 1%;
+    padding: 0 10px;
+}
+.line {
+    border-bottom: 1px solid #f57f20;
+    position: relative;
+    top: -.5em;
+}
+
+@media only screen and (min-width: 1094px) {
+  .cont{
+    padding-left: 60px;
+    padding-right: 60px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.height{
+  height: 200px;
+}
+.bot-mar{
+  margin-bottom: 85px;
+}
+.white-bg{
+  background: #fff;
+}
+.eve-title{
+  font-size: 25px; 
+  margin-top: 20px;
+}
+.speaker-div{
+  padding-top: 0px;
+}
+@media only screen and (max-width: 844px) {
+ .speaker-div{
+  height: 600px;
+} 
+}

@@ -1,3 +1,4 @@
+   
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -17,6 +18,7 @@
      <link href="<?php echo URL::asset('/css/timeline.css') ?>" rel="stylesheet" type="text/css">
      <link href="<?php echo URL::asset('/css/cover.css') ?>" rel="stylesheet" type="text/css">
      <link href="<?php echo URL::asset('/css/forms.css') ?>" rel="stylesheet" type="text/css">
+     <link rel="stylesheet" type="text/css" href="<?php echo URL::asset('/css/homepage_similar_events.css') ?>">
      <link href="<?php echo URL::asset('/css/buttons.css') ?>" rel="stylesheet" type="text/css">
      <link href="<?php echo URL::asset('/css/jquery-confirm.css') ?>" rel="stylesheet" type="text/css">
      <link href="<?php echo URL::asset('/css/toastr.min.css') ?>" rel="stylesheet" type="text/css">
@@ -41,21 +43,20 @@
 
   <body class="animated fadeIn">
 
-@section('header')
-@show
+      @section('header')
+        @show
 <?php
 /*echo '<pre>';
 print_r($details);
 echo '</pre>';*/
  ?>
   
-
 <div style="position: relative; margin-top: 30px;width: 100%">
 <div style="position: absolute;
-            background: #000;
+            
             width: 100%;
             height: 315px;
-            opacity: .3;
+            
             margin-top: -44px;"></div>
 <div style="margin-right: 15px;
             margin-left: 15px;" class="owl-carousel row container">
@@ -101,8 +102,6 @@ echo '</pre>';*/
 
     <!-- Begin page content -->
 <div class="container page-content ">
-
-
       <div class="row">
         <!-- left links -->
         <div class="col-md-3">
@@ -188,51 +187,42 @@ echo '</pre>';*/
 
         <!-- right posts -->
         <div class="col-md-3">
-          <!-- Friends activity -->
-          <div class="widget">
-            <div class="widget-header">
-              <h3 class="widget-caption">Upcoming Meetings</h3>
+         
+         <div class="wrapper">
+        
+        <div class="card radius shadowDepth1">
+          
+
+          <div class="card__content card__padding">
+                    
+            <div class="card__meta">
+                <span class="font-size-12">17 Sep 2017</span><span class="pull-right font-size-12">2.00 PM</span>     
             </div>
-            <div class="widget-body bordered-top bordered-sky">
-              <div class="card">
-                <div class="content">
-                   <ul class="list-unstyled team-members">
-                 
-                    <li>
-                         <div class="row">
-                        <div class="col-xs-4">
-                          <div>
-                              <span class="event_date"> 17 Jun 2017</span>
-                          </div>
-                        </div>
-                        <div class="col-xs-8">
-                          <b><a href="http://startupsclub.org/events/businesses-investors-seek-del/" target="_blank">Businesses Investors Seek – DEL</a></b><br>
-                          <span class="event_desc">Investors invest because there is an end goal they want to reach. Even they do not know whether your business will be successful or not, but, they look for elements which offer them protection.</b></span>
-                          <span class="event_location">Delhi.</span>
-                          <span class="timeago event_time" >11:00 AM onwards</span>
-                        </div>
-                      </div>   
-                    </li>
-                    <li>
-                       <div class="row">
-                        <div class="col-xs-4">
-                          <div>
-                              <span class="event_date"> 18 Jun 2017</span>
-                          </div>
-                        </div>
-                        <div class="col-xs-8">
-                          <b><a href="http://startupsclub.org/events/finance-non-finance-founders-blr/" target="_blank">Finance for Non-Finance Founders – CHE</a></b><br>
-                          <span class="event_desc">Finance is often made to look like a deep enigma which involves a lot of esoteric knowledge. The truth of the matter is that finance involves addition subtraction multiplication and division.</b></span>
-                          <span class="event_location">Chennai.</span>
-                          <span class="timeago event_time" >11:00 AM onwards</span>
-                        </div>
-                      </div>   
-                    </li>
-                  </ul>
-                </div>
+
+            <article class="card__article">
+              <h3 class="h2"><a href="#">Material Design Card - For Blog Post Article</a></h3>
+
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus harum...</p>
+            </article>
+          </div>
+
+          <div class="card__action">
+            
+            <div class="card__author">
+              <img src="http://lorempixel.com/40/40/sports/" alt="user">
+              <div class="card__author-content">
+                By <a href="#">John Dissilva</a>
               </div>
             </div>
-          </div><!-- End Friends activity -->
+          </div>
+        </div>
+
+           
+      </div>
+      
+
+
+
 
           <!-- People You May Know -->
           <div class="widget">

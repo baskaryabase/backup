@@ -19,3 +19,13 @@ th, td {
 .color-black{
   color: #000
 }
+.style-h1{
+  border-bottom: 3px solid #f57f20;
+}
+.heading{
+  padding-bottom: 10px;
+}
+h4{
+  font-size: 18px !important;
+  font-weight: 100 !important;
+}

@@ -13,15 +13,17 @@
    <link rel="stylesheet" type="text/css" href="<?php echo URL::asset('/css/dash.css') ?>">
 
 <div class="container">
+<div class="container" style="background: #fff">
+<h3 class="heading"><span class="style-h1">Knowledge Session Dashboard</span></h3>
 	<section>
-        <div class="col-md-3">
+        <div class="col-md-2" style="border-left: 1px solid #f57f20">
 
-        	<a href="#"><h3>Add Knowledge Session</h3></a>
+        	<a href="#"><h4 class="color color-black"><center>Add</center> </h4></a>
         </div>
 
-<div class="col-md-9">
+<div class="col-md-10" style="border-left: 1px solid #f57f20">
 
-<h3>Upcoming Events</h3>
+<h4>Upcoming Sessions</h4>
 <div style="overflow-x:auto;">
   <table class="color">
     <tr>
@@ -40,7 +42,7 @@
       <a href="#"><i class="fa fa-pencil color-black" aria-hidden="true"></i></a>
       <a href="#"><i class="fa fa-trash pull-right red" aria-hidden="true"></i></a>
       </td>
-   
+      <td><a href="/dash-ksdetails" class="color-black">Details</a></td>
       
     </tr>
     <tr>
@@ -51,7 +53,7 @@
       <a href="#"><i class="fa fa-pencil color-black" aria-hidden="true"></i></a>
       <a href="#"><i class="fa fa-trash pull-right red" aria-hidden="true"></i></a>
       </td>
-     
+      <td><a href="/dash-ksdetails" class="color-black">Details</a></td>
       
     </tr>
     <tr>
@@ -62,20 +64,20 @@
       <a href="#"><i class="fa fa-pencil color-black" aria-hidden="true"></i></a>
       <a href="#"><i class="fa fa-trash pull-right red" aria-hidden="true"></i></a>
       </td>
-      
+      <td><a href="/dash-ksdetails" class="color-black">Details</a></td>
     </tr>
   </table>
 </div>
 
 
-<h3>Past Events</h3>
+<h4>Past Sessions</h4>
 <div style="overflow-x:auto;">
   <table class="color">
     <tr>
       <th>Title</th>
       <th>Date </th>
       <th>Time</th>
-      <th>Action</th>
+      
       
       
     </tr>
@@ -83,7 +85,7 @@
       <td>Swapping Customers for Productive Growth – BLR</td>
       <td>23 Sep 2017</td>
       <td>10.00 AM</td>
-      <td>50</td>
+      
    
       
     </tr>
@@ -91,7 +93,7 @@
       <td>Swapping Customers for Productive Growth – BLR</td>
       <td>23 Mar 2017</td>
       <td>9.00 AM</td>
-      <td>94</td>
+      
      
       
     </tr>
@@ -99,7 +101,7 @@
       <td>Swapping Customers for Productive Growth – BLR</td>
       <td>23 Mar 2017</td>
       <td>9.00 AM</td>
-      <td>94</td>
+      
       
     </tr>
   </table>
@@ -108,6 +110,7 @@
 
 </div>
 	</section>
+</div>
 </div>
 
  @stop  

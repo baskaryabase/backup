@@ -10,6 +10,8 @@ use App\Http\models\sc_events;
 use App\Http\models\sc_speakers;
 use App\Http\models\sc_comments;
 use App\Http\models\sc_likes;
+use App\Http\models\sc_knowledge_sessions;
+use App\Http\models\speaker_metas;
 use App\Http\models\demoday_pics;
 use App\Http\models\sc_notifications;
 use App\Http\models\users_company_details;
@@ -113,7 +115,7 @@ foreach ($posts as $key => $row) {
       $result[0]['user_id']=$fn;
       $result[0]['posts']=$values;
 
-return view('profile',['details' => $result[0]]);
+return view('newprofile',['details' => $result[0]]);
 
         
     }
@@ -455,6 +457,31 @@ if(Input::file())
         );
     Sc_users::where('id',$user_id)->update($result_array);
  session()->put('profile_pic', 'http://members.startupsclub.org/image/'.$filename);
+           }
+
+
+   echo json_encode($filename);  
+
+
+
+}
+function upload_speaker_pic(Request $request){
+
+
+if(Input::file())
+        {
+  
+            $image = Input::file('file');
+           $filename  = time() . '.' . $image->getClientOriginalExtension();
+
+            $path = public_path('image/speakers/' . $filename);
+ 
+        
+                Image::make($image->getRealPath())->save($path);
+             /*   $user->image = $filename;
+                $user->save();*/
+
+
            }
 
 
@@ -2289,10 +2316,29 @@ return view('single_events')->with('events',$final_array);
 
 }
 
-function getSingleKs(){
+function getSingleKs($ks){
+
+  $ks_obj=Sc_knowledge_sessions::where('ks_title_slug',$ks)->orderBy('created_date', 'desc')->get();
+  $ks_array=$ks_obj->toArray();
+   $allks_obj=Sc_knowledge_sessions::where('ks_title_slug',Null)->orderBy('created_date', 'desc')->get();
+  $allks_array=$allks_obj->toArray();
+   $metas_obj=speaker_metas::where('speaker_id',$ks_array[0]['ks_id'])->orderBy('created_date', 'desc')->get();
+  $metas_array=$metas_obj->toArray();
+$final_array['ks']=$ks_array[0];
+$final_array['similar']=$allks_array;
 
 
-return view('knowledge_sessions');
+foreach ($metas_array as $key => $value) {
+
+$final_array['metas'][$value['meta_key']][]=$value;
+
+}
+
+/*echo '<pre>';
+print_r($final_array);
+echo '</pre>';
+die;*/
+return view('knowledge_sessions')->with('data',$final_array);
 
 }
 function getMemberDashboard(){
@@ -2643,6 +2689,151 @@ $validator = Validator::make($request->all(), [
 
 
 }
+function InsertKs(Request $request){
+
+
+$validator = Validator::make($request->all(), [
+                
+                'ks_speaker_awards' => 'required',      
+                'ks_speaker_recognitions' => 'required',
+                'ks_timeline_time' => 'required',
+                'ks_timeline_content' => 'required',
+                'ks_title' => 'required',
+                'ks_date' => 'required',
+                'ks_time' => 'required',
+                'ks_duration' => 'required',
+                'ks_venue' => 'required',
+                'ks_city' => 'required',
+                'ks_cost' => 'required',
+                'ks_event_details' => 'required',
+                'ks_speaker_bio' => 'required',
+                'ks_speaker_desn' => 'required',
+                'ks_speaker_company' => 'required',
+                'ks_speaker_linkedin' => 'required',
+                'ks_speaker_twitter' => 'required',
+                'ks_speaker_name' => 'required',
+                'hidden_image' => 'required',
+              
+                
+        ],[
+'ks_speaker_awards.required' => 'This Speaker Awards field is required',
+'ks_speaker_recognitions.required' => 'The Speaker Recognitions field is required',
+'ks_timeline_time.required' => 'The Timelime time field is required',
+'ks_timeline_content.required' => 'The Timelime Content field is required',
+'ks_title.required' => 'The Title field is required',
+'ks_date.required' => 'The Date field is required',
+'ks_time.required' => 'The Time field is required',
+'ks_duration.required' => 'The Duration field is required',
+'ks_venue.required' => 'The Venue field is required',
+'ks_cost.required' => 'The Price field is required',
+'ks_city.required' => 'The City field is required',
+'ks_event_details.required' => 'The Event Details field is required',
+'ks_speaker_bio.required' => 'The Speaker Bio field is required',
+'ks_speaker_desn.required' => 'The Designation field is required',
+'ks_speaker_company.required' => 'The Company Name field is required',
+'ks_speaker_linkedin.required' => 'The Speaker LinkedIn link field is required',
+'ks_speaker_twitter.required' => 'The Speaker Twitter link field is required',
+'ks_speaker_name.required' => 'The Speaker Name field  is required',
+'hidden_image.required' => 'The Speaker Image field is required',
+
+        ]);
+
+        if ($validator->fails()) {
+
+            return Response::json(array(
+        'success' => true,
+        'errors' => $validator->getMessageBag()->toArray()
+
+    ), 200); // 400 being the HTTP code for an invalid request.
+       
+
+
+        }else{
+
+             $user_id = session()->get('userid');
+             $role = session()->get('role');
+  $insert_array= array(
+        'member_id'=>$user_id,
+        'ks_title'=>$request->input('ks_title'),
+        'ks_date'=>$request->input('ks_date'),
+        'ks_time'=>$request->input('ks_time'),
+        'ks_duration'=>$request->input('ks_duration'),
+        'ks_venue'=>$request->input('ks_venue'),
+        'ks_cost'=>$request->input('ks_cost'),
+        'ks_city'=>$request->input('ks_city'),   
+        'ks_event_details'=>$request->input('ks_event_details'),
+        'ks_speaker_bio'=>$request->input('ks_speaker_bio'),
+        'ks_speaker_desn'=>$request->input('ks_speaker_desn'),
+        'ks_speaker_company'=>$request->input('ks_speaker_company'),
+        'ks_speaker_linkedin'=>$request->input('ks_speaker_linkedin'),
+        'ks_speaker_twitter'=>$request->input('ks_speaker_twitter'),
+        'ks_speaker_name'=>$request->input('ks_speaker_name'),
+        'ks_title_slug'=>str_slug($request->input('ks_title')),
+        'ks_speaker_img'=>$request->input('hidden_image'),
+        'created_date'=>date("Y-m-d H:i:s")
+        );
+
+       $results = DB::table('sc_knowledge_sessions')->insertGetId($insert_array);
+
+
+       foreach ($request->input('ks_timeline_time') as $key => $value) {
+        $s=explode('~', $value);
+        $meta_array[]=array(
+          'speaker_id'=>$results,
+          'meta_key'=>'timeline',
+          'meta_data'=>$s[0],
+          'meta_extra'=>$s[1],
+          'created_by'=>$user_id,
+         'created_date'=>date("Y-m-d H:i:s")
+
+          );
+         
+       }
+       foreach ($request->input('ks_speaker_awards') as $key => $value) {
+        
+        $meta_array[]=array(
+      'speaker_id'=>$results,
+          'meta_key'=>'awards',
+          'meta_data'=>$value,
+          'meta_extra'=>NULL,
+          'created_by'=>$user_id,
+         'created_date'=>date("Y-m-d H:i:s")
+
+          );
+         
+       }
+       foreach ($request->input('ks_speaker_recognitions') as $key => $value) {
+        
+        $meta_array[]=array(
+          'speaker_id'=>$results,
+          'meta_key'=>'recognitions',
+          'meta_data'=>$value,
+          'meta_extra'=>NULL,      
+          'created_by'=>$user_id,
+         'created_date'=>date("Y-m-d H:i:s")
+
+          );
+         
+       }
+
+DB::table('speaker_metas')->insert($meta_array);
+
+
+
+            return Response::json(array(
+        'success' => true,
+        'errors' => 'success'
+
+    ), 200);
+
+
+
+        }
+
+
+
+
+}
 
 function getDemoday(){
 return view('demoday');
@@ -2666,18 +2857,6 @@ return view('revup');
 }
 function getWhatWeDo(){
 return view('whatwedo');
-}
-
-function getDemodaySub(){
-return view('demoday_sub');
-
-}
-function getOurTeam(){
-return view('our_team');
-
-}
-function getDash(){
-return view('dash');
 
 }
 function getDemodayCity($city){
@@ -2695,5 +2874,171 @@ return view('demo_city')->with('pics',$pics_array);
 
 }
 
+function getAllKs(){
+
+
+
+  $ks_obj=Sc_knowledge_sessions::orderBy('created_date', 'desc')->get();
+  $ks_array=$ks_obj->toArray();
+return view('all_knowledge_sessions')->with('ks',$ks_array);
+}
+
+
+function CheckAttendeesKs(Request $request){
+
+
+$validator = Validator::make($request->all(), [
+                
+                'attendees_name' => 'required',      
+                'attendees_email' => 'required',
+                'attendees_mobile' => 'required',
+                'attendees_city' => 'required',
+                'attendees_status' => 'required',
+                'ticket_count' => 'required',
+              
+                
+        ],[
+'attendees_name.required' => 'This field is required',
+'attendees_email.required' => 'This field is required',
+'attendees_mobile.required' => 'This field is required',
+'attendees_city.required' => 'This field is required',
+'attendees_status.required' => 'This field is required',
+'ticket_count.required' => 'This field is required',
+
+        ]);
+
+        if ($validator->fails()) {
+
+            return Response::json(array(
+        'success' => true,
+        'errors' => $validator->getMessageBag()->toArray()
+
+    ), 200); // 400 being the HTTP code for an invalid request.
+       
+
+
+        }else{
+
+ $ks_obj=Sc_knowledge_sessions::where('ks_id',$request->input('data_id'))->get();
+  $ks_array=$ks_obj->toArray();
+
+            
+            return Response::json(array(
+        'success' => true,
+        'errors' => 'success',
+        'cost' => $ks_array[0]['ks_cost']
+
+    ), 200);
+
+
+
+        }
+
+
+
+
+}
+
+
+function InsertAttendeesKs(Request $request){
+
+
+$validator = Validator::make($request->all(), [
+                
+                'attendees_name' => 'required',      
+                'attendees_email' => 'required',
+                'attendees_mobile' => 'required',
+                'attendees_city' => 'required',
+                'attendees_status' => 'required',
+              
+                
+        ],[
+'attendees_name.required' => 'This field is required',
+'attendees_email.required' => 'This field is required',
+'attendees_mobile.required' => 'This field is required',
+'attendees_city.required' => 'This field is required',
+'attendees_status.required' => 'This field is required',
+
+        ]);
+
+        if ($validator->fails()) {
+
+            return Response::json(array(
+        'success' => true,
+        'errors' => $validator->getMessageBag()->toArray()
+
+    ), 200); // 400 being the HTTP code for an invalid request.
+       
+
+
+        }else{
+
+             $user_id = session()->get('userid');
+             $role = session()->get('role');
+  $insert_array= array(
+        'parent_id'=>$request->input('data_id'),
+        
+        'amount'=>$request->input('ticket_cost'),
+       
+        'member_id'=>$user_id,
+        'member_type'=>$role,
+        'name'=>$request->input('attendees_name'),
+        'phone_number'=>$request->input('attendees_mobile'),
+        'email'=>$request->input('attendees_email'),
+        'city'=>$request->input('attendees_city'),
+      
+        'status'=>$request->input('attendees_status'),
+        'ticket_type'=>$request->input('data_type'),
+        'created_date'=>date("Y-m-d H:i:s")
+        );
+       $results = DB::table('rsvp_members')->insertGetId($insert_array);
+
+
+
+
+
+            return Response::json(array(
+        'success' => true,
+        'errors' => 'success'
+
+    ), 200);
+
+
+
+        }
+
+
+
+
+}
+
+function getCompanyProfilePage(){
+return view('company_profile');
+
+}
+function getTeamPage(){
+return view('our_team');
+
+}
+function getDash(){
+return view('dash');
+
+}
+function getCompPro(){
+return view('company-profile-baskar');
+
+}
+function getKsDetails(){
+return view('dashksdetails');
+
+}
+function getDashEvents(){
+return view('dashevents');
+
+}
+function getTestPage(){
+return view('testpage');
+
+}
 
 }

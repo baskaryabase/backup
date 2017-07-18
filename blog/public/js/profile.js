@@ -1,3 +1,4 @@
+
  if($('#user_id').val() == $('#display_user').val())
    $('.cropControlUpload').css('display','block');
   else
@@ -396,9 +397,9 @@ function sendMessage(elm){
   var role=$('#role').val();
 
 
-toastr.remove();
-if(role == 'regular'){
 
+if(role == 'regular'){
+toastr.remove();
  Command: toastr["success"]("<p>Only pioneer can message</p><a href='http://members.startupsclub.org/edit-membership'>Become a pioneer member</a>")
 
 toastr.options = {
@@ -424,9 +425,10 @@ $('#sendmessageuser').attr('data-user',$(elm).attr('data-user'));
 $('#sendmessageuser1').modal({ show: true });
 
 }
+$(document).ready(function(){
 
 $('#sendmessageuser').click(function(){
-
+alert('ghry');
 var user_id=$('#sendmessageuser').attr('data-user');
    var hidden_token=$('#hidden_token').val();
    var send_message_value=$('#send_message_value').val();
@@ -445,6 +447,8 @@ if(send_message_value == ''){
                 });
 
 })
+})
+
 
 
 function like_button(elm){
@@ -492,7 +496,7 @@ $(elm).attr('data-original-title',$(elm).attr('data-original-title').substring(0
 }
 
 
-$('[data-toggle="tooltip"]').tooltip(); 
+/*$('[data-toggle="tooltip"]').tooltip(); */
 
 
 

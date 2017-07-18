@@ -1,7 +1,7 @@
-@extends('layouts.homeMaster')
-@section('title')
-<title>Home | Member Platform | Startups Club</title> 
-@stop
+       @extends('layouts.homeMaster')
+         @section('title')
+    <title>Home | Member Platform | Startups Club</title> 
+   @stop
   @section('header')
 @include('layouts.header')
 @stop
@@ -10,12 +10,12 @@
   @stop
    @section('content')
    <!-- Begin page content -->
-<?php 
-/* echo '<pre>';
-print_r($details); 
-echo '</pre>'; 
-die;*/  
-?>
+    <?php 
+ /* echo '<pre>';
+    print_r($details); 
+    echo '</pre>'; 
+    die;*/  
+    ?>
 
 
      
@@ -31,8 +31,7 @@ die;*/
                     <form>
                         <textarea id="status_area" ng-model="post" class="form-control role_monitization input-lg p-text-area post_field" rows="2" placeholder="Share your startup experiences."></textarea>
                     </form>
-<div class="liveurl-loader">
-  </div>
+<div class="liveurl-loader"></div>
         
         <div class="get_url">
         <div class="liveurl">
@@ -176,9 +175,9 @@ if(!empty($cvalue)){
 $(document).ready(function(){
 var owl = $('.owl-carousel');
 owl.owlCarousel({
-    items:5,
+    items:4,
     loop:true,
-    margin:5,
+    margin:10,
     autoplay:true,
     autoplayTimeout:3000,
     
@@ -197,8 +196,6 @@ $('.owl-stage-outer').css('position','initial');
 $('.owl-carousel').css('position','initial');
 $('.owl-carousel').css('width','auto');
 $('.owl-item').css('background','white');
-
-
 
 });
 
@@ -303,7 +300,7 @@ $('.owl-item').css('background','white');
                 });
               
           
-               $('.liveurl ').on('click', '.controls .button', function() 
+                $('.liveurl ').on('click', '.controls .button', function() 
                 {
                  
 

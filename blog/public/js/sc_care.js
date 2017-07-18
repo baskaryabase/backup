@@ -295,5 +295,151 @@ $('.wpcf7-not-valid-tip').html('');
 })
 
 
+$('#register_paid_rsvp').click(function(){
+
+ $('#register_paid_rsvp').prop('disabled', true);
+
+
+var data_id =$(this).attr('data-id');
+var data_type=$(this).attr('data-type');
+
+
+   var attendees_name=$('#attendees_name').val();
+   var attendees_email=$('#attendees_email').val();
+   var attendees_mobile=$('#attendees_mobile').val();
+   var attendees_city=$('#attendees_city').val();
+   var attendees_status=$('#attendees_status').val();
+   if(attendees_status == 'Current status'){
+    attendees_status='';
+  }
+   var ticket_count=$('#ticket_count').val();
+   var hidden_token=$('#hidden_token').val();
+
+   var sam={
+    attendees_name:attendees_name,
+    attendees_email:attendees_email,
+    attendees_mobile:attendees_mobile,
+    attendees_city:attendees_city,
+    attendees_status:attendees_status,
+    ticket_count:ticket_count,
+    data_id:data_id,
+    data_type:data_type,
+    _token:hidden_token,
+
+
+
+   };
+
+  jQuery.ajax({
+
+                    url: '/CheckAttendeesKs',
+                    type: 'POST',
+                    data: sam,
+                    cache: false,
+                    success: function(data) {
+                
+                      $('#register_paid_rsvp').prop('disabled', false);  
+if(jQuery.trim(data.errors) != 'success'){
+
+$('.wpcf7-not-valid-tip').html('');
+                 $.each(data.errors, function(key,val) {
+
+                                $('#'+key).after('<span class="wpcf7-not-valid-tip">'+val[0]+'<span>');
+
+                            });
+
+
+}else{
+if(data.cost){
+
+   var sam={
+    attendees_name:attendees_name,
+    attendees_email:attendees_email,
+    attendees_mobile:attendees_mobile,
+    attendees_city:attendees_city,
+    attendees_status:attendees_status,
+    ticket_count:ticket_count,
+    ticket_cost:data.cost*ticket_count,
+    data_id:data_id,
+    data_type:data_type,
+    _token:hidden_token,
+
+
+
+   };
+
+
+  var options = {
+    "key": "rzp_test_WyUJ6wuelsKUQw",
+    "amount": data.cost*100*ticket_count, // 2000 paise = INR 20
+    "name": "Startups Club Networks LLP",
+    "description": "Events payment",
+    "image": "http://startupsclub.org/wp-content/uploads/2015/06/use.png",
+    "handler": function (response){
+      
+  jQuery.ajax({
+
+                    url: '/InsertAttendeesKs',
+                    type: 'POST',
+                    data: sam,
+                    cache: false,
+                    success: function(data) {
+                 window.location.reload();
+                   }
+})
+      
+
+     
+   
+                  
+    },
+   
+    "theme": {
+        "color": "#F37254"
+    }
+};
+
+var rzp1 = new Razorpay(options);
+     rzp1.open(); 
+
+}else{
+
+    jQuery.ajax({
+
+                    url: '/InsertAttendees',
+                    type: 'POST',
+                    data: sam,
+                    cache: false,
+                    success: function(data) {
+                 window.location.reload();
+                   }
+})
+
+}
+}
+                    }
+
+})
+
+
+})
+
+$('.paid_rsvp_link').click(function(){
+
+  
+$('#register_paid_rsvp').attr('data-id',$(this).attr('data-id'));
+$('#register_paid_rsvp').attr('data-type',$(this).attr('data-type'));
+
+
+
+
+    
+
+$('#myModal').modal({ show: true });
+
+
+})
+
+
 
 

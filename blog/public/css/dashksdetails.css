@@ -1,0 +1,30 @@
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+}
+h4{
+  font-size: 18px !important;
+  font-weight: 100 !important;
+}
+th, td {
+    border: none;
+    text-align: left;
+    padding: 8px;
+}
+.color{
+  background: #fff;
+}
+.red{
+  color: red;
+}
+.color-black{
+  color: #000
+}
+.style-h1{
+  border-bottom: 3px solid #f57f20;
+}
+.heading{
+  padding-bottom: 10px;
+}

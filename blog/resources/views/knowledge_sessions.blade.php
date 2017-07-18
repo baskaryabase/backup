@@ -11,13 +11,21 @@
 @stop
    @section('content')
 
+   <?php
+/*echo '<pre>';
+print_r($data);
+echo '</pre>';
+die;*/
+$speaker_img=URL::asset('/image/speakers/'.$data['ks']['ks_speaker_img']);
+    ?>
+<input type="hidden" id="hidden_token" name="_token" value="{{ csrf_token() }}">
  <link href="<?php echo URL::asset('/css/knowledge_session.css') ?>" rel="stylesheet" type="text/css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 
-
-<div class="container cont-margin">
+ 
+<div style="margin-top: 65px;" class="container">
 
 
 <div style="background: #fff;" class="margin col-md-9">  
@@ -25,27 +33,28 @@
   
   <div class=" margin col-md-12">
     <div>
-    <h5 class="ks pull-right hidden-xs">Knowledge Session</h5>
-    <li class="ks-date"><h5><i class="ks-icon fa fa-calendar" aria-hidden="true"></i><span>12 sep  2017</span><span><span>,  10 am onwards</span></span></h5></li>
+    <h5 style="font-weight: bold;" class="pull-right hidden-xs">Knowledge Session</h5>
+    <li style="list-style: none; padding-top: 15px;"><h5>
+      <i style="color: #f57f20; padding-right: 14px;" class="fa fa-calendar" aria-hidden="true"></i><span>{{ date('jS F Y',strtotime($data['ks']['ks_date'])) }}</span><span><span>,  {{ $data['ks']['ks_time'] }} onwards</span></span></h5></li>
 
-    <li class="li-style"><h5><i class="ks-icon fa fa-clock-o" aria-hidden="true"></i><span>Four hour Session</span></h5></li>
-        <h1 style="font-size: 20px">Swapping Customers for Productive Growth – BLR</h1>
+    <li style="list-style: none;"><h5><i style="color: #f57f20; padding-right: 14px;" class="fa fa-clock-o" aria-hidden="true"></i><span>{{ $data['ks']['ks_duration'] }}</span></h5></li>
+        <h1 style="font-size: 20px">{{ $data['ks']['ks_title'] }}</h1>
     </div>
 <div class="padd">
   <ul >
-    <li class="li-style"><h5><i class="ks-venue fa fa-map-marker" aria-hidden="true"></i><span>Coimbatore,</span><span><br><span class="ks-city"> City hall</span></span>
-    <span class="pull-right"><i class="fa fa-inr" aria-hidden="true"></i> 5000 / seat</span> 
+    <li style="list-style: none;"><h5><i style="color: #f57f20; padding-right: 18px;" class="fa fa-map-marker" aria-hidden="true"></i><span>{{ $data['ks']['ks_city'] }},</span><span><br><span style="padding-left: 26px;"> {{ $data['ks']['ks_venue'] }}</span></span>
+    <span class="pull-right" >₹ {{ $data['ks']['ks_cost'] }} / seat</span> 
     </h5></li>
   </ul>
 </div>
 <div>
   <h2 class="font-size-15"><span>Event Details</span></h2>
-  <p>We have a monthly meetup where entrepreneurs both aspiring and established come together to meet one another. These events typically have a theme, which could be a speaker, a workshop or an entrepreneur sharing his/her experience.We have a monthly meetup where entrepreneurs both aspiring and established come together to meet one another.</p>
+  <p>{!! html_entity_decode($data['ks']['ks_event_details']) !!}</p>
 </div>
 
 <center>
-<div class="padd-15">
-   <button type="button" class="btn btn-md rsvp" data-toggle="modal" data-target="#myModal">Join Us / RSVP</button></div>
+<div style="padding: 15px">
+   <button type="button" class="btn btn-md rsvp paid_rsvp_link" href="#" data-type="ks" data-id="{{ $data['ks']['ks_id'] }}" data-cost="{{$data['ks']['ks_cost'] }}" >Join Us / RSVP</button></div>
 </center>    
 
 </div>
@@ -60,22 +69,15 @@
 <h2 class="font-size-15"><span>Timeline</span></h2>
 <!-- <h5 class="hh5"><span>Event Date<br></span><strong>12 August 2017</strong></h5> -->
 <div class="timeline">
+  <?php foreach ($data['metas']['timeline'] as $key => $value) {
+?>
   <div class="timeline-item">
-    <time datetime="2016-02-03T15:00+08:00">3:00 PM</time>
-    <p>Task C completed</p>
+    <time datetime="2016-02-03T15:00+08:00">{{ $value['meta_data'] }}</time>
+    <p>{{ $value['meta_extra'] }}</p>
   </div>
-  <div class="timeline-item">
-    <time datetime="2016-02-03T11:30+08:00">11:30 AM</time>
-    <p>Task B completed</p>
-  </div>
-  <div class="timeline-item">
-    <time datetime="2016-02-03T09:45+08:00">9:45 AM</time>
-    <p>Task A completed</p>
-  </div>
-  <div class="timeline-item">
-    <time datetime="2016-02-03T09:45+08:00">9:45 AM</time>
-    <p>Task A completed</p>
-  </div>
+
+  <?php } ?>
+  
 </div>
 </div>
 </center>
@@ -93,19 +95,19 @@
         <div class="row">
         <div style="box-sizing: inherit; display: block;" class="col-md-4 col-sm-4 col-xs-12">
           <div class="speaker-image">
-            <img  src="<?php echo URL::asset('/image/ks/header.jpg') ?>" alt="speaker image" class="img-responsive ks-speaker-size">
+            <img  src="{{ $speaker_img }}" alt="speaker image" class="img-responsive ks-speaker-size">
           </div>
         </div>
           <div class="col-md-8 col-sm-8 col-xs-12">
             <div class="speaker-content">
-              <h4>John dissilva</h4>
-              <span ><strong>Manager</strong></span><br>
-                <span style="font-style: italic;">company name</span>
+              <h4>{{ $data['ks']['ks_speaker_name'] }}</h4>
+              <span ><strong>{{ $data['ks']['ks_speaker_desn'] }}</strong></span><br>
+                <span style="font-style: italic;">{{ $data['ks']['ks_speaker_company'] }}</span>
               
-              <p>very good skilled person with lot of stuffs filled in and woreking as tech head in product developement in a reputed company</p>
+              <p>{{ $data['ks']['ks_speaker_bio'] }}</p>
               <ul style="margin-left: -40px;" class="speaker-social">
-                <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                <li><a href="{{ $data['ks']['ks_speaker_linkedin'] }}"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                <li><a href="{{ $data['ks']['ks_speaker_twitter'] }}"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
               </ul>
 
             </div>
@@ -121,15 +123,12 @@
         <h3 style="padding-top: 5px;font-size: 20px;">Awards</h3>
       </div>
       <ul class="list-unstyled">
+          <?php foreach ($data['metas']['awards'] as $key => $value) {
+?>
            <li>
-            <p class="option"><span class="glyphicon glyphicon-ok inactive" aria-hidden="true"></span>Option #1 #1</p>
+            <p class="option"><span class="glyphicon glyphicon-ok inactive" aria-hidden="true"></span>{{ $value['meta_data'] }}</p>
            </li>
-           <li>
-            <p class="option"><span class="glyphicon glyphicon-ok inactive" aria-hidden="true"></span>Option #1 #2</p>
-           </li>
-           <li>
-            <p class="option"><span class="glyphicon glyphicon-ok inactive" aria-hidden="true"></span>Option #1 #3</p>
-           </li>
+          <?php } ?>
       </ul>
     </div>
     <div class="col-md-6 t2">
@@ -138,12 +137,12 @@
         <h3 style="padding-top: 5px;font-size: 20px">Recognitions</h3>
       </div>
       <ul class="list-unstyled">
+        <?php foreach ($data['metas']['recognitions'] as $key => $value) {
+?>
            <li>
-            <p class="option"><span class="glyphicon glyphicon-ok inactive" aria-hidden="true"></span>Option #2 #1</p>
+            <p class="option"><span class="glyphicon glyphicon-ok inactive" aria-hidden="true"></span>{{ $value['meta_data'] }}</p>
            </li>
-           <li>
-            <p class="option"><span class="glyphicon glyphicon-ok inactive" aria-hidden="true"></span>Option #2 #2</p>
-           </li>
+       <?php } ?>
       </ul>
     </div>
   
@@ -157,28 +156,40 @@
 
 <section>
 
-<div class="ks-similar-div col-md-3">
+<div style="padding-top: 18px; 
             
-   <div class="ks-sim-head">
+            padding-right: 15px;
+            padding-left: 15px;" class="col-md-3">
+            
+   <div style=" background: #f57f20;
+                color: #fff;
+                height: 26px;
+                text-align: center;
+                padding-top: 0px;
+                border-radius: 5px;">
                 <h5 
-                class="ks-sim-heading">
+                style="font-size: 14px;
+                           padding-top:5px;">
                 Similar Sessions</h5></div>
 </div>
 
-<div class="ks-sim-mar col-md-3 pull-right">
+<?php foreach ($data['similar'] as $key => $value) {
+?>
+
+<div style="margin-bottom: 15px;margin-top: 15px;" class="col-md-3 pull-right">
 
  <div class="event">
   <div class="table">
   <div class="row">
-     <div class="col date-short" style="background-color:#8ec33f">
-       <div class="month">MAR</div> 
-       <div class="day">02</div> 
+     <div class="col date-short" <?php echo (strtotime($value['ks_date'])>strtotime('now'))?'style="background-color:#8ec33f"':'style="background-color:#000"' ?> >
+       <div class="month">{{ strtoupper(substr(date('F', strtotime($value['ks_date'])),0,3))  }}</div> 
+       <div class="day">{{ date('d', strtotime($value['ks_date'])) }}</div> 
      </div>
      <div class="col event-details">
-       <div class="event-name">Explore Security Graduate Programs</div>
-       <div class="date-long">Wednesday, Mar 2, 6pm</div>
-       <div class="location">Webinar</div>
-       <a href="#"><div class="registration">RSVP</div></a> 
+       <div class="event-name">{{ $value['ks_title'] }}</div>
+       <div class="date-long">{{ date('l', strtotime($value['ks_date'])) }}, {{ date('F d', strtotime($value['ks_date'])) }}, {{ $value['ks_time'] }}</div>
+       <div class="location">{{ $value['ks_city'] }}</div>
+       <a href="#"><div class="registration paid_rsvp_link" data-type="ks" data-id="{{ $value['ks_id'] }}" data-cost="{{ $value['ks_cost'] }}">RSVP</div></a> 
      </div>
     <div class="col right-col"></div>
   </div>
@@ -187,27 +198,7 @@
 
 </div>   
 
-<div class="ks-sim-mar-bot col-md-3 pull-right">
-
- <div class="event">
-  <div class="table">
-  <div class="row">
-     <div class="col date-short" style="background-color:#999999">
-       <div class="month">MAR</div> 
-       <div class="day">02</div> 
-     </div>
-     <div class="col event-details">
-       <div class="event-name">Explore Security Graduate Programs</div>
-       <div class="date-long">Wednesday, Mar 2, 6pm</div>
-       <div class="location">Webinar</div>
-       <a href="#"><div class="registration">RSVP</div></a> 
-     </div>
-    <div class="col right-col"></div>
-  </div>
-  </div>
-</div>
-
-</div>   
+ <?php } ?>
 
 
 </div>   
@@ -257,12 +248,12 @@
       <div class="product-title">Swapping Customers for Productive Growth – BLR</div>
       <p class="product-description"></p>
     </div>
-    <div class="product-price">5000</div>
+    <div class="product-price">{{ $data['ks']['ks_cost'] }}</div>
     <div class="product-quantity">
-      <input type="number" value="1" min="1">
+      <input type="number" id="ticket_count" value="1" min="1">
     </div>
    
-    <div class="product-line-price">5000</div>
+    <div class="product-line-price">{{ $data['ks']['ks_cost'] }}</div>
   </div>
 
 
@@ -270,32 +261,42 @@
 <div  class="i container">  
   <form id="contact" action="" method="post">
     <fieldset>
-      <input placeholder="Name" type="text" tabindex="1" required autofocus>
+      <input placeholder="Name" id="attendees_name" type="text" tabindex="1" required autofocus>
     </fieldset>
     <fieldset>
-      <input placeholder="Email Address" type="email" tabindex="2" required>
+      <input placeholder="Email Address" id="attendees_email" type="email" tabindex="2" required>
     </fieldset>
     <fieldset>
-      <input placeholder="Phone Number" type="tel" tabindex="3" required>
+      <input placeholder="Phone Number" id="attendees_mobile" type="tel" tabindex="3" required>
     </fieldset>
     <fieldset>
-      <input placeholder="City" type="text" tabindex="4" required>
+      <input placeholder="City" type="text" id="attendees_city" tabindex="4" required>
     </fieldset>
     <fieldset>
-      <input placeholder="Startups Name" type="url" tabindex="4" required>
- 
+<div class="form-group">
+       
+            <select class="form-control" id="attendees_status">
+  <option selected>Current status</option>
+  <option>Aspiring entrepreneur</option>
+  <option>Budding entrepreneur</option>
+  <option>Established  entrepreneur</option>
+
+</select>
+            
+             
+            </div> 
  </fieldset>
         
   <div class="totals">
     <div class="totals-item totals-item-total">
       <label>Grand Total</label>
-      <div class="totals-value" id="cart-total">5000</div>
+      <div class="totals-value" id="cart-total">{{ $data['ks']['ks_cost'] }}</div>
     </div>
   </div>      
 
 
 <fieldset>
-     <button style="color: #fff" name="submit" type="submit" id="contact-submit" data-submit="...Sending">Register</button>
+     <button style="color: #fff" name="submit" type="button" id="register_paid_rsvp" data-submit="...Sending">Register</button>
     </fieldset>
   </form>
 </div>
@@ -407,5 +408,6 @@ document.getElementById('abc').style.display = "block";
 //    $('#abc').hide();
 // });
 </script>
+<script type="text/javascript" src="https://checkout.razorpay.com/v1/checkout.js?ver=1.1"></script><div class="razorpay-container" style="z-index: 1000000000; position: fixed; top: 0px; display: none; left: 0px; height: 100%; width: 100%; backface-visibility: hidden; overflow-y: visible;"><style>@keyframes rzp-rot{to{transform: rotate(360deg);}}@-webkit-keyframes rzp-rot{to{-webkit-transform: rotate(360deg);}}</style><div class="razorpay-backdrop" style="min-height: 100%; transition: 0.3s ease-out; position: fixed; top: 0px; left: 0px; width: 100%; height: 100%;"><span style="text-decoration: none; background: rgb(214, 68, 68); border: 1px dashed white; padding: 3px; opacity: 0; transform: rotate(45deg); transition: opacity 0.3s ease-in; font-family: lato, ubuntu, helvetica, sans-serif; color: white; position: absolute; width: 200px; text-align: center; right: -50px; top: 50px;">Test Mode</span></div><iframe class="razorpay-checkout-frame" style="height: 100%; position: relative; background: none; display: block; border: 0 none transparent; margin: 0px; padding: 0px;" allowtransparency="true" width="100%" height="100%" src="https://api.razorpay.com/v1/checkout/public"></iframe></div>
 
 @stop

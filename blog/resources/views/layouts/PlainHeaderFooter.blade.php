@@ -16,7 +16,9 @@
      <link href="<?php echo URL::asset('/font-awesome.4.6.1/css/font-awesome.min.css') ?>" rel="stylesheet" type="text/css">
     <link href="<?php echo URL::asset('/bootstrap.3.3.6/css/bootstrap.min.css') ?>" rel="stylesheet" type="text/css"><link href="<?php echo URL::asset('/css/animate.min.css') ?>" rel="stylesheet" type="text/css">
      <link href="<?php echo URL::asset('/css/timeline.css') ?>" rel="stylesheet" type="text/css">
-    
+           <link href="<?php echo URL::asset('/css/toastr.min.css') ?>" rel="stylesheet" type="text/css">
+
+      <script src="<?php echo URL::asset('/js/toastr.min.js') ?>"></script>
           <script src="<?php echo URL::asset('/js/jquery.1.11.1.min.js') ?>"></script>
           
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->

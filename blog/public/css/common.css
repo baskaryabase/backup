@@ -3,6 +3,7 @@ body {
   font-family: Lato,"Helvetica Neue",Arial,Verdana,Tahoma,"Lucida Sans",FreeSans,"Lucida Sans Unicode","Luxi Sans",sans-serif;
    font-size: 14px!important;
     line-height: 1.42857!important;
+    
 }
 .custom_notify li img {
     border-radius: 50em;
@@ -288,17 +289,14 @@ time.blue_green { background-color: #148aa5 }
     transform: translateY(-50%);
 }
 .flickity-prev-next-button.previous {
-    left: 35px;
+    left: 76px;
       position: absolute;
 }
 .flickity-prev-next-button.next {
-    right: 35px;
+    right: 100px;
       position: absolute;
-      color: #f57f20;
 }
-.fill{
-    fill:#f57f20;
-}
+
 
  .eventCard-group {
     position: relative;
@@ -341,7 +339,7 @@ a.eventCard--hasGroup{
    background: #e9eaed ;
 }
 body.animated.fadeIn {
-   background: #e9eaed ;
+   background: #fff ;
 }
 .col-md-3 {
    background: #e9eaed ;

@@ -14,5 +14,9 @@ use Illuminate\Http\Request;
 */
 
 Route::get('/user', function (Request $request) {
+	echo 'fgt';
     return $request->user();
-})->middleware('auth:api');
+});
+
+Route::get('/knowledge_sessions', 'ApiController@getAllKs');
+Route::get('/events', 'ApiController@getAllEvents');

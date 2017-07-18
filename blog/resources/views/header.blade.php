@@ -1,6 +1,6 @@
  @extends('layouts.profileMaster')
  @section('header')
-
+ 
 <nav class="navbar navbar-white navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">

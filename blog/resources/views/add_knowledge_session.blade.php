@@ -3,37 +3,31 @@
     <title>Events | Member Platform | Startups Club</title> 
    @stop
   @section('header')
-@include('layouts.header')
+@include('layouts.header') 
 @stop
    @section('content')
 
  <link href="<?php echo URL::asset('/css/edit_ks.css') ?>" rel="stylesheet" type="text/css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link href="<?php echo URL::asset('/css/jquery.timepicker.css') ?>" rel="stylesheet" type="text/css">
+      <link href="<?php echo URL::asset('/admin/css/datepicker3.css') ?>" rel="stylesheet" type="text/css">
+           <link href="<?php echo URL::asset('/admin/css/bootstrap3-wysihtml5.min.css') ?>" rel="stylesheet" type="text/css">
 
 
 
 <div style="margin-top: 65px; position: relative;" class="container">
 <section>
 
-<div style="padding-top: 18px; 
+<div class=" col-md-offset-9 col-md-3 first-div">
             
-            padding-right: 15px;
-            padding-left: 15px;" class=" col-md-offset-9 col-md-3">
-            
-   <div style=" background: #f57f20;
-                color: #fff;
-                height: 26px;
-                text-align: center;
-                padding-top: 0px;
-                border-radius: 5px;">
+   <div class="ks-similar-div">
                 <h5 
-                style="font-size: 14px;
-                           padding-top:5px;">
+                class="ks-similar-head">
                 Similar Sessions</h5></div>
 </div>
 
-<div style="margin-bottom: 15px;margin-top: 15px;" class="col-md-offset-9 col-md-3 pull-right">
+<div class="similar-eve col-md-offset-9 col-md-3 pull-right">
 
  <div class="event">
   <div class="table">
@@ -55,7 +49,7 @@
 
 </div>   
 
-<div style="margin-bottom: 25px;"  class="col-md-offset-9 col-md-3 pull-right">
+<div class="similar-eve-2 col-md-offset-9 col-md-3 pull-right">
 
  <div class="event">
   <div class="table">
@@ -83,43 +77,64 @@
 </section>
 </div>
 
-<div style="height: 1700px;" class="opacity"></div>
+<div class="opacity opacity-height"></div>
  
 <!-- opacity background -->
 
 
 <section>
-<div style="padding-left:0px;" class="container">
-<div style="background: #fff; position: absolute; top: 67px" class="margin col-md-7"> 
+<div class="container add-ks-container">
+<div class="margin col-md-7 add-ks-div"> 
 
 <section id="event-details">
   
   <div class=" margin col-md-12">
-    <div>
-    <button style="background-color: #f57f20; color: #fff;" class="btn btn-md pull-right">publish</button>
-    
-    <li style="list-style: none; padding-top: 15px;"><h5><i style="color: #f57f20; padding-right: 14px;" class="fa fa-calendar" aria-hidden="true"></i><span contenteditable="true">12 sep  2017</span>
-    <span><span contenteditable="true">,  10 am onwards</span></span></h5></li>
+    <div class="alert alert-danger display_error" style="display:none">
+  <strong>Error!</strong>
 
-    <li style="list-style: none;"><h5><i style="color: #f57f20; padding-right: 14px;" class="fa fa-clock-o" aria-hidden="true"></i><span contenteditable="true">Four hour Session</span></h5></li>
-        <h1 style="font-size: 20px" contenteditable="true">Swapping Customers for Productive Growth – BLR</h1>
+<ul>
+  <div id="error_append"></div> 
+</ul>
+
+</div>
+    <div>
+    <button id="publish_ks" class="publish-btn btn btn-md pull-right">publish</button>
+    
+    <li class="ks-date"><h5><i class="ks-icon fa fa-calendar" aria-hidden="true"></i>
+      <span >
+        <input type="date" id="ks_date" placeholder="Enter date" ></span>
+    <span><span >,  
+      <input type="date" id="ks_time" placeholder="Enter Time" > onwards</span></span></h5></li>
+
+    <li class="li-style"><h5><i class="ks-icon fa fa-clock-o" aria-hidden="true"></i>
+      <span ><input type="date" id="ks_duration" placeholder="Enter Duration" ></span></h5></li>
+        <h1 style="font-size: 20px" ><input type="date" style="width:60%"  id="ks_title" placeholder="Enter Title" ></h1>
     </div>
 <div class="padd">
   <ul >
-    <li style="list-style: none;"><h5><i style="color: #f57f20; padding-right: 18px;" class="fa fa-map-marker" aria-hidden="true"></i><span contenteditable="true">Coimbatore,</span><span><br><span style="padding-left: 26px;" contenteditable="true"> City hall</span></span>
-    <span class="pull-right" contenteditable="true">₹ 5000 / seat</span> 
+    <li class="li-style"><h5><i class="ks-icon2  fa fa-map-marker" aria-hidden="true"></i>
+      <span ><input type="text" id="ks_city" placeholder="Enter City" >,</span><span><br>
+      <span style="padding-left: 26px;" > <input type="date" id="ks_venue" placeholder="Enter venue" ></span></span>
+    <span class="pull-right" > 
+      <select id="ks_cost">
+  <option >Select Price</option>
+  <option>2000</option>
+  <option>3000</option>
+  <option>5000</option>
+</select>  / seat</span> 
     </h5></li>
   </ul>
 </div>
 <div>
   <h2 class="font-size-15"><span>Event Details</span></h2>
-  <p contenteditable="true">We have a monthly meetup where entrepreneurs both aspiring and established come together to meet one another. These events typically have a theme, which could be a speaker, a workshop or an entrepreneur sharing his/her experience.We have a monthly meetup where entrepreneurs both aspiring and established come together to meet one another.</p>
+<!--  <textarea rows="4" cols="50" id="ks_event_details" style="width:100%" placeholder="Enter event Details..">
+</textarea>  -->
+   <form>
+                <textarea id="ks_event_details" class="textarea" placeholder="Enter event Details.." style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
+              </form>
 </div>
 
-<center>
-<div style="padding: 15px">
-   <button type="button" class="btn btn-md rsvp" data-toggle="modal" data-target="#myModal">Join Us / RSVP</button></div>
-</center>    
+   
 
 </div>
 </section>
@@ -133,22 +148,21 @@
 <h2 class="font-size-15"><span>Timeline</span></h2>
 <!-- <h5 class="hh5"><span>Event Date<br></span><strong>12 August 2017</strong></h5> -->
 <div class="timeline">
-  <div class="timeline-item">
-    <time datetime="2016-02-03T15:00+08:00" contenteditable="true">3:00 PM</time>
-    <p contenteditable="true">Task C completed</p>
+  <div class="timeline-item ks_timeline">
+    <a href="#"><i class="fa fa-plus pull-right" aria-hidden="true"></i></a>
+    <time datetime="2016-02-03T15:00+08:00" ><input type="date" class="ks_timeline_time" placeholder="Enter Time" ></time>
+    <p ><input type="date" class="ks_timeline_content" placeholder="Enter timeline" > </p>
+
+
   </div>
-  <div class="timeline-item">
-    <time datetime="2016-02-03T11:30+08:00" contenteditable="true">11:30 AM</time>
-    <p contenteditable="true">Task B completed</p>
+   <div class="timeline-item ks_timeline">
+    <a href="#"><i class="fa fa-times pull-right" aria-hidden="true"></i></a>
+    <time datetime="2016-02-03T15:00+08:00" ><input type="date" class="ks_timeline_time" placeholder="Enter Time" ></time>
+    <p ><input type="date" class="ks_timeline_content" placeholder="Enter timeline" > </p>
+
+
   </div>
-  <div class="timeline-item">
-    <time datetime="2016-02-03T09:45+08:00" contenteditable="true">9:45 AM</time>
-    <p contenteditable="true">Task A completed</p>
-  </div>
-  <div class="timeline-item">
-    <time datetime="2016-02-03T09:45+08:00" contenteditable="true">9:45 AM</time>
-    <p contenteditable="true">Task A completed</p>
-  </div>
+
 </div>
 </div>
 </center>
@@ -164,25 +178,27 @@
         <h2 class="font-size-15"><span>Speaker</span></h2>
       </div>
         <div class="row">
-        <div style="box-sizing: inherit; display: block;" class="col-md-4 col-sm-4 col-xs-12">
+        <div class="ks-speaker-div col-md-4 col-sm-4 col-xs-12">
           <div class="speaker-image">
           
-            <img src="<?php echo URL::asset('/image/ks/header.jpg') ?>" alt="speaker image" class="img-responsive ks-speaker-size">
+            <img src="<?php echo URL::asset('/image/speakers/default-user.png') ?>" id="display_pic" alt="speaker image" class="img-responsive ks-speaker-size">
+  <input type="hidden" id="hidden_token" name="_token" value="{{ csrf_token() }}">
+  <input type="hidden" id="hidden_image" name="_token" value="">
 
-            <input type="file" class="file" id="attachement" name="attachement" style="display: none;" onchange="fileSelected(this)"/>
-<input type="button" class="file" id="btnAttachment" onclick="openAttachment()" value="File"/>
+<input type="file" name="pic" id="ks_speaker_pic" >
           </div>
         </div>
           <div class="col-md-8 col-sm-8 col-xs-12">
             <div class="speaker-content">
-              <h4 contenteditable="true">John dissilva</h4>
-              <span contenteditable="true"><strong>Manager</strong></span><br>
-                <span style="font-style: italic;" contenteditable="true">company name</span>
+              <h4><input type="text" id="ks_speaker_name" placeholder="Enter Speaker Name" ></h4>
+              <span ><strong><input type="text" id="ks_speaker_desn" placeholder="Enter Speaker Designation" ></strong></span><br>
+                <span style="font-style: italic;"><input type="text" id="ks_speaker_company" placeholder="Enter Company Name" ></span>
               
-              <p contenteditable="true">very good skilled person with lot of stuffs filled in and woreking as tech head in product developement in a reputed company</p>
+              <p> <textarea rows="3" id="ks_speaker_bio" cols="30" style="width:100%" placeholder="Enter Company Description..">
+</textarea></p>
               <ul class="speaker-social">
-                <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                <li><input type="text" id="ks_speaker_linkedin" placeholder="Enter linkedin profile" ></li>
+                <li><input type="text" id="ks_speaker_twitter" placeholder="Enter twitter profile" ></li>
               </ul>
 
             </div>
@@ -195,31 +211,46 @@
     <div class="col-md-6 t1">
       <div class="col-head text-center">
         
-        <h3 style="padding-top: 5px;font-size: 20px;">Awards</h3>
+        <h3 class="ks-awardandachieve">Awards</h3>
       </div>
       <ul class="list-unstyled">
            <li>
-            <p contenteditable="true" class="option"><span class="glyphicon glyphicon-ok inactive" aria-hidden="true"></span >Option #1 #1</p>
+            <p class="option"><span class="glyphicon glyphicon-ok inactive" aria-hidden="true"></span ><input type="text" class="ks_speaker_awards" placeholder="Enter Awards" ></p>
            </li>
            <li>
-            <p contenteditable="true" class="option"><span class="glyphicon glyphicon-ok inactive" aria-hidden="true"></span>Option #1 #2</p>
+            <p  class="option"><span class="glyphicon glyphicon-ok inactive" aria-hidden="true"></span><input type="text" class="ks_speaker_awards" placeholder="Enter Awards" ></p>
            </li>
            <li>
-            <p contenteditable="true" class="option"><span class="glyphicon glyphicon-ok inactive" aria-hidden="true"></span>Option #1 #3</p>
+            <p class="option"><span class="glyphicon glyphicon-ok inactive" aria-hidden="true"></span><input type="text" class="ks_speaker_awards" placeholder="Enter Awards" ></p>
+           </li>
+            <li>
+            <p class="option"><span class="glyphicon glyphicon-ok inactive" aria-hidden="true"></span><input type="text" class="ks_speaker_awards" placeholder="Enter Awards" ></p>
+           </li>
+            <li>
+            <p class="option"><span class="glyphicon glyphicon-ok inactive" aria-hidden="true"></span><input type="text" class="ks_speaker_awards" placeholder="Enter Awards" ></p>
            </li>
       </ul>
     </div>
     <div class="col-md-6 t2">
       <div class="col-head text-center">
         
-        <h3 style="padding-top: 5px;font-size: 20px">Recognitions</h3>
+        <h3 class="ks-awardandachieve">Recognitions</h3>
       </div>
       <ul class="list-unstyled">
            <li>
-            <p contenteditable="true" class="option"><span class="glyphicon glyphicon-ok inactive" aria-hidden="true"></span>Option #2 #1</p>
+            <p class="option"><span class="glyphicon glyphicon-ok inactive" aria-hidden="true"></span><input type="text" class="ks_speaker_recognitions" placeholder="Enter Recognitions" ></p>
            </li>
            <li>
-            <p contenteditable="true" class="option"><span class="glyphicon glyphicon-ok inactive" aria-hidden="true"></span>Option #2 #2</p>
+            <p  class="option"><span class="glyphicon glyphicon-ok inactive" aria-hidden="true"></span><input type="text" class="ks_speaker_recognitions" placeholder="Enter Recognitions" ></p>
+           </li>
+            <li>
+            <p  class="option"><span class="glyphicon glyphicon-ok inactive" aria-hidden="true"></span><input type="text" class="ks_speaker_recognitions" placeholder="Enter Recognitions" ></p>
+           </li>
+           <li>
+            <p  class="option"><span class="glyphicon glyphicon-ok inactive" aria-hidden="true"></span><input type="text" class="ks_speaker_recognitions" placeholder="Enter Recognitions" ></p>
+           </li>
+            <li>
+            <p  class="option"><span class="glyphicon glyphicon-ok inactive" aria-hidden="true"></span><input type="text" class="ks_speaker_recognitions" placeholder="Enter Recognitions" ></p>
            </li>
       </ul>
     </div>
@@ -237,5 +268,22 @@
           <center><p class="text-muted"> Copyright 2017 Startups Club Services Pvt Ltd. </p></center>
         </div>
 </div>
+ <script src="<?php echo URL::asset('/admin/js/bootstrap-datepicker.js') ?>"></script>
+ <script src="<?php echo URL::asset('/js/jquery.timepicker.js') ?>"></script>
+ <script src="<?php echo URL::asset('/js/ks.js') ?>"></script>
+    <script src="<?php echo URL::asset('/js/loader.js') ?>"></script>
+      <script src="<?php echo URL::asset('/admin/js/bootstrap3-wysihtml5.all.min.js') ?>"></script>
 
+
+<script>
+  $('#ks_date').datepicker({
+      autoclose: true
+    });
+  $("#ks_time").timepicker();
+  $(".ks_timeline_time").timepicker();
+    $(function () {
+   
+    $("#ks_event_details").wysihtml5();
+  });
+</script>
 @stop

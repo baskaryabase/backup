@@ -1,19 +1,19 @@
-  
- @section('header') 
+     
+@section('header') 
 <style type="text/css">
 .navbar-style{
-  margin-bottom: 100px;
+ margin-bottom: 100px;
 }
- @media screen and (min-width: 767px) and (max-width: 1093px) {
-    .navbar-style{
-      margin-bottom: 180px;
-    }
- }
+@media screen and (min-width: 767px) and (max-width: 1093px) {
+   .navbar-style{
+     margin-bottom: 180px;
+   }
+}
 </style>
-
+<input type="hidden" id="hidden_token" name="_token" value="{{ csrf_token() }}">
 <div class="navbar-style" id="navbar">
-  <nav class="navbar navbar-default navbar-static-top navbar-fixed-top" role="navigation">
-    <div class="container">
+ <nav class="navbar navbar-default navbar-static-top navbar-fixed-top" role="navigation">
+    <div class="container" >
     <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
           <span class="sr-only">Toggle navigation</span>
@@ -37,8 +37,8 @@
                 <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" >Event<b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         <li class="kopie"><a href="/events">Meetups</a></li>
-                        <li><a href="#">Ks</a></li>
-                        <li><a href="#">Ravup</a></li>
+                        <li><a href="/knowledge-sessions">Ks</a></li>
+                        <li><a href="#">Revup</a></li>
                         <li><a href="#">Calender</a></li>
                     </ul>
                 </li>
@@ -93,10 +93,10 @@
 
   <!-- Modal -->
   <div class="modal fade" id="login_modal" role="dialog">
-    <div class="modal-dialog">
+    <div align="center" class="modal-dialog">
     
       <!-- Modal content-->
-<div class="modal-content">
+<div class="width modal-content">
         
         <!-- <div class="modal-body">
           -->
@@ -109,7 +109,7 @@
         <div class="panel-body">
           <div class="row">
             <div class="col-lg-12">
-              <form id="login-form" action="#" method="post" role="form" style="display: block;">
+              <form id="login-form"  role="form" style="display: block;">
                 <h2>LOGIN</h2>
                   <div class="form-group">
                     <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
@@ -122,7 +122,7 @@
                     <label for="checkbox1">Remember Me</label>   
                   </div>
                   <div class="col-xs-6 form-group pull-right">     
-                        <input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-login" value="Log In">
+                        <input type="button" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-login" value="Log In">
                   </div>
                   <div class="col-xs-12">
                     <center>forgot password?<a id="forgot-btn" href="#">click here...</a></center>
@@ -130,42 +130,52 @@
               </form>
 
 
-              <form id="register-form" action="#" method="post" role="form" style="display: none;">
+              <form id="register-form"  role="form" style="display: none;">
                 <h2>REGISTER</h2>
                   <div class="form-group">
-                    <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
+                    <input type="text" name="username" id="fullname" tabindex="1" class="form-control" placeholder="Fullname" value="">
                   </div>
                   <div class="form-group">
-                    <input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="Email Address" value="">
+                    <input type="email" name="email" id="emailaddress" tabindex="1" class="form-control" placeholder="Email Address" value="">
                   </div>
                   <div class="form-group">
-                    <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
+                    <input type="password" name="password" id="register_password" tabindex="2" class="form-control" placeholder="Password">
                   </div>
                   <div class="form-group">
-                    <input type="password" name="confirm-password" id="confirm-password" tabindex="2" class="form-control" placeholder="Confirm Password">
+                    <input type="password" name="confirm-password" id="confirmpassword" tabindex="2" class="form-control" placeholder="Confirm Password">
                   </div>
+                  
                   <div class="form-group">
                     <div class="row">
                       <div class="col-sm-6 col-sm-offset-3">
-                        <input type="submit" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-register" value="Register Now">
+                        <input type="button" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-register" value="Register Now">
                       </div>
                     </div>
+                  </div>
+
+                  <div class="form-group width-btn">
+                    <a class="btn btn-block btn-social btn-facebook">
+                     <i class="fa fa-facebook"></i> Sign in with Facebook
+                    </a>
+                     <a class="btn btn-block btn-social btn-linkedin">
+                      <i class="fa fa-linkedin"></i> Sign in with LinkedIn
+                     </a>
                   </div>
               </form>
 
               
-              <form id="forgot-password" action="#" method="post" role="form" style="display: none;">
+          <form id="forgot-password"  role="form" style="display: none;">
                 <h2>Forgot Password</h2>
                   <div class="form-group">
-                    <input type="email" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
+                    <input type="email" name="username" id="email_id" tabindex="1" class="form-control" placeholder="Please Enter email id" value="">
                     <div style="padding-top: 20px;" class="col-sm-6 col-sm-offset-3">
-                        <input type="submit" name="forgot-password-submit" tabindex="4" class="form-control btn btn-register" value="Submit">
+                        <input type="button" name="forgot-password-submit" id="forgot-password-submit" tabindex="4" class="form-control btn btn-register" value="Submit">
                       </div>
                   </div>
               </form>
 
 
-            </div>
+            </div> 
           </div>
         </div>
         <div class="panel-heading">
@@ -231,6 +241,7 @@
 </script>
 
 
+
 <script>
 /*$(document).ready(function() {
 $('[data-toggle="tooltip"]').tooltip(); 
@@ -241,6 +252,7 @@ $('ul.nav li.dropdown').hover(function() {
 }, function() {
   $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
 });
+
 
 </script>
    <script src="<?php echo URL::asset('/js/header.js') ?>"></script>

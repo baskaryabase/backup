@@ -53,7 +53,7 @@ echo '</pre>';*/
   
 <div style="position: relative; margin-top: 30px;width: 100%">
 <div style="position: absolute;
-            
+            background: #fff;
             width: 100%;
             height: 315px;
             
@@ -90,12 +90,24 @@ echo '</pre>';*/
 <?php } ?>
 
 </div>
-<div style="position: absolute;width: 100%; top: 70px;">
-<button class="flickity-prev-next-button previous  customPrevBtn float-left" type="button" aria-label="previous">
+<div style="position: absolute;width: 100%; top: 110px;">
+<button class="arrow left flickity-prev-next-button previous  customPrevBtn float-left" type="button" aria-label="previous">
+  <svg viewBox="0 0 100 100" xml:space="preserve">
+    <polyline fill="none" stroke="#000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" points="
+  45.63,75.8 0.375,38.087 45.63,0.375 "/>
+  </svg>  
+</button>
+<button class="arrow right flickity-prev-next-button next float-right customNextBtn" type="button" aria-label="next">
+  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 100 100" xml:space="preserve">
+    <polyline fill="none" stroke="#000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" points="
+  0.375,0.375 45.63,38.087 0.375,75.8 "/>
+  </svg>
+</button>
+<!-- <button class="flickity-prev-next-button previous  customPrevBtn float-left" type="button" aria-label="previous">
 <svg viewBox="0 0 100 100">
 <path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z" class="arrow fill"></path></svg></button>
 
-<button class="flickity-prev-next-button next float-right customNextBtn" type="button" aria-label="next"><svg viewBox="0 0 100 100"><path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z" class="arrow fill" transform="translate(100, 100) rotate(180) "></path></svg></button>
+<button class="flickity-prev-next-button next float-right customNextBtn" type="button" aria-label="next"><svg viewBox="0 0 100 100"><path d="M 10,50 L 60,100 L 70,90 L 30,50  L 70,10 L 60,0 Z" class="arrow fill" transform="translate(100, 100) rotate(180) "></path></svg></button> -->
 </div>
 </div>
 
@@ -122,7 +134,7 @@ echo '</pre>';*/
                 <ul class="nav nav-pills nav-stacked">
                   <li class="active"><a href="#"> <i class="fa fa-user"></i> News feed</a></li>
                                   <?php if(!empty(session()->get('SessionID'))){ ?>
-<li>
+                  <li>
                     <a href="/messages">
                       <i class="fa fa-envelope"></i> Messages
                       <!-- <span class="label label-info pull-right r-activity">9</span> -->

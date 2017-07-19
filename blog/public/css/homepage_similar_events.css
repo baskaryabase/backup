@@ -3,14 +3,14 @@
 /*
 *  Basic Reset
 */
- 
+ /*
 *,
 *:after,
 *:before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
+}*/
 
 /**
  * Basics Styles
@@ -144,3 +144,49 @@
       transition: transform 0.35s ease;
   }
 
+button {
+  -webkit-appearance: none;
+  background: transparent;
+  border: 0;
+  outline:0;
+}
+
+svg {
+  padding: 10px;
+}
+
+.arrow {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  margin-top: -45px;
+  margin-left: -35px;
+  width: 70px;
+  height: 90px;
+}
+
+
+
+.left:hover polyline,
+.left:focus polyline {
+  stroke-width: 6;
+}
+
+.left:active polyline {
+  stroke-width: 9;
+  transition: all 100ms ease-in-out;
+}
+
+.right:hover polyline,
+.right:focus polyline {
+  stroke-width: 6;
+}
+
+.right:active polyline {
+  stroke-width: 9;
+  transition: all 100ms ease-in-out;
+}
+
+polyline {
+  transition: all 250ms ease-in-out;
+}

@@ -289,11 +289,11 @@ time.blue_green { background-color: #148aa5 }
     transform: translateY(-50%);
 }
 .flickity-prev-next-button.previous {
-    left: 76px;
+    left: 33px;
       position: absolute;
 }
 .flickity-prev-next-button.next {
-    right: 100px;
+    right: 0px;
       position: absolute;
 }
 
@@ -339,7 +339,7 @@ a.eventCard--hasGroup{
    background: #e9eaed ;
 }
 body.animated.fadeIn {
-   background: #fff ;
+   background: #e9eaed ;
 }
 .col-md-3 {
    background: #e9eaed ;

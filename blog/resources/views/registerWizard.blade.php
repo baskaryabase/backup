@@ -3,7 +3,7 @@
     <title>Register | Member Platform | Startups Club</title> 
    @stop
 @include('layouts.footer')
-  @section('footer')
+  @section('footer') 
   @stop
 @section('content')
 
@@ -178,7 +178,7 @@
 
 </fieldset>
 <fieldset class="form-section">
-<h2 class="fs-title"><b class="avv">Company Details</b></h2>
+
 <!-- <h3 class="fs-subtitle">Your presence on the social network</h3> -->
 <div class="margin-tp-sm" ><p>Do you have a startup?</p>
 <span class="radio-inline">
@@ -194,6 +194,8 @@
                                   </label>
                                   </span>
                               </div>
+
+                              <h2 class="fs-title"><b class="avv">Company Details</b></h2>
 <div id="display_startup" class="width-70pc" >
 <input type="text" style="width:100%" name="startup name" id="startup_name" placeholder="Startup Name"  />
 
@@ -248,7 +250,7 @@ Current Engagement
 <div class="radio-inline">
                                   <label>
                                       <input name="form-field-radio1" type="radio" value="employed" checked class="inverted">
-                                      <span class="text">Employed</span>
+                                       <span class="text">Employed</span>
                                   </label>
                               </div>
 <div class="radio-inline">
@@ -264,9 +266,11 @@ Current Engagement
                                   </label>
                               </div>
 <input type="text" name="company_name" id="company_name" placeholder="Company name" class="width-70pc margin-tp-sm" />
-<input type="text" name="user_desn" id="user_desn" placeholder="Designation" class="width-70pc" />
 
   </div>
+  <h2 class="fs-title"><b class="avv">Your Role</b></h2>
+  <input type="text" name="user_desn" id="user_desn" placeholder="Designation" class="width-70pc" />
+
   <div class="width-70pc arr multi_join">
 <select name="joinsuc"  multiple class="form-control joinsuc  ">
 <option type="checkbox" value="Investment">Investment</option>

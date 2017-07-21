@@ -9,6 +9,13 @@
 @include('layouts.footer')
 @stop
    @section('content')
+
+   <?php
+echo '<pre>';
+print_r($company['data']);
+echo '</pre>';
+
+    ?>
    <link href="<?php echo URL::asset('/bootstrap.3.3.6/css/bootstrap.min.css') ?>" rel="stylesheet" type="text/css">
    <link href="<?php echo URL::asset('/css/common.css') ?>" rel="stylesheet" type="text/css">
    <link href="<?php echo URL::asset('/css/company_profile.css') ?>" rel="stylesheet" type="text/css">
@@ -21,7 +28,7 @@
           <div class="row">
             <div class="col-sm-8 col-xs-8">
               <div class="promotion-header">
-                Startupsclub pvt limited
+              {{  $company['data']['startup_name'] }}
               </div>
             </div>
             <div class="col-sm-4 col-xs-4">
@@ -42,10 +49,10 @@
           </div>
           <div class="col-sm-4" style="padding-left: 10%;">
             <i class="fa fa-industry" aria-hidden="true" style="margin-right: 3px;"></i>
-            <span>digital marketing</span>  
+            <span>{{  $company['data']['startup_industry'] }}</span>  
             <br>
             <i class="fa fa-building-o" aria-hidden="true" style="margin-right: 3px;"></i>
-            <span>stage</span> 
+            <span>{{ $company['data']['startup_stage'] }}</span> 
           </div>
           <div class="col-sm-4">
             <ul class="faico clear">
@@ -67,7 +74,7 @@
         </div>
         <div class="wpb_text_column wpb_content_element ">
           <div class="wpb_wrapper">
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            <p>{{  $company['data']['elevator_pitch'] }}</p>
           </div>
         </div>
       </div>

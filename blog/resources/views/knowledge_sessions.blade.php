@@ -25,24 +25,24 @@ $speaker_img=URL::asset('/image/speakers/'.$data['ks']['ks_speaker_img']);
 
 
  
-<div style="margin-top: 65px;" class="container">
+<div class="container container-margin">
 
 
-<div style="background: #fff;" class="margin col-md-9">  
+<div class="margin bg-white col-md-9">  
 <section id="event-details">
   
   <div class=" margin col-md-12">
     <div>
-    <h5 style="font-weight: bold;" class="pull-right hidden-xs">Knowledge Session</h5>
-    <li style="list-style: none; padding-top: 15px;"><h5>
-      <i style="color: #f57f20; padding-right: 14px;" class="fa fa-calendar" aria-hidden="true"></i><span>{{ date('jS F Y',strtotime($data['ks']['ks_date'])) }}</span><span><span>,  {{ $data['ks']['ks_time'] }} onwards</span></span></h5></li>
+    <h5 class="font-weight pull-right hidden-xs">Knowledge Session</h5>
+    <li class="li-style-none1"><h5>
+      <i class="icon-color fa fa-calendar" aria-hidden="true"></i><span>{{ date('jS F Y',strtotime($data['ks']['ks_date'])) }}</span><span><span>,  {{ $data['ks']['ks_time'] }} onwards</span></span></h5></li>
 
-    <li style="list-style: none;"><h5><i style="color: #f57f20; padding-right: 14px;" class="fa fa-clock-o" aria-hidden="true"></i><span>{{ $data['ks']['ks_duration'] }}</span></h5></li>
-        <h1 style="font-size: 20px">{{ $data['ks']['ks_title'] }}</h1>
+    <li class="li-style-none"><h5><i class="icon-color fa fa-clock-o" aria-hidden="true"></i><span>{{ $data['ks']['ks_duration'] }}</span></h5></li>
+        <h1 class="font-size-20">{{ $data['ks']['ks_title'] }}</h1>
     </div>
 <div class="padd">
   <ul >
-    <li style="list-style: none;"><h5><i style="color: #f57f20; padding-right: 18px;" class="fa fa-map-marker" aria-hidden="true"></i><span>{{ $data['ks']['ks_city'] }},</span><span><br><span style="padding-left: 26px;"> {{ $data['ks']['ks_venue'] }}</span></span>
+    <li class="li-style-none"><h5><i class="icon-color-padd fa fa-map-marker" aria-hidden="true"></i><span>{{ $data['ks']['ks_city'] }},</span><span><br><span class="padding-26"> {{ $data['ks']['ks_venue'] }}</span></span>
     <span class="pull-right" >₹ {{ $data['ks']['ks_cost'] }} / seat</span> 
     </h5></li>
   </ul>
@@ -53,7 +53,7 @@ $speaker_img=URL::asset('/image/speakers/'.$data['ks']['ks_speaker_img']);
 </div>
 
 <center>
-<div style="padding: 15px">
+<div class="padding-15">
    <button type="button" class="btn btn-md rsvp paid_rsvp_link" href="#" data-type="ks" data-id="{{ $data['ks']['ks_id'] }}" data-cost="{{$data['ks']['ks_cost'] }}" >Join Us / RSVP</button></div>
 </center>    
 
@@ -120,7 +120,7 @@ $speaker_img=URL::asset('/image/speakers/'.$data['ks']['ks_speaker_img']);
     <div class="col-md-6 t1">
       <div class="col-head text-center">
         
-        <h3 style="padding-top: 5px;font-size: 20px;">Awards</h3>
+        <h3 class="awards-style">Awards</h3>
       </div>
       <ul class="list-unstyled">
           <?php foreach ($data['metas']['awards'] as $key => $value) {
@@ -134,7 +134,7 @@ $speaker_img=URL::asset('/image/speakers/'.$data['ks']['ks_speaker_img']);
     <div class="col-md-6 t2">
       <div class="col-head text-center">
         
-        <h3 style="padding-top: 5px;font-size: 20px">Recognitions</h3>
+        <h3 class="awards-style">Recognitions</h3>
       </div>
       <ul class="list-unstyled">
         <?php foreach ($data['metas']['recognitions'] as $key => $value) {
@@ -156,32 +156,23 @@ $speaker_img=URL::asset('/image/speakers/'.$data['ks']['ks_speaker_img']);
 
 <section>
 
-<div style="padding-top: 18px; 
+<div class="col-md-3 col-md-3-style">
             
-            padding-right: 15px;
-            padding-left: 15px;" class="col-md-3">
-            
-   <div style=" background: #f57f20;
-                color: #fff;
-                height: 26px;
-                text-align: center;
-                padding-top: 0px;
-                border-radius: 5px;">
+   <div class="similar-events-head">
                 <h5 
-                style="font-size: 14px;
-                           padding-top:5px;">
+                class="similar-events-h5">
                 Similar Sessions</h5></div>
 </div>
 
 <?php foreach ($data['similar'] as $key => $value) {
 ?>
 
-<div style="margin-bottom: 15px;margin-top: 15px;" class="col-md-3 pull-right">
+<div class="col-md-3 sm-eve-div pull-right">
 
  <div class="event">
   <div class="table">
   <div class="row">
-     <div class="col date-short" <?php echo (strtotime($value['ks_date'])>strtotime('now'))?'style="background-color:#8ec33f"':'style="background-color:#000"' ?> >
+     <div class="col date-short color-green" <?php echo (strtotime($value['ks_date'])>strtotime('now')) ?> >
        <div class="month">{{ strtoupper(substr(date('F', strtotime($value['ks_date'])),0,3))  }}</div> 
        <div class="day">{{ date('d', strtotime($value['ks_date'])) }}</div> 
      </div>
@@ -296,7 +287,7 @@ $speaker_img=URL::asset('/image/speakers/'.$data['ks']['ks_speaker_img']);
 
 
 <fieldset>
-     <button style="color: #fff" name="submit" type="button" id="register_paid_rsvp" data-submit="...Sending">Register</button>
+     <button class="btn btn-md btn-success pull-right" style="color: #fff" name="submit" type="button" id="register_paid_rsvp" data-submit="...Sending">Register</button>
     </fieldset>
   </form>
 </div>

@@ -16,11 +16,6 @@
 
 });*/
 
-Route::get('/test-page', 'MainController@getTestPage');
-Route::get('/dash-events', 'MainController@getDashEvents');
-Route::get('/dash', 'MainController@getDash');
-Route::get('/dash-ksdetails', 'MainController@getKsDetails');
-Route::get('/comp-pro', 'MainController@getCompPro');
 Route::get('/', 'MainController@getHome');
 Route::get('/demoday', 'MainController@getDemoday');
 Route::get('/democity/{fn}', 'MainController@getDemodayCity');
@@ -29,14 +24,16 @@ Route::get('/revup', 'MainController@getRevUp');
 Route::get('/scin', 'MainController@getScin');
 Route::get('/family', 'MainController@getFamily');
 Route::get('/what-we-do', 'MainController@getWhatWeDo');
-Route::get('/company', 'MainController@getCompanyProfilePage');
+Route::get('/company/{fn}', 'MainController@getCompanyProfilePage');
 Route::get('/our-team', 'MainController@getTeamPage');
 Route::get('/find', 'MainController@getFind');
 Route::get('/events', 'MainController@getEvents');
 Route::get('/knowledge-sessions', 'MainController@getAllKs');
 Route::get('/single-events/{fn}', 'MainController@getSingleEvents');
 Route::get('/knowledge-session/{fn}', 'MainController@getSingleKs');
+Route::get('/edit-ks/{fn}', 'MainController@getSingleEditKs');
 Route::get('/member-dashboard/', 'MainController@getMemberDashboard');
+Route::get('/ks-dashboard/', 'MainController@getKsDashboard');
 Route::get('/add-knowledge-session/', 'MainController@getAddKnowledgeSession');
 Route::get('/add-member-speaker/', 'MainController@getAddMemberSpeaker');
 Route::post('/CheckKnowledgeSession/', 'MainController@CheckKnowledgeSession');
@@ -48,6 +45,9 @@ Route::post('/InsertAttendeesKs/', 'MainController@InsertAttendeesKs');
 Route::post('/CheckParticipants/', 'MainController@CheckParticipants');
 Route::post('/upload_speaker_pic/', 'MainController@upload_speaker_pic');
 Route::post('/InsertKs/', 'MainController@InsertKs');
+Route::post('/UpdateKs/', 'MainController@UpdateKs');
+Route::post('/deleteKs/', 'MainController@deleteKs');
+Route::get('/ks-details/{fn}', 'MainController@getKsRsvp');
 
  
   Route::post('/get-find-member', 'MainController@get_find_member');

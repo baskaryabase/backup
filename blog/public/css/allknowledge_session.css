@@ -1,8 +1,7 @@
-
 .ks-thumbnail{
-	
+	/*margin-top: 60px; 
+	height: 400px;*/
 }
-
 .ks-div{
 	position: relative; 
 	left: 0px; 
@@ -12,6 +11,33 @@
     transition: .5s ease;
     backface-visibility: hidden;
 }
+@media screen and (min-width: 1080px) {
+.ks-div{
+	position: relative; 
+	left: 0px; 
+	top: 0px;
+	opacity: 1;
+    display: block;
+    transition: .5s ease;
+    backface-visibility: hidden;
+    width: 100%;
+    height: 215px;
+}
+}	
+@media screen and (min-width: 890px) and (max-width: 1080px){
+	.ks-div{
+	position: relative; 
+	left: 0px; 
+	top: 0px;
+	opacity: 1;
+    display: block;
+    transition: .5s ease;
+    backface-visibility: hidden;
+    width: 100%;
+    height: 160px;
+}
+}
+
 .ks-image{
 	width: 100%; 
 	height: 100%; 
@@ -24,14 +50,14 @@
 	bottom: 0%; 
     left: 1%;*/
     color: black; 
-    font-size: 10px;
+    font-size: 12px;
 }
 .ks-time{
 	/*position: absolute; 
 	bottom: 0%; 
 	right: 1%;*/
 	color: black; 
-	font-size: 10px;
+	font-size: 12px;
 }
 .ks-speaker{
 	position: absolute; 
@@ -42,10 +68,13 @@
 	right: 0%; 
 	border: 2px solid #fff;
 }
+.ks-title-div{
+	position: absolute; top: 0%; right: 1%; color: #fff;
+}
 
 .margin {
 		margin-top: 95px;
-		margin-bottom: 75px;
+		margin-bottom: 70px;
 }
 @media only screen and (max-width: 842px) {
 	.padd{
@@ -97,4 +126,3 @@
 .thumbnail:hover{
 	 box-shadow: 0 4px 8px 0 #999999, 0 6px 20px 0 #999999;
 }
-

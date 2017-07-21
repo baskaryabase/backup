@@ -81,7 +81,7 @@
  
 <!-- opacity background -->
 
-
+<div id="add_section">
 <section>
 <div class="container add-ks-container">
 <div class="margin col-md-7 add-ks-div"> 
@@ -90,7 +90,7 @@
   
   <div class=" margin col-md-12">
     <div class="alert alert-danger display_error" style="display:none">
-  <strong>Error!</strong>
+  <strong>Error!</strong>You seem to have left something empty! please check for fields!!!
 
 <ul>
   <div id="error_append"></div> 
@@ -98,23 +98,23 @@
 
 </div>
     <div>
-    <button id="publish_ks" class="publish-btn btn btn-md pull-right">publish</button>
+    <button id="publish_ks" class="publish-btn btn btn-md pull-right">Publish</button>
     
     <li class="ks-date"><h5><i class="ks-icon fa fa-calendar" aria-hidden="true"></i>
       <span >
-        <input type="date" id="ks_date" placeholder="Enter date" ></span>
+        <input type="text" id="ks_date" placeholder="when?" ></span>
     <span><span >,  
-      <input type="date" id="ks_time" placeholder="Enter Time" > onwards</span></span></h5></li>
+      <input type="text" id="ks_time" placeholder="On?" > onwards</span></span></h5></li>
 
     <li class="li-style"><h5><i class="ks-icon fa fa-clock-o" aria-hidden="true"></i>
-      <span ><input type="date" id="ks_duration" placeholder="Enter Duration" ></span></h5></li>
-        <h1 style="font-size: 20px" ><input type="date" style="width:60%"  id="ks_title" placeholder="Enter Title" ></h1>
+      <span ><input type="text" id="ks_duration" placeholder="How long?" ></span></h5></li>
+        <h1 style="font-size: 20px" ><input type="text" style="width:60%"  id="ks_title" placeholder="What is the session about?" ></h1>
     </div>
 <div class="padd">
   <ul >
     <li class="li-style"><h5><i class="ks-icon2  fa fa-map-marker" aria-hidden="true"></i>
-      <span ><input type="text" id="ks_city" placeholder="Enter City" >,</span><span><br>
-      <span style="padding-left: 26px;" > <input type="date" id="ks_venue" placeholder="Enter venue" ></span></span>
+      <span ><input type="text" id="ks_city" placeholder="Which City?" >,</span><span><br>
+      <span style="padding-left: 26px;" > <input type="text" id="ks_venue" placeholder="Address?" ></span></span>
     <span class="pull-right" > 
       <select id="ks_cost">
   <option >Select Price</option>
@@ -130,7 +130,7 @@
 <!--  <textarea rows="4" cols="50" id="ks_event_details" style="width:100%" placeholder="Enter event Details..">
 </textarea>  -->
    <form>
-                <textarea id="ks_event_details" class="textarea" placeholder="Enter event Details.." style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
+                <textarea id="ks_event_details" class="textarea" placeholder="Describe your session in glowing words.." style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
               </form>
 </div>
 
@@ -149,19 +149,13 @@
 <!-- <h5 class="hh5"><span>Event Date<br></span><strong>12 August 2017</strong></h5> -->
 <div class="timeline">
   <div class="timeline-item ks_timeline">
-    <a href="#"><i class="fa fa-plus pull-right" aria-hidden="true"></i></a>
-    <time datetime="2016-02-03T15:00+08:00" ><input type="date" class="ks_timeline_time" placeholder="Enter Time" ></time>
-    <p ><input type="date" class="ks_timeline_content" placeholder="Enter timeline" > </p>
+    <a  onclick="get_wrapper()"><i class="fa fa-plus pull-right" aria-hidden="true"></i></a>
+    <time datetime="2016-02-03T15:00+08:00" ><input type="text" class="ks_timeline_time" placeholder="Enter Time" ></time>
+    <p ><input type="text" class="ks_timeline_content" placeholder="Details?" > </p>
 
 
   </div>
-   <div class="timeline-item ks_timeline">
-    <a href="#"><i class="fa fa-times pull-right" aria-hidden="true"></i></a>
-    <time datetime="2016-02-03T15:00+08:00" ><input type="date" class="ks_timeline_time" placeholder="Enter Time" ></time>
-    <p ><input type="date" class="ks_timeline_content" placeholder="Enter timeline" > </p>
-
-
-  </div>
+   
 
 </div>
 </div>
@@ -190,15 +184,15 @@
         </div>
           <div class="col-md-8 col-sm-8 col-xs-12">
             <div class="speaker-content">
-              <h4><input type="text" id="ks_speaker_name" placeholder="Enter Speaker Name" ></h4>
-              <span ><strong><input type="text" id="ks_speaker_desn" placeholder="Enter Speaker Designation" ></strong></span><br>
-                <span style="font-style: italic;"><input type="text" id="ks_speaker_company" placeholder="Enter Company Name" ></span>
+              <h4><input type="text" id="ks_speaker_name" placeholder="Name?" ></h4>
+              <span ><strong><input type="text" id="ks_speaker_desn" placeholder="Designation?" ></strong></span><br>
+                <span style="font-style: italic;"><input type="text" id="ks_speaker_company" placeholder="Where do you work?" ></span>
               
-              <p> <textarea rows="3" id="ks_speaker_bio" cols="30" style="width:100%" placeholder="Enter Company Description..">
+              <p> <textarea rows="3" id="ks_speaker_bio" cols="30" style="width:100%" placeholder="Describe your work and yourself in glowing words...">
 </textarea></p>
               <ul class="speaker-social">
-                <li><input type="text" id="ks_speaker_linkedin" placeholder="Enter linkedin profile" ></li>
-                <li><input type="text" id="ks_speaker_twitter" placeholder="Enter twitter profile" ></li>
+                <li><input type="text" id="ks_speaker_linkedin" placeholder="Your linkedin profile" ></li>
+                <li><input type="text" id="ks_speaker_twitter" placeholder="Your twitter profile" ></li>
               </ul>
 
             </div>
@@ -215,19 +209,19 @@
       </div>
       <ul class="list-unstyled">
            <li>
-            <p class="option"><span class="glyphicon glyphicon-ok inactive" aria-hidden="true"></span ><input type="text" class="ks_speaker_awards" placeholder="Enter Awards" ></p>
+            <p class="option"><span class="glyphicon glyphicon-ok inactive" aria-hidden="true"></span ><input type="text" class="ks_speaker_awards" placeholder="Awards you have won?" ></p>
            </li>
            <li>
-            <p  class="option"><span class="glyphicon glyphicon-ok inactive" aria-hidden="true"></span><input type="text" class="ks_speaker_awards" placeholder="Enter Awards" ></p>
+            <p  class="option"><span class="glyphicon glyphicon-ok inactive" aria-hidden="true"></span><input type="text" class="ks_speaker_awards" placeholder="Awards you have won?" ></p>
            </li>
            <li>
-            <p class="option"><span class="glyphicon glyphicon-ok inactive" aria-hidden="true"></span><input type="text" class="ks_speaker_awards" placeholder="Enter Awards" ></p>
+            <p class="option"><span class="glyphicon glyphicon-ok inactive" aria-hidden="true"></span><input type="text" class="ks_speaker_awards" placeholder="Awards you have won?" ></p>
            </li>
             <li>
-            <p class="option"><span class="glyphicon glyphicon-ok inactive" aria-hidden="true"></span><input type="text" class="ks_speaker_awards" placeholder="Enter Awards" ></p>
+            <p class="option"><span class="glyphicon glyphicon-ok inactive" aria-hidden="true"></span><input type="text" class="ks_speaker_awards" placeholder="Awards you have won?" ></p>
            </li>
             <li>
-            <p class="option"><span class="glyphicon glyphicon-ok inactive" aria-hidden="true"></span><input type="text" class="ks_speaker_awards" placeholder="Enter Awards" ></p>
+            <p class="option"><span class="glyphicon glyphicon-ok inactive" aria-hidden="true"></span><input type="text" class="ks_speaker_awards" placeholder="Awards you have won?" ></p>
            </li>
       </ul>
     </div>
@@ -238,19 +232,19 @@
       </div>
       <ul class="list-unstyled">
            <li>
-            <p class="option"><span class="glyphicon glyphicon-ok inactive" aria-hidden="true"></span><input type="text" class="ks_speaker_recognitions" placeholder="Enter Recognitions" ></p>
+            <p class="option"><span class="glyphicon glyphicon-ok inactive" aria-hidden="true"></span><input type="text" class="ks_speaker_recognitions" placeholder="Recognitions you have been given?" ></p>
            </li>
            <li>
-            <p  class="option"><span class="glyphicon glyphicon-ok inactive" aria-hidden="true"></span><input type="text" class="ks_speaker_recognitions" placeholder="Enter Recognitions" ></p>
+            <p  class="option"><span class="glyphicon glyphicon-ok inactive" aria-hidden="true"></span><input type="text" class="ks_speaker_recognitions" placeholder="Recognitions you have been given?" ></p>
            </li>
             <li>
-            <p  class="option"><span class="glyphicon glyphicon-ok inactive" aria-hidden="true"></span><input type="text" class="ks_speaker_recognitions" placeholder="Enter Recognitions" ></p>
+            <p  class="option"><span class="glyphicon glyphicon-ok inactive" aria-hidden="true"></span><input type="text" class="ks_speaker_recognitions" placeholder="Recognitions you have been given?" ></p>
            </li>
            <li>
-            <p  class="option"><span class="glyphicon glyphicon-ok inactive" aria-hidden="true"></span><input type="text" class="ks_speaker_recognitions" placeholder="Enter Recognitions" ></p>
+            <p  class="option"><span class="glyphicon glyphicon-ok inactive" aria-hidden="true"></span><input type="text" class="ks_speaker_recognitions" placeholder="Recognitions you have been given?" ></p>
            </li>
             <li>
-            <p  class="option"><span class="glyphicon glyphicon-ok inactive" aria-hidden="true"></span><input type="text" class="ks_speaker_recognitions" placeholder="Enter Recognitions" ></p>
+            <p  class="option"><span class="glyphicon glyphicon-ok inactive" aria-hidden="true"></span><input type="text" class="ks_speaker_recognitions" placeholder="Recognitions you have been given?" ></p>
            </li>
       </ul>
     </div>
@@ -261,7 +255,7 @@
 </section>
 </div>
 </section>
-
+</div>
 
 <div>
   <div class="container">

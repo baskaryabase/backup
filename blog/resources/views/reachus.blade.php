@@ -68,7 +68,7 @@
 
     <p>Working From:Startups Club Services Pvt. Ltd. HQ - Classic House, #678, 2nd Floor, 17th Main, 6th A Cross, 3rd Block, Koramangala, Bangalore 560034, Karnataka, India</p><br>
 </div>
-    <div class="wpb_map_wraper">
+    <div class="wpb_map_wraper bot-padd">
 			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1226.265652375716!2d77.62315078434541!3d12.92978354559892!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae14598469e773%3A0xc4cb4a97ac6ce32a!2sStartups+Club!5e0!3m2!1sen!2sin!4v1492736622015" width="400" height="400" frameborder="0" style="border: 0px; pointer-events: none;" allowfullscreen=""></iframe>		
 	</div>
 

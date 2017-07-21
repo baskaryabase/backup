@@ -12,26 +12,27 @@
 
 <link href="<?php echo URL::asset('/css/allknowledge_session.css') ?>" rel="stylesheet" type="text/css"> 
 
-<div class="container ks-thumbnail margin">
+<div class="container margin">
 <div class="">
 		
 
 <?php foreach ($ks as $key => $value) {
 
 	$speaker_img=URL::asset('/image/speakers/'.$value['ks_speaker_img']);
+ $random_img=URL::asset('/image/events-default/'.rand(1,21).'.jpg');
  ?>
-		<div class="col-md-4 col-sm-4 padd">
+		<div class="col-md-4 padd">
 		<a href="/knowledge-session/{{ $value['ks_title_slug'] }}">
 		<div class="thumbnail">
 			
 		     <div class="ks-div">
 		     <img class="img-responsive ks-image" 
-				 src="<?php echo URL::asset('/image/ks/header.jpg') ?>" alt="">
+				 src="<?php echo $random_img; ?>" alt="">
 
-             
+
 	         <div class="opacity"></div>
 			   
-			   <div style="position: absolute; top: 0%; right: 1%; color: #fff;">
+			   <div class="ks-title-div">
 			 <h5 style="color: #fff" class="caption">{{ $value['ks_title'] }}</h5>
 	         </div>
 			 
@@ -49,7 +50,7 @@
 		      </div>
              </a>
 
-		      </div>
+		   </div>
 
 <?php } ?>
 

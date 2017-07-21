@@ -9,6 +9,11 @@
 @include('layouts.footer')
 @stop
    @section('content')
+
+   <?php /*echo '<pre>';
+print_r($details);
+echo '</pre>'*/
+    ?>
        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 
    <link href="<?php echo URL::asset('/css/profile2.css') ?>" rel="stylesheet" type="text/css"> 
@@ -29,11 +34,12 @@
               <img src="<?php echo $details['sc_profile_pic']; ?>" alt="" class="profile-img img-responsive center-block show-in-modal">
               
               <div class="profile-details">
-                <ul class="fa-ul">
-                  <li><i class="fa-li fa fa-user"></i>Following: <span>456</span></li>
-                  <li><i class="fa-li fa fa-users"></i>Followers: <span>828</span></li>
-                  <li><i class="fa-li fa fa-comments"></i>Posts: <span>1024</span></li>
-                </ul>
+               <div class="profile-message-btn center-block text-center">
+                <a href="/company/{{ $details['startups_slug'] }}" class="btn btn-azure">
+                  <i class="fa fa-edit"></i>
+                  Company Profile
+                </a>
+              </div>
               </div>
               <?php  if($details['user_id'] == session()->get('userid')){ ?>
               <div class="profile-message-btn center-block text-center">

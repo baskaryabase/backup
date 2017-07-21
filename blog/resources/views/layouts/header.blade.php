@@ -1,4 +1,4 @@
-     
+   
 @section('header') 
 <style type="text/css">
 .navbar-style{
@@ -8,6 +8,9 @@
    .navbar-style{
      margin-bottom: 180px;
    }
+}
+.hover-class{
+  cursor: pointer !important;
 }
 </style>
 <input type="hidden" id="hidden_token" name="_token" value="{{ csrf_token() }}">
@@ -51,13 +54,15 @@
                  
             
                           <?php if(!empty(session()->get('SessionID'))){ ?>
-  <li><a onclick="get_notification()" class="btn btn-default dropdown-toggle" id="menu1" data-toggle="dropdown"><img src="<?php echo URL::asset('/image/notification.png') ?>"></img> <span class="badge notifybadge"></span></a>
+  <li><a onclick="get_notification()" class="btn-default hover-class dropdown-toggle" id="menu1" data-toggle="dropdown">
+  <img src="<?php echo URL::asset('/image/notification.png') ?>">
+  </img> <span class="badge notifybadge"></span></a>
 
 <ul class="dropdown-menu custom_notify" role="menu" aria-labelledby="menu1">
      <div id="display_notify"></div>
     </ul>
             </li>
-            <li><a onclick="get_notification_msg()" class="btn btn-default dropdown-toggle" id="menu1" data-toggle="dropdown"><i class="fa fa-envelope" aria-hidden="true"></i>
+            <li><a onclick="get_notification_msg()" class="hover-class btn-default dropdown-toggle" id="menu1" data-toggle="dropdown"><i class="fa fa-envelope" aria-hidden="true"></i>
  <span class="badge msgbadge"></span></a>
 
 <ul class="dropdown-menu custom_notify" role="menu" aria-labelledby="menu1">
@@ -93,10 +98,10 @@
 
   <!-- Modal -->
   <div class="modal fade" id="login_modal" role="dialog">
-    <div align="center" class="modal-dialog">
+    <div class="modal-dialog">
     
       <!-- Modal content-->
-<div class="width modal-content">
+<div class="modal-content">
         
         <!-- <div class="modal-body">
           -->
@@ -144,7 +149,6 @@
                   <div class="form-group">
                     <input type="password" name="confirm-password" id="confirmpassword" tabindex="2" class="form-control" placeholder="Confirm Password">
                   </div>
-                  
                   <div class="form-group">
                     <div class="row">
                       <div class="col-sm-6 col-sm-offset-3">
@@ -152,19 +156,10 @@
                       </div>
                     </div>
                   </div>
-
-                  <div class="form-group width-btn">
-                    <a class="btn btn-block btn-social btn-facebook">
-                     <i class="fa fa-facebook"></i> Sign in with Facebook
-                    </a>
-                     <a class="btn btn-block btn-social btn-linkedin">
-                      <i class="fa fa-linkedin"></i> Sign in with LinkedIn
-                     </a>
-                  </div>
               </form>
 
               
-          <form id="forgot-password"  role="form" style="display: none;">
+              <form id="forgot-password"  role="form" style="display: none;">
                 <h2>Forgot Password</h2>
                   <div class="form-group">
                     <input type="email" name="username" id="email_id" tabindex="1" class="form-control" placeholder="Please Enter email id" value="">

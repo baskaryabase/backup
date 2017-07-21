@@ -48,11 +48,11 @@
 						</ul>
 					</div> -->
 		<div align="center"  class="tab-content-wrap row row-eq-height">
-			<?php foreach ($events as $key => $value) { 
-				# code...
+			<?php foreach ($events as $key => $value) {  
+			 $random_img=URL::asset('/image/events-default/'.rand(1,21).'.jpg');
 		?>
 			<div class="col-lg-3 col-md-4 col-sm-6 mix hvr-float-shadow wow fadeIn">
-				<div class="img-holder"><img src="http://wp1.themexlab.com/html/event_time/img/upcoming-event/1.jpg" alt="">
+				<div class="img-holder"><img src="{{ $random_img }}" alt="">
                  
 				</div>
 				<div class="content-wrap row-eq-height">

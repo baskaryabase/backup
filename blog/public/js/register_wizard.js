@@ -1,5 +1,5 @@
 $(document).ready(function(){
-
+ 
 
 
 
@@ -130,7 +130,7 @@ if(is_startup == 'yes'){
   var elevator_pitch=$('#elevator_pitch').val();
   var hidden_token=$('#hidden_token').val();
 var phoneno = /^\d{10}$/;
-  
+   var user_desn=$('#user_desn').val();
 
 if(startup_name == ''){
   $('#startup_name').after('<span class="wpcf7-not-valid-tip">This field is required</span>');
@@ -159,8 +159,12 @@ if(joinsuc == null){
   $('.multi_join').after('<span class="wpcf7-not-valid-tip">This field is required</span><br>');
   
 }
+if(user_desn == ''){
+  $('#user_desn').after('<br><span class="wpcf7-not-valid-tip">This field is required</span><br>');
+  
+}
 
-if(startup_name=='' || startup_age == null || joinsuc == null || startup_website == '' || startup_type == null || startup_industry == null || elevator_pitch == ''){ 
+if(user_desn=='' ||startup_name=='' || startup_age == null || joinsuc == null || startup_website == '' || startup_type == null || startup_industry == null || elevator_pitch == ''){ 
 
 return false;
 }
@@ -197,7 +201,7 @@ return false;
 var current_engg=$("input[name='form-field-radio1']:checked").val();
 
   var company_name=$('#company_name').val();
-  var user_desn=$('#user_desn').val();
+ var user_desn=$('#user_desn').val();
 if(company_name == ''){
   $('#company_name').after('<br><span class="wpcf7-not-valid-tip">This field is required</span><br>');
   
@@ -210,6 +214,7 @@ if(user_desn == ''){
   $('#user_desn').after('<br><span class="wpcf7-not-valid-tip">This field is required</span><br>');
   
 }
+
 if(joinsuc == null){
   $('.multi_join').after('<span class="wpcf7-not-valid-tip">This field is required</span><br>');
   

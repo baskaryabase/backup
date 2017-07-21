@@ -11,10 +11,10 @@
    @section('content')
    <!-- Begin page content -->
     <?php 
- /* echo '<pre>';
+/*  echo '<pre>';
     print_r($details); 
     echo '</pre>';
-    die;*/  
+    die;  */
     ?>
     <br> 
     <br>

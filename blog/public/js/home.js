@@ -1,4 +1,4 @@
-
+ 
 var app = angular.module('LoginApp', []);
 app.controller('LoginCtrl', function($scope) {
     $scope.user = 'John Doe';

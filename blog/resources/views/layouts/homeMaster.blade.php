@@ -16,6 +16,7 @@
      <link href="<?php echo URL::asset('/font-awesome.4.6.1/css/font-awesome.min.css') ?>" rel="stylesheet" type="text/css">
     <link href="<?php echo URL::asset('/bootstrap.3.3.6/css/bootstrap.min.css') ?>" rel="stylesheet" type="text/css"><link href="<?php echo URL::asset('/css/animate.min.css') ?>" rel="stylesheet" type="text/css">
      <link href="<?php echo URL::asset('/css/timeline.css') ?>" rel="stylesheet" type="text/css">
+     
      <link href="<?php echo URL::asset('/css/cover.css') ?>" rel="stylesheet" type="text/css">
      <link href="<?php echo URL::asset('/css/forms.css') ?>" rel="stylesheet" type="text/css">
      <link rel="stylesheet" type="text/css" href="<?php echo URL::asset('/css/homepage_similar_events.css') ?>">
@@ -41,6 +42,10 @@
     <![endif]-->
   </head>
 
+
+
+
+
   <body class="animated fadeIn">
 
       @section('header')
@@ -50,7 +55,21 @@
 print_r($details);
 echo '</pre>';*/
  ?>
-  
+
+ <section>
+    <div>
+    <img class="header-img img-responsive" src="<?php echo URL::asset('/image/header2.png') ?>">
+    <div align="center" class="header-content">
+      <h1>Startups Club</h1>
+      <h4>We are an Open, Collaborative and Inclusive platform for startups from Napkin Stage to Growth Stage. We work along with startups to help them with Knowledge, Growth and Investment. Come be a part of this dynamic community of more than 13,000 entrepreneurs present across more than 20 cities in India</h4>
+      <br>
+      <button class=" btn-lg hvr-bounce-to-right hvr-buzz-out">Become a Pioneer Member</button> 
+    </div>
+    </div>
+ </section>
+  <!-- <div>
+    <h2>Learn About Our Events</h2>
+  </div> -->
 <div style="position: relative; margin-top: 30px;width: 100%">
 <div style="position: absolute;
             background: #fff;
@@ -113,7 +132,7 @@ echo '</pre>';*/
 
 
     <!-- Begin page content -->
-<div class="container page-content ">
+<div style="margin-top: 80px;" class="container page-content ">
       <div class="row">
         <!-- left links -->
         <div class="col-md-3">

@@ -177,7 +177,7 @@ h2 span {
   height: 7px;
   border-radius: 100px;
   border: 2px solid #444;
-  top: 4px;
+  top: 26px;
   left: -4px;
   background-color: #fff;
 }
@@ -200,10 +200,66 @@ h2 span {
      border-image: -webkit-linear-gradient(top, #000, rgba(0,0,0,0)) 1 100%;
      border-image: linear-gradient(to bottom, #000, rgba(0,0,0,0)) 1 100%;
 }
-
-
-
-
+.container-margin{
+  margin-top: 65px;
+  margin-bottom: 70px;
+}
+.bg-white{
+  background: #fff;
+}
+.li-style-none1{
+  list-style: none; padding-top: 15px;
+}
+.li-style-none{
+  list-style: none;
+}
+.font-weight{
+  font-weight: bold;
+}
+.icon-color{
+  color: #f57f20; padding-right: 14px;
+}
+.font-size-20{
+  font-size: 20px
+}
+.icon-color-padd{
+  color: #f57f20; padding-right: 18px;
+}
+.padding-26{
+  padding-left: 26px;
+}
+.padding-15{
+  padding: 15px
+}
+.awards-style{
+  padding-top: 5px;font-size: 20px;
+}
+.col-md-3-style{
+  padding-top: 18px; 
+  padding-right: 15px
+  padding-left: 15px;
+}
+.similar-events-head{
+  background: #f57f20;
+  color: #fff;
+  height: 26px;
+  text-align: center;
+  padding-top: 0px;
+  border-radius: 5px;
+}
+.similar-events-h5{
+  font-size: 14px;
+  padding-top:5px;
+}
+.sm-eve-div{
+ margin-bottom: 15px;margin-top: 15px;
+}
+.color-green{
+  background: #8ec33f;
+}
+.color-grey{
+  background: #999999;
+}
 
 
 

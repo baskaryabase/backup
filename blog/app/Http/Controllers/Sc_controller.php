@@ -382,7 +382,7 @@ $validator = Validator::make($request->all(), [
     			'elevator_pitch' => 'required_if:rusc,yes',
     			'current_engg' => 'required_if:rusc,no',
     			'company_name' => 'required_if:rusc,no',
-    			'user_desn' => 'required_if:rusc,no',
+    			'user_desn' => 'required',
     			'joinsuc' => 'required',
     			'role' => 'required',
         ],[

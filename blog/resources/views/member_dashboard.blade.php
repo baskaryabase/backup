@@ -1,109 +1,96 @@
-       @extends('layouts.MemberAdminMaster')
-         @section('title')
-    <title>Home | Member Platform | Startups Club</title> 
+@extends('layouts.PlainHeaderFooter')
+      @section('title')
+    <title>Events | Member Platform | Startups Club</title> 
    @stop
   @section('header')
 @include('layouts.header')
 @stop
-
+  @section('footer')
+@include('layouts.footer')
+@stop
    @section('content')
 
-  <div class="row">
-        <div class="col-xs-12">
-          
-          <div class="box" style="top:30px;">
-            <div class="box-header">
-              <h3 class="box-title">Data Table With Full Features</h3>
-            </div>
+   <link rel="stylesheet" type="text/css" href="<?php echo URL::asset('/css/member_dashboard.css') ?>">
 
-      
-            <div class="box-header with-border">
-              <h3 class="box-title">Upcoming Events</h3>
-               
-            </div>
-            
-            <!-- /.box-body -->
-    
-          
-            <!-- /.box-header -->
-            <div class="box-body">
-              <div id="filtered_append">
-              <table id="example1" class="table table-bordered table-striped">
-                <thead>
-                <tr>
-                  <th>S.no</th>
-                  <th>Name</th>
-                  <th>Date</th>
-                  <th>Time</th>
-                  <th>Location</th>
-                  <th>Rsvp</th>
-                  <th>Action</th>
-                
-                  
-                </tr>
-                </thead>
-      
-                <tfoot>
-                <tr>
-            
-                 <th>S.no</th>
-                  <th>Name</th>
-                  <th>Date</th>
-                  <th>Time</th>
-                  <th>Location</th>
-                  <th>Rsvp</th>
-                  <th>Action</th>
-                </tr>
-                </tfoot>
-              </table>
-            </div>
-            </div>
-              <div class="box-header with-border">
-              <h3 class="box-title">Past</h3>
-               
-            </div>
-            
-            <!-- /.box-body -->
-    
-          
-            <!-- /.box-header -->
-            <div class="box-body">
-              <div id="filtered_append">
-              <table id="example1" class="table table-bordered table-striped">
-                <thead>
-                <tr>
-                  <th>S.no</th>
-                  <th>Name</th>
-                  <th>Date</th>
-                  <th>Time</th>
-                  <th>Location</th>
-                  <th>Rsvp</th>
-                  <th>Action</th>
-                
-                  
-                </tr>
-                </thead>
-      
-                <tfoot>
-                <tr>
-            
-                 <th>S.no</th>
-                  <th>Name</th>
-                  <th>Date</th>
-                  <th>Time</th>
-                  <th>Location</th>
-                  <th>Rsvp</th>
-                  <th>Action</th>
-                </tr>
-                </tfoot>
-              </table>
-            </div>
-            </div>
-            <!-- /.box-body -->
-          </div>
-          <!-- /.box -->
+<div class="container">
+<h3 class="heading"><span class="style-h1">Premium Pioneer Member Events Dashboard</span></h3>
+  <section>
+        <div class="col-md-2" style="border-left: 1px solid #f57f20">
+
+          <a href="/member-dashboard"><h4 class="color-black color"><center>Events</center> </h4></a>
+          <a href="#"><h4 class="color-black color"><center>Knowledge Sessions</center> </h4></a>
+          <a href="/ks-dashboard"><h4 class="color-black color"><center>Organize Knowledge Sessions</center> </h4></a>
         </div>
-        <!-- /.col -->
-      </div>
 
-@stop
+<div class="col-md-10" style="border-left: 1px solid #f57f20">
+
+<h4>Upcoming RSVP</h4>
+<div style="overflow-x:auto;">
+  <?php if(isset($events['up'])){ ?>
+  <table class="color">
+    <tr>
+      <th>Title</th>
+      <th>Date </th>
+      <th>Time</th>
+      <th>Location</th>
+      
+    </tr>
+    <?php
+    foreach ($events['up'] as $key => $value) {
+
+     ?>
+    <tr>
+      <td>{{ $value['event_title'] }}</td>
+      <td>{{ date('jS F Y',strtotime($value['event_date'])) }}</td>
+      <td>{{ $value['event_time'] }}</td>
+      <td>{{ $value['event_venue'] }}</td>
+    </tr>
+    <?php  } ?>
+
+  </table>
+   <?php }else{ ?>
+
+<h4>No Events</h4>
+<?php  } ?>
+</div>
+
+
+<h4>Past RSVP</h4>
+<div style="overflow-x:auto;">
+    <?php if(isset($events['past'])){ ?>
+  <table class="color">
+    <tr>
+      <th>Title</th>
+      <th>Date </th>
+      <th>Time</th>
+      <th>Location</th>
+      
+      
+      
+    </tr>
+    <?php
+    foreach ($events['past'] as $key => $value) {
+
+     ?>
+    <tr>
+      <td>{{ $value['event_title'] }}</td>
+      <td>{{ date('jS F Y',strtotime($value['event_date'])) }}</td>
+      <td>{{ $value['event_time'] }}</td>
+      <td>{{ $value['event_venue'] }}</td>
+    </tr>
+    <?php  } ?>
+
+
+  </table>
+  <?php }else{ ?>
+
+<h3>No Events</h3>
+<?php  } ?>
+</div>
+
+
+</div>
+  </section>
+</div>
+
+ @stop  

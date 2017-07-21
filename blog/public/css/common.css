@@ -241,8 +241,8 @@ time.blue_green { background-color: #148aa5 }
     time.yellow_orange { background-color: #fec42e}
 
     .time {
-        background-color: rgb(165, 82, 167);
-    }
+       /* background-color: rgb(165, 82, 167);*/ 
+   }
 
     time > span {
         display: none;

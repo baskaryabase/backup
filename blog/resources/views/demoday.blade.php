@@ -129,6 +129,7 @@
 		</div>
 	</div>
 </section>
+
 <section class="light-wrapper  vc_row wpb_row vc_row-fluid">
 	<div class="container">
 		<div class="row">
@@ -522,7 +523,7 @@
 	<div class="wpb_single_image wpb_content_element vc_align_center">
 		
 		<figure class="wpb_wrapper vc_figure">
-			<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="640" height="427" src="<?php echo URL::asset('/image/demoday/demoday-cities/demoday_finale.jpg') ?>" class="vc_single_image-img attachment-full" alt="Bangalore" sizes="(max-width: 640px) 100vw, 640px" style="opacity: 1;"></div>
+			<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="640" height="427" src="<?php echo URL::asset('/image/demoday/demoday-cities/demoday_finalae.jpg') ?>" class="vc_single_image-img attachment-full" alt="Bangalore" sizes="(max-width: 640px) 100vw, 640px" style="opacity: 1;"></div>
 		</figure>
 	</div>
 

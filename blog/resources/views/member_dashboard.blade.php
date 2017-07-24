@@ -12,10 +12,11 @@
 
    <link rel="stylesheet" type="text/css" href="<?php echo URL::asset('/css/member_dashboard.css') ?>">
 
-<div class="container">
+<div class="container margin">
+<div class="row color">
 <h3 class="heading"><span class="style-h1">Premium Pioneer Member Events Dashboard</span></h3>
   <section>
-        <div class="col-md-2" style="border-left: 1px solid #f57f20">
+        <div class="col-md-2" style="border-left: 1px solid #f57f2row 0">
 
           <a href="/member-dashboard"><h4 class="color-black color"><center>Events</center> </h4></a>
           <a href="#"><h4 class="color-black color"><center>Knowledge Sessions</center> </h4></a>
@@ -92,5 +93,5 @@
 </div>
   </section>
 </div>
-
+</div>
  @stop  

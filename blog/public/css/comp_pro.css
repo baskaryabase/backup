@@ -1,0 +1,456 @@
+body { font-family: "Open Sans, "Helvetica Neue", Helvetica, Arial, sans-serif;"; /*color: #fff;*/ background: #f9f9fa; color: #000;}
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 100px);
+body
+{
+    padding-top: 20px;
+}
+
+/*@media (min-width: 1200px){
+.container { 
+    width: 68%;
+}
+}*/
+/*************************video**********************/
+.container {
+  /*background: #e3e3e3;*/
+  
+  
+}
+.container-grid{
+  /*background: #fff;*/
+  margin-bottom: 10px;
+}
+
+
+iframe {
+    max-height: 100%;
+    
+    max-width: 100%;
+    width: 89.2%;
+  } 
+
+ 
+  .text{
+        /*float: right;
+    margin-top: -135px;*/
+    font-size: 17px;
+        line-height: 33px;
+        /*margin-left: -26%;*/
+    margin-top: 16px;
+  }
+  .col-sm-8{
+    margin-top: 34px;
+    text-transform: uppercase;
+    /*color: #000;*/
+  }
+  
+.profile-details{
+  /*box-shadow: 0 1px 10px #c3c3c3;*/
+  border: 1px solid #ebebeb;
+  margin-top: 30px;
+  margin-bottom: 10%;
+  width: 100%;
+  /*background: #fff;*/
+}
+.emp{
+    font-size: 18px; /*color: #000;*/
+  }
+  section.full-body{
+    background: #fff;
+    margin-bottom: 5%;
+    /*margin: 5%;*/
+  }
+.box-header.with-border {
+    border-bottom: 1px solid #f57f20;
+    padding: 10px;
+    text-transform: uppercase;
+}
+
+
+********************************************
+/*input#email {
+    border: none !important;
+    box-shadow: 0 0;
+    border-bottom: 1px solid #d2d2d2;
+        width: 80%;
+}*/
+  .sheet4{
+        background: #fff;
+  }
+  .max-card {
+    background: #fff;
+    padding: 10px 0;
+    margin-top: 27px;
+    margin-bottom: 10px;
+    position: relative;
+    /*box-shadow: 0 3px 7px 0 rgba(0,0,0,.28);*/
+        margin-right: 8%;
+        margin-left: 8%;
+    border: 1px solid #d2d2d2;
+}
+.card-center {
+    /* width: 100%; */
+    padding-top: 30px;
+    text-align: center;
+}
+.promotion-header{
+  margin-left: 8%;
+  font-size: 29px;
+  color: #f57f20;
+}
+.list-inline{
+  border-top: 1px solid#f57f20;
+    padding-top: 10px;
+    text-align: center;
+}
+label{
+  color: #f57f20;
+  margin: 1.8px 14px 21.8px 3px;
+  font-weight: 500;
+  font-size: 20px;
+  text-transform: capitalize;
+}
+.small-images {
+    text-align: center;
+    background: #f2f2f2;
+    /*margin-right: 112px;*/
+}
+h3.founders.header{
+  margin: 30.8px 14px 30.8px 28px;
+    font-size: 20px;
+    line-height: 1;
+    font-weight: 500;
+}
+.photo{
+  width: 97%;
+  line-height: 92px;
+    border-radius: 5px;
+    overflow: hidden;
+    border-bottom: 1px solid #eee;
+    border-right: 1px solid #e9eaec;
+    border-left: 1px solid #e9eaec;
+    border-top: 1px solid #f7f8f9;
+    box-sizing: border-box;
+    /*padding: 7px;*/
+    box-shadow: inset 0 1px 3px rgba(0,0,0,.05);
+    border: 1px solid #eee;
+    background-color: #f8f9fa;
+    line-height: 80px;
+    vertical-align: middle;
+    margin-right: 86%;
+    margin-top: 7px;
+    margin-left: 10px;
+    margin-bottom: 7px;
+}
+.founders.section{
+      margin-bottom: 8%;
+      /*margin-right: 12px;*/
+}
+.section.with_filler.with_editable_regions.dsss17.startups-show-sections.ffs70.founders._a._jm{
+  border: 1px solid #ebebeb;
+    background: #fff;
+    margin-left: 8%;
+    margin-right: 8%;
+    padding: 13px;
+}
+ul.larger.roles{
+  list-style-type: none;
+}
+/*.role_title{
+  margin-right: 30em;
+}*/
+.row.add {
+    padding-top: 13px;
+    /*padding-bottom: 24px;*/
+    background: #fff;
+    /*margin-top: 16px;*/
+    font-size: 20px;
+    line-height: 47px;
+}
+ul.faico.clear {
+    list-style-type: none;
+    display: flex;
+}
+.faico a {
+    display: inline-block;
+    /*width: 36px;*/
+    height: 36px;
+    line-height: 36px;
+    font-size: 18px;
+    text-align: center;
+    /*border: 1px solid #d2d2d2;*/
+}
+ul.faico.clear li{
+  padding-left: 5px;
+    padding-right: 5px;
+}
+
+a.profile-link {
+    color: #f57f20;
+}
+.wpb_text_column.wpb_content_element{
+  border: 1px solid #d2d2d2;
+    background: #fff;
+    padding: 45px;
+    margin-left: 8%;
+    margin-right: 8%;
+}
+h2{
+  font-size: 28px;
+  text-transform: capitalize;
+  margin-right: 15px;
+}
+.vc_separator.wpb_content_element.vc_separator_align_center.vc_sep_width_100.vc_sep_pos_align_center.vc_sep_color_orange.vc_separator-has-text{
+      margin-top: 23px;
+    width: 85%;
+}
+.wpb_wrapper {
+    font-size: 15px;
+}
+/*.sheet4{
+  margin-left: 8%;
+}*/
+.col-sm-4.col-xs-8{
+  margin-top: 7px;
+    line-height: 27px;
+    font-size: 17px;
+    padding-left: 34px;
+    min-height: 154px;
+}
+.col-sm-4.col-xs-4{
+  display: flex;
+}
+iframe {
+    margin-bottom: -5px;
+}
+.try{
+  padding-left: 15px;
+    font-size: 21px;
+}
+
+/*****************************responsive***************************/
+
+@media (min-width: 512px) and (max-width: 561px){
+.col-sm-4.col-xs-8{
+  min-height: 118px;
+}
+}
+@media screen and (max-width: 750px){
+  .max-card{
+       padding-right: 37px;
+   /* margin-top: 1px; */
+     margin-bottom: 0;
+  }
+  .promotion-header{
+    font-size: 16px;
+    margin-top: 34px;
+    display: flex;
+  }
+  h2 {
+    font-size: 17px;
+    text-transform: uppercase;
+    margin-right: 10px;
+}
+.col-sm-8{
+  margin-top: 0;
+}
+.row.add{
+  font-size: 17px;
+  line-height: 41px;
+}
+.wpb_text_column.wpb_content_element{
+  margin: 0;
+  padding: 20px;
+}
+/*.sheet4 {
+   margin-left: 0;
+  }*/
+  div#big-image img{
+    height: 171px;
+    width: 268px;
+  }  
+  .col-sm-4.col-xs-8{
+    font-size: 15px;
+    padding-left: 0;
+    margin-top: -4px;
+    line-height: 21px;
+    /*min-height: 104px;*/
+  }
+  .founders.section{
+    margin-bottom: 11%;
+  }
+}
+.img-responsive {
+    height: auto;
+    max-width: 100%;
+}
+.small-images{
+  display: block;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+div#big-image img {
+    max-width: 100%;
+    width: 89.4%;
+    }
+    img.angel_image {
+    max-width: 100%;
+}
+.small-images img {
+    max-width: 100%;
+    width: 16.39%;
+    text-align: center; background: rgba(0,0,0,.41); height: auto;
+    border: 1px solid hsla(0,0%,86%,.64)!important;
+    box-shadow: 0 1px 10px #c3c3c3;
+}
+
+/*************************(thumbnails)*************************/
+
+/*@media (min-width: 320px) and (max-width: 336px){
+.small-images{
+  margin-right: 25px;
+}
+}
+@media (min-width: 337px) and (max-width: 358px){
+.small-images{
+  margin-right: 27px;
+}
+}
+@media (min-width: 363px) and (max-width: 400px){
+.small-images{
+  margin-right: 28px;
+}
+}
+@media (min-width: 401px) and (max-width: 470px){
+.small-images{
+  margin-right: 39px;
+}
+}
+@media (min-width: 471px) and (max-width: 490px){
+.small-images{
+  margin-right: 43px;
+}
+}
+@media (min-width: 491px) and (max-width: 577px){
+.small-images{
+  margin-right: 44px;
+}
+}
+@media (min-width: 578px) and (max-width: 601px){
+.small-images{
+  margin-right: 53px;
+}
+}
+
+@media (min-width: 601px) and (max-width: 620px){
+.small-images{
+  margin-right: 57px;
+}
+}
+@media (min-width: 621px) and (max-width: 667px){
+.small-images{
+  margin-right: 11%;
+}
+}
+
+@media (min-width: 667px) and (max-width: 700px){
+.small-images{
+  margin-right: 58px;
+}
+}
+@media (min-width: 701px) and (max-width: 715px){
+.small-images{
+  margin-right: 61px;
+}
+}*/
+@media (min-width: 715px) and (max-width: 760px){
+.small-images{
+  margin-right: 64px;
+}
+}
+@media (min-width: 761px) and (max-width: 991px){
+.small-images{
+  width: 89.5%;
+}
+}
+@media (min-width: 992px) and (max-width: 1200px){
+.small-images{
+  width: 89.5%;
+}
+}
+
+/****************************video*************************/
+@media (min-width: 320px) and (max-width: 750px){
+iframe{
+  height: 172px;
+}
+.small-images{
+width: 89%;
+  }
+  .sheet4{
+    padding-left: 0;
+  }
+}
+@media (min-width: 751px) and (max-width: 992px){
+iframe{
+  height: 202px;
+}
+.sheet4{
+    padding-left: 56px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px){
+iframe{
+  height: 279px;
+}
+.sheet4{
+    padding-left: 59px;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1650px){
+.small-images{
+width: 89.5%;
+  }
+  .sheet4{
+    padding-left: 91px;
+  }
+}
+
+/***************************testing edit profile*********************/
+
+.col-sm-4.cols {
+    padding-left: 10%;
+}
+@media (min-width: 1200px) and (max-width: 1600px){
+.pitch_box{
+  margin-left: 8%;
+    margin-right: 8%;
+}
+}
+
+@media screen and (max-width: 750px){
+  div#max{
+       padding-right: 39px;
+     /*margin-bottom: 0;*/
+     margin-right: 4%;
+    margin-left: 37px;
+  }
+  .try{
+    padding-left: 0;
+  }
+  select#gender{
+    margin-top: -31px;
+    margin-bottom: 10px;
+  }
+  select#stage{
+    margin-top: -24px;
+  }
+  .pitch_box{
+    margin-left: 18px;
+  }
+}

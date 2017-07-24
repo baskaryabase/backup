@@ -58,7 +58,7 @@ echo '</pre>';*/
 
  <section>
     <div>
-    <img class="header-img img-responsive" src="<?php echo URL::asset('/image/header2.png') ?>">
+    <img class="header-img img-responsive" src="http://www.dglives.com/demo/coolcarousel66/img/snow1.jpg">
     <div align="center" class="header-content">
       <h1>Startups Club</h1>
       <h4>We are an Open, Collaborative and Inclusive platform for startups from Napkin Stage to Growth Stage. We work along with startups to help them with Knowledge, Growth and Investment. Come be a part of this dynamic community of more than 13,000 entrepreneurs present across more than 20 cities in India</h4>
@@ -75,7 +75,6 @@ echo '</pre>';*/
             background: #fff;
             width: 100%;
             height: 315px;
-            
             margin-top: -44px;"></div>
 <div style="margin-right: 15px;
             margin-left: 15px;" class="owl-carousel row container">
@@ -84,6 +83,7 @@ echo '</pre>';*/
 ?>
             <a class="eventCard--hasGroup" href="/single-events/{{ str_slug($value['event_title']) }}">
   <div class="eventCard-group inverted" style="background-image: url(http://startupsclub.org/wp-content/uploads/2015/06/12764534_10204454851046069_2273984407365722684_o.jpg);">
+  <!-- style="background-image: url(http://startupsclub.org/wp-content/uploads/2015/06/12764534_10204454851046069_2273984407365722684_o.jpg);" -->
     <h4 class="text--heavy text--big">{{ $value['event_title'] }}</h4>
   </div>
 

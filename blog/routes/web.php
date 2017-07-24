@@ -16,6 +16,7 @@
 
 });*/
 
+Route::get('/comp-pro', 'MainController@getCompPro');
 Route::get('/', 'MainController@getHome');
 Route::get('/demoday', 'MainController@getDemoday');
 Route::get('/democity/{fn}', 'MainController@getDemodayCity');

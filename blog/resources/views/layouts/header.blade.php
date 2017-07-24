@@ -1,5 +1,6 @@
    
 @section('header') 
+<link rel="stylesheet" type="text/css" href="">
 <style type="text/css">
 .navbar-style{
  margin-bottom: 100px;
@@ -98,10 +99,10 @@
 
   <!-- Modal -->
   <div class="modal fade" id="login_modal" role="dialog">
-    <div class="modal-dialog">
+    <div align="center" class="modal-dialog">
     
       <!-- Modal content-->
-<div class="modal-content">
+<div class="modal-content login-width">
         
         <!-- <div class="modal-body">
           -->
@@ -117,10 +118,10 @@
               <form id="login-form"  role="form" style="display: block;">
                 <h2>LOGIN</h2>
                   <div class="form-group">
-                    <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
+                    <input type="text" name="username" id="username" tabindex="1" class="form-control input-styling-for-login" placeholder="Username" value="">
                   </div>
                   <div class="form-group">
-                    <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
+                    <input type="password" name="password" id="password" tabindex="2" class="form-control input-styling-for-login" placeholder="Password">
                   </div>
                   <div class="col-xs-6 form-group pull-left checkbox">
                     <input id="checkbox1" type="checkbox" name="remember">
@@ -138,16 +139,16 @@
               <form id="register-form"  role="form" style="display: none;">
                 <h2>REGISTER</h2>
                   <div class="form-group">
-                    <input type="text" name="username" id="fullname" tabindex="1" class="form-control" placeholder="Fullname" value="">
+                    <input type="text" name="username" id="fullname" tabindex="1" class="form-control input-styling-for-login" placeholder="Fullname" value="">
                   </div>
                   <div class="form-group">
-                    <input type="email" name="email" id="emailaddress" tabindex="1" class="form-control" placeholder="Email Address" value="">
+                    <input type="email" name="email" id="emailaddress" tabindex="1" class="form-control input-styling-for-login" placeholder="Email Address" value="">
                   </div>
                   <div class="form-group">
-                    <input type="password" name="password" id="register_password" tabindex="2" class="form-control" placeholder="Password">
+                    <input type="password" name="password" id="register_password" tabindex="2" class="form-control input-styling-for-login" placeholder="Password">
                   </div>
                   <div class="form-group">
-                    <input type="password" name="confirm-password" id="confirmpassword" tabindex="2" class="form-control" placeholder="Confirm Password">
+                    <input type="password" name="confirm-password" id="confirmpassword" tabindex="2" class="form-control input-styling-for-login" placeholder="Confirm Password">
                   </div>
                   <div class="form-group">
                     <div class="row">
@@ -156,13 +157,21 @@
                       </div>
                     </div>
                   </div>
+                  <div class="form-group width-btn">
+                    <a class="btn btn-block btn-social btn-facebook">
+                     <i class="fa fa-facebook"></i> Sign in with Facebook
+                    </a>
+                     <a class="btn btn-block btn-social btn-linkedin">
+                      <i class="fa fa-linkedin"></i> Sign in with LinkedIn
+                     </a>
+                  </div>
               </form>
 
               
               <form id="forgot-password"  role="form" style="display: none;">
                 <h2>Forgot Password</h2>
                   <div class="form-group">
-                    <input type="email" name="username" id="email_id" tabindex="1" class="form-control" placeholder="Please Enter email id" value="">
+                    <input type="email" name="username" id="email_id" tabindex="1" class="form-control input-styling-for-login" placeholder="Please Enter email id" value="">
                     <div style="padding-top: 20px;" class="col-sm-6 col-sm-offset-3">
                         <input type="button" name="forgot-password-submit" id="forgot-password-submit" tabindex="4" class="form-control btn btn-register" value="Submit">
                       </div>

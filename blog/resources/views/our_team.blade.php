@@ -28,7 +28,7 @@
         <div class="row">
 
           <div align="center" class="col-md-offset-2 col-md-4">
-            <div class="team-member">
+            <div class="team-member  bounceInUp">
               <figure>
                 <img class="height" src="<?php echo URL::asset('/image/our_team/salma.jpg') ?>">
                 <figcaption>
@@ -46,7 +46,7 @@
           </div><!-- /.col-md-4 -->
 
           <div align="center" class="col-md-4">
-            <div class="team-member">
+            <div class="team-member bounceInUp">
               <figure>
                 <img class="height" src="<?php echo URL::asset('/image/our_team/vivek.jpg') ?>">
                 <figcaption>
@@ -75,7 +75,7 @@
 
 <div class="row text-center">
 <div align="center" class="col-md-4 col-sm-4 col-sm-offset-4">
-            <div class="team-member">
+            <div class="team-member bounceInUp">
               <figure>
                 <img class="height" src="<?php echo URL::asset('/image/our_team/Mahesh-Bhalla.jpg') ?>" alt="" class="img-responsive">
                 <figcaption>
@@ -104,8 +104,8 @@
             <div class="team-member">
               <figure>
                 <img class="height" src="<?php echo URL::asset('/image/our_team/michael.jpg') ?>" alt="" class="img-responsive">
-                <figcaption style="padding: 5px">
-                  <p style="font-size: 12px;">Michael Marks has lived in Asia since 1997, and heads the Asia-Pacific practice of Innoventure Partners. He has been involved in several billion dollars of transactions in the Asia-Pacific region, including as a principal in his own businesses, as well as investor or advisor. Over the past sixteen years he has worked with several leading international and Asian companies and institutions on their investments and business development in Asia, particularly in China, as well as their strategic development, M&A, distribution, and capital markets programs in the international investment communities. Marks currently lives in Shanghai, China and speaks fluent Mandarin.</p>
+                <figcaption>
+                  <p class="font-size-14">Michael Marks has lived in Asia since 1997, and heads the Asia-Pacific practice of Innoventure Partners. Over the past sixteen years he has worked with several leading international and Asian companies and institutions on their investments and business development in Asia, particularly in China, as well as their strategic development, M&A, distribution, and capital markets programs in the international investment communities.</p>
                   <ul>
                     <li><a href="#"><i class="fa fa-facebook fa-2x"></i></a></li>
                     <li><a href="#"><i class="fa fa-twitter fa-2x"></i></a></li>

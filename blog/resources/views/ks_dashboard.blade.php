@@ -13,7 +13,8 @@
  <link rel="stylesheet" type="text/css" href="<?php echo URL::asset('/css/member_dashboard.css') ?>">
      <link href="<?php echo URL::asset('/css/jquery-confirm.css') ?>" rel="stylesheet" type="text/css">
 
-<div class="container">
+<div class="container margin">
+<div class="row color">
 <h3 class="heading"><span class="style-h1">Knowledge Session Dashboard</span></h3>
   <section>
         <div class="col-md-2" style="border-left: 1px solid #f57f20">
@@ -95,6 +96,7 @@
 
 </div>
   </section>
+</div>
 </div>
      <script src="<?php echo URL::asset('/js/jquery-confirm.js') ?>"></script>
           <script src="<?php echo URL::asset('/js/ks.js') ?>"></script>

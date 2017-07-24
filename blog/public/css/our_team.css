@@ -24,7 +24,10 @@ padding-left: 15px;
 margin-left: auto;
 margin-right: auto;
 }
-span{
+.font-size-14{
+  font-size: 14px !important;
+}
+h2 span{
      background: #fff;
       padding: 0 20px;
       margin-top:-25px;
@@ -138,7 +141,8 @@ margin-bottom: 25px
 .team-member figure:hover figcaption {
   visibility: visible;
   color: #fff;
-  background: rgba(230, 78, 62, 0.9);
+  background: #f57f20;
+  opacity: .9;
   /* Primary color, can be changed via colors.css */
   
   height: 100%;

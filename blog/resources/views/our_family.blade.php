@@ -12,6 +12,7 @@
  <link href="<?php echo URL::asset('/bootstrap.3.3.6/css/bootstrap.min.css') ?>" rel="stylesheet" type="text/css">
  <link href="<?php echo URL::asset('/css/ebor-theme-styles.css') ?>" rel="stylesheet" type="text/css">
  <link href="<?php echo URL::asset('/css/js_composer.min.css') ?>" rel="stylesheet" type="text/css">
+ <link href="<?php echo URL::asset('/css/common.css') ?>" rel="stylesheet" type="text/css">
 
  	<section>
 		<div class="container">

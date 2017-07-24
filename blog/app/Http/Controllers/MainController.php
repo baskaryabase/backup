@@ -3206,6 +3206,11 @@ function getTeamPage(){
 return view('our_team');
 
 }
+function getCompPro(){
+return view('comp_pro');
+
+}
+
 
 
 function getMemberDashboard(){

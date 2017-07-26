@@ -112,8 +112,8 @@ label {
   font-size: 20px;
   font-weight: 300;
   margin: 30px;
-  border: inherit;
   width:inherit;
+  border: inherit;
 }
 .panel-login>.panel-heading {
   color: #000;
@@ -248,3 +248,10 @@ label {
 
 .btn-social{position:relative !important;padding-left:44px !important;text-align:left !important;white-space:nowrap !important;overflow:hidden !important;text-overflow:ellipsis !important}
 .btn-social :first-child{position:absolute !important;left:0 !important;top:0 !important;bottom:0 !important;width:32px !important;line-height:34px !important;font-size:1.6em !important;text-align:center !important;border-right:1px solid rgba(0,0,0,0.2) !important}
+
+.custom-my-wall {
+color:#f57f20!important;
+}
+.custom-my-wall:hover {
+color:#000!important;
+}

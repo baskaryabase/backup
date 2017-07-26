@@ -15,8 +15,8 @@
 {    return view('login');
 
 });*/
-
-Route::get('/comp-pro', 'MainController@getCompPro');
+Route::get('test-url', 'MainController@getTestContent');
+Route::get('edit-membership', 'MainController@getMembershipProfile');
 Route::get('/', 'MainController@getHome');
 Route::get('/demoday', 'MainController@getDemoday');
 Route::get('/democity/{fn}', 'MainController@getDemodayCity');
@@ -48,6 +48,12 @@ Route::post('/upload_speaker_pic/', 'MainController@upload_speaker_pic');
 Route::post('/InsertKs/', 'MainController@InsertKs');
 Route::post('/UpdateKs/', 'MainController@UpdateKs');
 Route::post('/deleteKs/', 'MainController@deleteKs');
+Route::post('/getEditModalData/', 'MainController@getEditModalData');
+Route::post('/upload_company_logo/', 'MainController@upload_company_logo');
+Route::post('/UpdateCompanyDetails/', 'MainController@UpdateCompanyDetails');
+Route::post('/updateElevator/', 'MainController@updateElevator');
+Route::post('/upload_company_watwedo/', 'MainController@upload_company_watwedo');
+Route::post('/updateWatwedo/', 'MainController@updateWatwedo');
 Route::get('/ks-details/{fn}', 'MainController@getKsRsvp');
 
  
@@ -97,8 +103,8 @@ Route::post('/check_become_pioneer', 'MainController@check_become_pioneer');
 
 Route::get('/cronWeeklyNotification', 'MainController@cronWeeklyNotification');
 Route::get('/promotionalMail', 'MainController@promotionalMail');
-
-
+Route::post('/checkSc', 'MainController@getNotifyBadge');
+Route::post('/loadmorepostHome', 'MainController@loadMorePostHome');
 
 Route::group(['middleware' => 'check'], function () { 
 
@@ -119,7 +125,7 @@ Route::post('/cropped_cover', 'MainController@croppedChangeCover');
 Route::get('/edit-company-profile', 'MainController@getCompanyProfile');
 Route::get('/edit-social-profile', 'MainController@getSocialProfile');
 Route::get('edit-settings-profile', 'MainController@getSettingsProfile');
-Route::get('edit-membership', 'MainController@getMembershipProfile');
+
 Route::post('/putPost', 'MainController@insertPost');
 Route::post('/putComment', 'MainController@insertComment');
 Route::post('/deletePost', 'MainController@deletePost');
@@ -131,7 +137,7 @@ Route::post('/view_all_comments', 'MainController@viewAllComments');
 
 
 Route::post('/putPostHome', 'MainController@putPostHome');
-Route::post('/loadmorepostHome', 'MainController@loadMorePostHome');
+
 Route::post('/putCommentHome', 'MainController@insertCommentHome');
 Route::post('/view_all_comments_home', 'MainController@viewAllCommentsHome');
 
@@ -143,7 +149,7 @@ Route::post('/get-conversation', 'MainController@getConversation');
 Route::post('/likePost', 'MainController@likePost');
 Route::post('/get_notify', 'MainController@getNotify');
 Route::post('/get_notify_msg', 'MainController@getNotifyMsg');
-Route::post('/checkSc', 'MainController@getNotifyBadge');
+
 Route::get('/notification', 'MainController@getNotificationPage');
 Route::post('/urlFetch', 'MainController@urlFetch');
 Route::post('/get-member-loadmore', 'MainController@getMemberLoadmore');

@@ -114,7 +114,7 @@
   <ul >
     <li class="li-style"><h5><i class="ks-icon2  fa fa-map-marker" aria-hidden="true"></i>
       <span ><input type="text" id="ks_city" placeholder="Which City?" >,</span><span><br>
-      <span style="padding-left: 26px;" > <input type="text" id="ks_venue" placeholder="Address?" ></span></span>
+      <span style="padding-left: 26px;" > <input type="text" id="ks_venue" placeholder="Location?" ></span></span>
     <span class="pull-right" > 
       <select id="ks_cost">
   <option >Select Price</option>
@@ -186,7 +186,7 @@
             <div class="speaker-content">
               <h4><input type="text" id="ks_speaker_name" placeholder="Name?" ></h4>
               <span ><strong><input type="text" id="ks_speaker_desn" placeholder="Designation?" ></strong></span><br>
-                <span style="font-style: italic;"><input type="text" id="ks_speaker_company" placeholder="Where do you work?" ></span>
+                <span style="font-style: italic;"><input type="text" id="ks_speaker_company" placeholder="Your Organisation?" ></span>
               
               <p> <textarea rows="3" id="ks_speaker_bio" cols="30" style="width:100%" placeholder="Describe your work and yourself in glowing words...">
 </textarea></p>

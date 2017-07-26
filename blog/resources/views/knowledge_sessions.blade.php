@@ -1,7 +1,7 @@
     
   @extends('layouts.PlainHeaderFooter')
       @section('title')
-    <title>Events | Member Platform | Startups Club</title> 
+    <title>Knowledge Session | Member Platform | Startups Club</title> 
    @stop
   @section('header')
 @include('layouts.header')
@@ -172,7 +172,7 @@ $speaker_img=URL::asset('/image/speakers/'.$data['ks']['ks_speaker_img']);
  <div class="event">
   <div class="table">
   <div class="row">
-     <div class="col date-short color-green" <?php echo (strtotime($value['ks_date'])>strtotime('now')) ?> >
+     <div class="col date-short" <?php echo (strtotime($value['ks_date'])>strtotime('now'))?'style="background-color:#8ec33f"':'style="background-color:#D3D3D3"' ?>  >
        <div class="month">{{ strtoupper(substr(date('F', strtotime($value['ks_date'])),0,3))  }}</div> 
        <div class="day">{{ date('d', strtotime($value['ks_date'])) }}</div> 
      </div>

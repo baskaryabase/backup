@@ -1,6 +1,5 @@
    
 @section('header') 
-<link rel="stylesheet" type="text/css" href="">
 <style type="text/css">
 .navbar-style{
  margin-bottom: 100px;
@@ -29,27 +28,27 @@
     </div>
         <div class="collapse navbar-collapse" id="navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">    
- 
-                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" >Know us<b class="caret"></b></a>
+    <li><a class="custom-my-wall" href="/">My Wall</a></li>
+                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" >Know Us<b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         <li><a href="/what-we-do">What we do</a></li>
-                        <li><a href="#">Team</a></li>
+                        <li><a href="/our-team">Team</a></li>
                         <li><a href="/family">Family</a></li>
-                        <li><a href="/contact">Contact</a></li>
+                        <li><a href="/contact">Connect</a></li>
                     </ul>
                 </li>
                 <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" >Event<b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         <li class="kopie"><a href="/events">Meetups</a></li>
-                        <li><a href="/knowledge-sessions">Ks</a></li>
-                        <li><a href="#">Revup</a></li>
-                        <li><a href="#">Calender</a></li>
+                        <li><a href="/knowledge-sessions">Knowledge Session</a></li>
+                        <li><a href="/revup">Revup</a></li>
+                        <li><a data-toggle="tooltip" data-placement="bottom" title="Coming Soon!" href="#">Calender</a></li>
                     </ul>
                 </li>
-                <li><a href="/demoday">Demoday</a></li>
+                <li><a href="/demoday">Demo Day</a></li>
                 <li><a href="/find">Find</a></li>
-                <li><a href="#">Ask</a></li>
-                <li><a href="/scin">Scin</a></li>
+                <li><a data-toggle="tooltip" data-placement="bottom" title="Coming Soon!" href="#">Ask</a></li>
+                <li><a href="/scin">SCIN</a></li>
             
               
                  
@@ -79,9 +78,10 @@
               </a>
               <ul class="dropdown-menu">
                 <li><a href="/profile/<?php echo session()->get('unique_name'); ?>">My profile</a></li>
+                <li><a href="/member-dashboard">My Dashboard</a></li>
                 <li><a href="/edit-profile">Edit profile</a></li>
                 <li><a href="/edit-membership">Become a pioneer Member</a></li>
-                <li><a href="/logout">logout</a></li>
+                <li><a href="/logout">Logout</a></li>
                 
               </ul>
             </li>
@@ -118,10 +118,10 @@
               <form id="login-form"  role="form" style="display: block;">
                 <h2>LOGIN</h2>
                   <div class="form-group">
-                    <input type="text" name="username" id="username" tabindex="1" class="form-control input-styling-for-login" placeholder="Username" value="">
+                    <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
                   </div>
                   <div class="form-group">
-                    <input type="password" name="password" id="password" tabindex="2" class="form-control input-styling-for-login" placeholder="Password">
+                    <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
                   </div>
                   <div class="col-xs-6 form-group pull-left checkbox">
                     <input id="checkbox1" type="checkbox" name="remember">
@@ -139,16 +139,16 @@
               <form id="register-form"  role="form" style="display: none;">
                 <h2>REGISTER</h2>
                   <div class="form-group">
-                    <input type="text" name="username" id="fullname" tabindex="1" class="form-control input-styling-for-login" placeholder="Fullname" value="">
+                    <input type="text" name="username" id="fullname" tabindex="1" class="form-control" placeholder="Fullname" value="">
                   </div>
                   <div class="form-group">
-                    <input type="email" name="email" id="emailaddress" tabindex="1" class="form-control input-styling-for-login" placeholder="Email Address" value="">
+                    <input type="email" name="email" id="emailaddress" tabindex="1" class="form-control" placeholder="Email Address" value="">
                   </div>
                   <div class="form-group">
-                    <input type="password" name="password" id="register_password" tabindex="2" class="form-control input-styling-for-login" placeholder="Password">
+                    <input type="password" name="password" id="register_password" tabindex="2" class="form-control" placeholder="Password">
                   </div>
                   <div class="form-group">
-                    <input type="password" name="confirm-password" id="confirmpassword" tabindex="2" class="form-control input-styling-for-login" placeholder="Confirm Password">
+                    <input type="password" name="confirm-password" id="confirmpassword" tabindex="2" class="form-control" placeholder="Confirm Password">
                   </div>
                   <div class="form-group">
                     <div class="row">
@@ -171,7 +171,7 @@
               <form id="forgot-password"  role="form" style="display: none;">
                 <h2>Forgot Password</h2>
                   <div class="form-group">
-                    <input type="email" name="username" id="email_id" tabindex="1" class="form-control input-styling-for-login" placeholder="Please Enter email id" value="">
+                    <input type="email" name="username" id="email_id" tabindex="1" class="form-control" placeholder="Please Enter email id" value="">
                     <div style="padding-top: 20px;" class="col-sm-6 col-sm-offset-3">
                         <input type="button" name="forgot-password-submit" id="forgot-password-submit" tabindex="4" class="form-control btn btn-register" value="Submit">
                       </div>
@@ -258,6 +258,12 @@ $('ul.nav li.dropdown').hover(function() {
 });
 
 
+
+</script>
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();   
+});
 </script>
    <script src="<?php echo URL::asset('/js/header.js') ?>"></script>
      <link href="<?php echo URL::asset('/css/common.css') ?>" rel="stylesheet" type="text/css">

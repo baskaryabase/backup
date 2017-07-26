@@ -21,12 +21,13 @@
 .header-img{
   height: 500px;margin-top: -60px; width: 100%;position: relative;
 }
-.header-content{
-  position: absolute;color: #fff;
-  left: 10%;
-  top: 0%;
-  width: 80%;
-  padding-top: 80px;
+.header-content {
+   position: absolute;
+   color: #fff;
+   left: 10%;
+   top: 0%;
+   width: 80%;
+   padding-top: 145px;
 }
 .header-content button{
   background: #f57f20;

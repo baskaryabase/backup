@@ -1,3 +1,4 @@
+    
   @extends('layouts.PlainHeaderFooter')
       @section('title')
     <title>Events | Member Platform | Startups Club</title> 
@@ -10,67 +11,123 @@
 @stop
    @section('content')
 
-<link href="<?php echo URL::asset('/bootstrap.3.3.6/css/bootstrap.min.css') ?>" rel="stylesheet" type="text/css">
-<link href="<?php echo URL::asset('/font-awesome.4.6.1/css/font-awesome.min.css') ?>" rel="stylesheet" type="text/css">
-<link href="<?php echo URL::asset('/css/ebor-theme-styles.css') ?>" rel="stylesheet" type="text/css">
-<link href="<?php echo URL::asset('/css/js_composer.min.css') ?>" rel="stylesheet" type="text/css">
-<link href="<?php echo URL::asset('/css/stylo.css') ?>" rel="stylesheet" type="text/css">
-<body class="page page-id-3286 page-template-default wpb-js-composer js-comp-ver-4.11.2 vc_responsive">
+   <?php
+/*echo '<pre>';
+print_r($data);
+echo '</pre>';
+die;*/
+$speaker_img=URL::asset('/image/speakers/header.jpg');
+    ?>
+<input type="hidden" id="hidden_token" name="_token" value="{{ csrf_token() }}">
+ <link href="<?php echo URL::asset('/css/knowledge_session.css') ?>" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 
+ 
+<div style="margin-top: 65px;" class="container">
 
 
+<div style="background: #fff;" class="margin col-md-9">  
+<section id="event-details">
+  
+  <div class=" margin col-md-12">
+    <div>
+    <h5 style="font-weight: bold;" class="pull-right hidden-xs">Knowledge Session</h5>
+    <li style="list-style: none; padding-top: 15px;"><h5>
+      <i style="color: #f57f20; padding-right: 14px;" class="fa fa-calendar" aria-hidden="true"></i><span>9th June 2017</span><span><span>,  5:00 PM onwards</span></span></h5></li>
 
-
-
-
-
-	
-	<section>
-		<div class="container">
-			<div class="row">
-			
-				<div class="col-md-12 col-sm-12">
-					<div class="article-body">
-						<p>This is the series Startups Club brings to the entrepreneurs,&nbsp;<i>Exclusively for <a href="http://www.razorpay.com" target="_blank">Razorpay</a></i>, for making sure that our aspiring, budding &amp; established entrepreneurs to understand what it takes to start and scale up a Startup in trying times in India.&nbsp;RevUp Hyderabad by Razorpay, is here for you on 9th June 2017 at 5:00 PM at THub, IIT-Hyderabad Campus.</p>
-						<p>It is <strong>Only by Invite</strong>, so PLEASE DO NOT WAIT AND <a href="https://razorpay.com/events/revup-hyderabad/">REGISTER NOW</a></p>
-				<div class="one">
-				<h4>ABOUT THE EVENT</h4>
-				<h1 class="title">RevUp Hyderabad:<br>
+    <li style="list-style: none;"><h5><i style="color: #f57f20; padding-right: 14px;" class="fa fa-clock-o" aria-hidden="true"></i><span>3 Hour session</span></h5></li>
+        <h1 style="font-size: 20px">RevUp Hyderabad:
 How to Build and Run a Lean Startup?</h1>
-<p>As a startup, staying lean and efficient is key, both for bootstrapped companies and funded companies. Being lean is a rigour, something that needs to be part of the company DNA right from the start. As part of such an effort startups have to constantly evaluate themselves both internally and externally, thus bringing out the best from the organisation and its resources. We bring to you, ‘RevUp Hyderabad - How to Build and Run a Lean Startup?’ an insightful session where startup founders and industry leaders talk about their own journeys driving business success while keeping checks on costs and spending.</p>
+    </div>
+<div class="padd">
+  <ul >
+    <li style="list-style: none;"><h5><i style="color: #f57f20; padding-right: 18px;" class="fa fa-map-marker" aria-hidden="true"></i><span>Hyderabad,</span><span><br><span style="padding-left: 26px;"> THub, IIT-Hyderabad Campus</span></span>
+  
+    </h5></li>
+  </ul>
 </div>
-<div class="two"></div>
-<p><strong style="font-size: 1rem;">AGENDA:</strong></p>
-<p>5:30 pm -&nbsp;Session: Entry &amp; Registrations</p>
-<p><em><strong>Speaker: Harshil Mathur, CEO, Razorpay</strong></em></p>
-<p>6:00 pm -&nbsp;Session:&nbsp;Secrets of being lean &amp; efficient while focussing on growth</p>
-<p><em><strong>Speaker: Mrityunjay Kumar, VP Products, Zenoti</strong></em></p>
-<p>6:30 pm - Session: Fire side chat - getting the product right, the first time</p>
-<p><em><strong>Speaker:&nbsp;Abhay Deshpande - Founder - Martjack &amp; Board Member, Capillary</strong></em></p>
-<p>7:00 pm - Session: The art of survival</p>
-<p>7:30 pm - Casual catch up over drinks</p>
-<p>Looking forward for all our members to register for the same, Razorpay has initiated these series to ensure that our young entrepreneurs are able to understand, learn and build some amazing products for their startup initiatives.</p>
-					</div><!--end of article snippet-->
-				</div>
-				
-				
-				
-			</div>
-		</div>
-	</section>
+<div>
+  <h2 class="font-size-15"><span>Event Details</span></h2>
+  <p>As a startup, staying lean and efficient is key, both for bootstrapped companies and funded companies. Being lean is a rigour, something that needs to be part of the company DNA right from the start. As part of such an effort startups have to constantly evaluate themselves both internally and externally, thus bringing out the best from the organisation and its resources. We bring to you, ‘RevUp Hyderabad - How to Build and Run a Lean Startup?’ an insightful session where startup founders and industry leaders talk about their own journeys driving business success while keeping checks on costs and spending.</p>
+</div>
 
-</div><!-- end main container -->
+<center>
+<div style="padding: 15px">
+   <button type="button" class="btn btn-md rsvp paid_rsvp_link" href="https://razorpay.com/events/revup-hyderabad/" >Join Us / RSVP</button></div>
+</center>    
+
+</div>
+</section>
 
 
 
-<script type="text/javascript" src="http://startupsclub.org/wp-content/plugins/contact-form-7/includes/js/jquery.form.min.js?ver=3.51.0-2014.06.20"></script>
-<script type="text/javascript">
-/* <![CDATA[ */
-var _wpcf7 = {"loaderUrl":"http:\/\/startupsclub.org\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif","recaptcha":{"messages":{"empty":"Please verify that you are not a robot."}},"sending":"Sending ...","cached":"1"};
-/* ]]> */
-</script>
 
-<div id="lightboxOverlay" class="lightboxOverlay" style="display: none;"></div><div id="lightbox" class="lightbox" style="display: none;"><div class="lb-outerContainer"><div class="lb-container"><img class="lb-image" src=""><div class="lb-nav"><a class="lb-prev" href=""></a><a class="lb-next" href=""></a></div><div class="lb-loader"><a class="lb-cancel"></a></div></div></div><div class="lb-dataContainer"><div class="lb-data"><div class="lb-details"><span class="lb-caption"></span><span class="lb-number"></span></div><div class="lb-closeContainer"><a class="lb-close"></a></div></div></div></div></body>
+<section id="Time">
+
+<center><div class="timeline-style">
+<h2 class="font-size-15"><span>Timeline</span></h2>
+<!-- <h5 class="hh5"><span>Event Date<br></span><strong>12 August 2017</strong></h5> -->
+<div class="timeline">
+
+  <div class="timeline-item">
+    <time datetime="2016-02-03T15:00+08:00">5:30 pm</time>
+    <p>Entry & Registrations Speaker: Harshil Mathur, CEO, Razorpay</p>
+  </div>
+    <div class="timeline-item">
+    <time datetime="2016-02-03T15:00+08:00">6:00 pm</time>
+    <p> Secrets of being lean & efficient while focussing on growth Speaker: Mrityunjay Kumar, VP Products, Zenoti</p>
+  </div>
+    <div class="timeline-item">
+    <time datetime="2016-02-03T15:00+08:00">6:30 pm</time>
+    <p> Fire side chat - getting the product right, the first time Speaker: Abhay Deshpande - Founder - Martjack & Board Member, Capillary</p>
+  </div> 
+   <div class="timeline-item">
+    <time datetime="2016-02-03T15:00+08:00">7:00 pm</time>
+    <p> The art of survival</p>
+  </div>
+   <div class="timeline-item">
+    <time datetime="2016-02-03T15:00+08:00">7:30 pm</time>
+    <p>Casual catch up over drinks</p>
+  </div>
+ 
+  
+  
+</div>
+</div>
+</center>
+</section>  
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+   
+</div>
+
+<section>
+
+
+
+
+
+
+
+</section>
+
+
+
+
+
+<script type="text/javascript" src="https://checkout.razorpay.com/v1/checkout.js?ver=1.1"></script><div class="razorpay-container" style="z-index: 1000000000; position: fixed; top: 0px; display: none; left: 0px; height: 100%; width: 100%; backface-visibility: hidden; overflow-y: visible;"><style>@keyframes rzp-rot{to{transform: rotate(360deg);}}@-webkit-keyframes rzp-rot{to{-webkit-transform: rotate(360deg);}}</style><div class="razorpay-backdrop" style="min-height: 100%; transition: 0.3s ease-out; position: fixed; top: 0px; left: 0px; width: 100%; height: 100%;"><span style="text-decoration: none; background: rgb(214, 68, 68); border: 1px dashed white; padding: 3px; opacity: 0; transform: rotate(45deg); transition: opacity 0.3s ease-in; font-family: lato, ubuntu, helvetica, sans-serif; color: white; position: absolute; width: 200px; text-align: center; right: -50px; top: 50px;">Test Mode</span></div><iframe class="razorpay-checkout-frame" style="height: 100%; position: relative; background: none; display: block; border: 0 none transparent; margin: 0px; padding: 0px;" allowtransparency="true" width="100%" height="100%" src="https://api.razorpay.com/v1/checkout/public"></iframe></div>
 
 @stop

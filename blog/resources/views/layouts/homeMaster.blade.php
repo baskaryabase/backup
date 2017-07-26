@@ -58,12 +58,15 @@ echo '</pre>';*/
 
  <section>
     <div>
-    <img class="header-img img-responsive" src="http://www.dglives.com/demo/coolcarousel66/img/snow1.jpg">
+    <img class="header-img img-responsive" src="<?php echo URL::asset('/image/header2.jpg') ?>">
     <div align="center" class="header-content">
       <h1>Startups Club</h1>
       <h4>We are an Open, Collaborative and Inclusive platform for startups from Napkin Stage to Growth Stage. We work along with startups to help them with Knowledge, Growth and Investment. Come be a part of this dynamic community of more than 13,000 entrepreneurs present across more than 20 cities in India</h4>
       <br>
-      <button class=" btn-lg hvr-bounce-to-right hvr-buzz-out">Become a Pioneer Member</button> 
+                      <?php if(empty(session()->get('SessionID'))){ ?>
+
+      <a href="/edit-membership" style="color:inherit"><button class=" btn-lg hvr-bounce-to-right hvr-buzz-out">Become a Pioneer</button></a> 
+    <?php } ?>
     </div>
     </div>
  </section>
@@ -75,15 +78,15 @@ echo '</pre>';*/
             background: #fff;
             width: 100%;
             height: 315px;
+            
             margin-top: -44px;"></div>
 <div style="margin-right: 15px;
             margin-left: 15px;" class="owl-carousel row container">
-  <?php foreach ($details['events'] as $key => $value) {
-
+  <?php foreach ($details['events'] as $key => $value) { 
+$random_img=URL::asset('/image/events-default/'.rand(1,21).'.jpg');
 ?>
             <a class="eventCard--hasGroup" href="/single-events/{{ str_slug($value['event_title']) }}">
-  <div class="eventCard-group inverted" style="background-image: url(http://startupsclub.org/wp-content/uploads/2015/06/12764534_10204454851046069_2273984407365722684_o.jpg);">
-  <!-- style="background-image: url(http://startupsclub.org/wp-content/uploads/2015/06/12764534_10204454851046069_2273984407365722684_o.jpg);" -->
+  <div class="eventCard-group inverted" style="background-image: url(<?php echo $random_img; ?>);">
     <h4 class="text--heavy text--big">{{ $value['event_title'] }}</h4>
   </div>
 
@@ -218,7 +221,12 @@ echo '</pre>';*/
 
         <!-- right posts -->
         <div class="col-md-3">
-         
+         <?php foreach ($details['ks'] as $key => $value) {
+/*echo '<pre>';
+print_r($value);
+echo '</pre>';*/
+  $speaker_img=URL::asset('/image/speakers/'.$value['ks_speaker_img']);
+        ?>
          <div class="wrapper">
         
         <div class="card radius shadowDepth1">
@@ -227,22 +235,22 @@ echo '</pre>';*/
           <div class="card__content card__padding">
                     
             <div class="card__meta">
-                <span class="font-size-12">17 Sep 2017</span><span class="pull-right font-size-12">2.00 PM</span>     
+                <span class="font-size-12">{{ date('jS F Y',strtotime($value['ks_date'])) }}</span><span class="pull-right font-size-12">{{ $value['ks_time'] }}</span>     
             </div>
 
             <article class="card__article">
-              <h3 class="h2"><a href="#">Material Design Card - For Blog Post Article</a></h3>
+              <h3 class="h2"><a href="#">{{ $value['ks_title'] }}</a></h3>
 
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus harum...</p>
+              <p>{{ substr(strip_tags($value['ks_event_details']),0,60) }}</p>
             </article>
           </div>
 
           <div class="card__action">
             
             <div class="card__author">
-              <img src="http://lorempixel.com/40/40/sports/" alt="user">
+              <img style="height: 30px; width: 30px; " src="{{ $speaker_img }}" alt="user">
               <div class="card__author-content">
-                By <a href="#">John Dissilva</a>
+                By <a href="#">{{ $value['ks_speaker_name'] }}</a>
               </div>
             </div>
           </div>
@@ -250,6 +258,8 @@ echo '</pre>';*/
 
            
       </div>
+
+      <?php } ?>
       
 
 

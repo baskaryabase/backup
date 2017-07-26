@@ -16,29 +16,7 @@
   ga('create', 'UA-96616107-1', 'auto');
   ga('send', 'pageview');
 
-  (function() {
 
- var interakt = document.createElement('script');
-
- interakt.type = 'text/javascript'; interakt.async = true;
-
- interakt.src = "//cdn.interakt.co/interakt/012305b2df4bfdf6bbf4f38a42f0b4d3.js";
-
- var scrpt = document.getElementsByTagName('script')[0];
-
- scrpt.parentNode.insertBefore(interakt, scrpt);
-
- })()
-
-
-  window.mySettings = {
-
-  email: "<?php echo session()->get('email'); ?>",
-
-  created_at: <?php echo strtotime(session()->get('created_date')); ?>,
-      app_id: '012305b2df4bfdf6bbf4f38a42f0b4d3'
-
-  };
 
 </script>
 

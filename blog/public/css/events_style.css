@@ -702,7 +702,8 @@ header .mainmenu-container li.dropdown > a .fa {
 }
 #upcoming-event .tab-content-wrap .col-lg-3 .content-wrap .meta ul {
   text-align: center;
-  font-size: 12px;
+  font-size: 13px;
+  padding-top: 10px;
 }
 #upcoming-event .tab-content-wrap .col-lg-3 .content-wrap .meta ul li {
   display: inline;

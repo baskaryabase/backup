@@ -1,7 +1,7 @@
 <?php
   
 namespace App\Http\Controllers;
- 
+  
 use Illuminate\Http\Request;
 use App\Http\models\sc_users;
 use App\Http\models\sc_posts;
@@ -14,6 +14,7 @@ use App\Http\models\sc_knowledge_sessions;
 use App\Http\models\speaker_metas;
 use App\Http\models\rsvp_members;
 use App\Http\models\demoday_pics;
+use App\Http\models\company_metas;
 use App\Http\models\sc_notifications;
 use App\Http\models\users_company_details;
 use Illuminate\Support\Facades\Redirect;
@@ -1190,11 +1191,15 @@ $logos_array=$logos_obj->toArray();
 $announce_obj=Sc_announcements::orderBy('announced_date', 'desc')->where('status','1')->get();
 $announce_array=$announce_obj->toArray();
 
+  $ks_obj=Sc_knowledge_sessions::orderBy('created_date', 'desc')->limit(3)->get();
+  $ks_array=$ks_obj->toArray();
+
       $result[0]['user_id']=$fn;
       $result[0]['posts']=$values;
       $result[0]['logos_array']=$logos_array;
       $result[0]['announce_array']=$announce_array;
       $result[0]['events']=$event_array;
+      $result[0]['ks']=$ks_array;
 
  
 return view('home',['details' => $result[0]]);
@@ -2337,10 +2342,14 @@ function getSingleKs($ks){
 
   $ks_obj=Sc_knowledge_sessions::where('ks_title_slug',$ks)->orderBy('created_date', 'desc')->get();
   $ks_array=$ks_obj->toArray();
-   $allks_obj=Sc_knowledge_sessions::where('ks_title_slug',Null)->orderBy('created_date', 'desc')->get();
+   $allks_obj=Sc_knowledge_sessions::where('ks_title_slug','!=',$ks)->orderBy('created_date', 'desc')->get();
   $allks_array=$allks_obj->toArray();
    $metas_obj=speaker_metas::where('speaker_id',$ks_array[0]['ks_id'])->orderBy('created_date', 'desc')->get();
   $metas_array=$metas_obj->toArray();
+/*  echo '<pre>';
+  print_r($allks_array);
+  echo '</pre>';
+  die;*/
 $final_array['ks']=$ks_array[0];
 $final_array['similar']=$allks_array;
 
@@ -3196,9 +3205,11 @@ $validator = Validator::make($request->all(), [
 }
 
 function getCompanyProfilePage($company){
-  $company_obj=users_company_details::where('startups_slug',$company)->orderBy('company_id', 'desc')->get();
+  $company_obj=users_company_details::query()->leftjoin('sc_users as user','user.id', '=', 'users_company_details.member_id')->where('startups_slug',$company)->orderBy('company_id', 'desc')->get();
 $company_array['data']=$company_obj->toArray()[0];
 
+ $ks_obj=company_metas::where('company_id',$company_array['data']['company_id'])->get();
+  $company_array['metas']=$ks_obj->toArray();
 return view('company_profile')->with('company',$company_array);
 
 }
@@ -3206,11 +3217,6 @@ function getTeamPage(){
 return view('our_team');
 
 }
-function getCompPro(){
-return view('comp_pro');
-
-}
-
 
 
 function getMemberDashboard(){
@@ -3222,6 +3228,7 @@ echo '<pre>';
 print_r($result);
 echo '</pre>';
 die;*/
+$finalarray=array();
 foreach ($result as $key => $value) {
 
 if(strtotime($value['event_date']) > strtotime('now')){
@@ -3299,6 +3306,281 @@ function deleteKs(Request $request){
 
 }
 
+}
+
+function getTestContent(){
+
+
+
+
+
+$url='https://www.youtube.com/watch?v=AAVMkuHcGhU';
+ $html = file_get_html($url);
+                
+$tags = get_meta_tags($url);
+
+echo '<pre>';
+print_r($tags);
+echo '</pre>';
+
+ if (isset($tags['description'])) {
+            $response['keywords'][] = $tags['description'];
+        } else {
+            foreach ($html->find('meta[property=og:description]') as $element) {
+                $response['describe'][] = html_entity_decode(implode(' ', array_slice(explode(' ', trim($element->content)), 0, 50)));
+            }
+        }        
+        
+         foreach (@$html->find('meta[property=og:title]') as $element) {
+            $response['title'][] =trim($element->content);
+        }
+
+        foreach (@$html->find('title') as $element) {
+           $response['plaintitle'][] = $element->plaintext;
+        }    
+
+        foreach ($html->find('img') as $e) {
+            $response['image'][] = $e->src;
+        }
+        
+        $response['alt_img'][]  = $this->urlMetaOG($url);
+
+        echo '<pre>';
+        print_r($response);
+        echo '</pre>';
+        die;
+
+
+
+}
+
+function getEditModalData(Request $request){
+  $company_obj=users_company_details::query()->leftjoin('sc_users as user','user.id', '=', 'users_company_details.member_id')->where('company_id',$request->input('company_id'))->orderBy('company_id', 'desc')->get();
+$company_array['data']=$company_obj->toArray()[0];
+/*echo '<pre>';
+print_r($company_array);
+echo '</pre>';*/
+  $final_result['view_data']=view('edit_company_append_data')->with('details',$company_array)->render(); 
+ /* $final_result['count']=count($result);*/
+ return response()->json(['status'=>'success', 'data'=>$final_result], 200);
+
+
+}
+
+function upload_company_logo(Request $request){
+
+
+if(Input::file())
+        {
+  
+            $image = Input::file('file');
+           $filename  = time() . '.' . $image->getClientOriginalExtension();
+
+            $path = public_path('image/company/' . $filename);
+ 
+        
+                Image::make($image->getRealPath())->save($path);
+             /*   $user->image = $filename;
+                $user->save();*/
+
+
+           }
+
+
+   echo json_encode($filename);  
+
+
+
+}
+function upload_company_watwedo(Request $request){
+
+
+if(Input::file())
+        {
+  
+            $image = Input::file('file');
+           $filename  = time() . '.' . $image->getClientOriginalExtension();
+
+            $path = public_path('image/company/' . $filename);
+ 
+        
+                Image::make($image->getRealPath())->save($path);
+             /*   $user->image = $filename;
+                $user->save();*/
+
+
+           }
+
+
+   echo json_encode($filename);  
+
+
+
+}
+
+function UpdateCompanyDetails(Request $request){
+
+
+$validator = Validator::make($request->all(), [
+                
+                'startup_name' => 'required',      
+                'startup_website' => 'required',
+                'startup_twitter_url' => 'required',
+                'startup_google_url' => 'required',
+                'startup_fb_url' => 'required',
+                'startup_type' => 'required',
+                'startup_employee' => 'required',
+                'startup_industry' => 'required',
+                'sc_location' => 'required',
+                'hidden_image' => 'required',
+              
+                
+        ],[
+'startup_name.required' => 'This field is required',
+'startup_website.required' => 'This field is required',
+'startup_twitter_url.required' => 'This field is required',
+'startup_google_url.required' => 'This field is required',
+'startup_fb_url.required' => 'This field is required',
+'startup_type.required' => 'This field is required',
+'startup_employee.required' => 'This field is required',
+'startup_industry.required' => 'This field is required',
+'sc_location.required' => 'This field is required',
+'hidden_image.required' => 'This field is required',
+
+        ]);
+
+        if ($validator->fails()) {
+
+            return Response::json(array(
+        'success' => true,
+        'errors' => $validator->getMessageBag()->toArray()
+
+    ), 200); // 400 being the HTTP code for an invalid request.
+       
+
+
+        }else{
+
+             $user_id = session()->get('userid');
+             $role = session()->get('role');
+  $insert_array= array(
+           
+        'startup_employee'=>$request->input('startup_employee'),       
+        'startup_logo'=>$request->input('hidden_image'),      
+        'startup_industry'=>$request->input('startup_industry'),
+        'startup_type'=>$request->input('startup_type'),
+        'startup_website'=>$request->input('startup_website'),
+        'startup_name'=>$request->input('startup_name'),
+        'google_url'=>$request->input('startup_google_url'),
+        'fb_link'=>$request->input('startup_fb_url'),      
+        'twitter_link'=>$request->input('startup_twitter_url'),
+        'startup_location'=>$request->input('sc_location'),
+        'startups_slug'=>str_slug($request->input('startup_name'))
+
+       
+        );
+       users_company_details::where('company_id',$request->input('company_id'))->update($insert_array);
+
+
+
+
+
+            return Response::json(array(
+        'success' => true,
+        'errors' => 'success',
+        'name' => str_slug($request->input('startup_name')),
+
+    ), 200);
+
+
+
+        }
+
+
+
+
+}
+
+function updateElevator(Request $request){
+
+
+$validator = Validator::make($request->all(), [
+                
+                'elevator_pitch' => 'required',      
+    
+            
+              
+                
+        ],[
+'elevator_pitch.required' => 'This field is required',
+
+
+
+        ]);
+
+        if ($validator->fails()) {
+
+            return Response::json(array(
+        'success' => true,
+        'errors' => $validator->getMessageBag()->toArray()
+
+    ), 200); // 400 being the HTTP code for an invalid request.
+       
+
+
+        }else{
+
+             $user_id = session()->get('userid');
+             $role = session()->get('role');
+  $insert_array= array(
+           
+
+        'elevator_pitch'=>$request->input('elevator_pitch'),
+   
+
+       
+        );
+       users_company_details::where('company_id',$request->input('company_id'))->update($insert_array);
+
+
+
+
+
+            return Response::json(array(
+        'success' => true,
+        'errors' => 'success',
+       
+
+    ), 200);
+
+
+
+        }
+
+
+
+
+}
+
+function updateWatwedo(Request $request){
+
+
+$user_id = session()->get('userid');
+  $insert_array= array(
+        'created_by'=>$user_id,
+        'meta_value'=>$request->input('wattodo'),
+        'meta_key'=>($request->input('flag')=='no')?'video':'image',
+        'member_id'=>$request->input('member_id'),
+        'company_id'=>$request->input('company_id'),
+        'created_meta_date'=>date("Y-m-d H:i:s")
+        );
+       DB::table('company_metas')->insert($insert_array);
+           return Response::json(array(
+        'success' => true,
+        'errors' => 'success',
+       
+
+    ), 200);
 }
 
 

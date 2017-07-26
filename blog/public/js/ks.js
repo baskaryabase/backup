@@ -260,7 +260,7 @@ window.location.reload();
 
 })
 function get_wrapper(){
-   $('.ks_timeline').last().after('<div class="timeline-item ks_timeline"><a onclick="remove_wrapper(this)"><i class="fa fa-times pull-right" aria-hidden="true"></i></a><time datetime="2016-02-03T15:00+08:00" ><input type="date" class="ks_timeline_time" placeholder="Enter Time" ></time><p ><input type="date" class="ks_timeline_content" placeholder="Enter timeline" > </p></div>').css('height',"0px").animate({height:"100px"},1000);
+   $('.ks_timeline').last().after('<div class="timeline-item ks_timeline"><a onclick="remove_wrapper(this)"><i class="fa fa-times pull-right" aria-hidden="true"></i></a><time datetime="2016-02-03T15:00+08:00" ><input type="date" class="ks_timeline_time" placeholder="Enter Time" ></time><p ><input type="date" class="ks_timeline_content" placeholder="Details?" > </p></div>').css('height',"0px").animate({height:"100px"},1000);
 }
 function remove_wrapper(elm){
   // $(elm).parent('div').animate({height: "0px"},1000);

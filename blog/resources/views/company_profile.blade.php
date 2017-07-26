@@ -10,11 +10,12 @@
 @stop
    @section('content')
 
-   <?php
-echo '<pre>';
-print_r($company['data']);
-echo '</pre>';
+      <?php
+/*echo '<pre>';
+print_r($company);
+echo '</pre>';*/
 
+$logo_img=URL::asset('/image/company/'.$company['data']['startup_logo']);
     ?>
    <link href="<?php echo URL::asset('/bootstrap.3.3.6/css/bootstrap.min.css') ?>" rel="stylesheet" type="text/css">
    <link href="<?php echo URL::asset('/css/common.css') ?>" rel="stylesheet" type="text/css">
@@ -23,46 +24,63 @@ echo '</pre>';
 
   <body>
     <section class="container full-body">
+      
+<div class="border-first-container container-fluid">
       <div class="main-div">
         <div class="max-card">
+
+
           <div class="row">
-            <div class="col-sm-8 col-xs-8">
+          
+
+            <div  class="mar-top col-sm-10 col-xs-10">
+
+              <img style="height:100px; width:100px" src="{{ $logo_img }}" class="img-responsive">
+              
+            </div>
+            <a class="try col-xs-2 col-sm-2" data-toggle="modal" onclick="get_heading_modal({{$company['data']['company_id']}})"><i class="fa fa-pencil-square-o color-orange pull-right" aria-hidden="true"></i></a>
+
+            <div class="col-sm-12 col-xs-12">
               <div class="promotion-header">
-              {{  $company['data']['startup_name'] }}
+                {{$company['data']['startup_name']}} 
+                <!-- <a data-toggle="modal" href="#myModal" class="try"><i class="fa fa-pencil-square-o color-orange" aria-hidden="true"></i></a> -->
               </div>
             </div>
-            <div class="col-sm-4 col-xs-4">
-              <img src="https://media.glassdoor.com/sql/456666/great-little-box-company-squarelogo-1448432988828.png">
-            </div>
+            
           </div>
         </div>
       </div>
           
       <div class="container-fluid">
         <div class="row add" style="color: #000;">
+
           <div class="col-sm-4" style="padding-left: 10%;">
             <i class="fa fa-map-marker" aria-hidden="true" style="margin-right: 3px;"></i>
-            <a class="tag" href="https://angel.co/san-francisco" style="color: #000;">Bangalore</a>
+            <a class="tag" style="color: #000;">{{$company['data']['sc_location']}}</a>
             <br>
             <i class="fa fa-users" aria-hidden="true" style="margin-right: 3px;"></i>
-            <span>51-200 employees</span>    
+            <span>{{$company['data']['startup_employee']}}</span>    
           </div>
           <div class="col-sm-4" style="padding-left: 10%;">
             <i class="fa fa-industry" aria-hidden="true" style="margin-right: 3px;"></i>
-            <span>{{  $company['data']['startup_industry'] }}</span>  
+            <span>{{$company['data']['startup_industry']}}</span>  
             <br>
             <i class="fa fa-building-o" aria-hidden="true" style="margin-right: 3px;"></i>
-            <span>{{ $company['data']['startup_stage'] }}</span> 
+            <span>{{$company['data']['startup_stage']}}</span> 
           </div>
           <div class="col-sm-4">
             <ul class="faico clear">
-              <li><a class="faicon-facebook" href="#"><img src="https://res.cloudinary.com/thalmic-labs/image/upload/t_v2appCardIcon/market/apps/548c1294e4b03603dc2c67f0.jpg" style="height: 40px; width: 40px;"></a></li>
-              <li><a class="faicon-twitter" href="#"><img src="https://res.cloudinary.com/thalmic-labs/image/upload/t_v2appCardIcon/market/apps/voqzx01cvgk5reqqgcz8.jpg" style="height: 40px; width: 40px;"></a></li>
-              <li><a class="faicon-linkedin" href="#"><img src="http://tintation.com/wp-content/uploads/iphone-apps/iphone-apps-icon-5.jpg" style="height: 40px; width: 40px;"></a></li>
+              <li><a class="faicon-facebook" href="{{$company['data']['fb_link']}}"><img src="https://res.cloudinary.com/thalmic-labs/image/upload/t_v2appCardIcon/market/apps/548c1294e4b03603dc2c67f0.jpg" style="height: 30px; width: 30px;"></a></li>
+              <li><a class="faicon-twitter" href="{{$company['data']['google_url']}}"><img src="https://res.cloudinary.com/thalmic-labs/image/upload/t_v2appCardIcon/market/apps/voqzx01cvgk5reqqgcz8.jpg" style="height: 30px; width: 30px;"></a></li>
+              <li><a class="faicon-linkedin" href="{{$company['data']['twitter_link']}}"><img src="http://tintation.com/wp-content/uploads/iphone-apps/iphone-apps-icon-5.jpg" style="height: 30px; width: 30px;"></a></li>
+              
             </ul>
+            <a href="http://startupsclub.org/"><span style="margin-left: 39px;">{{$company['data']['startup_website']}}</span></a>
           </div>
         </div>
       </div>
+</div>
+
       <div class="container details_descript">
         <div class="vc_separator wpb_content_element vc_separator_align_center vc_sep_width_100 vc_sep_pos_align_center vc_sep_color_orange vc_separator-has-text">
           <span class="vc_sep_holder vc_sep_holder_l">
@@ -73,8 +91,10 @@ echo '</pre>';
           <p></p><span class="vc_sep_holder vc_sep_holder_r"><span class="vc_sep_line"></span></span>
         </div>
         <div class="wpb_text_column wpb_content_element ">
+          <a class="try pull-right" onclick="get_elevator({{$company['data']['company_id']}})" data-toggle="modal" href="#myModal3"><i class="fa fa-pencil-square-o color-orange" aria-hidden="true"></i></a>
+
           <div class="wpb_wrapper">
-            <p>{{  $company['data']['elevator_pitch'] }}</p>
+            <p id="elevator_text">{{$company['data']['elevator_pitch']}}</p>
           </div>
         </div>
       </div>
@@ -84,21 +104,33 @@ echo '</pre>';
           <h4></h4>
           <h2>What We Offer</h2>
           <p></p><span class="vc_sep_holder vc_sep_holder_r"><span class="vc_sep_line"></span></span>
+          
+
         </div>
+
         <div class="sheet4">
+
           <div id="big-image">
-            <img src="http://aftertargets.com/jewellery/assets/images/banner/collections/Jewelry-sets-2.jpg" style="width: 937px;">
-            <img src="http://aftertargets.com/jewellery/assets/images/banner/collections/earrings.png" style="width: 937px;">
-            <img src="http://aftertargets.com/jewellery/assets/images/banner/collections/Ring-2.jpg" style="width: 937px;">
-            <iframe width="937" height="336" src="https://www.youtube.com/embed/WDjd1piOMZQ" frameborder="0" allowfullscreen></iframe>
-            <img src="http://aftertargets.com/jewellery/assets/images/banner/collections/Jewelry-sets-2.jpg" style="width: 937px;">
+            <?php foreach ($company['metas'] as $key => $value) {
+              if($value['meta_key']=='video'){
+         
+         echo preg_replace("/\s*[a-zA-Z\/\/:\.]*youtube.com\/watch\?v=([a-zA-Z0-9\-_]+)([a-zA-Z0-9\/\*\-\_\?\&\;\%\=\.]*)/i","<iframe width=\"420\" height=\"315\" src=\"//www.youtube.com/embed/$1\" frameborder=\"0\" allowfullscreen></iframe>",$value['meta_value']);
+ }else{  ?>
+            <img src="<?php echo URL::asset('/image/default/header2.jpg') ?>">
+            <?php } ?>
+      
+<?php } ?>
           </div>
-          <div class="small-images" style="text-align: center; background: #f2f2f2; margin-right: 113px; height: 131px;">
-            <img src="http://lorempixel.com/100/50/sports/1/" id="img" style="width: 157px; height: 111px; margin-right: 5px; margin-left: 5px; margin-top: 10px;">
-            <img src="http://lorempixel.com/100/50/fashion/1/" style="width: 157px; height: 111px; margin-right: 5px; margin-left: 5px; margin-top: 10px;">
-            <img src="http://lorempixel.com/100/50/city/1/" style="width: 157px; height: 111px; margin-right: 5px; margin-left: 5px; margin-top: 10px;">
-            <img src="http://lorempixel.com/100/50/city/1/" style="width: 157px; height: 111px; margin-right: 5px; margin-left: 5px; margin-top: 10px;">
-            <img src="http://lorempixel.com/100/50/city/1/" style="width: 157px; height: 111px; margin-right: 5px; margin-left: 5px; margin-top: 10px;">
+          <div class="small-images">
+              <?php foreach ($company['metas'] as $key => $value) {
+              if($value['meta_key']=='video'){
+                ?>
+            <img data-company="{{ $company['data']['company_id'] }}" data-member="{{ $company['data']['member_id'] }}"  src="<?php echo URL::asset('/image/default/plus.png') ?>" id="img"> <!-- style="width: 157px; height: 111px; margin-right: 5px; margin-left: 5px; margin-top: 10px;"> -->
+           <?php }else{ ?>
+            <img data-company="{{ $company['data']['company_id'] }}" data-member="{{ $company['data']['member_id'] }}" onclick="modal(this)" src="<?php echo URL::asset('/image/default/plus.png') ?>" > <!-- style="width: 157px; height: 111px; margin-right: 5px; margin-left: 5px; margin-top: 10px;"> -->
+
+            <?php } } ?>
+            <!-- style="width: 157px; height: 111px; margin-right: 5px; margin-left: 5px; margin-top: 10px;"> -->
           </div>
         </div>
       </div>
@@ -115,24 +147,18 @@ echo '</pre>';
           <div class="row">
             <div class="fast">
               <div class="col-sm-2 col-xs-4">
-                <a href="#"><img class="angel_image" alt="Kyle Vogt" src="http://startupsclub.org/wp-content/uploads/2017/02/Vivek-150x150.jpg">
+                <img class="angel_image" alt="Kyle Vogt" src="http://startupsclub.org/wp-content/uploads/2017/02/Vivek-150x150.jpg">
               </div>
               <div class="col-sm-4 col-xs-8">
-                <a class="profile-link" href="#">Vivek Srinivasan</a>
+                <a class="profile-link" href="#">{{$company['data']['sc_fullname']}}</a>
                 <p class="role_title">Founder</p> 
-                <p class="bio">Founder of Startups club.</p> 
+                <p class="bio">{{$company['data']['startup_name']}}</p> 
               </div>
+            
             </div>
-            <div class="second">
-              <div class="col-sm-2 col-xs-4">
-                <a href="#"><img class="angel_image" alt="Kyle Vogt" src="http://startupsclub.org/wp-content/uploads/2017/02/Salma-150x150.jpg">
-              </div>
-              <div class="col-sm-4 col-xs-8">
-                <a class="profile-link" href="#">Salma Moosa</a>
-                <p class="role_title">Founder</p> 
-                <p class="bio">Founder of Startups club.</p> 
-              </div>
-            </div>
+            <!-- <div class="second">
+              
+            </div> -->
           </div>
         </div>
       </div>  
@@ -210,11 +236,139 @@ echo '</pre>';
       </div>
     </div> -->
   
+
+<div id="edit_company_modal" class="modal fade" role="dialog">
+  <div align="center" class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="edit-modal1-width modal-content">
+      <!-- <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Modal Header</h4>
+      </div> -->
+      <div class="modal-body">
+
+<div class="">
+  <section id="content">
+<button type="button" class="close close-btn-class" data-dismiss="modal">&times;</button>
+<div id="edit_append_data" ></div>
+   
+  </section><!-- content -->
+</div><!-- container -->
+      </div>
+      
+    </div>
+
+  </div>
+</div>
+
+
+
+<!-- modal 3 div -->
+<div id="myModal3" class="modal fade" role="dialog">
+  <div align="center" class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="edit-modal1-width modal-content">
+      <!-- <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Modal Header</h4>
+      </div> -->
+      <div class="modal-body">
+
+<div class="">
+  <section id="content">
+<button type="button" class="close close-btn-class" data-dismiss="modal">&times;</button>
+    <form action="">
+      <h1>ELevator Pitch</h1>
+      <div>
+        <textarea id="elevator_pitch" type="text"></textarea>
+      </div>
+      
+      <div>
+    <input class="pull-right" type="button" id="update_elevator" value="Submit" />
+       
+      </div>
+    </form><!-- form -->
+   
+  </section><!-- content -->
+</div><!-- container -->
+      </div>
+      
+    </div>
+
+  </div>
+</div>
+
+
+
+<div class="modal fade" id="watwedoModal" role="dialog">
+    <div align="center" class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="edit-modal4-width modal-content">
+        <!-- <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Add Images Or Videos</h4>
+        </div> -->
+        <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      
+  <label class="radio-inline">
+      <input type="radio" value="yes" checked name="optradio">image
+    </label>
+    <label class="radio-inline">
+      <input type="radio" value="no" name="optradio">youtube url
+    </label>
+   
+<div id="image_tab" >
+   <input type="file" id="watwedo_pic" onchange="startup_watwedo()" title='Click to add Files' >
+
+  <img id="display_pic" style="height:100px; width:100px" src="https://media.glassdoor.com/sql/456666/great-little-box-company-squarelogo-1448432988828.png">
+      <input type="hidden" name="hidden_image" id="hidden_image" name="" value="">
+
+</div>
+<div id="url_tab" style="display:none;">
+        <input type="text" placeholder="Enter youtube url" value="" required="" id="youtube_url" />
+
+</div>
+<input type="submit" value="submit" id="update_watwedo" data-member="" data-company="" class="btn btn-md pull-right">
+                    
+        </div>
+
+
+        
+      </div>
+      
+    </div>
+  </div>
+
+
+
+<script>
+
+
+function modal(elm){
+
+  
+  $('#update_watwedo').attr('data-member',$(elm).attr('data-member'))
+  $('#update_watwedo').attr('data-company',$(elm).attr('data-company'))
+  
+$('#watwedoModal').modal({ show: true });
+
+}
+
+
+</script>
+
+
 <script>
   $(function(){
       $("#big-image img:eq(0)").nextAll().hide();
       $(".small-images img").click(function(e){
+
           var index = $(this).index();
+   
           $("#big-image img").eq(index).show().siblings().hide();
       });
   });
@@ -231,5 +385,6 @@ echo '</pre>';
 
 
 </body>
+ <script src="<?php echo URL::asset('/js/company_profile.js') ?>"></script>
 
 @stop

@@ -3,14 +3,15 @@
 .liveurl {
     width: 100%;
     overflow: hidden;
-    background: #fff;
-    border: 2px solid #CCC;
+    background: #F3F3F3;
+    border-top: 1px dashed #CCC;
     margin-top: 10px;
-     
+    display: none;
+    
 }
 
 .liveurl .inner {
-    /*margin: 15px;*/
+    margin: 15px;
 
     overflow: hidden;
 }
@@ -22,17 +23,20 @@
 
 
 .liveurl .details {
+    float: left;
     overflow: hidden;
-    
+    width: 475px;
 }
 
 .liveurl .details .info * {
+    float: left;
     clear: both;
+    line-height: 13px;
 }
 
 
 .liveurl .title {
-    float: right;
+    font-weight: bold;
 }
 
 .liveurl .url {
@@ -42,20 +46,24 @@
 }
 
 .liveurl .image {
-    width: 150px;
+    width: 100px;
+    margin: 0 10px 10px 0;
     float: left;
-    padding-left: 0px;
+    display: none;
+     
 }
 
 .liveurl .video {
     clear: both;
-    float: left;    
+    float: left;
+    margin: 10px 0 0 0;
+    display: none;
 }
 
 .liveurl img {
-    width: 150px;
+    width: 100px;
     height: auto;
-    
+    display: none;
 }
 
 .liveurl img.active {
@@ -76,7 +84,7 @@
     float: left;
     margin: 15px 0 0 0;
     clear: both;
-    
+    display: none;
 }
 
 .liveurl .thumbnail  label {
@@ -159,17 +167,10 @@
     background: url(/image/url-loader.gif);
     
 }
-.font-size-16{
-    font-size: 17px !important;
-}
-.description-p{
-    font-size: 13px;
-    line-height: 12px;
-}
 
-/*.liveurl * {
+.liveurl * {
     font: 12px/1em Tahoma, Arial, Helvetica, Segoe, sans-serif;
-}*/
+}
 
 
 

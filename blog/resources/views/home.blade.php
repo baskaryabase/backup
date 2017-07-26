@@ -37,16 +37,12 @@
         <div class="liveurl">
             <div class="close" title="Entfernen"></div>
             <div class="inner">
-                <div class="image col-md-5">
-                  <img src="https://members.startupsclub.org/image/1494399354.jpg">
-                </div>
-                <div class="details col-md-7">
+                <div class="image"> </div>
+                <div class="details">
                     <div class="info">
-                        <div class="title"><h5 class="font-size-16">A Video About how to survive inside whales stomach</h5></div>
-                        <div class="description"><p class="description-p">
-                          amazing video it will be usefull for u when u got struck inside whale
-                        </p> </div> 
-                        <div class="url">youtube.com </div>
+                        <div class="title"> </div>
+                        <div class="description"> </div> 
+                        <div class="url"> </div>
                     </div>
 
                    
@@ -181,7 +177,7 @@ var owl = $('.owl-carousel');
 owl.owlCarousel({
     loop:true,
     margin:10,
-    autoplay:true,
+    
     autoplayTimeout:3000,
     responsiveClass:true,
     responsive:{
@@ -231,89 +227,134 @@ $('.owl-carousel').css('width','auto');
                     },
                     success : function(data) 
                     { 
-                    //    $('#url_flag').val('set');
+                       $('#url_flag').val('set');
 
-                    //     var output = $('.liveurl');
-                    //     if(data.description != '')
-                    //     output.find('.title').text(data.title);
-                    //     output.find('.description').text(data.description);
+                        var output = $('.liveurl');
+                        if(data.description != '')
+                        output.find('.title').text(data.title);
+                        output.find('.description').text(data.description);
                         
-                    //     output.find('.url').text(data.url);
-                    //     output.find('.image').empty();
+                        output.find('.url').text(data.url);
+                        output.find('.image').empty();
                         
-                    //     output.find('.close').one('click', function() 
-                    //     {
-                    //         var liveUrl     = $(this).parent();
-                    //         liveUrl.hide('fast');
-                    //         liveUrl.find('.video').html('').hide();
-                    //         liveUrl.find('.image').html('');
-                    //         liveUrl.find('.controls .prev').addClass('inactive');
-                    //         liveUrl.find('.controls .next').addClass('inactive');
-                    //         liveUrl.find('.thumbnail').hide();
-                    //         liveUrl.find('.image').hide();
+                        output.find('.close').one('click', function() 
+                        {
+                            var liveUrl     = $(this).parent();
+                            liveUrl.hide('fast');
+                            liveUrl.find('.video').html('').hide();
+                            liveUrl.find('.image').html('');
+                            liveUrl.find('.controls .prev').addClass('inactive');
+                            liveUrl.find('.controls .next').addClass('inactive');
+                            liveUrl.find('.thumbnail').hide();
+                            liveUrl.find('.image').hide();
 
-                    //         $('textarea').trigger('clear'); 
-                    //         curImages = new Array();
-                    //     });
+                            $('textarea').trigger('clear'); 
+                            curImages = new Array();
+                        });
                         
-                    //     output.show('fast');
+                        output.show('fast');
                         
-                    //     if (data.video != null) {                       
-                    //         var ratioW        = data.video.width  /350;
-                    //         data.video.width  = 350;
-                    //         data.video.height = data.video.height / ratioW;
+                        if (data.video != null) {                       
+                            var ratioW        = data.video.width  /350;
+                            data.video.width  = 350;
+                            data.video.height = data.video.height / ratioW;
         
-                    //         var video = 
-                    //         '<object width="' + data.video.width  + '" height="' + data.video.height  + '">' +
-                    //             '<param name="movie"' +
-                    //                   'value="' + data.video.file  + '"></param>' +
-                    //             '<param name="allowScriptAccess" value="always"></param>' +
-                    //             '<embed src="' + data.video.file  + '"' +
-                    //                   'type="application/x-shockwave-flash"' +
-                    //                   'allowscriptaccess="always"' +
-                    //                   'width="' + data.video.width  + '" height="' + data.video.height  + '"></embed>' +
-                    //         '</object>';
-                    //         output.find('.video').html(video).show();
+                            var video = 
+                            '<object width="' + data.video.width  + '" height="' + data.video.height  + '">' +
+                                '<param name="movie"' +
+                                      'value="' + data.video.file  + '"></param>' +
+                                '<param name="allowScriptAccess" value="always"></param>' +
+                                '<embed src="' + data.video.file  + '"' +
+                                      'type="application/x-shockwave-flash"' +
+                                      'allowscriptaccess="always"' +
+                                      'width="' + data.video.width  + '" height="' + data.video.height  + '"></embed>' +
+                            '</object>';
+                            output.find('.video').html(video).show();
                             
                          
-                    //     }
+                        }
                        
-                    // },
-                    // addImage : function(image)
-                    // {   
+                    },
+                    addImage : function(image)
+                    {   
                       
                      
 
-                    //     var output  = $('.liveurl');
-                    //     var jqImage = $(image);
-                    //     jqImage.attr('alt', 'Preview');
+                        var output  = $('.liveurl');
+                        var jqImage = $(image);
+                        jqImage.attr('alt', 'Preview');
                         
-                    //     if ((image.width / image.height)  > 7 
-                    //     ||  (image.height / image.width)  > 4 ) {
-                    //         // we dont want extra large images...
-                    //         return false;
-                    //     } 
+                        if ((image.width / image.height)  > 7 
+                        ||  (image.height / image.width)  > 4 ) {
+                            // we dont want extra large images...
+                            return false;
+                        } 
 
-                    //     curImages.push(jqImage.attr('src'));
-                    //     output.find('.image').append(jqImage);
+                        curImages.push(jqImage.attr('src'));
+                        output.find('.image').append(jqImage);
                         
                         
-                    //     if (curImages.length == 1) {
-                    //         // first image...
+                        if (curImages.length == 1) {
+                            // first image...
                             
-                    //         output.find('.thumbnail .current').text('1');
-                    //         output.find('.thumbnail').show();
-                    //         output.find('.image').show();
-                    //         jqImage.addClass('active');
+                            output.find('.thumbnail .current').text('1');
+                            output.find('.thumbnail').show();
+                            output.find('.image').show();
+                            jqImage.addClass('active');
                             
-                    //     }
+                        }
                         
-                    //     if (curImages.length == 2) {
-                    //         output.find('.controls .next').removeClass('inactive');
-                    //     }
+                        if (curImages.length == 2) {
+                            output.find('.controls .next').removeClass('inactive');
+                        }
                         
-                    //     output.find('.thumbnail .max').text(curImages.length);
-                //    
+                        output.find('.thumbnail .max').text(curImages.length);
+                    }
+                });
+              
+          
+                $('.liveurl ').on('click', '.controls .button', function() 
+                {
+                 
+
+                    var self        = $(this);
+                    var liveUrl     = $(this).parents('.liveurl');
+                    var content     = liveUrl.find('.image');
+                    var images      = $('img', content);
+                    var activeImage = $('img.active', content);
+
+                    if (self.hasClass('next')) 
+                         var elem = activeImage.next("img");
+                    else var elem = activeImage.prev("img");
+      
+                    if (elem.length > 0) {
+                        activeImage.removeClass('active');
+                        elem.addClass('active');  
+                        liveUrl.find('.thumbnail .current').text(elem.index() +1);
+                        
+                        if (elem.index() +1 == images.length || elem.index()+1 == 1) {
+                            self.addClass('inactive');
+                        }
+                    }
+
+                    if (self.hasClass('next')) 
+                         var other = elem.prev("img");
+                    else var other = elem.next("img");
+                    
+                    if (other.length > 0) {
+                        if (self.hasClass('next')) 
+                               self.prev().removeClass('inactive');
+                        else   self.next().removeClass('inactive');
+                   } else {
+                        if (self.hasClass('next')) 
+                               self.prev().addClass('inactive');
+                        else   self.next().addClass('inactive');
+                   }
+                   
+                   
+                   
+                });
+              
           </script>
 
     @stop

@@ -9,7 +9,7 @@
 @include('layouts.footer')
 @stop
    @section('content')
-
+ 
 <link href="<?php echo URL::asset('/bootstrap.3.3.6/css/bootstrap.min.css') ?>" rel="stylesheet" type="text/css">
 <link href="<?php echo URL::asset('/font-awesome.4.6.1/css/font-awesome.min.css') ?>" rel="stylesheet" type="text/css">
 <link href="<?php echo URL::asset('/css/ebor-theme-styles.css') ?>" rel="stylesheet" type="text/css">
@@ -258,7 +258,7 @@ we can offer the perfect solution.</p>
 				<div class="wpb_wrapper">
 					<div class="topic">
 						<i class="icon_link"></i>
-						<h1 style="text-align: center;">300+</h1>
+						<h1 style="text-align: center;">500+</h1>
 						<h3 style="text-align: center;">Meetings</h3>
 						<p>
 						</p></div></div></div></div>
@@ -267,7 +267,7 @@ we can offer the perfect solution.</p>
 				<div class="wpb_wrapper">
 					<div class="topic">
 						<i class="pe-7s-add-user"></i>
-						<h1 style="text-align: center;">12000+</h1>
+						<h1 style="text-align: center;">20000+</h1>
 						<h3 style="text-align: center;">Members</h3>
 						<p>
 						</p>

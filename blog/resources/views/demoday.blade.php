@@ -415,7 +415,7 @@
 	<div class="wpb_text_column wpb_content_element ">
 		<div class="wpb_wrapper">
 			<p style="text-align: center;">15-Jul-2017</p>
-<p style="text-align: center;"><a class="pitch_link" style="margin-right: 10%;" data-type="participants" data-city="mangalore" data-date="2017-07-15">Pitch</a><a class="attend_link" data-type="attendee" data-city="mangalore" data-date="2017-07-15">Attend</a></p>
+<p style="text-align: center;"><a href="#" >Completed (Pics)</a></p>
 <p style="text-align: center;">To be announced - 11am - 2pm</p>
 
 		</div>

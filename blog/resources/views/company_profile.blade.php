@@ -21,6 +21,8 @@ $logo_img=URL::asset('/image/company/'.$company['data']['startup_logo']);
    <link href="<?php echo URL::asset('/css/common.css') ?>" rel="stylesheet" type="text/css">
    <link href="<?php echo URL::asset('/css/company_profile.css') ?>" rel="stylesheet" type="text/css">
    <link href="<?php echo URL::asset('/css/js_composer.min.css') ?>" rel="stylesheet" type="text/css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
   <body>
     <section class="container full-body">
@@ -108,32 +110,83 @@ $logo_img=URL::asset('/image/company/'.$company['data']['startup_logo']);
 
         </div>
 
-        <div class="sheet4">
 
-          <div id="big-image">
-            <?php foreach ($company['metas'] as $key => $value) {
-              if($value['meta_key']=='video'){
-         
-         echo preg_replace("/\s*[a-zA-Z\/\/:\.]*youtube.com\/watch\?v=([a-zA-Z0-9\-_]+)([a-zA-Z0-9\/\*\-\_\?\&\;\%\=\.]*)/i","<iframe width=\"420\" height=\"315\" src=\"//www.youtube.com/embed/$1\" frameborder=\"0\" allowfullscreen></iframe>",$value['meta_value']);
- }else{  ?>
-            <img src="<?php echo URL::asset('/image/default/header2.jpg') ?>">
-            <?php } ?>
-      
-<?php } ?>
-          </div>
-          <div class="small-images">
-              <?php foreach ($company['metas'] as $key => $value) {
-              if($value['meta_key']=='video'){
-                ?>
-            <img data-company="{{ $company['data']['company_id'] }}" data-member="{{ $company['data']['member_id'] }}"  src="<?php echo URL::asset('/image/default/plus.png') ?>" id="img"> <!-- style="width: 157px; height: 111px; margin-right: 5px; margin-left: 5px; margin-top: 10px;"> -->
-           <?php }else{ ?>
-            <img data-company="{{ $company['data']['company_id'] }}" data-member="{{ $company['data']['member_id'] }}" onclick="modal(this)" src="<?php echo URL::asset('/image/default/plus.png') ?>" > <!-- style="width: 157px; height: 111px; margin-right: 5px; margin-left: 5px; margin-top: 10px;"> -->
-
-            <?php } } ?>
-            <!-- style="width: 157px; height: 111px; margin-right: 5px; margin-left: 5px; margin-top: 10px;"> -->
-          </div>
+<div class="container">
+              
+  <!-- Slider -->
+  <div class="row">
+    <div class="col-md-12" id="slider">
+      <!-- Top part of the slider -->
+      <div class="row">
+        <div class="col-md-12" id="carousel-bounding-box">
+          <div id="myCarousel" class="carousel slide">
+            <!-- Carousel items -->
+            <div class="carousel-inner">
+              <div class="active item" data-slide-number="0">
+              <img src="http://placehold.it/770x300&amp;text=video one"></div>
+              <div class="item" data-slide-number="1">
+              <iframe src="https://www.youtube.com/embed/FBEGuOPlDUE"></iframe></div>
+              <div class="item" data-slide-number="2"><img src="http://placehold.it/770x300&amp;text=video three"></div>
+              <div class="item" data-slide-number="3"><img src="http://placehold.it/770x300&amp;text=video four"></div>
+              <div class="item" data-slide-number="4"><img src="http://placehold.it/770x300&amp;text=video five"></div>
+              <div class="item" data-slide-number="5"><img src="http://placehold.it/770x300&amp;text=video six"></div>
+              <div class="item" data-slide-number="5"><img src="http://placehold.it/770x300&amp;text=video seven"></div>
+            </div>
+            <!-- Carousel nav -->
+           </div>
         </div>
-      </div>
+<style type="text/css">
+  .col-xs-2{
+    /*padding-right: 0;*/
+    padding-left: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .ul{
+    margin-left: -40px;
+    list-style: none
+  }
+</style>        
+        
+    </div>
+  </div> <!--/Slider-->
+  
+  <div class="row-fluid hidden-phone" id="slider-thumbs">
+    <div class="col-xs-12">
+      <!-- Bottom switcher of slider -->
+      <ul class="ul thumbnails">
+        <li class="col-xs-2">
+          <a class="thumbnail" id="carousel-selector-0">
+            <img src="http://placehold.it/170x100&amp;text=one">
+          </a>
+        </li>
+        <li class="col-xs-2">
+          <a class="thumbnail" id="carousel-selector-1">
+            <img src="http://placehold.it/170x100&amp;text=two">
+          </a>
+        </li>
+        <li class="col-xs-2">
+          <a class="thumbnail" id="carousel-selector-2">
+            <img src="http://placehold.it/170x100&amp;text=three">
+          </a>
+        </li>
+        <li class="col-xs-2">
+          <a class="thumbnail" id="carousel-selector-3">
+            <img src="http://placehold.it/170x100&amp;text=four">
+          </a>
+        </li>
+        <li class="col-xs-2">
+          <a class="thumbnail" id="carousel-selector-4">
+            <img src="http://placehold.it/170x100&amp;text=five">
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+</div>
       <!--/main slider carousel-->
       <div class="vc_separator wpb_content_element vc_separator_align_center vc_sep_width_100 vc_sep_pos_align_center vc_sep_color_orange vc_separator-has-text">
         <span class="vc_sep_holder vc_sep_holder_l"><span class="vc_sep_line"></span></span>
@@ -348,43 +401,41 @@ $logo_img=URL::asset('/image/company/'.$company['data']['startup_logo']);
 <script>
 
 
-function modal(elm){
+// function modal(elm){
 
   
-  $('#update_watwedo').attr('data-member',$(elm).attr('data-member'))
-  $('#update_watwedo').attr('data-company',$(elm).attr('data-company'))
+//   $('#update_watwedo').attr('data-member',$(elm).attr('data-member'))
+//   $('#update_watwedo').attr('data-company',$(elm).attr('data-company'))
   
-$('#watwedoModal').modal({ show: true });
+// $('#watwedoModal').modal({ show: true });
 
-}
+// }
+
+  $('#myCarousel').carousel({
+                interval: 5000
+        });
+
+        $('#carousel-text').html($('#slide-content-0').html());
+
+        //Handles the carousel thumbnails
+        $('[id^=carousel-selector-]').click( function(){
+                var id_selector = $(this).attr("id");
+                var id = id_selector.substr(id_selector.length -1);
+                var id = parseInt(id);
+                $('#myCarousel').carousel(id);
+        });
 
 
+        // When the carousel slides, auto update the text
+        $('#myCarousel').on('slid', function (e) {
+                var id = $('.item.active').data('slide-number');
+                $('#carousel-text').html($('#slide-content-'+id).html());
+        });
 </script>
 
 
-<script>
-  $(function(){
-      $("#big-image img:eq(0)").nextAll().hide();
-      $(".small-images img").click(function(e){
-
-          var index = $(this).index();
-   
-          $("#big-image img").eq(index).show().siblings().hide();
-      });
-  });
-</script>
-<script>
-  $(function(){
-      $("#big-image iframe:eq(0)").nextAll().hide();
-      $(".small-images #img").click(function(e){
-          var index = $(this).index();
-          $("#big-image iframe").eq(index).show().siblings().hide();
-      });
-  });
-</script>
 
 
-</body>
  <script src="<?php echo URL::asset('/js/company_profile.js') ?>"></script>
 
 @stop

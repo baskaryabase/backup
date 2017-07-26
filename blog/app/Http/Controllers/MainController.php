@@ -3051,6 +3051,10 @@ function getWhatWeDo(){
 return view('whatwedo');
 
 }
+function getTestPage(){
+return view('test-page');
+
+}
 function getDemodayCity($city){
 
   $pics_obj=Demoday_pics::where('demoday_flag',$city)->get();

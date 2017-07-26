@@ -16,6 +16,7 @@
 
 });*/
 Route::get('test-url', 'MainController@getTestContent');
+Route::get('test-page', 'MainController@getTestPage');
 Route::get('edit-membership', 'MainController@getMembershipProfile');
 Route::get('/', 'MainController@getHome');
 Route::get('/demoday', 'MainController@getDemoday');

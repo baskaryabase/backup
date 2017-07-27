@@ -26,7 +26,7 @@ $logo_img=URL::asset('/image/company/'.$company['data']['startup_logo']);
 
   <body>
     <section class="container full-body">
-      
+      <button data-toggle="modal" onClick="modal()">modal 4</button>
 <div class="border-first-container container-fluid">
       <div class="main-div">
         <div class="max-card">
@@ -111,8 +111,8 @@ $logo_img=URL::asset('/image/company/'.$company['data']['startup_logo']);
         </div>
 
 
-<div class="container">
-              
+<div class="container margin-center">
+<div class="container ">             
   <!-- Slider -->
   <div class="row">
     <div class="col-md-12" id="slider">
@@ -123,61 +123,53 @@ $logo_img=URL::asset('/image/company/'.$company['data']['startup_logo']);
             <!-- Carousel items -->
             <div class="carousel-inner">
               <div class="active item" data-slide-number="0">
-              <img src="http://placehold.it/770x300&amp;text=video one"></div>
+              <img class="big-image"  src="https://static.pexels.com/photos/248797/pexels-photo-248797.jpeg"></div>
+              
               <div class="item" data-slide-number="1">
-              <iframe src="https://www.youtube.com/embed/FBEGuOPlDUE"></iframe></div>
-              <div class="item" data-slide-number="2"><img src="http://placehold.it/770x300&amp;text=video three"></div>
-              <div class="item" data-slide-number="3"><img src="http://placehold.it/770x300&amp;text=video four"></div>
-              <div class="item" data-slide-number="4"><img src="http://placehold.it/770x300&amp;text=video five"></div>
-              <div class="item" data-slide-number="5"><img src="http://placehold.it/770x300&amp;text=video six"></div>
-              <div class="item" data-slide-number="5"><img src="http://placehold.it/770x300&amp;text=video seven"></div>
+              <iframe class="iframe" src="https://www.youtube.com/embed/FBEGuOPlDUE" allowfullscreen></iframe></div>
+              
+              <div class="item" data-slide-number="2"><img class="big-image" src="http://placehold.it/770x300&amp;text=video three"></div>
+              
+              <div class="item" data-slide-number="3"><img class="big-image" src="http://placehold.it/770x300&amp;text=video four"></div>
+              
+              <div class="item" data-slide-number="4"><img class="big-image" src="http://placehold.it/770x300&amp;text=video five"></div>
+              
             </div>
             <!-- Carousel nav -->
            </div>
         </div>
-<style type="text/css">
-  .col-xs-2{
-    /*padding-right: 0;*/
-    padding-left: 0;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .ul{
-    margin-left: -40px;
-    list-style: none
-  }
-</style>        
+       
         
     </div>
   </div> <!--/Slider-->
   
   <div class="row-fluid hidden-phone" id="slider-thumbs">
-    <div class="col-xs-12">
+    <div align="center" class="col-xs-12">
       <!-- Bottom switcher of slider -->
       <ul class="ul thumbnails">
         <li class="col-xs-2">
           <a class="thumbnail" id="carousel-selector-0">
-            <img src="http://placehold.it/170x100&amp;text=one">
+            <img class="small-image" src="https://static.pexels.com/photos/248797/pexels-photo-248797.jpeg">
           </a>
         </li>
         <li class="col-xs-2">
           <a class="thumbnail" id="carousel-selector-1">
-            <img src="http://placehold.it/170x100&amp;text=two">
+            <img class="small-image" src="http://placehold.it/170x100&amp;text=two">
           </a>
         </li>
         <li class="col-xs-2">
           <a class="thumbnail" id="carousel-selector-2">
-            <img src="http://placehold.it/170x100&amp;text=three">
+            <img class="small-image" src="http://placehold.it/170x100&amp;text=three">
           </a>
         </li>
         <li class="col-xs-2">
           <a class="thumbnail" id="carousel-selector-3">
-            <img src="http://placehold.it/170x100&amp;text=four">
+            <img class="small-image" src="http://placehold.it/170x100&amp;text=four">
           </a>
         </li>
         <li class="col-xs-2">
           <a class="thumbnail" id="carousel-selector-4">
-            <img src="http://placehold.it/170x100&amp;text=five">
+            <img class="small-image" src="http://placehold.it/170x100&amp;text=five">
           </a>
         </li>
       </ul>
@@ -185,7 +177,7 @@ $logo_img=URL::asset('/image/company/'.$company['data']['startup_logo']);
   </div>
 </div>
 
-
+</div>
 </div>
       <!--/main slider carousel-->
       <div class="vc_separator wpb_content_element vc_separator_align_center vc_sep_width_100 vc_sep_pos_align_center vc_sep_color_orange vc_separator-has-text">
@@ -374,18 +366,18 @@ $logo_img=URL::asset('/image/company/'.$company['data']['startup_logo']);
       <input type="radio" value="no" name="optradio">youtube url
     </label>
    
-<div id="image_tab" >
+<div id="image_tab" class="image_tab_style">
    <input type="file" id="watwedo_pic" onchange="startup_watwedo()" title='Click to add Files' >
 
   <img id="display_pic" style="height:100px; width:100px" src="https://media.glassdoor.com/sql/456666/great-little-box-company-squarelogo-1448432988828.png">
       <input type="hidden" name="hidden_image" id="hidden_image" name="" value="">
 
 </div>
-<div id="url_tab" style="display:none;">
+<div id="url_tab" class="url_tab_style" style="display:none; padding-top: 80px;">
         <input type="text" placeholder="Enter youtube url" value="" required="" id="youtube_url" />
 
 </div>
-<input type="submit" value="submit" id="update_watwedo" data-member="" data-company="" class="btn btn-md pull-right">
+<input type="submit" class="submit-btn submit-btn-align" value="submit" id="update_watwedo" data-member="" data-company="" class="btn btn-md pull-right">
                     
         </div>
 
@@ -401,18 +393,18 @@ $logo_img=URL::asset('/image/company/'.$company['data']['startup_logo']);
 <script>
 
 
-// function modal(elm){
+function modal(elm){
 
   
-//   $('#update_watwedo').attr('data-member',$(elm).attr('data-member'))
-//   $('#update_watwedo').attr('data-company',$(elm).attr('data-company'))
+  $('#update_watwedo').attr('data-member',$(elm).attr('data-member'))
+  $('#update_watwedo').attr('data-company',$(elm).attr('data-company'))
   
-// $('#watwedoModal').modal({ show: true });
+$('#watwedoModal').modal({ show: true });
 
-// }
+}
 
   $('#myCarousel').carousel({
-                interval: 5000
+                interval: 500000
         });
 
         $('#carousel-text').html($('#slide-content-0').html());

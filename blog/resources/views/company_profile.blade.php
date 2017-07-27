@@ -10,7 +10,7 @@
 @stop
    @section('content')
 
-      <?php
+      <?php       
 /*echo '<pre>';
 print_r($company);
 echo '</pre>';*/
@@ -208,7 +208,9 @@ $logo_img=URL::asset('/image/company/'.$company['data']['startup_logo']);
         </div>
       </div>  
     </section>
-              <!-- <div class="photo">
+
+
+<!-- <div class="photo">
                 <a class="profile-link" data-type="User" data-id="158128" href="#" data-hasqtip="3" aria-describedby="qtip-3"><img class="angel_image" alt="Kyle Vogt" src="http://startupsclub.org/wp-content/uploads/2017/02/Salma-150x150.jpg"></a>
               </div>
             </div>

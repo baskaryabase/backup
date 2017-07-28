@@ -129,10 +129,83 @@ echo '</pre>'*/
               <div class="tabs-wrapper profile-tabs">
                 <ul class="nav nav-tabs">
                   <li class="active"><a href="#tab-timeline" data-toggle="tab">Timeline</a></li>
+                  <li><a href="#tab-upgrade" data-toggle="tab">Upgrade</a></li>
                   
                 </ul>
                 
                 <div class="tab-content">
+
+ <div class="tab-pane fade" id="tab-upgrade">
+   <div class="container col-md-12">
+     <div>
+       <h3>Upgrade your membership<span class="membership-info pull-right">Regular Member</span></h3>
+        <h5>Membership Expire By:<span>16 Sep 2017</span> </h5>
+       <div>
+             <select onchange="showDiv(this)">
+               <option value="0">Select Membership</option>
+               <option value="1">Premium Membership</option>
+               <option value="2">Pioneer Membership</option>
+             </select>    
+          
+<script type="text/javascript">
+  function showDiv(elem){
+   if(elem.value == 1){
+      document.getElementById('tab-premium-pioneer').style.display = "block";
+      document.getElementById('tab-pioneer').style.display = "none";
+   }
+
+else{
+   document.getElementById('tab-pioneer').style.display = "block";
+   document.getElementById('tab-premium-pioneer').style.display = "none";
+}
+}
+</script>
+            <div> 
+                <div style="display: none" id="tab-pioneer">
+                  <h5>Pioneer Memership Benefits</h5>
+
+                  <div class="col-md-7">
+                    <ul class="list-group">
+                      <li class="list-group-item">Mentoring On Request</li>
+                      <li class="list-group-item">Networking</li>
+                      <li class="list-group-item">Investors</li>
+                      <li class="list-group-item">Discount Packag
+
+                      es For Offering</li>
+                    </ul>
+                  </div>
+                  <div class="bg-white col-md-5">
+                  One Year Subscrition Charge<br><br>
+                   <label class="price"><i class="fa fa-rupee pricetag">4000</i></label>
+                    <button class="btn btn-success pull-right">
+                      Pay Now
+                    </button>
+                  </div>
+                </div>
+
+                <div style="display: none" id="tab-premium-pioneer">
+                <h5>Premium Pioneer Membership benefits</h5>
+                  <div class="col-md-7">
+                    <ul class="list-group">
+                      <li class="list-group-item">Free Platinum Value Kit For Demoday</li>
+                      <li class="list-group-item">Access To Investors As VIP at Finale</li>
+                      <li class="list-group-item">PAN India Access To Market</li>
+                      <li class="list-group-item">Customised Growth Service</li>
+                    </ul>
+                  </div>
+                  <div class="col-md-5 bg-white">
+                  One Year Subscrition Charge<br><br>
+                    <label class="price"><i class="fa fa-rupee  pricetag">25000</i></label>
+                    <button class="btn btn-success pull-right">
+                      Pay Now
+                    </button>
+                  </div>
+                </div>
+            </div>
+      </div>
+     </div>
+   </div>                   
+ </div>
                   <div class="tab-pane fade in active" id="tab-timeline">
                     <div class="row">
                      <div class="col-md-12" id="app1" ng-app="Profile" ng-controller="postCtrl">
@@ -297,4 +370,7 @@ if(!empty($cvalue)){
     </div>
   </div>
  <input type="hidden" id="role"  value="{{ session()->get('role') }}"> 
+
+
+
     @stop

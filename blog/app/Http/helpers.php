@@ -62,6 +62,54 @@ return 'Honorary Pioneer Member';
 }
 }
 
+function get_url_content($details){
+/*    echo '<pre>';
+    print_r($details);
+    echo '</pre>';*/
+?>
+       <div class="get_url">
+       <a target="_blank" href="<?php echo $details['url_data'] ?>">
+       <div class="liveurl">
+
+           <div class="inner">
+              <?php if(!empty($details['url_pic'])){ ?>
+               <div class="image col-md-5">
+              
+                 <img src="<?php echo $details['url_pic'] ?>">
+                 
+               </div>
+               <?php } ?>
+               <div class="details  <?php if(!empty($details['url_pic'])){ echo 'col-md-7'; }else{ echo 'col-md-12';} ?> ">
+                   <div class="info">
+                       <div class="title"><h5 class="font-size-16"><?php echo $details['url_title'] ?></h5></div>
+                       <div class="description"><p class="description-p">
+                         <?php echo $details['url_desb'] ?>
+                       </p> </div>
+                       <div class="url"><?php echo $details['url_data'] ?> </div>
+                   </div>
+
+                 
+                   <div class="video"></div>
+               </div>
+
+           </div>
+       </div>
+       </a>
+       
+
+       <!-- video player div    -->
+<!--        <div class="col-md-12 video-container">
+       <div class="embed-responsive embed-responsive-16by9">
+         <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/WDjd1piOMZQ" allowfullscreen></iframe>
+
+       
+       </div>
+       </div><!-- video div end --> 
+     
+     </div>  
+  <?php  
+}
+
 
 
 

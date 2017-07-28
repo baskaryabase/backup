@@ -1057,34 +1057,47 @@ function getUrlContents($url, $maximumRedirections = null, $currentRedirection =
     }
 function urlFetch(Request $request){
 
-$url=$request->input('q');
+
+
+$url=$request->input('status_area');
  $html = file_get_html($url);
                 
 $tags = get_meta_tags($url);
 
+
  if (isset($tags['description'])) {
-            $response['describe'][] = $tags['description'];
+            $response['keywords'] = $tags['description'];
         } else {
             foreach ($html->find('meta[property=og:description]') as $element) {
-                $response['describe'][] = html_entity_decode(implode(' ', array_slice(explode(' ', trim($element->content)), 0, 50)));
+                $response['keywords'] = html_entity_decode(implode(' ', array_slice(explode(' ', trim($element->content)), 0, 50)));
             }
         }        
         
          foreach (@$html->find('meta[property=og:title]') as $element) {
-            $response['title'][] =trim($element->content);
+            $response['title'] =trim($element->content);
         }
 
         foreach (@$html->find('title') as $element) {
-           $response['title'][] = $element->plaintext;
+           $response['plaintitle'] = $element->plaintext;
         }    
 
         foreach ($html->find('img') as $e) {
-            $response['image'][] = $e->src;
+            $response['image'] = $e->src;
         }
-        $response['url'][] = $url;
-        $response['alt_img'][]  = $this->urlMetaOG($url);
+        
+        $response['alt_img']  = $this->urlMetaOG($url);
+        $response['url']  = $url;
 
- return response()->json(['status'=>'success', 'data'=>$response], 200);
+        /*echo '<pre>';
+        print_r($response);
+        echo '</pre>';
+        die;*/
+
+  $final_result['view_data']=view('url_append_data')->with('details',$response)->render(); 
+  $final_result['details']=$response; 
+
+ return response()->json(['status'=>'success', 'data'=>$final_result], 200);
+
 
 }
 
@@ -1211,8 +1224,8 @@ public function putPostHome(Request $request){
 
 $post=str_replace(array("\r\n","\r","\n"),'<br>',$request->input('post'));
 $post_category='post';
-if($request->input('url_fetch')){
-  $post=str_replace(array("\r\n","\r","\n"),'<br>',$request->input('post')).'<br>'.$request->input('url_fetch');
+if($request->input('url_flag')){
+  
   $post_category='url';
 }
 /*echo '<pre>';
@@ -1222,12 +1235,29 @@ echo '</pre>';*/
 
 
     $user_id = session()->get('userid');
-  $insert_array= array(
+    if($request->input('url_flag') == 'set'){
+        $insert_array= array(
+        'post_author'=>$user_id,
+        'post'=>$post,
+        'post_category'=>$post_category,
+        'url_title'=>$request->input('url_title'),
+        'url_desb'=>$request->input('url_desb'),
+        'url_pic'=>$request->input('url_pic'),
+        'url_data'=>$request->input('url_data'),
+        'posted_date'=>date("Y-m-d H:i:s")
+        );
+
+}else{
+
+    $insert_array= array(
         'post_author'=>$user_id,
         'post'=>$post,
         'post_category'=>$post_category,
         'posted_date'=>date("Y-m-d H:i:s")
         );
+
+
+}
        $results = DB::table('sc_posts')->insertGetId($insert_array);
        //echo json_encode($results);
     // echo $dvc=view('edit_profile_append',['details' => $result[0]]);
@@ -3051,10 +3081,6 @@ function getWhatWeDo(){
 return view('whatwedo');
 
 }
-function getTestPage(){
-return view('test-page');
-
-}
 function getDemodayCity($city){
 
   $pics_obj=Demoday_pics::where('demoday_flag',$city)->get();
@@ -3189,23 +3215,12 @@ $validator = Validator::make($request->all(), [
         );
        $results = DB::table('rsvp_members')->insertGetId($insert_array);
 
-
-
-
-
             return Response::json(array(
         'success' => true,
         'errors' => 'success'
 
     ), 200);
-
-
-
         }
-
-
-
-
 }
 
 function getCompanyProfilePage($company){
@@ -3220,6 +3235,16 @@ return view('company_profile')->with('company',$company_array);
 function getTeamPage(){
 return view('our_team');
 
+}
+function getRegPage1(){
+return view('reg_page1');
+
+}
+function getRegPage2(){
+return view('reg_page2');
+}
+function getRegPage3(){
+return view('reg_page3');
 }
 
 

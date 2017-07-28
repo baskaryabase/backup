@@ -265,3 +265,46 @@ if(jQuery.trim(data.errors) == 'exists'){
 
 })
 
+$(document).ready(function(){
+
+
+$('#status_area').bind('keyup',function(){
+
+  var status_area=$('#status_area').val();
+  var hidden_token=$('#hidden_token').val();
+      var res = status_area.match(/(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g);
+
+if(res == null)
+        return false;
+   
+$('.liveurl-loader').css('display','block');
+var sam = { 
+  status_area:status_area, 
+
+  _token:hidden_token, 
+};
+     jQuery.ajax({
+                    url: '/urlFetch',
+                    type: 'POST',
+                    data: sam,          
+                    cache: false,                
+                    success: function(data) {
+
+                     $('#url_flag').val('set');
+                     $('#url_title').val(data.data.details.title);
+                     $('#url_desb').val(data.data.details.keywords);
+                     $('#url_data').val(data.data.details.url);
+                     $('#url_pic').val(data.data.details.alt_img);
+                  $('.liveurl-loader').css('display','none');
+$('#url_append_data').html(data.data.view_data);
+
+
+
+                    }
+                  })
+
+  
+})
+
+
+})

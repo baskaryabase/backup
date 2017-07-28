@@ -1,6 +1,6 @@
 <?php
   
-/*
+/* 
 |--------------------------------------------------------------------------
 | Web Routes
 |--------------------------------------------------------------------------
@@ -15,8 +15,10 @@
 {    return view('login');
 
 });*/
+Route::get('reg-page3', 'MainController@getRegPage3');
+Route::get('reg-page2', 'MainController@getRegPage2');
+Route::get('reg-page1', 'MainController@getRegPage1');
 Route::get('test-url', 'MainController@getTestContent');
-Route::get('test-page', 'MainController@getTestPage');
 Route::get('edit-membership', 'MainController@getMembershipProfile');
 Route::get('/', 'MainController@getHome');
 Route::get('/demoday', 'MainController@getDemoday');

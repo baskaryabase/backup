@@ -33,7 +33,7 @@
 
                     <div class="box-body" style="display: block;">
                      
-                      <p>{!! html_entity_decode($value['post']['post']) !!}</p>
+                      <p>{!! html_entity_decode($value['post']['post']) !!} {{ ($value['post']['post_category'] == 'url')?get_url_content($value['post']):'' }}</p>
                      
                          <button data-html="true" data-toggle="tooltip" title="<?php foreach ($value['likes'] as $like_key => $like_value) {
                         if(session()->get('userid') != $like_value['id'] ){

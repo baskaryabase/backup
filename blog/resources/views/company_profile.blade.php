@@ -12,9 +12,14 @@
 
       <?php       
 /*echo '<pre>';
-print_r($company);
-echo '</pre>';*/
 
+print_r($company['data']['sc_profile_pic']);
+echo '</pre>'; */
+if(session()->get('userid') == $company['data']['member_id']){
+  $is_user=true;
+}else{
+  $is_user=false;
+}
 $logo_img=URL::asset('/image/company/'.$company['data']['startup_logo']);
     ?>
    <link href="<?php echo URL::asset('/bootstrap.3.3.6/css/bootstrap.min.css') ?>" rel="stylesheet" type="text/css">
@@ -26,7 +31,7 @@ $logo_img=URL::asset('/image/company/'.$company['data']['startup_logo']);
 
   <body>
     <section class="container full-body">
-      <button data-toggle="modal" onClick="modal()">modal 4</button>
+      
 <div class="border-first-container container-fluid">
       <div class="main-div">
         <div class="max-card">
@@ -40,8 +45,9 @@ $logo_img=URL::asset('/image/company/'.$company['data']['startup_logo']);
               <img style="height:100px; width:100px" src="{{ $logo_img }}" class="img-responsive">
               
             </div>
+            <?php if($is_user){ ?>
             <a class="try col-xs-2 col-sm-2" data-toggle="modal" onclick="get_heading_modal({{$company['data']['company_id']}})"><i class="fa fa-pencil-square-o color-orange pull-right" aria-hidden="true"></i></a>
-
+<?php } ?>
             <div class="col-sm-12 col-xs-12">
               <div class="promotion-header">
                 {{$company['data']['startup_name']}} 
@@ -77,7 +83,7 @@ $logo_img=URL::asset('/image/company/'.$company['data']['startup_logo']);
               <li><a class="faicon-linkedin" href="{{$company['data']['twitter_link']}}"><img src="http://tintation.com/wp-content/uploads/iphone-apps/iphone-apps-icon-5.jpg" style="height: 30px; width: 30px;"></a></li>
               
             </ul>
-            <a href="http://startupsclub.org/"><span style="margin-left: 39px;">{{$company['data']['startup_website']}}</span></a>
+            <a target="_blank" href="{{$company['data']['startup_website']}}"><span style="margin-left: 39px;">{{$company['data']['startup_website']}}</span></a>
           </div>
         </div>
       </div>
@@ -93,8 +99,9 @@ $logo_img=URL::asset('/image/company/'.$company['data']['startup_logo']);
           <p></p><span class="vc_sep_holder vc_sep_holder_r"><span class="vc_sep_line"></span></span>
         </div>
         <div class="wpb_text_column wpb_content_element ">
+           <?php if($is_user){ ?>
           <a class="try pull-right" onclick="get_elevator({{$company['data']['company_id']}})" data-toggle="modal" href="#myModal3"><i class="fa fa-pencil-square-o color-orange" aria-hidden="true"></i></a>
-
+<?php } ?>
           <div class="wpb_wrapper">
             <p id="elevator_text">{{$company['data']['elevator_pitch']}}</p>
           </div>
@@ -122,18 +129,19 @@ $logo_img=URL::asset('/image/company/'.$company['data']['startup_logo']);
           <div id="myCarousel" class="carousel slide">
             <!-- Carousel items -->
             <div class="carousel-inner">
-              <div class="active item" data-slide-number="0">
-              <img class="big-image"  src="https://static.pexels.com/photos/248797/pexels-photo-248797.jpeg"></div>
+               <?php $i=0; foreach ($company['metas'] as $key => $value) {
+                  if($value['meta_key'] == 'image'){
+                      $img=URL::asset('/image/company/'.$value['meta_value']);
+               ?>
+              <div class="<?php if($i==0){ echo 'active'; } ?> item" data-slide-number="{{ $i }}">
+              <img class="big-image"  src="{{ $img }}"></div>
+              <?php }else{ ?>
+              <div class="item <?php if($i==0){ echo 'active'; } ?>" data-slide-number="{{ $i }}">
+              <iframe class="iframe" src="https://www.youtube.com/embed/FBEGuOPlDUE" allowfullscreen></iframe>
+            </div>
+            <?php } ?>
               
-              <div class="item" data-slide-number="1">
-              <iframe class="iframe" src="https://www.youtube.com/embed/FBEGuOPlDUE" allowfullscreen></iframe></div>
-              
-              <div class="item" data-slide-number="2"><img class="big-image" src="http://placehold.it/770x300&amp;text=video three"></div>
-              
-              <div class="item" data-slide-number="3"><img class="big-image" src="http://placehold.it/770x300&amp;text=video four"></div>
-              
-              <div class="item" data-slide-number="4"><img class="big-image" src="http://placehold.it/770x300&amp;text=video five"></div>
-              
+                 <?php $i++; } ?>
             </div>
             <!-- Carousel nav -->
            </div>
@@ -147,31 +155,57 @@ $logo_img=URL::asset('/image/company/'.$company['data']['startup_logo']);
     <div align="center" class="col-xs-12">
       <!-- Bottom switcher of slider -->
       <ul class="ul thumbnails">
+          <?php if(!$is_user){ ?>
+         <?php $i=0; foreach ($company['metas'] as $key => $value) {
+                  if($value['meta_key'] == 'image'){
+                      $img=URL::asset('/image/company/'.$value['meta_value']);
+               ?>
         <li class="col-xs-2">
-          <a class="thumbnail" id="carousel-selector-0">
-            <img class="small-image" src="https://static.pexels.com/photos/248797/pexels-photo-248797.jpeg">
+          <a class="thumbnail" id="carousel-selector-{{ $i }}">
+            <img class="small-image" src="{{ $img }}">
           </a>
         </li>
+        <?php }else{ ?>
         <li class="col-xs-2">
-          <a class="thumbnail" id="carousel-selector-1">
+          <a class="thumbnail" id="carousel-selector-{{ $i }}">
             <img class="small-image" src="http://placehold.it/170x100&amp;text=two">
           </a>
         </li>
+         <?php } ?>
+              
+                 <?php $i++; } ?>
+  <?php }else{  ?>
+
+ <?php $i=0; for ($j=0; $j < 5; $j++) { 
+
+                  if(isset($company['metas'][$j])){
+                  
+                  if($company['metas'][$i]['meta_key'] == 'image'){
+                      $img=URL::asset('/image/company/'.$company['metas'][$i]['meta_value']);
+               ?>
         <li class="col-xs-2">
-          <a class="thumbnail" id="carousel-selector-2">
-            <img class="small-image" src="http://placehold.it/170x100&amp;text=three">
+          <a class="thumbnail" id="carousel-selector-{{ $i }}">
+            <img class="small-image" src="{{ $img }}">
           </a>
         </li>
+        <?php }else{ ?>
         <li class="col-xs-2">
-          <a class="thumbnail" id="carousel-selector-3">
-            <img class="small-image" src="http://placehold.it/170x100&amp;text=four">
+          <a class="thumbnail" id="carousel-selector-{{ $i }}">
+            <img class="small-image" src="http://placehold.it/170x100&amp;text=two">
           </a>
         </li>
-        <li class="col-xs-2">
-          <a class="thumbnail" id="carousel-selector-4">
-            <img class="small-image" src="http://placehold.it/170x100&amp;text=five">
+         <?php } ?>
+              <?php }else{ ?>
+                 <li class="col-xs-2">
+          <a class="thumbnail" onClick="modal()" id="carousel-selector-{{ $i }}">
+            <img class="small-image" src="<?php echo URL::asset('/image/plus.png') ?>">
           </a>
         </li>
+              <?php } ?>
+                 <?php $i++; } ?>
+
+
+  <?php } ?>
       </ul>
     </div>
   </div>
@@ -192,7 +226,7 @@ $logo_img=URL::asset('/image/company/'.$company['data']['startup_logo']);
           <div class="row">
             <div class="fast">
               <div class="col-sm-2 col-xs-4">
-                <img class="angel_image" alt="Kyle Vogt" src="http://startupsclub.org/wp-content/uploads/2017/02/Vivek-150x150.jpg">
+                <img class="angel_image" alt="Kyle Vogt" src="{{ $company['data']['sc_profile_pic'] }}">
               </div>
               <div class="col-sm-4 col-xs-8">
                 <a class="profile-link" href="#">{{$company['data']['sc_fullname']}}</a>

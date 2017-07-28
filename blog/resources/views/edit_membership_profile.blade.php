@@ -1,79 +1,134 @@
-
- @extends('layouts.PlainHeaderFooter')
-          @section('title')
-    <title>Edit Profile | Member Platform | Startups Club</title> 
-   @stop
+@extends('layouts.PlainHeaderFooter')
+  @section('title')
+  <title>Events | Member Platform | Startups Club</title> 
+  @stop
   @section('header')
 @include('layouts.header')
 @stop
-@include('layouts.footer')
-  @section('footer')
-  @stop
+  @section('footer') 
+@include('layouts.footer') 
+@stop
    @section('content')
-   @foreach ($errors->all() as $error)
-                 <div class='bg-danger alert'>{{ $error }}</div>
-             @endforeach
-             <fieldset class="form-section">
+   <link href="<?php echo URL::asset('/bootstrap.3.3.6/css/bootstrap.min.css') ?>" rel="stylesheet" type="text/css">
+   <link href="<?php echo URL::asset('/css/membership_page.css') ?>" rel="stylesheet" type="text/css">
+  <body class="animated fadeIn">
+<div class="row plan-card" style="margin-top: 112px;">
+                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 animated fadeInUp padding-r-l data-delay-1">
+                    <div class="white-box bg-basic">
+                        <div class="basic-plan-head">
+                            <h2 class="page-title">Premium Pioneer Member</h2>
+                            <div class="waves">
+                                <span class="wave-1"></span>
+                                <span class="wave-2"></span>
+                                <span class="wave-3"></span>
+                                <span class="wave-4"></span>
+                            </div>
+                        </div>
+                        <div class="basic-plan-body">
+                            <p class="basic-price"><i class="fa fa-inr"></i> 25000/-</p>
+                            <p class="text-center">Free Platinum Value Kit of DemoDay Finale.</p>
+                            <p class="text-center">Access to Investors as Vip at Finale..</p>
+                            <p class="text-center">PAN india access to market.</p>
+                            <p class="text-center">Customised Growth services.</p>
+                            <!-- <p class="text-center">Filtered Search of all members.</p>
+                            <p class="text-center">Full platform access.</p>
+                            <p class="text-center">Access to Pioneer Whatsapp group.</p> -->
+                        </div>
+                        <div class="basic-plan-footer">
+                            
+                            <a href="#" class="btn btn-basic btn-continue"><span>Continue</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 animated fadeInUp padding-r-l data-delay-2">
+                    <div class="white-box bg-pro">
+                        <div class="pro-plan-head">
+                            <h2 class="page-title">Pioneer Member</h2>
+                            <div class="waves">
+                                <span class="wave-1"></span>
+                                <span class="wave-2"></span>
+                                <span class="wave-3"></span>
+                                <span class="wave-4"></span>
+                            </div>
+                        </div>
+                        <div class="pro-plan-body">
+                            <p class="pro-price"><i class="fa fa-inr"></i> 4000/-</p>
+                            <p class="text-center">Mentoring on request.</p>
+                            <p class="text-center">Networking.</p>
+                            <p class="text-center">Investors.</p>
+                            <p class="text-center">Discount Packages for offerings.</p>
+                            <!-- <p class="text-center">Filtered Search of all members.</p>
+                            <p class="text-center">Full platform access.</p>
+                            <p class="text-center">Access to Pioneer Whatsapp group.</p>
+                            <p class="text-center">Access to Exclusive Pioneer Meets.</p> -->
+                        </div>
+                        <div class="pro-plan-footer">
+                             <a href="#" class="btn btn-pro btn-continue"><span>Continue</span></a>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 animated fadeInUp padding-r-l data-delay-3">
+                    <div class="white-box bg-platinum">
+                        <div class="platnium-plan-head">
+                            <h2 class="page-title">Young Pioneer</h2>
+                            <div class="waves">
+                                <span class="wave-1"></span>
+                                <span class="wave-2"></span>
+                                <span class="wave-3"></span>
+                                <span class="wave-4"></span>
+                            </div>
+                        </div>
+                        <div class="platnium-plan-body">
+                            <p class="platnium-price"><i class="fa fa-inr"></i> Free</p>
+                            <p class="text-center">Sessions.</p>
+                            <p class="text-center">Weekly Meets.</p>
+                            <p class="text-center">Mega Events.</p>
+                            <p class="text-center">Activities.</p>
+                            <!-- <p class="text-center">Filtered Search of all members.</p>
+                            <p class="text-center">Full platform access.</p> -->
 
-<!-- <h3 class="fs-subtitle">We will never sell it</h3> -->
-<div class="row row-eq-height" >
+                        </div>
+                        <div class="platnium-plan-footer">
+                              <a href="#" class="btn btn-platinum btn-continue"><span>Continue</span></a>
+                            <!-- <div id="ck-button" class="platinum-btn">
+                               <label>
+                                  <input type="checkbox" class="planchk" name="planname" id="Check3" value="3" onclick="selectOnlyThis(this.id)"><span>Continue</span>
+                               </label>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 animated fadeInUp padding-r-l data-delay-4">
+                    <div class="white-box bg-platinum">
+                        <div class="members-plan-head">
+                            <h2 class="page-title">Member</h2>
+                            <div class="waves">
+                                <span class="wave-1"></span>
+                                <span class="wave-2"></span>
+                                <span class="wave-3"></span>
+                                <span class="wave-4"></span>
+                            </div>
+                        </div>
+                        <div class="platnium-plan-body">
+                            <p class="platnium-price"><i class="fa fa-inr"></i> Free</p>
+                            <p class="text-center">Add to whatsapp group.</p>
+                            <p class="text-center">Get notification.</p>
+                            <p class="text-center">Access to Events.</p>
+                            <p class="text-center">Activities.</p>
+                            <!-- <p class="text-center">Filtered Search of all members.</p>
+                            <p class="text-center">Full platform access.</p> -->
 
- <label class="col-md-4 col-md-offset-2" style="padding-left:15px" align="center" style="margin: 2% 0% 1% 0%">
-
-      <div class="pio" style="border:2px solid green;background-color: white">
-         <div  class=" cus_rdcont" style=" height : 280px ">
-         <div style="border-bottom: 2px solid black;margin:0px ">
-            <h5 class="fs-title align-center " style="box-shadow: 1px;text-align: center;"><b>PIONEER MEMBER</b></h5>
-         </div>
-        <ul style="margin-left: 4.5%;text-align: left;font-size: 1.2em ;padding:2% ;margin: 5% ">
-        <li>Access to All members.</li>
-        <li>Access to Honorary Pioneer members.</li>
-        <li>Access to Pioneer members.</li>
-        <li>Direct Messaging to all members.</li>
-        <li>Filtered Search of all members.</li>
-        <li>Full platform access.</li>
-        <li>Access to Pioneer Whatsapp group.</li>
-        <li>Access to Exclusive Pioneer Meets.</li>
-        </ul>
-</div>
-
-       <div style="margin-top: 5px;background-color:orange;padding:2%;font-size: 20px;color:white; text-align: center"><i style="font-size:25px" class="fa fa-inr" aria-hidden="true"> <b> 4000 </b></i></div>
-
-      </div>
-    </label>
-     <label class="col-md-4"  >
-
-      <div class="pio" style="border:2px solid orange;background-color: white">
-         <div  class=" cus_rdcont" >
-         <div style="border-bottom: 2px solid black;margin:0px ">
-            <h5 class="fs-title align-center " style="box-shadow: 1px;text-align: center;"><b>PREMIUM PIONEER</b></h5>
-         </div>
-        <ul style="margin-left: 4.5%;text-align: left;font-size: 1.2em ;padding:2% ;margin: 5% ">
-        <li>Access to All members.</li>
-        <li>Access to Honorary Pioneer members.</li>
-        <li>Access to Pioneer members.</li>
-        <li>Direct Messaging to all members.</li>
-        <li>Filtered Search of all members.</li>
-        <li>Full platform access.</li>
-        <li>Access to Pioneer Whatsapp group.</li>
-        <li>Access to Exclusive Pioneer Meets.</li>
-        <li>Organize Knowledge Sessions.</li>
-        </ul>
-</div>
-
-       <div style="margin-top: 5px;background-color:orange;padding:2%;font-size: 20px;color:white; text-align: center"><i style="font-size:25px" class="fa fa-inr" aria-hidden="true"> <b> 25000 </b></i></div>
-
-      </div>
-    </label>
-
-</div>
-<!-- <input type="button" name="submit" id="become_pioneer" class="btn btn-lg align-center " style="background-color:#ff7d0f;color:white;padding: 1%;font-size: 18px;clear:both;margin:2% 9% 0% 8%;font-style:bold;border: 2px solid white;border-radius:5px  " value="Become a pioneer member"  />
- -->
-</fieldset>
-
-
-
-
-
-
-    @stop
+                        </div>
+                        <div class="members-plan-footer">
+                             <a href="#" class="btn btn-platinum btn-continue"><span>Continue</span></a>
+                            <!-- <div id="ck-button" class="members-btn">
+                               <label>
+                                  <input type="checkbox" class="planchk" name="planname" id="Check3" value="3" onclick="selectOnlyThis(this.id)"><span>Continue</span>
+                               </label>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </body>

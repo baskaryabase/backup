@@ -1,4 +1,4 @@
- 
+  
 var app = angular.module('LoginApp', []);
 app.controller('LoginCtrl', function($scope) {
     $scope.user = 'John Doe';
@@ -46,25 +46,31 @@ var load_sequence = 1;
 
     $scope.putPostHome = function() {
 
-var url_fetch='';
-var image_html='';
+var url_title='';
+var url_desb='';
+var url_data='';
+var url_pic='';
+
            if($('#url_flag').val()=='set'){
 
- var output = $('.liveurl');
-
-                       var title= output.find('.title').text();
-                        var description=output.find('.description').text();
-                        var url=output.find('.url').text();
-                        var image=output.find('img').attr('src');
-                        if(image)
-image_html='<div class="customimage"><img class="active" src="'+image+'"></div>';
-            var url_fetch='<a target="_blank" href="'+url+'"><div class="custom_url"><div class="inner">'+image_html+'<div class="details"><div class="info"><div class="customtitle">'+title+'</div><div class="customdescription">'+description+'</div><div class="customurl">'+url+'</div></div><div class="video"></div></div></div></div></a>';
-
+                       var url_title= $('#url_title').val();
+                       var url_desb= $('#url_desb').val();
+                       var url_data= $('#url_data').val();
+                       var url_pic= $('#url_pic').val();
+                      
            }
-       var username = { post : $scope.post, url_fetch:url_fetch }
+           var url_flag = $('#url_flag').val()
+       var username = { 
+                        post : $scope.post, 
+                        url_title:url_title, 
+                        url_desb:url_desb, 
+                        url_data:url_data, 
+                        url_pic:url_pic, 
+                        url_flag:url_flag, 
+                      }
 
      $http.post("/putPostHome",username).success(function(response) {
-if(url_fetch){
+if(url_flag){
 window.location.reload();
 }else{
 
@@ -388,3 +394,9 @@ $(elm).attr('data-original-title',$(elm).attr('data-original-title').substring(0
 }
 
 $('[data-toggle="tooltip"]').tooltip(); 
+
+function remove_url(elm){
+
+$(elm).closest('.get_url').remove();
+$('#url_flag').val('');
+}

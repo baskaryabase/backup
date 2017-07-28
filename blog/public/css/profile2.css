@@ -1,11 +1,21 @@
+.bg-white{
+	background: #fff !important;
+}
+.membership-info{
+	font-size: 13px !important;
+	color: #f57f20 !important;
 
+}
 h2 {
     clear: both;
     font-size: 1.8em;
     margin-bottom: 10px;
     padding: 10px 0 10px 30px;
 }
-
+.pricetag{
+	color: #f57f20;
+    font-size: 20px;
+}
 h3 > span {
     border-bottom: 2px solid #C2C2C2;
     display: inline-block;

@@ -32,12 +32,14 @@ body
 .mar-top{
   margin-top: -20px;
 }
+@media (min-width: 776px){
 .edit-modal1-width{
   width: 450px;
 }
 .edit-modal4-width{
   width: 430px;
   height: 350px;
+}
 }
 .close-btn-class{
   margin-right: 10px;
@@ -245,7 +247,7 @@ h2{
 @media only screen and (min-width:767px){
 .big-image{
   width: 82% !important;
-  height:300px;
+  height:300px !important;
 }
 }
 .big-image{

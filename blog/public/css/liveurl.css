@@ -3,15 +3,17 @@
 .liveurl {
     width: 100%;
     overflow: hidden;
-    background: #F3F3F3;
-    border-top: 1px dashed #CCC;
+    background: #fff;
+    border: 2px solid #CCC;
     margin-top: 10px;
-    display: none;
-    
+    color: #000; 
 }
-
+.video-container{
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
 .liveurl .inner {
-    margin: 15px;
+    /*margin: 15px;*/
 
     overflow: hidden;
 }
@@ -23,20 +25,17 @@
 
 
 .liveurl .details {
-    float: left;
     overflow: hidden;
-    width: 475px;
+    
 }
 
 .liveurl .details .info * {
-    float: left;
     clear: both;
-    line-height: 13px;
 }
 
 
 .liveurl .title {
-    font-weight: bold;
+    float: right;
 }
 
 .liveurl .url {
@@ -46,24 +45,20 @@
 }
 
 .liveurl .image {
-    width: 100px;
-    margin: 0 10px 10px 0;
+    width: 150px;
     float: left;
-    display: none;
-     
+    padding-left: 0px;
 }
 
 .liveurl .video {
     clear: both;
-    float: left;
-    margin: 10px 0 0 0;
-    display: none;
+    float: left;    
 }
 
 .liveurl img {
-    width: 100px;
+    width: 150px;
     height: auto;
-    display: none;
+    
 }
 
 .liveurl img.active {
@@ -84,7 +79,7 @@
     float: left;
     margin: 15px 0 0 0;
     clear: both;
-    display: none;
+    
 }
 
 .liveurl .thumbnail  label {
@@ -167,10 +162,17 @@
     background: url(/image/url-loader.gif);
     
 }
-
-.liveurl * {
-    font: 12px/1em Tahoma, Arial, Helvetica, Segoe, sans-serif;
+.font-size-16{
+    font-size: 17px !important;
 }
+.description-p{
+    font-size: 13px;
+    line-height: 12px;
+}
+
+/*.liveurl * {
+    font: 12px/1em Tahoma, Arial, Helvetica, Segoe, sans-serif;
+}*/
 
 
 

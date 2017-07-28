@@ -239,7 +239,7 @@ echo '</pre>';*/
             </div>
 
             <article class="card__article">
-              <h3 class="h2"><a href="#">{{ $value['ks_title'] }}</a></h3>
+              <h3 class="h2"><a href="/knowledge-session/{{ $value['ks_title_slug'] }}">{{ $value['ks_title'] }}</a></h3>
 
               <p>{{ substr(strip_tags($value['ks_event_details']),0,60) }}</p>
             </article>
